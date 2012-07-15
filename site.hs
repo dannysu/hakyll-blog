@@ -31,11 +31,13 @@ main = hakyllWith hakyllConf $ do
     match "posts/**" $ do
         route   $ gsubRoute "posts/" (const "") `composeRoutes` gsubRoute ".markdown" (const "/index.html")
         compile $ pageCompiler
+            >>> applyTemplateCompiler "templates/post.html"
             >>> applyTemplateCompiler "templates/default.html"
             >>> relativizeUrlsCompiler
 
-    match (list ["about.rst", "index.markdown", "code.lhs"]) $ do
+    match "index.markdown" $ do
         route   $ setExtension "html"
         compile $ pageCompiler
+            >>> applyTemplateCompiler "templates/post.html"
             >>> applyTemplateCompiler "templates/default.html"
             >>> relativizeUrlsCompiler
