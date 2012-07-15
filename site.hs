@@ -14,11 +14,15 @@ main = hakyllWith hakyllConf $ do
 
     match "templates/*" $ compile templateCompiler
 
-    match "images/*" $ do
+    match "images/**" $ do
         route   idRoute
         compile copyFileCompiler
 
-    match "css/*" $ do
+    match "files/**" $ do
+        route   idRoute
+        compile copyFileCompiler
+
+    match "css/**" $ do
         route   idRoute
         compile compressCssCompiler
 
