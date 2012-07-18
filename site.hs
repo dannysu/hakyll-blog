@@ -39,7 +39,7 @@ main = hakyllWith hakyllConf $ do
     match "index.markdown" $ do
         route   $ setExtension "html"
         compile $ pageCompiler
-            >>> applyTemplateCompiler "templates/post.html"
+            >>> applyTemplateCompiler "templates/page.html"
             >>> applyTemplateCompiler "templates/default.html"
             >>> relativizeUrlsCompiler
 
