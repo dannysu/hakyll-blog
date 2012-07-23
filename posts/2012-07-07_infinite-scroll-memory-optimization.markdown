@@ -21,11 +21,10 @@ LinkedIn's approaches should help.
 ## Iteration 1:
 My initial version simply did the very naive thing, which is to continuously
 add &lt;div> elements to the page. When I monitored the number of DOM nodes
-using this approach, I got the following graph using Chrome Developer Tool:
-<img title="Iteration 1 Timeline"
-src="http://www.dannysu.com/wp-content/uploads/2012/07/iter1.timeline.png"
-alt="&quot;Iteration 1 Timeline&quot;" /> Memory usage after 2500 images:
-48.87MB DOM Node Count: [1611-23403]
+using this approach, I got the following graph using Chrome Developer Tool:  
+![Iteration 1 Timeline](/images/iter1.timeline.png)  
+Memory usage after 2500 images: 48.87MB  
+DOM Node Count: [1611-23403]  
 
 As you can see, it's ever increasing so of course I eventually ran out of
 memory.
@@ -44,11 +43,10 @@ My approach differs from LinkedIn's approach because the elements on my page are
 position:absolute; and I didn't need to insert stubs at all. Regions which you
 don't see content are really just empty with nothing there.
 
-The node count graph became this: <img title="Iteration 2 Timeline"
-src="http://www.dannysu.com/wp-content/uploads/2012/07/iter2.timeline.png"
-alt="&quot;Iteration 2 Timeline&quot;" />
-
-Memory usage after 2500 images: 20.19MB DOM Node Count: [524-19933]
+The node count graph became this:  
+![Iteration 2 Timeline](/images/iter2.timeline.png)  
+Memory usage after 2500 images: 20.19MB  
+DOM Node Count: [524-19933]  
 
 Wow! That's half of the memory usage compared to the naive version. Also, you
 can see that the graph is sawtooth-like showing when Chrome garbage collected
@@ -62,11 +60,10 @@ my data's left and top position variables to be knockout observables. This
 means that when I change them, the &lt;div&gt; element's position on the page
 will change as well without actually removing and adding back the element.
 
-I got this afterwards: <img title="Iteration 3 Timeline"
-src="http://www.dannysu.com/wp-content/uploads/2012/07/iter3.timeline.png"
-alt="&quot;Iteration 3 Timeline&quot;" />
-
-Memory usage after 2500 images: 20.22MB DOM Node Count: [540-24478]
+I got this afterwards:  
+![Iteration 3 Timeline](/images/iter3.timeline.png)  
+Memory usage after 2500 images: 20.22MB  
+DOM Node Count: [540-24478]  
 
 There's a slight increase in memory usage from this approach, and at the time I
 figured that was just because there are so few cells showing loading image that
@@ -75,13 +72,11 @@ it didn't matter, so that brings me to iteration 4.
 ## Iteration 4:
 I applied the same approach as iteration 3 to all cells showing actual EOL
 images. The timeline graph looks a lot better with # of DOM node count much
-lower:
+lower:  
 
-<img title="Iteration 4 Timeline"
-src="http://www.dannysu.com/wp-content/uploads/2012/07/iter4.timeline.png"
-alt="&quot;Iteration 4 Timeline&quot;" />
-
-Memory usage after 2500 images: 26.46MB DOM Node Count: [518-571]
+![Iteration 4 Timeline](/images/iter4.timeline.png)  
+Memory usage after 2500 images: 26.46MB  
+DOM Node Count: [518-571]  
 
 At this point I was shocked. The approach which I thought would bring memory
 usage down actually increased it. I measured it couple more times to make sure
@@ -97,16 +92,8 @@ iteration 4 than iteration 2. Drilling deeper, I found that each object in
 iteration 4 takes up more memory than iteration 2. Check out the screenshot
 comparison to see the size of "smallImage" field:
 
-<a href="http://www.dannysu.com/wp-content/uploads/2012/07/iter2.screenshot.png"
-target="_blank"><img class="alignnone size-thumbnail wp-image-519"
-title="iter2.screenshot"
-src="http://www.dannysu.com/wp-content/uploads/2012/07/iter2.screenshot-150x150.png"
-alt="" width="150" height="150" /></a> vs <a
-href="http://www.dannysu.com/wp-content/uploads/2012/07/iter4.screenshot.png"
-target="_blank"><img class="alignnone size-thumbnail wp-image-520"
-title="iter4.screenshot"
-src="http://www.dannysu.com/wp-content/uploads/2012/07/iter4.screenshot-150x150.png"
-alt="" width="150" height="150" /></a>
+[![](/images/iter2.screenshot-150x150.png)][3] vs
+[![](/images/iter4.screenshot-150x150.png)][4]
 
 In iteration 2, smallImage field simply stored the URL of the EOL image and took
 up 88 bytes. However, in iteration 4 the same field now takes up 592 bytes.
@@ -129,3 +116,5 @@ me.
 
   [1]: /2012/07/02/pinterest-like-interface-for-encyclopedia-of-life/
   [2]: http://engineering.linkedin.com/linkedin-ipad-5-techniques-smooth-infinite-scrolling-html5
+  [3]: /images/iter2.screenshot.png
+  [4]: /images/iter4.screenshot.png
