@@ -53,14 +53,15 @@ main = hakyll $ do
 
     -- Match all files under posts directory and its subdirectories.
     -- Turn posts into wordpress style url: year/month/date/title/index.html
-    match "posts/*" $ do
-        route   $ wordpressRoute
-        compile $ pageCompilerWith defaultHakyllParserState pandocWriteOptions
-            >>> renderTagsField "labels" (fromCapture "label/*")
-            >>> applyTemplateCompiler "templates/post.html"
-            >>> requireA "recent.markdown" (setFieldA "recent" $ arr pageBody)
-            >>> applyTemplateCompiler "templates/default.html"
-            >>> wordpressUrlsCompiler
+    forM_ [("posts/*", "templates/post.html"), ("pages/*", "templates/page.html")] $ \(p, t) ->
+        match p $ do
+            route   $ wordpressRoute
+            compile $ pageCompilerWith defaultHakyllParserState pandocWriteOptions
+                >>> renderTagsField "labels" (fromCapture "label/*")
+                >>> applyTemplateCompiler t
+                >>> requireA "recent.markdown" (setFieldA "recent" $ arr pageBody)
+                >>> applyTemplateCompiler "templates/default.html"
+                >>> wordpressUrlsCompiler
 
     -- Build list of recent posts
     match "recent_template.html" $ route idRoute
@@ -88,8 +89,9 @@ main = hakyll $ do
 wordpressRoute :: Routes
 wordpressRoute =
     gsubRoute "posts/" (const "") `composeRoutes`
-        gsubRoute "[0-9]{4}-[0-9]{2}-[0-9]{2}_" (map replaceWithSlash)`composeRoutes`
-            gsubRoute ".markdown" (const "/index.html")
+        gsubRoute "pages/" (const "") `composeRoutes`
+            gsubRoute "[0-9]{4}-[0-9]{2}-[0-9]{2}_" (map replaceWithSlash)`composeRoutes`
+                gsubRoute ".markdown" (const "/index.html")
     where replaceWithSlash c = if c == '-' || c == '_'
                                    then '/'
                                    else c
