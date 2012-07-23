@@ -1,0 +1,16 @@
+---
+date: 2004-02-08 16:48:39
+title: PPPoE
+tags: Linux/Unix/QNX
+---
+
+It took me a while to get internet on Linux...
+I needed to set up PPPoE
+
+what you need to do on Gentoo is recompile kernel with pppoe support,
+then install this:
+http://www.roaringpenguin.com/products/rp-pppoe/
+
+it should already be in portage though :)
+
+gotta love ports (FreeBSD) or it's variant - portage (Gentoo) :D
