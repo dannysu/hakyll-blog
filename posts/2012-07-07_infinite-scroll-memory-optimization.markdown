@@ -1,7 +1,6 @@
 ---
 title: Infinite Scroll Memory Optimization
-category: Mad Coding
-tags: endless scroll, infinite scroll
+tags: Mad Coding, endless scroll, infinite scroll
 ---
 In my previous post, I talked about my [Pinterest-like interface for
 Encyclopedia of Life (eol.org)][1].  In this post I'm going to go through my

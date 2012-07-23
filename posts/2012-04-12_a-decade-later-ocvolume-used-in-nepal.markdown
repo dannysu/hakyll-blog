@@ -1,6 +1,6 @@
 ---
 title: A decade later, OCVolume used in Nepal
-category: OCVolume
+tags: OCVolume
 ---
 The OCVolume category contains posts with emails I received regarding OCVolume.
 It was 2002 when I wrote OCVolume with couple high school friends. A decade
