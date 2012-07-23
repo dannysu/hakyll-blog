@@ -4,6 +4,7 @@ task :build do
   sh "cp _site/recent_template.html recent.markdown"
   sh "./site rebuild"
   sh "rm _site/recent_template.html"
+  sh "cp -r _site/* dannysu.github.com"
 end
 
 task :monitor do
