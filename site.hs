@@ -4,6 +4,7 @@
 -- Pattern.hs uses parseGlob to convert string to (Pattern a)
 -- http://www.haskell.org/ghc/docs/7.2.2/html/users_guide/type-class-extensions.html
 
+import Control.Monad (forM_)
 import Control.Arrow (arr, (>>>), (***), (&&&), (>>^))
 import Data.Monoid (mempty, mconcat)
 
@@ -40,32 +41,22 @@ main = hakyll $ do
         route   idRoute
         compile compressCssCompiler
 
-    -- Categories
-    create "categories" $
+    -- Labels
+    create "labels" $
         requireAll "posts/*" (\_ ps -> readTags ps :: Tags String)
 
-    -- Add a category compiler for every category
-    match "category/*" $ route $ categoryRoute
-    metaCompile $ require_ "categories"
+    -- Add a label list compiler for every label
+    match "label/*" $ route $ labelRoute
+    metaCompile $ require_ "labels"
         >>> arr tagsMap
-        >>> arr (map (\(t, p) -> (tagIdentifier "category/*" t, makePostList "Posts in category" t p)))
-
-    -- Tags
-    create "tags" $
-        requireAll "posts/*" (\_ ps -> readTags ps :: Tags String)
-
-    -- Add a tag list compiler for every tag
-    match "tag/*" $ route $ setExtension ".html"
-    metaCompile $ require_ "tags"
-        >>> arr tagsMap
-        >>> arr (map (\(t, p) -> (tagIdentifier "tag/*" t, makePostList "Posts tagged" t p)))
+        >>> arr (map (\(t, p) -> (tagIdentifier "label/*" t, makePostList "Posts with label" t p)))
 
     -- Match all files under posts directory and its subdirectories.
     -- Turn posts into wordpress style url: year/month/date/title/index.html
     match "posts/*" $ do
         route   $ wordpressRoute
         compile $ pageCompilerWith defaultHakyllParserState pandocWriteOptions
-            >>> renderTagsField "prettytags" (fromCapture "tag/*")
+            >>> renderTagsField "labels" (fromCapture "label/*")
             >>> applyTemplateCompiler "templates/post.html"
             >>> requireA "recent.markdown" (setFieldA "recent" $ arr pageBody)
             >>> applyTemplateCompiler "templates/default.html"
@@ -81,13 +72,14 @@ main = hakyll $ do
     match "recent.markdown" $ compile pageCompiler
 
     -- Build index page
-    match "index.markdown" $ do
-        route   $ setExtension "html"
-        compile $ pageCompiler
-            >>> applyTemplateCompiler "templates/page.html"
-            >>> requireA "recent.markdown" (setFieldA "recent" $ arr pageBody)
-            >>> applyTemplateCompiler "templates/default.html"
-            >>> wordpressUrlsCompiler
+    forM_ ["index.markdown", "404.markdown"] $ \p ->
+        match p $ do
+            route   $ setExtension "html"
+            compile $ pageCompiler
+                >>> applyTemplateCompiler "templates/page.html"
+                >>> requireA "recent.markdown" (setFieldA "recent" $ arr pageBody)
+                >>> applyTemplateCompiler "templates/default.html"
+                >>> wordpressUrlsCompiler
 
   where
     tagIdentifier :: Pattern (Page String) -> String -> Identifier (Page String)
@@ -102,12 +94,12 @@ wordpressRoute =
                                    then '/'
                                    else c
 
-categoryRoute :: Routes
-categoryRoute =
+labelRoute :: Routes
+labelRoute =
     setExtension ".html" `composeRoutes`
     gsubRoute "." adjustLink `composeRoutes`
         gsubRoute "/" (const "") `composeRoutes`
-            gsubRoute "^category" (const "category/") `composeRoutes`
+            gsubRoute "^label" (const "label/") `composeRoutes`
                 gsubRoute "-html" (const "/index.html")
 
 adjustLink = (filter (not . isSlash)) . (map (toLower . replaceWithDash))
@@ -140,7 +132,7 @@ makePostList message tag posts =
     constA (mempty, posts)
         >>> addPostList "posts" "templates/postitem.html"
         >>> arr (setField "title" (message ++ " &#8216;" ++ tag ++ "&#8217;"))
-        >>> arr (setField "category" tag)
+        >>> arr (setField "label" tag)
         >>> arr (setField "route" (adjustLink tag))
         >>> applyTemplateCompiler "templates/posts.html"
         >>> requireA "recent.markdown" (setFieldA "recent" $ arr pageBody)

@@ -4,7 +4,9 @@ task :build do
   sh "cp _site/recent_template.html recent.markdown"
   sh "./site rebuild"
   sh "rm _site/recent_template.html"
+  sh "rm -rf dannysu.github.com/*"
   sh "cp -r _site/* dannysu.github.com"
+  sh "cd dannysu.github.com && git checkout CNAME"
 end
 
 task :monitor do
@@ -12,6 +14,6 @@ task :monitor do
 end
 
 task :clean do
-  sh "git co recent.markdown"
+  sh "git checkout recent.markdown"
   sh "./site clean"
 end
