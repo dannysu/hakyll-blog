@@ -64,10 +64,10 @@ ul.dates li, ul.counts li, ul.blogroll ul li, ul.pages li, .widget ul li{
 ul.dates .date, ul.counts .count{
 	color:#7A7A7A;
 }
-ul.dates a, ul.counts a, ul.blogroll a, ul.pages a, .widget ul a, a.readmore{
+ul.dates a, ul.counts a, ul.blogroll a, ul.pages a, .widget ul a, a.readmore, .links{
 	color:#404040;
 }
-ul.dates a:hover, ul.dates a:hover .date, ul.counts a:hover, ul.counts a:hover .count, ul.blogroll a:hover, ul.pages a:hover, .widget ul a:hover, a.readmore:hover{ color:#000; }
+ul.dates a:hover, ul.dates a:hover .date, ul.counts a:hover, ul.counts a:hover .count, ul.blogroll a:hover, ul.pages a:hover, .widget ul a:hover, a.readmore:hover, .links:hover{ color:#000; }
 
 #footer a, #footer p.attributes a{
 	color:#333;

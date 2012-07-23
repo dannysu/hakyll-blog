@@ -479,7 +479,7 @@ ul.counts .count{
 	color:#858585;
 }
 
-ul.dates a, ul.counts a, ul.blogroll a, ul.pages a, .widget ul a, a.readmore{
+ul.dates a, ul.counts a, ul.blogroll a, ul.pages a, .widget ul a, a.readmore, .links{
 	color:#BFBFBF;
 	text-decoration:none;
 }
