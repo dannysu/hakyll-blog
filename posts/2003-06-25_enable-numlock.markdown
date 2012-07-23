@@ -1,5 +1,6 @@
 ---
 title: enable numlock
+category: FreeBSD
 ---
 In order to have numlock enabled automatically after your window manager loads,
 follow the steps below. This works for any WM, even though KDE provides this

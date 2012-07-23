@@ -1,5 +1,6 @@
 ---
 title: screenshot
+category: FreeBSD
 ---
 Ooo!\
 check out my GNOME desktop running on FreeBSD

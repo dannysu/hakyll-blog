@@ -1,5 +1,6 @@
 ---
 title: most reliable server
+category: FreeBSD
 ---
 need another reason why use FreeBSD? or *BSD?
 
