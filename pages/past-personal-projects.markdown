@@ -93,4 +93,4 @@ software obsessively to my liking.
   [[direct download][2]]
 
   [1]: http://forums.gentoo.org/viewtopic.php?t=191259
-  [2]: http://www.dannysu.com/wp-content/uploads/2011/03/gmailtray.tar.gz
+  [2]: /files/gentoo/gmailtray.tar.gz
