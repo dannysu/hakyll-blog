@@ -6,7 +6,7 @@ task :build do
   sh "rm _site/recent_template.html"
   sh "rm -rf dannysu.github.com/*"
   sh "cp -r _site/* dannysu.github.com"
-  sh "cd dannysu.github.com && git checkout CNAME"
+  sh "cd dannysu.github.com && git checkout CNAME && git checkout .nojekyll"
 end
 
 task :monitor do
