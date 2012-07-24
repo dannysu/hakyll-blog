@@ -171,13 +171,13 @@ table caption{
 	margin:0 0 0 10%;
 }
 
-#primary.twocol-stories .story{
+#primary.twocol-stories .story, .twocol-story{
 	float:left;
 	width:48%;
 	margin:0 0 0 4%;
 	display:inline;
 }
-* html #primary.twocol-stories .story{
+* html #primary.twocol-stories .story, .twocol-story{
 	margin-left:2%;
 }
 #primary.twocol-stories .first, * html #primary.twocol-stories .first{

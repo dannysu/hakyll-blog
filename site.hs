@@ -11,11 +11,21 @@ import Data.Monoid (mempty, mconcat)
 import Prelude hiding (id)
 import Control.Category (id)
 
+import Text.Blaze.Html.Renderer.String (renderHtml)
+import Text.Blaze.Internal (preEscapedString)
+import Text.Blaze.Html ((!), toHtml, toValue)
+import qualified Text.Blaze.Html5 as H
+import qualified Text.Blaze.Html5.Attributes as A
+
 import Data.Char (toLower)
+import Data.List (isPrefixOf, tails, findIndex)
 
 import Text.Pandoc
 
 import Hakyll
+
+postsPerBlogPage :: Int
+postsPerBlogPage = 2
 
 -- Allow for reference style links in markdown
 pandocWriteOptions = defaultWriterOptions {
@@ -57,6 +67,7 @@ main = hakyll $ do
         match p $ do
             route   $ wordpressRoute
             compile $ pageCompilerWith defaultHakyllParserState pandocWriteOptions
+                >>> addTeaser
                 >>> renderTagsField "labels" (fromCapture "label/*")
                 >>> applyTemplateCompiler t
                 >>> requireA "recent.markdown" (setFieldA "recent" $ arr pageBody)
@@ -81,6 +92,12 @@ main = hakyll $ do
                 >>> requireA "recent.markdown" (setFieldA "recent" $ arr pageBody)
                 >>> applyTemplateCompiler "templates/default.html"
                 >>> wordpressUrlsCompiler
+
+    -- Build blog pages
+    match "blog/page/*/index.html" $ route idRoute
+    metaCompile $ requireAll_ "posts/*"
+        >>> arr (chunk postsPerBlogPage . reverse . chronological)
+        >>^ makeBlogPages
 
   where
     tagIdentifier :: Pattern (Page String) -> String -> Identifier (Page String)
@@ -158,3 +175,99 @@ wordpressUrls :: String  -- ^ Path to the site root
 wordpressUrls root = withUrls convert
   where
     convert x = replaceAll "/index.html" (const "/") x
+
+-- | Split list into equal sized sublists.
+-- https://github.com/ian-ross/blog
+--
+chunk :: Int -> [a] -> [[a]]
+chunk n [] = []
+chunk n xs = ys : chunk n zs
+    where (ys,zs) = splitAt n xs
+
+-- | Helper function for index page metacompilation: generate
+-- appropriate number of index pages with correct names and the
+-- appropriate posts on each one.
+-- https://github.com/ian-ross/blog
+--
+makeBlogPages :: [[Page String]]
+              -> [(Identifier (Page String), Compiler () (Page String))]
+makeBlogPages ps = map doOne (zip [1..] ps)
+  where doOne (n, ps) = (indexIdentifier n, makeBlogPage n maxn ps)
+        maxn = nposts `div` postsPerBlogPage +
+               if (nposts `mod` postsPerBlogPage /= 0) then 1 else 0
+        nposts = sum $ map length ps
+        indexIdentifier n = parseIdentifier url
+          where url = "blog/page/" ++ (show n) ++ "/index.html" 
+
+-- | Make a single index page: inserts posts, sets up navigation links
+-- to older and newer article index pages, applies templates.
+-- https://github.com/ian-ross/blog
+--
+makeBlogPage :: Int -> Int -> [Page String] -> Compiler () (Page String)
+makeBlogPage n maxn posts = 
+    constA (mempty, posts)
+    >>> addPostList "posts" "templates/teaser.html"
+    >>> arr (setField "navlinkolder" (indexNavLink n 1 maxn))
+    >>> arr (setField "navlinknewer" (indexNavLink n (-1) maxn))
+    >>> arr (setField "title" "Danny Su")
+    >>> applyTemplateCompiler "templates/blogpage.html"
+    >>> requireA "recent.markdown" (setFieldA "recent" $ arr pageBody)
+    >>> applyTemplateCompiler "templates/default.html"
+    >>> wordpressUrlsCompiler
+
+-- | Generate navigation link HTML for stepping between index pages.
+-- https://github.com/ian-ross/blog
+--
+indexNavLink :: Int -> Int -> Int -> String
+indexNavLink n d maxn = renderHtml ref
+  where ref = if (refPage == "") then ""
+              else H.a ! A.href (toValue $ toUrl $ refPage) $ 
+                   (preEscapedString lab)
+        lab = if (d > 0) then "Older Entries &raquo;" else "&laquo; Newer Entries"
+        refPage = if (n + d < 1 || n + d > maxn) then ""
+                  else case (n + d) of
+                    1 -> "/blog/page/1/"
+                    _ -> "/blog/page/" ++ (show $ n + d) ++ "/"
+
+-- | Turns body of the page into the teaser
+-- https://groups.google.com/forum/?fromgroups#!topic/hakyll/Q9wjV1Xag0c
+--
+addTeaser :: Compiler (Page String) (Page String)
+addTeaser = arr $
+    copyBodyToField "teaser"
+    >>> changeField "teaser" compactTeaser
+    >>> changeField "teaser" maxLengthTeaser
+    >>> changeField "teaser" extractTeaser
+  where
+    extractTeaser :: String -> String
+    extractTeaser [] = []
+    extractTeaser xs@(x : xr)
+        | "<!-- more -->" `isPrefixOf` xs = []
+        | otherwise                       = x : extractTeaser xr
+
+    maxLengthTeaser :: String -> String
+    maxLengthTeaser s = if findIndex (isPrefixOf "<!-- more -->") (tails s) == Nothing
+                            then unwords (take 60 (words s))
+                            else s
+
+    compactTeaser :: String -> String
+    compactTeaser =
+        (replaceAll "<img [^>]*>" (const "")) .
+        (replaceAll "<p>" (const "")) .
+        (replaceAll "</p>" (const "")) .
+        (replaceAll "<blockquote>" (const "")) .
+        (replaceAll "</blockquote>" (const "")) .
+        (replaceAll "<strong>" (const "")) .
+        (replaceAll "</strong>" (const "")) .
+        (replaceAll "<ol>" (const "")) .
+        (replaceAll "</ol>" (const "")) .
+        (replaceAll "<ul>" (const "")) .
+        (replaceAll "</ul>" (const "")) .
+        (replaceAll "<li>" (const "")) .
+        (replaceAll "</li>" (const "")) .
+        (replaceAll "<h[0-9][^>]*>" (const "")) .
+        (replaceAll "</h[0-9]>" (const "")) .
+        (replaceAll "<pre.*" (const "")) .
+        (replaceAll "<a [^>]*>" (const "")) .
+        (replaceAll "</a>" (const ""))
+
