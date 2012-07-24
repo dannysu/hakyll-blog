@@ -3,41 +3,57 @@ date: 2007-04-13 08:40:27
 title: OCVolume
 tags: Miscellaneous, OCVolume
 ---
-
-
-
 From a high school project to a project with a life of its own.
 
-I love open-source software even though a lot of times they do 90% of what I want and cause me to want to code the rest 10%.
+I love open-source software even though a lot of times they do 90% of what I
+want and cause me to want to code the rest 10%.
 
-I got an email a day ago asking questions about [OCVolume](http://ocvolume.sf.net). I no longer work on this high school project that I did with Keith and Andrei. However, there are still the occasional inquiries that come by. It's a great delight to see somebody using a project that meant so much to me. If you ask me what were some of the defining moments in life, for high school it will have to be OCVolume.
+I got an email a day ago asking questions about
+[OCVolume](http://ocvolume.sf.net). I no longer work on this high school
+project that I did with Keith and Andrei. However, there are still the
+occasional inquiries that come by. It's a great delight to see somebody using a
+project that meant so much to me. If you ask me what were some of the defining
+moments in life, for high school it will have to be OCVolume.
 
 A quick search on Google revealed the following results:
 
-1) As far back as 2002, there were people who discovered OCVolume and wrote paper that referenced it
-[ http://ucsub.colorado.edu/~reids/papers/object-oriented-asr_reid-2002.pdf](http://ucsub.colorado.edu/~reids/papers/object-oriented-asr_reid-2002.pdf)
+1) As far back as 2002, there were people who discovered OCVolume and wrote
+paper that referenced it
+[http://ucsub.colorado.edu/~reids/papers/object-oriented-asr_reid-2002.pdf][1]
 
-2) Somebody tried the software back in 2004
-[ http://www.raditha.com/blog/archives/000204.html](http://www.raditha.com/blog/archives/000204.html)
+2) Somebody tried the software back in 2004  
+[http://www.raditha.com/blog/archives/000204.html][2]
 
-3) OCVolume gets a mention in jAudio paper
-[ http://ismir2005.ismir.net/proceedings/2103.pdf](http://ismir2005.ismir.net/proceedings/2103.pdf)
-[ http://www.music.mcgill.ca/~mcennis/](http://www.music.mcgill.ca/~mcennis/)
+3) OCVolume gets a mention in jAudio paper  
+[http://ismir2005.ismir.net/proceedings/2103.pdf][3]  
+[http://www.music.mcgill.ca/~mcennis/][4]
 
-4) Last year, a student from India checked out OCVolume and mentioned it in his project presentation:
-[ http://www.cse.iitb.ac.in/~knnayak/seminar/myslides.pdf](http://www.cse.iitb.ac.in/~knnayak/seminar/myslides.pdf)
+4) Last year, a student from India checked out OCVolume and mentioned it in his
+project presentation:  
+[http://www.cse.iitb.ac.in/~knnayak/seminar/myslides.pdf][5]
 
-5) Apparently OCVolume gets a mention in a paper for the 2004 European Conference on Intelligent Systems and Technologies in Romania
-[ http://www-clips.imag.fr/geod/User/vladimir.popescu/ECIT2004.pdf](http://www-clips.imag.fr/geod/User/vladimir.popescu/ECIT2004.pdf)
+5) Apparently OCVolume gets a mention in a paper for the 2004 European
+Conference on Intelligent Systems and Technologies in Romania  
+[http://www-clips.imag.fr/geod/User/vladimir.popescu/ECIT2004.pdf][6]
 
-6) Random sites that mention the OCVolume URL
-[ http://forums.devnetwork.net/rss.php?p=336618](http://forums.devnetwork.net/rss.php?p=336618)
-[ http://www.openoffice.org/servlets/ReadMsg?list=discuss&msgNo=45358](http://www.openoffice.org/servlets/ReadMsg?list=discuss&msgNo=45358)
-[ http://www.freeasr.com/](http://www.freeasr.com/)
+6) Random sites that mention the OCVolume URL  
+[http://forums.devnetwork.net/rss.php?p=336618][7]  
+[http://www.openoffice.org/servlets/ReadMsg?list=discuss&msgNo=45358][8]  
+[http://www.freeasr.com/](http://www.freeasr.com/)  
 ...
 
 Well, OCVolume is still good for certain things.
 
-That is, if all you need is an isolated word recognition capability, then it's great. I've used it in the past to control Lego robots with voice commands and it was a lot of fun. OCVolume also demonstrates how far one can get with just preprocessing and Vector Quantization.
+That is, if all you need is an isolated word recognition capability, then it's
+great. I've used it in the past to control Lego robots with voice commands and
+it was a lot of fun. OCVolume also demonstrates how far one can get with just
+preprocessing and Vector Quantization.
 
-
+  [1]: http://ucsub.colorado.edu/~reids/papers/object-oriented-asr_reid-2002.pdf
+  [2]: http://www.raditha.com/blog/archives/000204.html
+  [3]: http://ismir2005.ismir.net/proceedings/2103.pdf
+  [4]: http://www.music.mcgill.ca/~mcennis/
+  [5]: http://www.cse.iitb.ac.in/~knnayak/seminar/myslides.pdf
+  [6]: http://www-clips.imag.fr/geod/User/vladimir.popescu/ECIT2004.pdf
+  [7]: http://forums.devnetwork.net/rss.php?p=336618
+  [8]: http://www.openoffice.org/servlets/ReadMsg?list=discuss&msgNo=45358

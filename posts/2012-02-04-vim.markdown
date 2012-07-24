@@ -3,103 +3,77 @@ date: 2012-02-04 12:31:01
 title: VIM
 tags: Mad Coding, Vim
 ---
-
-One of the things I kick started at Well.ca is the weekly tech talks. I started the tech talks off by showing a security hole in the software and brought attention to the team the Threat Modelling practices at Microsoft. I encouraged the team to think about what cool things they know and start sharing knowledge within the team. Late last year I was asked by a team mate to give a demo on VIM since I'm one of the few VIM users within the team. I'm sharing my presentation and reasons on this blog now as well.
-
+One of the things I kick started at Well.ca is the weekly tech talks. I started
+the tech talks off by showing a security hole in the software and brought
+attention to the team the Threat Modelling practices at Microsoft. I encouraged
+the team to think about what cool things they know and start sharing knowledge
+within the team. Late last year I was asked by a team mate to give a demo on
+VIM since I'm one of the few VIM users within the team. I'm sharing my
+presentation and reasons on this blog now as well.
 
 ### Pros:
 
-
-
-
-
+- You can learn it once and use it everywhere
+    - FreeBSD: I first learned VIM on this OS
+    - Various Linux: My knowledge of VIM transferred over when I switched to
+      use Linux
+    - OS X: When I bought my powerbook I continued to use VIM
+    - Windows: When I worked at Microsoft, I used VIM for development
 	
-  * You can learn it once and use it everywhere
-
-	
-    * FreeBSD: I first learned VIM on this OS
-
-	
-    * Various Linux: My knowledge of VIM transferred over when I switched to use Linux
-
-	
-    * OS X: When I bought my powerbook I continued to use VIM
-
-	
-    * Windows: When I worked at Microsoft, I used VIM for development
-
-
-
-
-	
-  * VIM is powerful
-
-	
-    * You can split screen however you like
-
-	
-    * record macros to eliminate repetitive tasks
-
-	
-    * do a lot of stuff without leaving home row
-
-	
-    * assign keyboard shortcuts to whatever you want
-
-	
-    * etc
-
-
-
-
-
-
+- VIM is powerful
+    - You can split screen however you like
+    - record macros to eliminate repetitive tasks
+    - do a lot of stuff without leaving home row
+    - assign keyboard shortcuts to whatever you want
+    - etc
 
 ### Cons:
 
-
-
-
-
-	
-  * Autocomplete support isn't always there for the language you need or isn't as good
-
-	
-    * When I worked at Microsoft on Windows Phone, the UI markup language is a proprietary one. The team that created it has a Visual Studio plugin, but if I wanted the same autocomplete functionality I'd have to do it myself for VIM.
-
-
-
-
-	
-  * xdebug plugin for VIM sucks
-
-	
-  * No indexed code search
-
-	
-  * No refactoring tool that I know of
-
-	
-  * No way to find all references of a function
-
-
-
+- Autocomplete support isn't always there for the language you need or isn't as
+  good
+    - When I worked at Microsoft on Windows Phone, the UI markup language is a
+      proprietary one. The team that created it has a Visual Studio plugin, but
+      if I wanted the same autocomplete functionality I'd have to do it myself
+      for VIM.
+- xdebug plugin for VIM sucks
+- No indexed code search
+- No refactoring tool that I know of
+- No way to find all references of a function
 
 ### Demo
 
+After telling the team at Well.ca about the pros and cons of using VIM, I dive
+right into showing demos of using VIM to do various things. I showed some of
+what VIM could do natively and I also showed some plugins that really make
+working with the code or files a lot easier. You can find many useful plugins
+from the [Janus](https://github.com/carlhuda/janus) project as well.
 
-After telling the team at Well.ca about the pros and cons of using VIM, I dive right into showing demos of using VIM to do various things. I showed some of what VIM could do natively and I also showed some plugins that really make working with the code or files a lot easier. You can find many useful plugins from the [Janus](https://github.com/carlhuda/janus) project as well.
+I showed various plugins for working with files such as Lusty-Explorer,
+NERDTree, using ctags, and with Command-T. I showed how to use vim-fugitive
+plugin to do git grep and open files from the search result. I demonstrated
+autocomplete, jump to definition and performing a diff within a file.
 
-I showed various plugins for working with files such as Lusty-Explorer, NERDTree, using ctags, and with Command-T. I showed how to use vim-fugitive plugin to do git grep and open files from the search result. I demonstrated autocomplete, jump to definition and performing a diff within a file.
-
-I also showed the awesome NrrwRgn plugin for doing things within a section of a file without impacting rest of the file. I also showed how you can manipulate text and sort things all within VIM.
-
+I also showed the awesome NrrwRgn plugin for doing things within a section of a
+file without impacting rest of the file. I also showed how you can manipulate
+text and sort things all within VIM.
 
 ### Command-T
 
+One of the plugins that I love is the CommandT plugin. It allows you to type a
+keyboard shortcut and then just start typing file names that you'd like to
+open. It's a really fast way to navigate through projects. However, one of the
+projects at Well.ca has tons of files that really slows down CommandT's initial
+start time due to CommandT needing to index the files in the directory when VIM
+first starts. I [forked the CommandT project on
+github](https://github.com/dannysu/Command-T) and implemented a caching
+mechanism so that for big projects you only have to index it once and VIM will
+use the cached index upon initial load. If you want to refresh the cached index
+then all you need to do is a :CommandTFlush and then bring up CommandT again to
+re-index and cache.
 
-One of the plugins that I love is the CommandT plugin. It allows you to type a keyboard shortcut and then just start typing file names that you'd like to open. It's a really fast way to navigate through projects. However, one of the projects at Well.ca has tons of files that really slows down CommandT's initial start time due to CommandT needing to index the files in the directory when VIM first starts. I [forked the CommandT project on github](https://github.com/dannysu/Command-T) and implemented a caching mechanism so that for big projects you only have to index it once and VIM will use the cached index upon initial load. If you want to refresh the cached index then all you need to do is a :CommandTFlush and then bring up CommandT again to re-index and cache.
-
-
-
-VIM is great and I keep learning new things about it that makes me even faster at manipulating text and coding. When I was at Microsoft I sometimes felt handicapped when helping out a team mate who doesn't use VIM. For example, VIM has built-in ability to show HEX value of a file, so when I needed to analyze C++ object files or when debugging I felt handicapped at a team mate's computer that doesn't have VIM already.
+VIM is great and I keep learning new things about it that makes me even faster
+at manipulating text and coding. When I was at Microsoft I sometimes felt
+handicapped when helping out a team mate who doesn't use VIM. For example, VIM
+has built-in ability to show HEX value of a file, so when I needed
+to analyze C++ object files or when debugging I felt handicapped at a team
+mate's computer that doesn't have VIM already.

@@ -1,0 +1,246 @@
+<!doctype html>  
+<html lang="en">
+	
+	<head>
+		<meta charset="utf-8">
+		
+		<title>30 days with Haskell</title>
+
+		<meta name="description" content="30 days with Haskell">
+		<meta name="author" content="Chien-Wen Danny Su">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+		
+		<link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+		
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/main.css">
+		<link rel="stylesheet" href="css/print.css" type="text/css" media="print">
+
+		<link rel="stylesheet" href="lib/styles/zenburn.css">
+	</head>
+	
+	<body>
+		
+		<div id="reveal">
+
+			<!-- Used to fade in a background when a specific slide state is reached -->
+			<div class="state-background"></div>
+			
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<section>
+						<h3 class="inverted">30 days with</h3>
+						<h1>Haskell</h1>
+						<img src="http://www.haskell.org/wikistatic/haskellwiki_logo_white.png" style="border: 0">
+						<br><br>
+						<h4 class="inverted">- A Pure Functional Language</h4>
+						<script>
+							// Delicously hacky. Look away.
+							if( navigator.userAgent.match( /(iPhone|iPad|iPod|Android)/i ) ) document.write( '<p style="color: rgba(0,0,0,0.3); text-shadow: none;">('+'Tap to navigate'+')</p>' );
+						</script>
+					</section>
+					<section>
+						<h2>reveal.js</h2>
+						<p>yet another HTML5/CSS3 presentation thingy
+						<br><br>
+						<small><a href="http://lab.hakim.se/reveal-js">http://lab.hakim.se/reveal-js</a></small>
+						</p>
+					</section>
+				</section>
+
+				<section>
+					<h2>Agenda</h2>
+					<ol>
+						<li>What did I do</li>
+						<li>The Motivation</li>
+						<li>Cool Haskell Stuff</li>
+						<li>PHP Equivalent or Lessons</li>
+						<li>Repeat 3 &amp; 4</li>
+					</ol>
+				</section>
+				
+				<section>
+					<h2>What</h2>
+					<ul>
+						<li class="fragment">At least 30 minutes a day while eating breakfast</li>
+						<li class="fragment">Books:<br>
+							<ul>
+								<li>Learn You a Haskell for Great Good!<br><small>- <a href="http://learnyouahaskell.com">http://learnyouahaskell.com</a></small></li>
+								<li>Real World Haskell<br><small>- <a href="http://book.realworldhaskell.org">http://book.realworldhaskell.org</a></small></li>
+							</ul>
+						</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Motivation</h2>
+					<p class="fragment">
+						<blockquote>Learn at least one new language every year.</blockquote>
+						<i><small>- The Pragmatic Programmer, p14</small></i>
+					</p>
+					<ul>
+						<li class="fragment">Scala, Clojure, Erlang, Common Lisp, etc</li>
+						<li class="fragment">No side effects</li>
+						<li class="fragment">Concurrency</li>
+						<li class="fragment">Functional Programming way of thinking</li>
+					</ul>
+				</section>
+				
+				<section>
+					<h2>Haskell</h2>
+					<ul>
+						<li class="fragment">Static &amp; strongly typed</li>
+						<li class="fragment">First-class functions</li>
+						<li class="fragment">Higher-order functions</li>
+						<li class="fragment">Help avoid side effects in functions</li>
+					</ul>
+					<br><br>
+					<h3 class="fragment">Other Cool Stuff</h3>
+					<ul class="fragment">
+						<li>Lazy evaluation</li>
+						<li>Type inference</li>
+					</ul>
+				</section>
+
+				
+				<section>
+					<section>
+						<h2>Static & Strongly Typed</h2>
+						<ul>
+							<li>Variable types checked during compile time or when using REPL</li>
+							<li>Can't mix different variable types</li>
+							<li>Type inference</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Haskell:</h2>
+						<p>Can't mix types or use undefined variables</p>
+						<pre><code class="haskell">
+Prelude&gt; a
+
+&lt;interactive&gt;:1:1: Not in scope: `a'
+
+
+
+Prelude&gt; (1 :: Integer) + (1 :: Double)
+
+&lt;interactive&gt;:1:19:
+    Couldn't match expected type `Integer' with actual type `Double'
+    ...
+						</code></pre>
+					</section>
+					<section>
+						<h2>Haskell:</h2>
+						<p>Must convert before adding</p>
+						<pre><code class="haskell">
+Prelude&gt; read "3" + 1
+4
+						</code></pre>
+						<p class="fragment">Type inference</p>
+						<pre class="fragment"><code class="haskell">
+Prelude&gt; read "3" + 1.0
+4.0
+
+Prelude&gt; read "3"
+
+&lt;interactive&gt;:1:1:
+    Ambiguous type variable `a0' in the constraint:
+    ...
+
+Prelude&gt; read "3" :: Double
+3.0
+						</code></pre>
+					</section>
+					<section>
+						<h2>PHP:</h2>
+						<p>Undefined constant becomes string and you get:</p>
+						<pre><code class="php">
+p h p &gt; echo SESSION_TIMEOUT_ADMIN + 900;
+900
+						</pre></code>
+						<ul class="fragment">
+							<li>Caused bugs in warehouse during extraction</li>
+							<li>Potential bugs and dead code kept around unnoticed</li>
+						</ul>
+						<br><br>
+						<p class="fragment">With PHP notices on:</p>
+						<pre class="fragment"><code class="php">
+p h p &gt; echo SESSION_TIMEOUT_ADMIN + 900;
+PHP Notice:  Use of undefined constant SESSION_TIMEOUT_ADMIN - assumed 'SESSION_TIMEOUT_ADMIN' in
+&#112;hp shell code on line 1
+900
+						</pre></code>
+					</section>
+				</section>
+			</div>
+
+			<!-- The navigational controls UI -->
+			<aside class="controls">
+				<a class="left" href="#">&#x25C4;</a>
+				<a class="right" href="#">&#x25BA;</a>
+				<a class="up" href="#">&#x25B2;</a>
+				<a class="down" href="#">&#x25BC;</a>
+			</aside>
+
+			<!-- Displays presentation progress, max value changes via JS to reflect # of slides -->
+			<div class="progress"><span></span></div>
+			
+		</div>
+
+		<!-- Optional libraries for code syntax highlighting and classList support in IE9 -->
+		<script src="lib/highlight.js"></script>
+		<script src="lib/classList.js"></script>
+		
+		<script src="js/reveal.js"></script>
+		
+		<script>
+			// Parse the query string into a key/value object
+			var query = {};
+			location.search.replace( /[A-Z0-9]+?=(\w*)/gi, function(a) {
+				query[ a.split( '=' ).shift() ] = a.split( '=' ).pop();
+			} );
+
+			// Fires when a slide with data-state=customevent is activated
+			Reveal.addEventListener( 'customevent', function() {
+				alert( '"customevent" has fired' );
+			} );
+
+			// Fires each time a new slide is activated
+			Reveal.addEventListener( 'slidechanged', function( event ) {
+				// event.indexh & event.indexv
+			} );
+
+			Reveal.initialize({
+				// Display controls in the bottom right corner
+				controls: true,
+
+				// Display a presentation progress bar
+				progress: true,
+
+				// If true; each slide will be pushed to the browser history
+				history: true,
+
+				// Loops the presentation, defaults to false
+				loop: false,
+
+				// Flags if mouse wheel navigation should be enabled
+				mouseWheel: true,
+
+				// Apply a 3D roll to links on hover
+				rollingLinks: true,
+
+				// UI style
+				theme: query.theme || 'default', // default/neon
+
+				// Transition style
+				transition: query.transition || 'default' // default/cube/page/concave/linear(2d)
+			});
+
+			hljs.initHighlightingOnLoad();
+		</script>
+
+	</body>
+</html>

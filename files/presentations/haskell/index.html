@@ -1,0 +1,589 @@
+<!doctype html>  
+<html lang="en">
+	
+	<head>
+		<meta charset="utf-8">
+		
+		<title>30 days with Haskell</title>
+
+		<meta name="description" content="30 days with Haskell">
+		<meta name="author" content="Chien-Wen Danny Su">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+		
+		<link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+		
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/main.css">
+		<link rel="stylesheet" href="css/print.css" type="text/css" media="print">
+
+		<link rel="stylesheet" href="lib/styles/zenburn.css">
+	</head>
+	
+	<body>
+		
+		<div id="reveal">
+
+			<!-- Used to fade in a background when a specific slide state is reached -->
+			<div class="state-background"></div>
+			
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<section>
+						<h3 class="inverted">30 days with</h3>
+						<h1>Haskell</h1>
+						<img src="http://www.haskell.org/wikistatic/haskellwiki_logo_white.png" style="border: 0">
+						<br><br>
+						<h4 class="inverted">- A Pure Functional Language</h4>
+						<small>Presentation by Danny Su</small>
+						<script>
+							// Delicously hacky. Look away.
+							if( navigator.userAgent.match( /(iPhone|iPad|iPod|Android)/i ) ) document.write( '<p style="color: rgba(0,0,0,0.3); text-shadow: none;">('+'Tap to navigate'+')</p>' );
+						</script>
+					</section>
+					<section>
+						<h2>reveal.js</h2>
+						<p>slides made with reveal.js
+						<br><br>
+						<small><a href="http://lab.hakim.se/reveal-js">http://lab.hakim.se/reveal-js</a></small>
+						</p>
+					</section>
+				</section>
+
+				<section>
+					<h2>Agenda</h2>
+					<ol>
+						<li>What did I do</li>
+						<li>The Motivation</li>
+						<li>Cool Haskell Stuff</li>
+						<li>PHP Equivalent or Lessons</li>
+						<li>Repeat 3 &amp; 4</li>
+					</ol>
+				</section>
+				
+				<section>
+					<h2>What</h2>
+					<ul>
+						<li class="fragment">At least 30 minutes a day while eating breakfast</li>
+						<li class="fragment">Books:<br>
+							<ul>
+								<li>Learn You a Haskell for Great Good!<br><small>- <a href="http://learnyouahaskell.com">http://learnyouahaskell.com</a></small></li>
+								<li>Real World Haskell<br><small>- <a href="http://book.realworldhaskell.org">http://book.realworldhaskell.org</a></small></li>
+							</ul>
+						</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Motivation</h2>
+					<p class="fragment">
+						<blockquote>Learn at least one new language every year.</blockquote>
+						<i><small>- The Pragmatic Programmer, p14</small></i>
+					</p>
+					<ul>
+						<li class="fragment">Scala, Clojure, Erlang, Common Lisp, etc</li>
+						<li class="fragment">No side effects</li>
+						<li class="fragment">Concurrency</li>
+						<li class="fragment">Functional Programming way of thinking</li>
+					</ul>
+				</section>
+				
+				<section>
+					<h2>Haskell</h2>
+					<ul>
+						<li class="fragment">Static &amp; strongly typed</li>
+						<li class="fragment">First-class functions</li>
+						<li class="fragment">Higher-order functions</li>
+						<li class="fragment">Help avoid side effects in functions</li>
+					</ul>
+					<br><br>
+					<h3 class="fragment">Other Cool Stuff</h3>
+					<ul class="fragment">
+						<li>Lazy evaluation</li>
+						<li>Type inference</li>
+					</ul>
+				</section>
+
+				
+				<section>
+					<section>
+						<h2>Static & Strongly Typed</h2>
+						<ul>
+							<li>Variable types checked during compile time or when using REPL</li>
+							<li>Can't mix different variable types</li>
+							<li>Type inference</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Haskell:</h2>
+						<p>Can't mix types or use undefined variables</p>
+						<pre><code class="haskell">
+Prelude&gt; a
+
+&lt;interactive&gt;:1:1: Not in scope: `a'
+
+
+
+Prelude&gt; (1 :: Integer) + (1 :: Double)
+
+&lt;interactive&gt;:1:19:
+    Couldn't match expected type `Integer' with actual type `Double'
+    ...
+						</code></pre>
+					</section>
+					<section>
+						<h2>Haskell:</h2>
+						<p>Must convert before adding</p>
+						<pre><code class="haskell">
+Prelude&gt; read "3" + 1
+4
+						</code></pre>
+						<p class="fragment">Type inference</p>
+						<pre class="fragment"><code class="haskell">
+Prelude&gt; read "3" + 1.0
+4.0
+
+Prelude&gt; read "3"
+
+&lt;interactive&gt;:1:1:
+    Ambiguous type variable `a0' in the constraint:
+    ...
+
+Prelude&gt; read "3" :: Double
+3.0
+						</code></pre>
+					</section>
+					<section>
+						<h2>PHP:</h2>
+						<p>Undefined constant becomes string and you get:</p>
+						<pre><code class="php">
+&#112;hp &gt; echo UNDEFINED_PHP_CONST + 900;
+900
+						</pre></code>
+						<ul class="fragment">
+							<li>Caused bugs undetected and pushed to production</li>
+							<li>Potential bugs and dead code kept around unnoticed</li>
+						</ul>
+						<br><br>
+						<p class="fragment">With PHP notices on:</p>
+						<pre class="fragment"><code class="php">
+&#112;hp &gt; echo UNDEFINED_PHP_CONST + 900;
+PHP Notice:  Use of undefined constant UNDEFINED_PHP_CONST - assumed 'UNDEFINED_PHP_CONST' in
+&#112;hp shell code on line 1
+900
+						</pre></code>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h3>First-Class Function</h3>
+						<h3>Higher-Order Function (HOF)</h3>
+						<ul>
+							<li>Functions treated the same as everything else</li>
+							<li>Functions that take functions or produce functions</li>
+						</ul>
+					</section>
+
+					<section>
+						<h2>Quick Sort in Haskell</h2>
+						<pre><code class="haskell">
+quicksort []     = []
+
+quicksort (p:xs) = (quicksort lesser) ++ [p] ++ (quicksort greater)
+    where
+	lesser  = filter (< p) xs
+	greater = filter (>= p) xs
+						</code></pre>
+						<br><br>
+						<ul>
+							<li>pattern matching</li>
+							<li><strong>filter</strong> is a HOF</li>
+							<li><strong>(&lt; p)</strong> and <strong>(&gt;= p)</strong> are partially applied functions</li>
+						</ul>
+					</section>
+
+					<section>
+						<h2>HOF in PHP</h2>
+						<pre><code class="php">
+function process_with_clean_environment($do_process) {
+	// backup existing session
+	$current_data = $_SESSION['data'];
+
+	// call function
+	$do_process();
+
+	// restore
+	$_SESSION['data'] = $current_data;
+}
+
+process_with_clean_environment(function() {
+	// do whatever I want with $_SESSION['data']
+});
+						</code></pre>
+						<small>Necessary due to existing code difficult to reuse</small><br>
+						<br><br>
+						<small class="fragment">Similar: Strategy design pattern in OO</small><br>
+						<small class="fragment">Downside: Closure involving $this doesn't work until 5.4</small>
+					</section>
+
+					<section>
+						<h2>filter in Haskell</h2>
+						<pre><code class="haskell">
+filter is_this_good the_list
+						</code></pre>
+						<ul>
+							<li>Apply function on list</li>
+							<li>Get a new list with elements that are good</li>
+						</ul>
+					</section>
+
+					<section>
+						<h2>filter in PHP</h2>
+						<pre><code class="php">
+$result = array_filter($the_list, "is_this_good");
+						</code></pre>
+						<p>vs</p>
+						<pre><code class="php">
+$result = array();
+foreach ($the_list as $element) {
+    if (is_this_good($element)) {
+        $result[] = $element;
+    }
+}
+return $result;
+						</code></pre>
+					</section>
+
+					<section>
+						<h2>map & reduce</h2>
+						<pre><code class="haskell">
+Prelude&gt; let the_list = [1, 3 .. 7]
+Prelude&gt; the_list
+[1,3,5,7]
+
+Prelude&gt; {- map applying lambda to the_list -}
+Prelude&gt; map (\x -&gt; x + 1) the_list
+[2,4,6,8]
+
+Prelude&gt; {- aka "reduce" down to a single result -}
+Prelude&gt; foldl (+) 0 the_list
+16
+						</code></pre>
+					</section>
+
+					<section>
+						<h2>map & reduce in PHP</h2>
+						<p>
+						array_map,<br>
+						array_reduce<br>
+						See <a href="http://www.php.net/manual/en/ref.array.php">array functions</a>.
+						</p>
+						<br><br>
+						<small>Similar: Visitor design pattern in OO</small>
+					</section>
+
+					<section>
+						<h2>function composition</h2>
+						<pre><code class="haskell">
+Prelude&gt; toUpper . head . tail $ "Me"
+'E'
+Prelude&gt; toUpper (head (tail "Me"))
+'E'
+Prelude&gt; let uppercase = toUpper . head . tail
+						</code></pre>
+						<br><br>
+						<h2 class="fragment">list comprehension</h2>
+						<pre class="fragment"><code class="haskell">
+{- Project Euler Problem #1 -}
+{- Find the sum of all natural numbers below 1000 and are multiples of 3 or 5 -}
+sum [x | x <- [1 .. 999], x `mod` 3 == 0 || x `mod` 5 == 0]
+						</code></pre>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>No side effects</h2>
+						<ul>
+							<li>Same input, same output all the time</li>
+							<li>Easy to test</li>
+							<li>Easy to reuse</li>
+							<li>Can't go modifying global states and other things</li>
+							<li>Haskell is pure</li>
+						</ul>
+					</section>
+
+					<section>
+						<h2>Haskell</h2>
+						<p>Keep things separated via type system:</p>
+						<pre class=""><code class="haskell">
+Prelude&gt; {- getLine returns IO String of what user types -}
+Prelude&gt; :type getLine
+getLine :: IO String
+
+{- A pure function -}
+uppercase :: String -&gt; String
+uppercase str = map toUpper str
+
+{- Trying to stuff a IO String to String will fail -}
+main = do
+    return $ uppercase getLine
+
+{- Take String out of IO String first, then you can use it -}
+main = do
+    str <- getLine
+    return $ uppercase str
+						</code></pre>
+						<br>
+						<small>Deal with states by passing them around explicitly</small>
+					</section>
+
+					<section>
+						<h2>PHP</h2>
+						<p>Careful that function can have side effects:</p>
+						<pre><code class="php">
+function bad_php_code() {
+	global $db;
+
+	$data = $_SESSION['data'];
+
+	$_SESSION['data'] = 0;
+}
+						</code></pre>
+						<small>makes it difficult to test or reuse</small>
+						<br><br>
+						<small class="fragment">
+							Things to look into:<br>
+							<ul>
+								<li>Dependency Injection</li>
+								<li>"Decoupling and the Law of Demeter" <i>- The Pragmatic Programmer, p138</i></li>
+							</ul>
+						</small>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Expression must return a value</h2>
+						<li>Not Valid:
+						<pre><code class="haskell">
+add_if_greater a = if a &gt; 100
+                     then a + 1
+						</code></pre>
+						<li>Valid:
+						<pre><code class="haskell">
+add_if_greater a = if a &gt; 100
+		     then a + 1
+                     else a
+						</code></pre>
+					</section>
+
+					<section>
+						<h2>PHP</h2>
+						<p>Be careful with:</p>
+						<pre><code class="php">
+// code in our codebase
+function mixed_return() {
+	if (!good) {
+		return FALSE;
+	}
+
+	perform_action();
+	// PHP returns NULL for you
+}
+
+$result = mixed_return();
+if (!$result) {
+	// Both cases are "false"
+}
+
+// forced to distinguish
+if ($result === FALSE) {
+}
+						</code></pre>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Haskell Types & Typeclasses</h2>
+						<p>Defining a type:</p>
+						<pre><code class="haskell">
+{- Type with 2 value constructors -}
+data Maybe a = Just a
+	     | Nothing
+
+{- Using value constructors -}
+let result = Just 1
+let result = Nothing
+						</code></pre>
+					</section>
+
+					<section>
+						<h2>Typeclasses</h2>
+						<p>Think of this like an interface</p>
+						<pre><code class="haskell">
+class Eq a where 
+  (==)                  :: a -&gt; a -&gt; Bool
+						</code></pre>
+						<br><br>
+						<p>Actual implementation of == for Integer &amp; Float</p>
+						<pre><code class="haskell">
+instance Eq Integer where 
+  x == y                =  x `integerEq` y
+
+instance Eq Float where
+  x == y                =  x `floatEq` y
+						</code></pre>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>Haskell Web Frameworks</h2>
+						<ul>
+							<li>Yesod</li>
+							<li>Happstack</li>
+							<li>Snap</li>
+						</ul>
+						<p>More at <a href="http://www.haskell.org/haskellwiki/Web/Frameworks">Haskell wiki</a></p>
+					</section>
+
+					<section>
+						<h2>Yesod Web Framework</h2>
+						<img src="http://www.yesodweb.com/static/logo-home2-no-esod-smaller2.png" style="border: 0">
+						<br>
+						<a href="http://www.yesodweb.com"><small>http://www.yesodweb.com</small></a>
+						<br>
+						<a href="http://yannesposito.com/Scratch/en/blog/Yesod-tutorial-for-newbies/"><small>tutorial by Yann Esposito</small></a>
+					</section>
+
+					<section>
+						<h2>Routing</h2>
+						<pre><code class="no-highlight">
+/             HomeR   GET
+/echo/#Text   EchoR   GET
+						</code></pre>
+					</section>
+
+					<section>
+						<h2>Handlers</h2>
+						<p>aka Controller</p>
+						<pre><code class="haskell">
+getEchoR :: Text -> Handler RepHtml
+getEchoR theText = do
+    defaultLayout $ do
+        $(widgetFile "echo")
+						</code></pre>
+					</section>
+
+					<section>
+						<h2>Templates</h2>
+						<p>aka View</p>
+						<pre><code class="html">
+&lt;h1&gt; #{theText}
+						</code></pre>
+						<small>templates/echo.hamlet</small>
+					</section>
+
+					<section>
+						<h2>Persistent</h2>
+						<p>storage (DB, etc)</p>
+						<pre><code class="haskell">
+{- Define a Developer datatype -}
+mkPersist sqlSettings [persist|
+Developer
+    firstname String
+    lastname String
+    deriving Show
+|]
+
+{- Add a developer -}
+main = withSqliteConn ":memory:" $ runSqlConn do
+    dannyId <- insert $ Developer "Danny" "Su"
+						</code></pre>
+						<br>
+						<small>Could also do raw SQL</small>
+					</section>
+
+					<section>
+						<h2>Yesod Demo</h2>
+						<a href="http://localhost:3000/echo/Hello%20World!" target="_blank">Link</a>
+					</section>
+				</section>
+
+				<section>
+					<h1>...</h1>
+					<h1 class="fragment">THE END<h1>
+				</section>
+			</div>
+
+			<!-- The navigational controls UI -->
+			<aside class="controls">
+				<a class="left" href="#">&#x25C4;</a>
+				<a class="right" href="#">&#x25BA;</a>
+				<a class="up" href="#">&#x25B2;</a>
+				<a class="down" href="#">&#x25BC;</a>
+			</aside>
+
+			<!-- Displays presentation progress, max value changes via JS to reflect # of slides -->
+			<div class="progress"><span></span></div>
+			
+		</div>
+
+		<!-- Optional libraries for code syntax highlighting and classList support in IE9 -->
+		<script src="lib/highlight.js"></script>
+		<script src="lib/classList.js"></script>
+		
+		<script src="js/reveal.js"></script>
+		
+		<script>
+			// Parse the query string into a key/value object
+			var query = {};
+			location.search.replace( /[A-Z0-9]+?=(\w*)/gi, function(a) {
+				query[ a.split( '=' ).shift() ] = a.split( '=' ).pop();
+			} );
+
+			// Fires when a slide with data-state=customevent is activated
+			Reveal.addEventListener( 'customevent', function() {
+				alert( '"customevent" has fired' );
+			} );
+
+			// Fires each time a new slide is activated
+			Reveal.addEventListener( 'slidechanged', function( event ) {
+				// event.indexh & event.indexv
+			} );
+
+			Reveal.initialize({
+				// Display controls in the bottom right corner
+				controls: true,
+
+				// Display a presentation progress bar
+				progress: true,
+
+				// If true; each slide will be pushed to the browser history
+				history: true,
+
+				// Loops the presentation, defaults to false
+				loop: false,
+
+				// Flags if mouse wheel navigation should be enabled
+				mouseWheel: true,
+
+				// Apply a 3D roll to links on hover
+				rollingLinks: true,
+
+				// UI style
+				theme: query.theme || 'default', // default/neon
+
+				// Transition style
+				transition: query.transition || 'default' // default/cube/page/concave/linear(2d)
+			});
+
+			hljs.initHighlightingOnLoad();
+		</script>
+
+	</body>
+</html>

@@ -1,22 +1,23 @@
 ---
 date: 2004-04-18 07:36:04
 title: I'm in love!
-tags: Linux/Unix/QNX
+tags: Linux Unix QNX
 ---
-
 that's right! I found my new love :)
 
-she's my love source: linux kernel-2.6.5-love4 :D
-basically a set of patches for the linux kernel put together by some people @ Gentoo forums.
+she's my love source: linux kernel-2.6.5-love4 :D basically a set of patches
+for the linux kernel put together by some people @ Gentoo forums.
 
-What I do want to mention is the built-in supermount feature.
-since I've been lazy and haven't got around to find out how to get supermount, love-source is great!
-saves me time.
+What I do want to mention is the built-in supermount feature. since I've been
+lazy and haven't got around to find out how to get supermount, love-source is
+great! saves me time.
 
-supermount basically allows you to use your cdroms or dvdroms without manually mount or umount!
-finally linux got rid of that usability issue...
+supermount basically allows you to use your cdroms or dvdroms without manually
+mount or umount! finally linux got rid of that usability issue...
 
 just put your cd in and go!
 
 here's where you can get the latest:
-http://www.public.iastate.edu/~jpcox/
+[http://www.public.iastate.edu/~jpcox/][1]
+
+  [1]: http://www.public.iastate.edu/~jpcox/

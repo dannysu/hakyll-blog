@@ -3,13 +3,27 @@ date: 2007-01-20 09:24:47
 title: figure 8
 tags: Miscellaneous
 ---
+As Peter said to me, "You're addicted to real-time or something". Haha, that's
+because I'm in the lab every time he enters. However, I also have some cool
+stuff for show including the figure 8 video below. As fun as real-time is, I
+had stopped working on cs452 assignment 1 for several days because I was busy
+with 4th year design project. Some others have worked right up till the
+assignment deadline. I had to work early to deal with the FYDP schedule.
 
-As Peter said to me, "You're addicted to real-time or something". Haha, that's because I'm in the lab every time he enters. However, I also have some cool stuff for show including the figure 8 video below. As fun as real-time is, I had stopped working on cs452 assignment 1 for several days because I was busy with 4th year design project. Some others have worked right up till the assignment deadline. I had to work early to deal with the FYDP schedule.
+Playing with trains is fun. It's even more satisfying once you understand more
+about the hardware and how and why things work. My program is guaranteed not to
+lose clock ticks. It does figure 8 AND it honks AND blinks lights. What more do
+you want?!
 
-Playing with trains is fun. It's even more satisfying once you understand more about the hardware and how and why things work. My program is guaranteed not to lose clock ticks. It does figure 8 AND it honks AND blinks lights. What more do you want?!
-
-
-[Get the Flash Player](http://www.macromedia.com/go/getflashplayer) to see this video.
-
-
-
+<div id="v5405"><a href="http://www.macromedia.com/go/getflashplayer" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://www.macromedia.com/go/getflashplayer']);">Get the Flash Player</a> to see this video.</div>
+<p>
+<script src="https://media.dreamhost.com/mp4/swfobject.js" type="text/javascript"></script>
+<script type="text/javascript">// <![CDATA[
+var swf = new SWFObject("https://media.dreamhost.com/mp4/player.swf", "mpl", "480", "659", 8);
+swf.addParam("allowfullscreen", "true");
+swf.addParam("allowscriptaccess", "always");
+swf.addVariable("file", "http://dannysu.com/files/videos/figure8_conv.flv");
+swf.addVariable("image", "http://dannysu.com/files/videos/figure8_conv.jpeg");
+swf.write("v5405");
+// ]]&gt;</script>
+</p>

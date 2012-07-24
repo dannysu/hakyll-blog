@@ -9,8 +9,10 @@ I needed to set up PPPoE
 
 what you need to do on Gentoo is recompile kernel with pppoe support,
 then install this:
-http://www.roaringpenguin.com/products/rp-pppoe/
+[http://www.roaringpenguin.com/products/rp-pppoe/][1]
 
 it should already be in portage though :)
 
 gotta love ports (FreeBSD) or it's variant - portage (Gentoo) :D
+
+  [1]: http://www.roaringpenguin.com/products/rp-pppoe/

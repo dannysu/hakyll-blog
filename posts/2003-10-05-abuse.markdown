@@ -3,21 +3,29 @@ date: 2003-10-05 18:27:22
 title: Abuse!
 tags: FreeBSD
 ---
-
 Intense side-scrolling action! :D
 
-thnx to Johnny Yip (who's high addicted to Abuse) that told me about this game ;)
+thnx to Johnny Yip (who's high addicted to Abuse) that told me about this game
+;)
 
-I was browsing through my FreeBSD ports collection for games, hoping to find Unreal Tournament or Quake 3 to test my ATI card... Johnny saw Abuse and immediately got excited :)
+I was browsing through my FreeBSD ports collection for games, hoping to find
+Unreal Tournament or Quake 3 to test my ATI card... Johnny saw Abuse and
+immediately got excited :)
 
 screenshot:
 ![](http://www.labyrinth.net.au/~trandor/abuse/shot3.jpg)
 visit:
-[http://www.labyrinth.net.au/~trandor/abuse/](http://www.labyrinth.net.au/~trandor/abuse/)
+[http://www.labyrinth.net.au/~trandor/abuse/][1]
 
-After compiling the source... I still couldn't get the game running. However, after a bit of search on google, I found the solution to my problem.
+After compiling the source... I still couldn't get the game running. However,
+after a bit of search on google, I found the solution to my problem.
 
-Basically I need to create a folder in my home directory and create a file. The commands for doing both of these tasks are listed below:
+Basically I need to create a folder in my home directory and create a file. The
+commands for doing both of these tasks are listed below:
 
-`mkdir ~/.abuse
-echo '(setq darkest_gray 40)' > ~/.abuse/gamma.lsp`
+~~~
+mkdir ~/.abuse
+echo '(setq darkest_gray 40)' > ~/.abuse/gamma.lsp
+~~~
+
+  [1]: http://www.labyrinth.net.au/~trandor/abuse/

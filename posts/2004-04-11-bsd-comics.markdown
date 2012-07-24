@@ -3,11 +3,13 @@ date: 2004-04-11 17:11:42
 title: BSD comics!!!
 tags: FreeBSD
 ---
-
 hahaha man! gotta get me this magazine!
 
 check out these comic strips!
-[bsd01](/files/bsd/bsd01.jpg) | [bsd02](/files/bsd/bsd02.jpg) | [bsd03](/files/bsd/bsd03.jpg) | [bsd04](/files/bsd/bsd04.jpg) | [bsd05](/files/bsd/bsd05.jpg) | [bsd06](/files/bsd/bsd06.jpg) | [bsd07](/files/bsd/bsd07.jpg) | [bsd08](/files/bsd/bsd08.jpg)
+[bsd01](/files/bsd/bsd01.jpg) | [bsd02](/files/bsd/bsd02.jpg) |
+[bsd03](/files/bsd/bsd03.jpg) | [bsd04](/files/bsd/bsd04.jpg) |
+[bsd05](/files/bsd/bsd05.jpg) | [bsd06](/files/bsd/bsd06.jpg) |
+[bsd07](/files/bsd/bsd07.jpg) | [bsd08](/files/bsd/bsd08.jpg)
 
 BSD history??? is it? somebody who knows japanese tell me please!
 [page 1](/files/bsd/bsdhist01.jpg)
@@ -17,6 +19,12 @@ BSD history??? is it? somebody who knows japanese tell me please!
 
 more cool pics [here](/files/bsd/spstick.jpg)
 
-I found these originally from http://thetbserver.adsldns.org/~palatis/BSDComic/ while I was browsing on http://forums.gentoo.org.tw...
+I found these originally from
+[http://thetbserver.adsldns.org/~palatis/BSDComic/][1] while I was browsing on
+[http://forums.gentoo.org.tw][2]...
 
-Palatis' site is a bit slow so I copied everything over to my server... plus I wanted to keep these anyways :D
+Palatis' site is a bit slow so I copied everything over to my server... plus I
+wanted to keep these anyways :D
+
+  [1]: http://thetbserver.adsldns.org/~palatis/BSDComic/
+  [2]: http://forums.gentoo.org.tw
