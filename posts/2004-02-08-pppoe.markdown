@@ -1,7 +1,7 @@
 ---
 date: 2004-02-08 16:48:39
 title: PPPoE
-tags: Linux/Unix/QNX
+tags: Linux Unix QNX
 ---
 
 It took me a while to get internet on Linux...
