@@ -702,3 +702,7 @@ img.alignleft {
 .postmetadata {
 	clear: both;
 }
+
+.gcsc-branding, .gsc-above-wrapper-area {
+    display: none;
+}

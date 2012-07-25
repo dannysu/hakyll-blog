@@ -29,6 +29,11 @@ blockquote{ color:#333; }
 
 table th{ color:#FFF; background:#333; }
 table td{ color:#000; background:#EAEAEA; }
+#cse table td{
+	color:#000;
+	background:white;
+	font-family:"Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Verdana, Arial, sans-serif;
+}
 
 #header h2{ border-right:1px solid #7F7F7F; }
 .secondary dd a:hover {
@@ -78,10 +83,10 @@ ul.dates a:hover, ul.dates a:hover .date, ul.counts a:hover, ul.counts a:hover .
 /* Images */
 
 #footer .inside{
-	background:url(white/footer.gif) 50% 0 repeat-x;
+	background:url(/images/footer.gif) 50% 0 repeat-x;
 }
 #search .searchimg{
-	background:url(white/search.gif) 0 0 no-repeat;
+	background:url(/images/search.gif) 0 0 no-repeat;
 }
 #searchform #s{background:#F0F0F0; border-bottom:1px solid #D8D8D8;}
 #searchform #searchsubmit{background:#FFF;}

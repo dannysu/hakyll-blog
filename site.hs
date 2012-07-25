@@ -88,7 +88,7 @@ main = hakyll $ do
     match "recent.markdown" $ compile pageCompiler
 
     -- Build index page
-    forM_ ["index.markdown", "404.markdown"] $ \p ->
+    forM_ ["index.markdown", "404.markdown", "search.markdown"] $ \p ->
         match p $ do
             route   $ setExtension "html"
             compile $ pageCompiler
