@@ -12,12 +12,12 @@ documentation for it. The actual amount of code I wrote was small and is about
 
 The result of my work can be seen through the following screenshots:
 
-![](http://www.dannysu.com/wp-content/uploads/2011/03/evolution.systray.jpg)
+![](/images/evolution.systray.jpg)
 
-![](http://www.dannysu.com/wp-content/uploads/2011/03/systray.jpg) - system tray icon
+![](/images/systray.jpg) - system tray icon
 
-![](http://www.dannysu.com/wp-content/uploads/2011/03/new.email_.jpg) - new email notification icon
+![](/images/new.email_.jpg) - new email notification icon
 
-[Download my patch](http://www.dannysu.com/wp-content/uploads/2011/03/evolution.systray.patch.zip)
+[Download my patch](/files/evolution.systray.patch.zip)
 
 [My post on Gentoo Linux forums](http://forums.gentoo.org/viewtopic.php?t=254338)

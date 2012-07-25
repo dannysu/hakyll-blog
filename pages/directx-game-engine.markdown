@@ -10,6 +10,8 @@ clicking somewhere on the screen.
 
 The exact replication of our project tracking page is show below:
 
+&nbsp;  
+
 ### Goals
 
 #### Project Goals (by March 13, 2004):
@@ -46,608 +48,268 @@ A person walking in a terrain hitting people; with menus; simple game logic;
 
 Game Engine has the following capabilities:
 	
-  * Terrain rendering
-  * Animated mesh
-  * Animated Skybox and water
-  * Collision Detection with character moving around obstacles
-  * Camera Control
-  * Game Logic Interface
-  * Scene-Model-Texture Management
-  * Pick Ray - character movement controlled by mouse clicks
+- Terrain rendering
+- Animated mesh
+- Animated Skybox and water
+- Collision Detection with character moving around obstacles
+- Camera Control
+- Game Logic Interface
+- Scene-Model-Texture Management
+- Pick Ray - character movement controlled by mouse clicks
 
 ### Team Member
 
-Chien-Wen (Danny) Su
-Johnny Yip
-Brian Keng
+Chien-Wen (Danny) Su  
+Johnny Yip  
+Brian Keng  
 Felix Lo
 
 ### Design
 
-
 Main Components: Game Logic, Game Engine, Win32
-![](http://www.dannysu.com/wp-content/uploads/2011/03/structure4.jpg)
 
+![](/images/structure4.jpg)
 
 #### Game Logic Modules
 
-
-**Pink: High Priority, Blue: Medium Priority**
-
-
-
-
-
-
-
-
-**Module Name**
-
-
-**Description**
-
-
-**Status**
-
-
-**Developers**
-
-
-
-
-
-
-**Map**
-
-
-load from file, contain game logic map, pass pointer to terrain of vertices
-
-
-under development
-
-
-Danny
-
-
-
-
-
-
-**Menu**
-
-
-display menu with items, etc
-
-
-under development
-
-
-Brian
-
-
-
-
-
-
-**Load Game File**
-
-
-load map data, load character data, load misc data... strictly file i/o.
-
-
-not started
-
-
-
-
-
-
-
-
-**Characters**
-
-
-health, type, state, location and movement on the given map
-
-
-under development
-
-
-Danny
-
-
-
-
-
-
-**Inanimate objects**
-
-
-building, tree, boat. etc...
-
-
-under development
-
-
-Danny
-
-
-
-
-
-
-**Game camera**
-
-
-higher level camera for game
-
-
-under development
-
-
-Felix
-
-
-
-
-
-
-**Input handling**
-
-
-reads input and does game logic (GameInput)
-
-
-under development
-
-
-Brian
-
-
-
-
-
-
-**AI**
-
-
-later
-
-
-not started
-
-
-Felix
-
-
-
+<p><strong><span style="color: #ff8866;">Pink: High Priority</span>,&nbsp;<span style="color: #44aaee;">Blue: Medium Priority</span></strong></p>
+<table border="1">
+<tbody>
+<tr>
+<td><strong>Module Name</strong></td>
+<td><strong>Description</strong></td>
+<td><strong>Status</strong></td>
+<td><strong>Developers</strong></td>
+</tr>
+<tr>
+<td style="background-color: #44aaee;" valign="top"><strong>Map</strong></td>
+<td>load from file, contain game logic map, pass pointer to terrain of vertices</td>
+<td>under development</td>
+<td>Danny</td>
+</tr>
+<tr>
+<td style="background-color: #44aaee;" valign="top"><strong>Menu</strong></td>
+<td>display menu with items, etc</td>
+<td>under development</td>
+<td>Brian</td>
+</tr>
+<tr>
+<td style="background-color: #efefef;" valign="top"><strong>Load Game File</strong></td>
+<td>load map data, load character data, load misc data&#8230; strictly file i/o.</td>
+<td>not started</td>
+<td></td>
+</tr>
+<tr>
+<td style="background-color: #ff8866;" valign="top"><strong>Characters</strong></td>
+<td>health, type, state, location and movement on the given map</td>
+<td>under development</td>
+<td>Danny</td>
+</tr>
+<tr>
+<td style="background-color: #44aaee;" valign="top"><strong>Inanimate objects</strong></td>
+<td>building, tree, boat. etc&#8230;</td>
+<td>under development</td>
+<td>Danny</td>
+</tr>
+<tr>
+<td style="background-color: #ff8866;" valign="top"><strong>Game camera</strong></td>
+<td>higher level camera for game</td>
+<td>under development</td>
+<td>Felix</td>
+</tr>
+<tr>
+<td style="background-color: #ff8866;" valign="top"><strong>Input handling</strong></td>
+<td>reads input and does game logic (GameInput)</td>
+<td>under development</td>
+<td>Brian</td>
+</tr>
+<tr>
+<td style="background-color: #efefef;" valign="top"><strong>AI</strong></td>
+<td>later</td>
+<td>not started</td>
+<td>Felix</td>
+</tr>
+</tbody>
+</table>
 
 Major Components for Game Engine:
 
-
 #### Graphics Modules
 
-
-
-
-
-
-
-
-
-
-**Module Name**
-
-
-**Description**
-
-
-**Status**
-
-
-**Developers**
-
-
-
-
-
-
-**Camera**
-
-
-controls the scene camera (multiple cameras?)
-
-
-under development
-
-
-Felix
-
-
-
-
-
-
-**Mesh**
-
-
-Manage all loaded mesh
-
-
-good for now
-
-
-Johnny
-
-
-
-
-
-
-**Model Manager**
-
-
-Manage all loaded models, and use the structure for culling
-
-
-under development
-
-
-Johnny
-
-
-
-
-
-
-**Pick**
-
-
-transforms a 2D input (mouse) into which polygon it corresponds to in 3D world
-
-
-under development
-
-
-Brian
-
-
-
-
-
-
-**Animation**
-
-
-Similar to 3DMeshFrame except this is for animation
-Classes involved: 3DAnimMeshFrame, 3DMeshHierarchy
-
-
-under development
-
-
-
-
-
-
-
-
-**3DModel**
-
-
-
-
-
-
-	
-  * Base class for all Models
-
-	
-  * Classes involved: 3DMeshFrame
-
-
-
-
-
-pending review
-
-
-Johnny
-
-
-
-
-
-
-**Terrain**
-
-
-takes map data, and build terrain mesh, handles the textures
-
-
-good for now
-
-
-Danny
-
-
-
-
-
-
-**Lighting**
-
-
-vertex lighting, light mapping
-
-
-not started
-
-
-
-
-
-
-
-
-**2D drawing**
-
-
-draw a 2d image on to screen (bitmaps), text, basic shapes(?)
-
-
-good for now
-
-
-Brian
-
-
-
-
-
-
-**Scene Manager**
-
-
-Manage all drawing operation to optimize render state changes
-
-
-not started
-
-
-
-
-
-
-
-
-**D3D Module**
-
-
-Interface to D3D Device
-
-
-good for now
-
-
-
-
-
-
-
-
-**D3DEnum**
-
-
-enumeration used in the d3d application, such as vertex, config etc.
-
-
-not started
-
-
-
-
-
-
-
-
-**Derived Models**
-
-
-derived models from 3DModel such as character, inanimate object
-
-
-suspended
-
-
-
-
-
-
-
-
-**Particles**
-
-
-particle
-
-
-not started
-
-
-
-
-
-
-
-
-**demo**
-
-
-show off and test graphics modules
-
-
-on going
-
-
-Everyone
-
-
-
-
-![](http://www.dannysu.com/wp-content/uploads/2011/03/graphics.jpg)
-
+<table border="1">
+<tbody>
+<tr>
+<td><strong>Module Name</strong></td>
+<td><strong>Description</strong></td>
+<td><strong>Status</strong></td>
+<td><strong>Developers</strong></td>
+</tr>
+<tr>
+<td style="background-color: #ff8866;" valign="top"><strong>Camera</strong></td>
+<td>controls the scene camera (multiple cameras?)</td>
+<td>under development</td>
+<td>Felix</td>
+</tr>
+<tr>
+<td style="background-color: #44aaee;" valign="top"><strong>Mesh</strong></td>
+<td>Manage all loaded mesh</td>
+<td>good for now</td>
+<td>Johnny</td>
+</tr>
+<tr>
+<td style="background-color: #ff8866;" valign="top"><strong>Model Manager</strong></td>
+<td>Manage all loaded models, and use the structure for culling</td>
+<td>under development</td>
+<td>Johnny</td>
+</tr>
+<tr>
+<td style="background-color: #ff8866;" valign="top"><strong>Pick</strong></td>
+<td>transforms a 2D input (mouse) into which polygon it corresponds to in 3D world</td>
+<td>under development</td>
+<td>Brian</td>
+</tr>
+<tr>
+<td style="background-color: #ff8866;" valign="top"><strong>Animation</strong></td>
+<td>Similar to 3DMeshFrame except this is for animation<br />
+Classes involved: 3DAnimMeshFrame, 3DMeshHierarchy</td>
+<td>under development</td>
+<td></td>
+</tr>
+<tr>
+<td style="background-color: #44aaee;" valign="top"><strong>3DModel</strong></td>
+<td>
+<ul>
+<li>Base class for all Models</li>
+<li>Classes involved: 3DMeshFrame</li>
+</ul>
+</td>
+<td>pending review</td>
+<td>Johnny</td>
+</tr>
+<tr>
+<td style="background-color: #44aaee;" valign="top"><strong>Terrain</strong></td>
+<td>takes map data, and build terrain mesh, handles the textures</td>
+<td>good for now</td>
+<td>Danny</td>
+</tr>
+<tr>
+<td style="background-color: #44aaee;" valign="top"><strong>Lighting</strong></td>
+<td>vertex lighting, light mapping</td>
+<td>not started</td>
+<td></td>
+</tr>
+<tr>
+<td style="background-color: #44aaee;" valign="top"><strong>2D drawing</strong></td>
+<td>draw a 2d image on to screen (bitmaps), text, basic shapes(?)</td>
+<td>good for now</td>
+<td>Brian</td>
+</tr>
+<tr>
+<td style="background-color: #efefef;" valign="top"><strong>Scene Manager</strong></td>
+<td>Manage all drawing operation to optimize render state changes</td>
+<td>not started</td>
+<td></td>
+</tr>
+<tr>
+<td style="background-color: #44aaee;" valign="top"><strong>D3D Module</strong></td>
+<td>Interface to D3D Device</td>
+<td>good for now</td>
+<td></td>
+</tr>
+<tr>
+<td style="background-color: #efefef;" valign="top"><strong>D3DEnum</strong></td>
+<td>enumeration used in the d3d application, such as vertex, config etc.</td>
+<td>not started</td>
+<td></td>
+</tr>
+<tr>
+<td style="background-color: #efefef;" valign="top"><strong>Derived Models</strong></td>
+<td>derived models from 3DModel such as character, inanimate object</td>
+<td>suspended</td>
+<td></td>
+</tr>
+<tr>
+<td style="background-color: #efefef;" valign="top"><strong>Particles</strong></td>
+<td>particle</td>
+<td>not started</td>
+<td></td>
+</tr>
+<tr>
+<td style="background-color: #44aaee;" valign="top"><strong>demo</strong></td>
+<td>show off and test graphics modules</td>
+<td>on going</td>
+<td>Everyone</td>
+</tr>
+</tbody>
+</table>
+
+![](/images/graphics.jpg)
 
 #### Game Modules
 
-
-
-
-
-
-
-
-
-
-**Module Name**
-
-
-**Description**
-
-
-**Status**
-
-
-**Developers**
-
-
-
-
-
-
-**Game Interface**
-
-
-Game logic will never touch any class except for this one
-
-
-inital phase
-
-
-
-
-
-
-
+<table border="1">
+<tbody>
+<tr>
+<td><strong>Module Name</strong></td>
+<td><strong>Description</strong></td>
+<td><strong>Status</strong></td>
+<td><strong>Developers</strong></td>
+</tr>
+<tr>
+<td style="background-color: #44aaee;" valign="top"><strong>Game Interface</strong></td>
+<td>Game logic will never touch any class except for this one</td>
+<td>inital phase</td>
+<td></td>
+</tr>
+</tbody>
+</table>
 
 #### Other Modules
 
-
-
-
-
-
-
-
-
-
-**Module Name**
-
-
-**Description**
-
-
-**Status**
-
-
-**Developers**
-
-
-
-
-
-
-**Collision Detection**
-
-
-collision detection
-
-
-under development
-
-
-Danny
-
-
-
-
-
-
-**Input**
-
-
-mouse and keyboard input
-
-
-good for now
-
-
-
-
-
-
-
-
-**Sound**
-
-
-work on later
-
-
-not started
-
-
-
-
-
-
-
-
-**Timer**
-
-
-global timer to synchronize all components in game engine
-
-
-good for now
-
-
-
-
-
-
-
-
-**Physics**
-
-
-work on later
-
-
-not started
-
-
-
-
-
-
-
+<table border="1">
+<tbody>
+<tr>
+<td><strong>Module Name</strong></td>
+<td><strong>Description</strong></td>
+<td><strong>Status</strong></td>
+<td><strong>Developers</strong></td>
+</tr>
+<tr>
+<td style="background-color: #ff8866;" valign="top"><strong>Collision Detection</strong></td>
+<td>collision detection</td>
+<td>under development</td>
+<td>Danny</td>
+</tr>
+<tr>
+<td style="background-color: #44aaee;" valign="top"><strong>Input</strong></td>
+<td>mouse and keyboard input</td>
+<td>good for now</td>
+<td></td>
+</tr>
+<tr>
+<td style="background-color: #efefef;" valign="top"><strong>Sound</strong></td>
+<td>work on later</td>
+<td>not started</td>
+<td></td>
+</tr>
+<tr>
+<td style="background-color: #efefef;" valign="top"><strong>Timer</strong></td>
+<td>global timer to synchronize all components in game engine</td>
+<td>good for now</td>
+<td></td>
+</tr>
+<tr>
+<td style="background-color: #efefef;" valign="top"><strong>Physics</strong></td>
+<td>work on later</td>
+<td>not started</td>
+<td></td>
+</tr>
+</tbody>
+</table>
 
 ### Screenshots
 
+![](/images/sky.jpg)
 
-![](http://www.dannysu.com/wp-content/uploads/2011/03/sky.jpg)
-
-![](http://www.dannysu.com/wp-content/uploads/2011/03/landscape.jpg)
-
+![](/images/landscape.jpg)
 

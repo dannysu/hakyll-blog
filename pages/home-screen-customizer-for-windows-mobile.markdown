@@ -10,19 +10,19 @@ time for fun, but the things that I learned and the program that I developed
 ended up being beneficial to the company.
 
 My app was bundled by Microsoft to ship on all Huawei C8300 devices in China
-(See more about that [here](http://www.dannysu.com/?p=408)). On top of that,
-there were other efforts inside my team where people used my app as a reference
-to develop their features.
+(See more about that [here][1]). On top of that, there were other efforts
+inside my team where people used my app as a reference to develop their
+features.
 
 As of July 21, 2010, the application has 151,116 downloads. It was the 11th
 most popular application in the US market:
 
-[![](http://www.dannysu.com/wp-content/uploads/2011/03/Most-Popular-US-Feb-24-2010-1024x608.png)](http://www.dannysu.com/wp-content/uploads/2011/03/Most-Popular-US-Feb-24-2010.png)
+[![](/images/Most-Popular-US-Feb-24-2010-800x475.png)](/images/Most-Popular-US-Feb-24-2010.png)
 
 At one point in time, my app was chosen as one of the Showcase apps that
 Microsoft hand picked:
 
-[![](http://www.dannysu.com/wp-content/uploads/2011/03/Showcase-1024x762.png)](http://www.dannysu.com/wp-content/uploads/2011/03/Showcase.png)
+[![](/images/Showcase-800x595.png)](/images/Showcase.png)
 
 Originally I only have English version of the program, but after I released the
 first version people really loved it and offered to translate it. In the end,
@@ -51,10 +51,14 @@ in 19 different regions on the Marketplace!
 
 **Application Screenshots:**
 
-![](http://www.dannysu.com/wp-content/uploads/2011/03/screenshotsp.png)
+![](/images/screenshotsp.png)
 
 **Links:**
 	
-  * [The app on Windows Marketplace for Mobile](http://marketplace.windowsphone.com/details.aspx?appId=da4e3a1c-f15e-4b6d-ac1e-0dd6855ffb61)
-  * [Coverage on PocketNow.com](http://pocketnow.com/tweaks-hacks/i-want-my-recent-programs)
+- [The app on Windows Marketplace for Mobile][2]
+- [Coverage on PocketNow.com][3]
 
+
+  [1]: /2011/03/27/home-screen-customizer-found-on-microsoft-china/
+  [2]: http://marketplace.windowsphone.com/details.aspx?appId=da4e3a1c-f15e-4b6d-ac1e-0dd6855ffb61
+  [3]: http://pocketnow.com/tweaks-hacks/i-want-my-recent-programs

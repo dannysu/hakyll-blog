@@ -2,8 +2,7 @@
 title: Recording Feature for spwave
 ---
 During my 2A co-op work term at ScanSoft, Inc, I added recording feature to a
-great software called
-[spwave](http://www.sp.m.is.nagoya-u.ac.jp/people/banno/spLibs/spwave/).
+great software called [spwave][1].
 
 I got the motivation after hearing the QA manager at ScanSoft say that his
 unregistered CoolEdit doesn't allow him to record voice and save it as wav
@@ -27,6 +26,8 @@ do was integrate the recording functions into spwave.
 
 My modification can be downloaded below in both binary and source:
 
-[spwave-0.6.8 binary](http://www.dannysu.com/wp-content/uploads/2011/03/spwave-0.6.9.zip)
+[spwave-0.6.8 binary](/files/spwave-0.6.9.zip)
 
-[spwave-0.6.8 source](http://www.dannysu.com/wp-content/uploads/2011/03/spwave-0.6.9.src.zip)
+[spwave-0.6.8 source](/files/spwave-0.6.9.src.zip)
+
+  [1]: http://www.sp.m.is.nagoya-u.ac.jp/people/banno/spLibs/spwave/

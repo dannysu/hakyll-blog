@@ -11,17 +11,22 @@ pattern by fully utilizing data binding and ripping out code-behind from my
 pages.
 
 Features:
-  * Offline caching of images and metadata so that the app is functional without internet
-  * Jump list (similar to People hub in WP7)
-  * Page transition animations (utilizing Silverlight Toolkit)
-  * Storing data in SQL CE using LINQ to SQL (new in WP7 'Mango' release)
-  * Fast App Switching feature (new in WP7 'Mango' release)
-  * Background Agent to check for new manga releases (new in WP7 'Mango' release)
-  * Background Transfer (new in WP7 'Mango' release)
-  * Toast and Live Tile notification when new manga is released (new in WP7 'Mango' release)
+
+- Offline caching of images and metadata so that the app is functional without internet
+- Jump list (similar to People hub in WP7)
+- Page transition animations (utilizing Silverlight Toolkit)
+- Storing data in SQL CE using LINQ to SQL (new in WP7 'Mango' release)
+- Fast App Switching feature (new in WP7 'Mango' release)
+- Background Agent to check for new manga releases (new in WP7 'Mango' release)
+- Background Transfer (new in WP7 'Mango' release)
+- Toast and Live Tile notification when new manga is released (new in WP7 'Mango' release)
 
 You can find the [source code on GitHub](http://github.com/dannysu/mangastream).
 
 **Screenshots:**
 
-[![](http://www.dannysu.com/wp-content/uploads/2011/08/MangaStream1.png)](http://www.dannysu.com/wp-content/uploads/2011/08/MangaStream1.png) [![](http://www.dannysu.com/wp-content/uploads/2011/08/MangaStream2.png)](http://www.dannysu.com/wp-content/uploads/2011/08/MangaStream2.png) [![](http://www.dannysu.com/wp-content/uploads/2011/08/MangaStream3.png)](http://www.dannysu.com/wp-content/uploads/2011/08/MangaStream3.png) [![](http://www.dannysu.com/wp-content/uploads/2011/08/MangaStream4.png)](http://www.dannysu.com/wp-content/uploads/2011/08/MangaStream4.png) [![](http://www.dannysu.com/wp-content/uploads/2011/08/MangaStream5.png)](http://www.dannysu.com/wp-content/uploads/2011/08/MangaStream5.png)
+[![](/images/MangaStream1.png)](/images/MangaStream1.png)
+[![](/images/MangaStream2.png)](/images/MangaStream2.png)
+[![](/images/MangaStream3.png)](/images/MangaStream3.png)
+[![](/images/MangaStream4.png)](/images/MangaStream4.png)
+[![](/images/MangaStream5.png)](/images/MangaStream5.png)
