@@ -103,6 +103,15 @@ main = hakyll $ do
         >>> arr (chunk postsPerBlogPage . reverse . chronological)
         >>^ makeBlogPages
 
+    -- Render RSS feed
+    match  "rss.xml" $ route idRoute
+    create "rss.xml" $
+        requireAll_ "posts/*"
+        >>> arr (take 10 . reverse . chronological)
+        >>> mapCompiler (arr $ copyBodyToField "description")
+        >>> mapCompiler (arr $ changeField "url" (replaceAll "/index.html" (const "/")))
+        >>> renderRss feedConfiguration
+
   where
     tagIdentifier :: Pattern (Page String) -> String -> Identifier (Page String)
     tagIdentifier pattern = fromCapture pattern
@@ -232,6 +241,17 @@ indexNavLink n d maxn = renderHtml ref
                   else case (n + d) of
                     1 -> "/blog/page/1/"
                     _ -> "/blog/page/" ++ (show $ n + d) ++ "/"
+
+-- | RSS feed configuration.
+--
+feedConfiguration :: FeedConfiguration
+feedConfiguration = FeedConfiguration
+    { feedTitle       = "Danny Su RSS Feed"
+    , feedDescription = "RSS feed for Danny Su's blog"
+    , feedAuthorName  = "Danny Su"
+    , feedRoot        = "http://dannysu.com"
+    , feedAuthorEmail = "contact@dannysu.com"
+    }
 
 -- | Turns body of the page into the teaser
 -- https://groups.google.com/forum/?fromgroups#!topic/hakyll/Q9wjV1Xag0c
