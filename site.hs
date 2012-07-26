@@ -248,7 +248,7 @@ indexNavLink n d maxn = renderHtml ref
 --
 feedConfiguration :: FeedConfiguration
 feedConfiguration = FeedConfiguration
-    { feedTitle       = "Danny Su RSS Feed"
+    { feedTitle       = "Danny Su"
     , feedDescription = "RSS feed for Danny Su's blog"
     , feedAuthorName  = "Danny Su"
     , feedRoot        = "http://dannysu.com"
