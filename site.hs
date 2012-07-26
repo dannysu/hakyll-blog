@@ -109,6 +109,8 @@ main = hakyll $ do
         requireAll_ "posts/*"
         >>> arr (take 10 . reverse . chronological)
         >>> mapCompiler (arr $ copyBodyToField "description")
+        >>> mapCompiler (arr $ changeField "description" trimHeader)
+        >>> mapCompiler (arr $ changeField "description" trimFooter)
         >>> mapCompiler (arr $ changeField "url" (replaceAll "/index.html" (const "/")))
         >>> renderRss feedConfiguration
 
@@ -252,6 +254,18 @@ feedConfiguration = FeedConfiguration
     , feedRoot        = "http://dannysu.com"
     , feedAuthorEmail = "contact@dannysu.com"
     }
+
+trimFooter :: String -> String
+trimFooter [] = []
+trimFooter xs@(x : xr)
+    | "<div id=\"secondary\">" `isPrefixOf` xs = []
+    | otherwise                                = x : trimFooter xr
+
+trimHeader :: String -> String
+trimHeader [] = []
+trimHeader xs@(x : xr)
+    | "<div id=\"primary\">" `isPrefixOf` xs = x : xr
+    | otherwise                              = trimHeader xr
 
 -- | Turns body of the page into the teaser
 -- https://groups.google.com/forum/?fromgroups#!topic/hakyll/Q9wjV1Xag0c
