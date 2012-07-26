@@ -11,7 +11,7 @@ of the webpage being discussed. Therefore, I whipped out my Scrapy and Python
 and coded this up. I also made use of the [readability-lxml package][3] to
 strip unnecessary HTML.
 
-You can access the feed via [http://dannysu.com/feeds/hackernews100.atom][4]
+You can access the feed via [http://feeds.dannysu.com/hackernews100.atom][4]
 
 I also want to give a shout-out to people at Mozilla for the [new developer
 tools][5]. I just discovered the new way you can inspect HTML elements just by
