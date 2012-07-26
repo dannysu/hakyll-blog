@@ -9,27 +9,27 @@ functionality already.
 
 1. save the code below as numlock.c
 
-~~~
-    #include  
-    #include  
+~~~ {.c}
+#include  
+#include  
 
-    int main(void) 
-    { 
-        Display* disp = XOpenDisplay(NULL); 
-        if (disp == NULL) return 1; 
-        XTestFakeKeyEvent(disp, XKeysymToKeycode(disp, XK_Num_Lock), True, 
-        CurrentTime); 
-        XTestFakeKeyEvent(disp, XKeysymToKeycode(disp, XK_Num_Lock), False, 
-        CurrentTime ); 
-        XCloseDisplay(disp); 
-        return 0; 
-    }
+int main(void) 
+{ 
+    Display* disp = XOpenDisplay(NULL); 
+    if (disp == NULL) return 1; 
+    XTestFakeKeyEvent(disp, XKeysymToKeycode(disp, XK_Num_Lock), True, 
+    CurrentTime); 
+    XTestFakeKeyEvent(disp, XKeysymToKeycode(disp, XK_Num_Lock), False, 
+    CurrentTime ); 
+    XCloseDisplay(disp); 
+    return 0; 
+}
 ~~~
 
 1. Build it:
 
-~~~
-    gcc -I/usr/X11R6/include -L/usr/X11R6/lib -o setnumlock numlock.c -lX11 -lXtst
+~~~ {.bash}
+gcc -I/usr/X11R6/include -L/usr/X11R6/lib -o setnumlock numlock.c -lX11 -lXtst
 ~~~
 
 1. you can then move the resulting file "setnumlock" to one of the paths in

@@ -23,7 +23,7 @@ Here's a video of my results: [foldeffect][1]
 Code below. I had help from this [Flipboard example][2] showing how to use Core
 Animation.
 
-~~~
+~~~ {.objectivec}
 - (void)pan:(UIPanGestureRecognizer *)gesture {
     if (gesture.state == UIGestureRecognizerStateBegan) {
         // Grab a screenshot of the current table view

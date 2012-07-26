@@ -16,7 +16,7 @@ multiples of 3 or 5.][1]
 Below is my initial naive solution which ran fast enough for the small (999)
 limit. However, there are more efficient solutions.
 
-~~~    
+~~~ {.python}
 import time
 
 target = 999

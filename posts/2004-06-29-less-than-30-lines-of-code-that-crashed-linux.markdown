@@ -10,7 +10,7 @@ it affected the floating point unit or something...
 as soon as I read about it, I tried it on my machine the night I got home,
 and... it does hang my computer quite well
 
-~~~
+~~~ {.c}
 #include 
 #include 
 #include 

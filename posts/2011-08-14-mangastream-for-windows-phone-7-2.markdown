@@ -37,7 +37,7 @@ in my Background Agent was not actually saved the next time my code runs.
 Adding a call to Save() allowed the setting to be flushed to wherever it's
 actually stored:
 
-~~~
+~~~ {.Cs}
 IsolatedStorageSettings.ApplicationSettings.Save();
 ~~~
 
@@ -71,7 +71,7 @@ in Isolated Storage. With 'Mango', I decided to move things to SQL CE but ran
 into a problem. Initially I had a DataContext similar to the following code
 where I attempted to specify two tables using the same model:
 
-~~~    
+~~~ {.Cs}
 public class TestDataContext : DataContext
 {
     // Pass the connection string to the base class.
@@ -114,7 +114,7 @@ Assemblies\\Microsoft\\Framework\\Silverlight\\v4.0\\Profile\\WindowsPhone71\\Mi
 Turns out that the BackgroundTransferRequest.Submit() code checks for
 IsHeadlessHost:
 
-~~~
+~~~ {.Cs}
 // Microsoft.Phone.BackgroundTransfer.BackgroundTransferRequest
 [SecurityCritical]
 internal void Submit()
