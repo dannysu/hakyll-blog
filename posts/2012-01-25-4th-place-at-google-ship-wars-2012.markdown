@@ -23,4 +23,7 @@ against the top 3 were either ties or wins but no losses.
 In the end they gave everyone a SWAG bag filled with some Android stuff and
 random fun things. Generally a pretty fun night!
 
+**Update:** [Pictures from the event][2]
+
   [1]: https://sites.google.com/site/shipwars2012/
+  [2]: https://picasaweb.google.com/101707065460104211289/ShipWarsWAT2012
