@@ -8,8 +8,8 @@ original release of Windows Phone 7. Even before WP7 was released to the world
 I had been interested in using those beautiful Bing pictures as wallpaper for
 my phone. You can often find gems like these:
 
-![](http://bing.dannysu.com/images/en-us/2011-08-20.jpg)
-![](http://bing.dannysu.com/images/en-us/2011-08-16.jpg)
+![](http://asset0.dannysu.com/ahBzfmltYWdlZGF0YXN0b3JlcgwLEgVpbWFnZRjpBww)
+![](http://asset0.dannysu.com/ahBzfmltYWdlZGF0YXN0b3JlcgsLEgVpbWFnZRgBDA)
 
 Initially I used the WP7 SDK to develop an app to do that and unveiled it to my
 team close to the release of WP7 and just around when 'Mango' release is
