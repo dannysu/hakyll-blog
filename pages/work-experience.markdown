@@ -3,12 +3,18 @@ title: Work Experience
 ---
 ## **Software Developer and Project Lead at [Well.ca](http://well.ca)
      (September 2011 to Present)**
-- **Secret Projects**
-    - Currently working on projects yet to be disclosed to public.
+- **Well.ca iPad app**
+    - [See on Apple AppStore][4]
+    - Implemented "Flick to add to cart" gesture and drag & drop various
+      products to cupboards
+    - Championed the use of Automatic Reference Counting
+        - Read about my experience [fixing memory leaks][6]
 - **Well.ca Virtual Store**
     - [http://well.ca/virtualstore](http://well.ca/virtualstore)
     - Wrote all 4 mobile clients (iPhone, Android, BlackBerry, Windows Phone)
-    - Major refactoring on server-side to make mobile checkout work
+        - Read about my usage of PhoneGap and SASS for this project [here][5]
+    - Refactored server-side code to allow checkout business logic to be
+      reusable
 - **Warehouse Management Software**
     - Leading two junior developers as the project lead for the in-house
       warehouse management software.
@@ -94,3 +100,6 @@ title: Work Experience
   [1]: http://www.microsoft.com/windowsphone/en-us/howto/wp6/sync/installing-activesync.aspx
   [2]: http://msdn.microsoft.com/webservices/indigo/default.aspx
   [3]: http://www.nuance.com/speech/demos/speechpakhealthcare/
+  [4]: http://itunes.apple.com/ca/app/well.ca/id516359938?mt=8
+  [5]: /2012/04/13/well-ca-virtual-store/
+  [6]: /2012/07/30/automatic-reference-counting-on-ios/
