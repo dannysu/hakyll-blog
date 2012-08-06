@@ -9,7 +9,7 @@ functionality already.
 
 1. save the code below as numlock.c
 
-~~~ {.c}
+<pre class="brush:c">
 #include  
 #include  
 
@@ -24,13 +24,13 @@ int main(void)
     XCloseDisplay(disp); 
     return 0; 
 }
-~~~
+</pre>
 
 1. Build it:
 
-~~~ {.bash}
+<pre class="brush:bash">
 gcc -I/usr/X11R6/include -L/usr/X11R6/lib -o setnumlock numlock.c -lX11 -lXtst
-~~~
+</pre>
 
 1. you can then move the resulting file "setnumlock" to one of the paths in
    your PATH env. variable

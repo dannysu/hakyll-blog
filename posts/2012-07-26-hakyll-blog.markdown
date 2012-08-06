@@ -57,14 +57,14 @@ recent posts. The second pass re-generates all pages including links to recent p
 
 In Rakefile:
 
-~~~ {.ruby}
+<pre class="brush:ruby">
 task :build do
   sh "./site rebuild"
   sh "cp _site/recent_template.html recent.markdown"
   sh "./site rebuild"
   sh "rm _site/recent_template.html"
 end
-~~~
+</pre>
 
 #### Markdown Reference-Style Links
 
@@ -72,7 +72,7 @@ Hakyll uses [Pandoc][4] to enable markdown syntax. Unfortunately Pandoc doesn't
 enable markdown's reference-style link syntax by default. The way to get that
 working in Hakyll is by calling pageCompilerWith instead of pageCompiler.
 
-~~~ {.haskell}
+<pre class="brush:haskell">
 -- Allow for reference style links in markdown
 pandocWriteOptions = defaultWriterOptions {
       writerReferenceLinks = True
@@ -82,7 +82,7 @@ pandocWriteOptions = defaultWriterOptions {
 match "posts/*" $ do
     route   $ wordpressRoute
     compile $ pageCompilerWith defaultHakyllParserState pandocWriteOptions
-~~~
+</pre>
 
 Pandoc looks awesome and outputs to epub too! Something to play with for my
 next document conversion needs.
@@ -97,7 +97,7 @@ function to have Hakyll generate index.html under the same directory structure.
 For a file in "posts/2012-07-26-hakyll-blog.markdown" it is routed to directory
 "_site/2012/07/26/hakyll-blog/index.html" using the following code:
 
-~~~ {.haskell}
+<pre class="brush:haskell">
 wordpressRoute :: Routes
 wordpressRoute =
     gsubRoute "posts/" (const "") `composeRoutes`
@@ -107,7 +107,7 @@ wordpressRoute =
     where replaceWithSlash c = if c == '-' || c == '_'
                                    then '/'
                                    else c
-~~~
+</pre>
 
 #### Paginated Post Listing
 
@@ -126,15 +126,15 @@ compiler flags that I'm not familiar with.
 For the longest time I was staring at the DSL for Hakyll wondering how the type
 system converted "templates/*" to (Pattern a)
 
-~~~ {.haskell}
+<pre class="brush:haskell">
 match "templates/*" $ compile templateCompiler
-~~~
+</pre>
 
 Turns out it was due to OverloadedStrings:
 
-~~~ {.haskell}
+<pre class="brush:haskell">
 {-# LANGUAGE OverloadedStrings -}
-~~~
+</pre>
 
   [1]: https://github.com/mojombo/jekyll/
   [2]: http://jaspervdj.be/hakyll/

@@ -3,6 +3,10 @@ date: 2012-07-31 00:25:32
 title: Automatic Reference Counting (ARC) on iOS
 tags: Apple, Mad Coding, iOS, iPhone, ObjC, ARC, automatic reference counting, memory leak
 ---
+<script type="text/javascript" src="/files/syntaxhighlighter_3.0.83/scripts/shCore.js"></script>
+<script type="text/javascript" src="/files/syntaxhighlighter_3.0.83/scripts/shBrushJScript.js"></script>
+<link type="text/css" rel="stylesheet" href="/files/syntaxhighlighter_3.0.83/styles/shCoreDefault.css"/>
+<script type="text/javascript">SyntaxHighlighter.all();</script>
 The Well.ca iPad app is now available in [Apple AppStore][4]. This is an app
 that I've been working on at work with two other developers. Prior to submission
 I had to fix memory leaks in the app to stop it from crashing during infinite
@@ -51,7 +55,7 @@ reference to the other:
 
 In code it might look like this:
 
-~~~ {.objectivec}
+<pre class="brush:objc">
 @interface Object1 : NSObject
 @property (strong) Object2 *obj2;
 @end
@@ -59,7 +63,7 @@ In code it might look like this:
 @interface Object2 : NSObject
 @property (strong) Object1 *obj1;
 @end
-~~~
+</pre>
 
 Since two objects both maintain strong reference to the other, their retainCount
 will always be greater than 1 and won't be freed. The actual cycle might look a
@@ -79,7 +83,7 @@ do so.
 
 Take the following code for example:
 
-~~~ {.objectivec}
+<pre class="brush:objc">
 @interface Object1 : NSObject
 @property (strong) Object2 *obj2;
 @end
@@ -87,7 +91,7 @@ Take the following code for example:
 @interface Object2 : NSObject
 @property (weak) Object1 *obj1;
 @end
-~~~
+</pre>
 
 Object1 has **strong** reference to Object2, but Object2 has a **weak**
 reference back to Object1. When Object1's retainCount reaches 0, Object1 memory
@@ -116,7 +120,7 @@ itself.
 
 Take the following code for example:
 
-~~~ {.objectivec}
+<pre class="brush:objc">
 @protocol Object1Delegate <NSObject>
 @end
 
@@ -134,7 +138,7 @@ Take the following code for example:
     obj1.delegate = self;
 }
 @end
-~~~
+</pre>
 
 Object2 code passing itself to Object1 as the delegate. Object1 uses `(assign)`
 which has the `__unsafe_unretained` semantic to avoid retain cycle. The code as
@@ -142,7 +146,7 @@ is might cause crashes if Object1 tries to access delegate after Object2 is
 freed. The correct way for Object2 to deal with this is to make sure to zero out
 references to it.
 
-~~~ {.objectivec}
+<pre class="brush:objc">
 @implementation Object2
 @synthesize obj1 = _obj1;
 - (void)doSomething {
@@ -153,7 +157,7 @@ references to it.
     obj1.delegate = nil;
 }
 @end
-~~~
+</pre>
 
 &nbsp;  
 
@@ -169,7 +173,7 @@ For example, in the code below Object3 maintains references to both Object1 and
 Object2. When Object3 is being freed, it can break up the cycle between Object1
 and Object2 thus allowing them to be freed as well.
 
-~~~ {.objectivec}
+<pre class="brush:objc">
 @interface Object3 : NSObject
 @property (strong) Object1 *obj1;
 @property (strong) Object2 *obj2;
@@ -181,7 +185,7 @@ and Object2 thus allowing them to be freed as well.
     obj2.obj1 = nil;
 }
 @end
-~~~
+</pre>
 
 &nbsp;  
 

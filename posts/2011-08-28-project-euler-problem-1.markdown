@@ -16,7 +16,7 @@ multiples of 3 or 5.][1]
 Below is my initial naive solution which ran fast enough for the small (999)
 limit. However, there are more efficient solutions.
 
-~~~ {.python}
+<pre class="brush: python">
 import time
 
 target = 999
@@ -33,7 +33,7 @@ for i in range(5, target + 1, 5):
 
 end = time.time()
 print sum, "took:", end - start
-~~~
+</pre>
 
 Looking at my friend [Shu's solution on GitHub][2] exposed me to two things:
 	
