@@ -22,6 +22,7 @@ something I thought of. Persistence and never giving up are two things I value
 a lot.
 
 Here is a list of things I did that I'm most proud of:
+
 - Wrote a speech recognizer named [OCVolume][3] in high school (I received
   [numerous emails][4] after I put it up on SourceForge)
 - Developed Home Screen Customizer application in my spare time that was later
