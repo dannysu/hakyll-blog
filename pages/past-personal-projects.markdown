@@ -24,8 +24,9 @@ software obsessively to my liking.
 **Home Screen Customizer for Windows Mobile**
 
 - Published on Microsoft Windows Marketplace for Mobile and allows users to
-  add, remove, rearrange home screen items. This hobby project was later
-  bundled by Microsoft to ship on all Huawei C8300 devices in China.  
+  add, remove, rearrange home screen items. This hobby project had over 150,000
+  downloads and was later bundled by Microsoft to ship on all Huawei C8300
+  devices in China.  
   [[details](/home-screen-customizer-for-windows-mobile/)]
 
 &nbsp;  

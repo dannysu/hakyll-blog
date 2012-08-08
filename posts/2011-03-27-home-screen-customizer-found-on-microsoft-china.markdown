@@ -21,6 +21,11 @@ see that my hobby project made a difference in shipping this phone!
 I'm mirroring these webpages here as well:  
 [Huawei C8300 on Microsoft China][3]
 
+Related Links:
+
+- Project information on [Home Screen Customizer][4]
+
   [1]: http://www.microsoft.com/china/windowsphone/tips/huawei_c8300/DeviceFeatures_huawei_c8300_94.html
   [2]: http://www.microsoft.com/china/windowsphone/phone/Huawei-C8300.aspx#tabs-4
   [3]: /files/HuaweiC8300.pdf
+  [4]: /home-screen-customizer-for-windows-mobile/
