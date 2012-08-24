@@ -27,7 +27,8 @@ provided URL. At any new computer you need to generate password, you can grab
 the account settings from your storage URL so that synchronization is taken
 care of. The account settings are encrypted before sending to server so that
 the server can't read any of it. Master password and generated passwords are
-never saved anywhere.
+never saved anywhere. Except the generated encryption password which is also
+stored in browser's local storage.
 
 To begin using hash0, you first type in a password and a URL where you want to
 store your account settings. The password is used to generate an encryption
