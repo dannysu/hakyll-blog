@@ -2,28 +2,36 @@
 title: Work Experience
 ---
 ## **Software Developer and Project Lead at [Well.ca](http://well.ca)
-     (September 2011 to Present)**
+     (September 2011 to August 2012)**
 - **Well.ca iPad app**
     - [See on Apple AppStore][4]
     - Implemented "Flick to add to cart" gesture and drag & drop various
-      products to cupboards
-    - Championed the use of Automatic Reference Counting
-        - Read about my experience [fixing memory leaks][6]
+      products to cupboards.
+    - Championed the use of Automatic Reference Counting.
+        - Read about my experience [fixing memory leaks][6].
+    - Developed smooth infinite-scroll product viewing experience.
 - **Well.ca Virtual Store**
     - [http://well.ca/virtualstore](http://well.ca/virtualstore)
-    - Wrote all 4 mobile clients (iPhone, Android, BlackBerry, Windows Phone)
-        - Read about my usage of PhoneGap and SASS for this project [here][5]
+    - Wrote all 4 mobile clients (iPhone, Android, BlackBerry, Windows Phone).
+        - Read about my usage of PhoneGap and SASS for this project [here][5].
     - Refactored server-side code to allow checkout business logic to be
-      reusable
+      reusable.
 - **Warehouse Management Software**
-    - Leading two junior developers as the project lead for the in-house
+    - Led two junior developers as the project lead for the in-house
       warehouse management software.
+    - Initiated using git submodules to reduce code duplicate across different
+      projects.
+    - Directed and encouraged team members to write reusable, testable, and well designed
+      components.
+- **Well.ca Website**
+    - Developed a central image server allowing for dynamic size requests
+    - Created a REST API for website data used by Well.ca mobile apps
 - **Software Craftsmanship**
     - Started the weekly tech talk series at the company to encourage knowledge
       sharing.
     - Led by example in writing tests and caring about software design.
-    - Gave tech talks on various topics such as security, PHPUnit, VIM, and
-      Haskell.
+    - Gave tech talks on various topics such as security, PHPUnit, VIM,
+      Haskell, and OpenCV.
     - Installed Phabricator for the team to allow for better code review
       feedbacks.
 
