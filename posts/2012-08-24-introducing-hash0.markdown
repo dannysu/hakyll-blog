@@ -3,6 +3,10 @@ date: 2012-08-24 08:57:32
 title: Introducing Hash0
 tags: Mad Coding, Security
 ---
+**Update:** I just found out that Kitchener-Wilmot Hydro's website stores
+passwords in plain text. All the more reasons to use strong and different
+passwords.
+
 It's a good idea to get strong passwords including random characters, numbers,
 symbols and don't reuse the same password for different account. Here's a very
 good [article][5] explaining why.
