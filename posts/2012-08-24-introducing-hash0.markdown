@@ -20,7 +20,7 @@ Hash0 has these improvements over existing hash-based password generators:
 1. Ease of use via synchronization of account settings such as password length,
    allowable characters, salt, etc
 1. Encrypted account settings similar to storing encrypted data via ZeroBin
-1. Uses HMAC-SHA512
+1. Uses HMAC-SHA512 (Update: Used with PBKDF2)
 
 Account settings are stored in the browser's local storage and also at a
 provided URL. At any new computer you need to generate password, you can grab
@@ -52,8 +52,9 @@ Password generation process:
 1. Generate a new salt if this is for a new account
 1. Reuse existing account settings (length, include symbols?, number, etc) if
    any
-1. CryptoJS.HmacSHA512(param+number, salt+master)
-1. 100 rounds of HMAC-SHA512 based on previous output and the salt
+1. (Update: PBKDF2 100 iterations of HMAC-SHA512 to generate key)
+1. CryptoJS.HmacSHA512(param+number, <del>salt+master</del> key)
+1. <del>100 rounds of HMAC-SHA512 based on previous output and the salt</del>
 1. Conversion to desired set of allowable characters
 1. Truncate to desired length
 1. Encrypt account settings and store it at the provided URL
