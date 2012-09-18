@@ -54,7 +54,7 @@ I'm using Ubuntu on my machine, and the latest package for clojure on Ubuntu
 clojure1.3` to get started.
 
 The latest version of Clojure right now is 1.4.0 and I wanted the latest, so
-here's no I got it set up.
+here's how I got it set up.
 
 1. Install JDK  
   
@@ -68,8 +68,9 @@ apt-get install openjdk-6-jre-headless
 2. Get a helper script to help run the java command with proper classpath  
   
 I modified the Ubuntu one from clojure1.3 package to look for clojure1.4 jar and
-also include \*.jar in `$HOME/apps/jars` directory. The good thing about this script is that I can now use whatever version of
-clojure I want. I saved the file as `clj`.
+also include \*.jar in `$HOME/apps/jars` directory. The good thing about this
+script is that I can now use whatever version of clojure I want. I saved the
+file as `clj`.
 
 <pre class="brush:bash">
 #!/bin/sh
