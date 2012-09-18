@@ -4,8 +4,11 @@ title: Introducing Hash0
 tags: Mad Coding, Security
 ---
 **Update:** I just found out that Kitchener-Wilmot Hydro's website stores
-passwords in plain text. All the more reasons to use strong and different
-passwords.
+passwords in plain text. Furthermore, Kevin Burke recently found [Virgin Mobile
+not doing the right thing][12]. All the more reasons to use different passwords
+and don't assume big companies know what they're doing.
+<br/>
+<br/>
 
 It's a good idea to get strong passwords including random characters, numbers,
 symbols and don't reuse the same password for different account. Here's a very
@@ -91,3 +94,4 @@ for various sites too annoying.
   [9]: http://crypto.stanford.edu/sjcl/
   [10]: http://sebsauvage.net/paste/
   [11]: https://github.com/dannysu/gae_storage
+  [12]: http://kev.inburke.com/kevin/open-season-on-virgin-mobile-customer-data/
