@@ -1,7 +1,7 @@
 ---
 date: 2012-09-17 12:15:04
 title: Setting up Node.js and Clojure
-tags: Mad Coding
+tags: Mad Coding, Clojure, Node.js
 ---
 I've been playing with Node.js and Clojure recently. Below are the steps to get
 each of them up and running.
