@@ -181,15 +181,15 @@ some helper functions I wrote:
   [pred cnt coll]
   (lazy-seq
     (when-let [s (seq coll)]
-      (when (pred (take cnt s))
+      (when (apply pred (take cnt s))
         (cons (take cnt s) (take-n-while pred cnt (rest s)))
         )
       )
     ))
 
 ; Usage:
-; user=> (take-n-while #(even? (+ (first %) (second %))) 2 [1 1 1 2])
-; ((1 1) (1 1))
+; user=> (take-n-while #(even? (+ %1 %2)) 2 [1 3 1 2])
+; ((1 3) (3 1))
 </pre>
 
 This is like the `take-while` function except you can consume the list at any n
