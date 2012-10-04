@@ -1,8 +1,17 @@
 ---
-date: 
+date: 2012-09-21 00:00:00
 title: Experience so far in Clojure
 tags: Mad Coding, Clojure, Node.js
 ---
+**Update:** I've read up to chapter 10 of Clojure in Action now and Clojure's
+STM is really cool! However, reading can only get you so far in learning. At
+the end of the day actual hands on experience is needed. I found that the
+book's coverage on Compojure is way too little for somebody to get into it. My
+actual hands-on experience with Compojure taught me more than what the book
+covers. Also, I went to a MeetUp and got some experience with STM that's really
+enlightening. I blogged about it [here][11].
+<br/>
+<br/>
 I started reading the book [Clojure in Action][1] that I got from a local
 library. The beauty of Clojure's Lisp syntax is making me wish that I had paid
 more attention to those Scheme exercises in school. I vaguely remember all the
