@@ -5,35 +5,36 @@ title: Work Experience
      (September 2011 to August 2012)**
 - **Well.ca iPad app**
     - [See on Apple AppStore][4]
-    - Implemented "Flick to add to cart" gesture and drag & drop various
+    - Implemented "Flick to add to cart" gesture as well as drag & drop
       products to cupboards.
+    - Developed smooth infinite-scroll product viewing experience.
     - Championed the use of Automatic Reference Counting.
         - Read about my experience [fixing memory leaks][6].
-    - Developed smooth infinite-scroll product viewing experience.
 - **Well.ca Virtual Store**
     - [http://well.ca/virtualstore](http://well.ca/virtualstore)
     - Wrote all 4 mobile clients (iPhone, Android, BlackBerry, Windows Phone).
         - Read about my usage of PhoneGap and SASS for this project [here][5].
     - Refactored server-side code to allow checkout business logic to be
       reusable.
-- **Warehouse Management Software**
+- **Project Lead for Warehouse Management Software**
     - Led two junior developers as the project lead for the in-house
       warehouse management software.
-    - Initiated using git submodules to reduce code duplicate across different
-      projects.
     - Directed and encouraged team members to write reusable, testable, and well designed
       components.
+    - Initiated the effort to use git submodules to reduce code duplicate
+      across different projects.
 - **Well.ca Website**
-    - Developed a central image server allowing for dynamic size requests
-    - Created a REST API for website data used by Well.ca mobile apps
+    - Developed a central image server allowing for dynamic size requests.
+    - Created a REST API for website data used by Well.ca mobile apps.
 - **Software Craftsmanship**
     - Started the weekly tech talk series at the company to encourage knowledge
-      sharing.
+      sharing. Gave tech talks on various topics such as security, PHPUnit,
+      VIM, Haskell, and OpenCV.
     - Led by example in writing tests and caring about software design.
-    - Gave tech talks on various topics such as security, PHPUnit, VIM,
-      Haskell, and OpenCV.
-    - Installed Phabricator for the team to allow for better code review
+    - Installed Phabricator for the team to enable better code review
       feedbacks.
+<br/>
+<br/>
 
 ## **Software Development Engineer I & II at 
      [Microsoft Corp.](http://www.microsoft.com/) (July 2007 to July 2011)**
@@ -64,6 +65,8 @@ title: Work Experience
       retrieval.
     - Won the internal Xperia X1 programming contest with an application that
       enables search via keywords for settings users want to change.
+<br/>
+<br/>
 
 ## **SDE Internship at [Amazon.com Inc.](http://www.amazon.com/) 
      (August 2006 to December 2006)**
@@ -74,6 +77,8 @@ title: Work Experience
   similarity between items.
 - Experimented with link analysis algorithms in Perl and later implemented
   several designs for a matching engine in C++.
+<br/>
+<br/>
 
 ## **SDE Internship at [Microsoft Corp.](http://www.microsoft.com/) 
      (January 2006 to April 2006)**
@@ -84,6 +89,8 @@ title: Work Experience
       that was disguised as a data type misalignment error.
     - Debugged and fixed code defects in an ActiveSync application and solved a
       Palm Treo 700w Smartphone’s synchronization problem.
+<br/>
+<br/>
 
 ## **Program Manager Internship at [Microsoft Corp.](http://www.microsoft.com/)
      (May 2005 to August 2005)**
@@ -94,11 +101,15 @@ title: Work Experience
       right people to gather information.
     - Implemented four other API samples from specification stage to
       implementation and testing stages.
+<br/>
+<br/>
 
 ## **SDE Internship at [ScanSoft Inc.](http://www.scansoft.com/) 
      (January 2004 to April 2004, September 2004 to December 2004)**
 - Developed the [Healthcare SpeechPAK][3] in Java utilizing a MVC J2EE
   framework written in-house.
+<br/>
+<br/>
 
 ## **SDE Internship at [Intrafinity Inc.](http://www.intrafinity.com/) 
      (April 2003 to August 2003)**

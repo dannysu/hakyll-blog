@@ -11,6 +11,8 @@ page][1] for more details about my work experience.
 
 In my spare time, I love to tinker with technology and I love to write code to
 make my ideas come true. Check out some of my [past projects][2]!
+<br/>
+<br/>
 
 **Making a Difference**
 
