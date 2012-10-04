@@ -160,7 +160,7 @@ I attempted at a solution by modeling forks as promises instead. Grabbing a fork
 is equivalent to placing a promise to deliver it back. If a promise hasn't been
 delivered yet, then whoever tries to deref it will block to wait for it to be
 delivered. So in this case, a philosopher will simply block waiting for a fork
-to be put down before doing anymore transaction retrying to obtain the fork. My
+to be put down before doing any more transaction retrying to obtain the fork. My
 solution is on my [github][5].
 
 The one thing I don't quite like about this is that it feels like locking again.
