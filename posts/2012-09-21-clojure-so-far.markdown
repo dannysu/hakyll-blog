@@ -215,3 +215,4 @@ items at a time. My first solution involved using `partition` and
   [8]: http://www.youtube.com/watch?v=M-sc73Y-zQA
   [9]: http://nodejs.org/api/child_process.html
   [10]: http://www.infoq.com/presentations/Bootstrapping-Clojure
+  [11]: /2012/10/04/clojure-stm/
