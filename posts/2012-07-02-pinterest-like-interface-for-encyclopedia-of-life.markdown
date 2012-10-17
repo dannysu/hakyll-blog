@@ -3,6 +3,8 @@ date: 2012-07-02 20:38:06
 title: Pinterest-like interface for Encyclopedia of Life
 tags: Mad Coding, endless scroll, eol, infinite scroll, JQuery, knockout.js, pinterest, responsive design, twitter bootstrap
 ---
+**UPDATE 2:** Source code on [github][2].
+
 **UPDATE:** Also see how I [optimized the memory usage of this][1].
 
 I found an awesome site couple weeks ago that allows people to check out living
@@ -43,3 +45,4 @@ I love it! It's awesome to be able to create. Well, now that I'm done creating,
 I'm back browsing awesome looking animals!
 
   [1]: /2012/07/07/infinite-scroll-memory-optimization/
+  [2]: https://github.com/dannysu/eol-infinite-scroll
