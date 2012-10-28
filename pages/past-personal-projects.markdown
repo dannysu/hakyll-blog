@@ -6,6 +6,8 @@ fun. I'm always tinkering with technology whether it is writing something for
 my smartphone, or writing a webservice for myself, or customizing open source
 software obsessively to my liking.
 
+Also see [github][3] for my past projects.
+
 &nbsp;  
 **MangaStream for Windows Phone 7**
 
@@ -95,3 +97,4 @@ software obsessively to my liking.
 
   [1]: http://forums.gentoo.org/viewtopic.php?t=191259
   [2]: /files/gentoo/gmailtray.tar.gz
+  [3]: http://github.com/dannysu/
