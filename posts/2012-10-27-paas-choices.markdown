@@ -160,8 +160,8 @@ somebody please make it easier for Haskell.
 
 ## AppFog
 
-Heroku charging for custom domain drove me to checkout AppFog that I signed up a
-while ago and never used. After playing with it I really like it! I moved my
+Heroku charging for custom domain drove me to check out AppFog that I signed up
+a while ago and never used. After playing with it I really like it! I moved my
 [EOL pinterest interface][10] to AppFog now.
 
 Pros:
