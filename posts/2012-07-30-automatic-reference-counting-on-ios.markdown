@@ -1,7 +1,7 @@
 ---
 date: 2012-07-31 00:25:32
 title: Automatic Reference Counting (ARC) on iOS
-tags: Apple, Mad Coding, iOS, iPhone, ObjC, ARC, automatic reference counting, memory leak
+tags: Apple, Mad Coding, iOS, iPhone, ObjC, ARC, automatic reference counting, memory leak, Well.ca
 ---
 <script type="text/javascript" src="/files/syntaxhighlighter_3.0.83/scripts/shCore.js"></script>
 <script type="text/javascript" src="/files/syntaxhighlighter_3.0.83/scripts/shBrushJScript.js"></script>

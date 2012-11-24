@@ -1,0 +1,21 @@
+---
+date: 2012-11-24 09:45:37
+title: Well.ca iOS app official launch!
+tags: Apple, Mad Coding, iOS, Well.ca
+---
+Got a message from Ali Asaria couple days ago to let me know that Well.ca's iOS
+app officially launched! Watch the promo video [here][1] and see the Cupboards feature
+that we made. If you have an iPhone or iPad, go check it out!
+
+This was the last project that I worked on before leaving Well.ca to start a
+start-up. It's great to see that it officially launched. Congrats to the team on
+an awesome app.
+
+Screenshots:
+
+- [Launch page][2]
+- [Vote for Your Favourite Cupboard][3]
+
+  [1]: http://well.ca/app/
+  [2]: http://asset0.dannysu.com/ahBzfmltYWdlZGF0YXN0b3JlcgwLEgVpbWFnZRjZNgw
+  [3]: http://asset0.dannysu.com/ahBzfmltYWdlZGF0YXN0b3JlcgwLEgVpbWFnZRjBPgw

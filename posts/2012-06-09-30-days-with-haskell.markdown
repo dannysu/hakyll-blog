@@ -1,7 +1,7 @@
 ---
 date: 2012-06-09 11:55:35
 title: 30 days with Haskell
-tags: Mad Coding, functional programming, Haskell, PHP, yesod
+tags: Mad Coding, functional programming, Haskell, PHP, yesod, Well.ca
 ---
 My 30-day challenge: Learn Haskell by studying at least 30 minutes a day while
 I eat breakfast.

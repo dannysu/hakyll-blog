@@ -1,7 +1,7 @@
 ---
 date: 2012-02-04 13:53:17
 title: Well Designed Software and Testing
-tags: Mad Coding, Microsoft, Andrew Hunt, Chris Hartjes, David Thomas, Martin Fowler, Michael Feathers, software design, Software quality
+tags: Mad Coding, Microsoft, Andrew Hunt, Chris Hartjes, David Thomas, Martin Fowler, Michael Feathers, software design, Software quality, Well.ca
 ---
 One of the things I've been doing at Well.ca is to lead by example. I started
 the weekly tech talks, wrote tests for the tickets or features I worked on, and

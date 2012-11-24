@@ -4,7 +4,7 @@ title: Work Experience
 ## **Software Developer and Project Lead at [Well.ca](http://well.ca)
      (September 2011 to August 2012)**
 - **Well.ca iPad app**
-    - [See on Apple AppStore][4]
+    - [See on Apple AppStore][4] and [Well.ca's website](http://well.ca/app/)
     - Implemented "Flick to add to cart" gesture as well as drag & drop
       products to cupboards.
     - Developed smooth infinite-scroll product viewing experience.

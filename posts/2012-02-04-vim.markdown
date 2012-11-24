@@ -1,7 +1,7 @@
 ---
 date: 2012-02-04 12:31:01
 title: VIM
-tags: Mad Coding, Vim
+tags: Mad Coding, Vim, Well.ca
 ---
 One of the things I kick started at Well.ca is the weekly tech talks. I started
 the tech talks off by showing a security hole in the software and brought

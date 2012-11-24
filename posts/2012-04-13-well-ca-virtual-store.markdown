@@ -1,7 +1,7 @@
 ---
 date: 2012-04-13 00:55:12
 title: Well.ca Virtual Store
-tags: Apple, Google, Mad Coding, Microsoft, PhoneGap, SASS
+tags: Apple, Google, Mad Coding, Microsoft, PhoneGap, SASS, Well.ca
 ---
 Well.ca's Virtual Store launched on April 2nd, 2012. I wrote smartphone apps
 for 4 mobile platforms and the supporting server-side work to make this happen.
