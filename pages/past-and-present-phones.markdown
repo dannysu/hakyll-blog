@@ -5,16 +5,17 @@ Yes, I'm a phone freak. I own devices running all major smartphone platforms
 except BlackBerry. Back when I was at Microsoft I was able to sign out
 competitor devices to play with as well.
 
-My primary phone currently is the LG Optimius 7 and I'm
-looking forward to getting the Nokia Lumia 920.
+My primary phone currently is the Nokia Lumia 920 and I'm looking forward to
+getting a Google Nexus 4 when it's in stock again.
 
 My current devices:
 
-- **Nexus One** (Android)
-- **iPhone 3Gs** (iOS)
-- **LG Optimus 7** (Windows Phone 7)
-- **Motorola FONE F3**
+- **Nokia Lumia 920** (Windows Phone 8)
 - **Nexus 7** (Android)
+- **LG Optimus 7** (Windows Phone 7)
+- **iPhone 3Gs** (iOS)
+- **Nexus One** (Android)
+- **Motorola FONE F3**
 <br/>
 <br/>
 
