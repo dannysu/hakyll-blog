@@ -1,0 +1,43 @@
+---
+date: 2013-01-04 01:54:43
+title: Risk? What Risk?
+tags: Start-up
+---
+I guess I'm not as risk-averse as some people, or maybe I just have a different
+view on things. I think it's all a mental state and how you look at things. You
+also have to be ok with failing and with the worst possible outcome. You have to
+be ok with things not turning out perfectly but hopefully still has upsides.
+Sometimes if you actually think about what the worst possible outcome is, things
+don't seem that bad.
+
+Just to list some things that people might think as being risks:
+
+- Bought a Nokia Lumia 920 within a month of release through an ad on Kijiji for
+  $160 cheaper
+- Left Microsoft to join Well.ca
+- Left Well.ca to start my own start-up ([AvidTap][1])
+
+There are risks when buying from eBay or Kijiji. I certainly had my share of
+encountering people trying to scam me. But the upside of saving $160, which then
+give me enough money to also buy a Nexus 4 whenever I can secure one, is an
+upside that I'm ok with.
+
+What's the worst outcome of leaving Microsoft and joining Well.ca? Well.ca could
+run out of money and I would be out of a job. The upside is that I get to learn
+new things and challenge myself to greater responsibility in certain areas. That
+said, is losing one's job a risk specific to Well.ca? A job at Microsoft is no
+safer than a job at Well.ca. Remember when Microsoft started laying off people?
+The best job security is one's skills.
+
+Is it a risk to go and start a company? What if it fails like most start-ups?
+This took me a while to get over the mental block. Well, I believe that capable
+software developers will have no problem finding a job. Once I'm comfortable
+with that outcome, I was able to make progress on my decision. What's another
+risk other than the company fails? This risk may not matter to some people but
+it does to me. It is the risk of regret. It is the risk of not trying. It is the
+risk of not working on something one believes in. There are things in the world
+that aren't working as well as I want them to be. I risk having to live with the
+regret of not doing anything to make things better. That's why I'm working hard
+on AvidTap. It is a step towards making the world a better place.
+
+  [1]: http://avidtap.com
