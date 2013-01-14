@@ -1,7 +1,15 @@
 ---
 title: Work Experience
 ---
-## **Software Developer and Project Lead at [Well.ca](http://well.ca)
+## **Technical Co-founder at [AvidTap Corp.](http://avidtap.com)
+     (September 2012 to Present)**
+
+- Making shopping more fun, more social, and more rewarding!
+- More on this soon.
+<br/>
+<br/>
+
+## **Software Developer and Project Lead at [Well.ca Inc.](http://well.ca)
      (September 2011 to August 2012)**
 - **Well.ca iPad app**
     - [See on Apple AppStore][4] and [Well.ca's website](http://well.ca/app/)
