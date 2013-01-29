@@ -1,7 +1,7 @@
 ---
 date: 2013-01-14 11:35:23
 title: Getting Started With ClojureScript For Node.js
-tags: Start-up, Node.js, Clojure, ClojureScript
+tags: Start-up, Node.js, Clojure, ClojureScript, Mad Coding
 ---
 Here is a [video][1] of Rich Hickey introducing ClojureScript. It's interesting
 that Clojure can run on different runtimes. Being on JVM definitely has some
