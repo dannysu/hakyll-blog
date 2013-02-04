@@ -1,15 +1,9 @@
 ---
 title: Past and Present Devices
 ---
-Yes, I'm a phone freak. I own devices running all major smartphone platforms
-except BlackBerry. Back when I was at Microsoft I was able to sign out
-competitor devices to play with as well.
+I love mobile phones. Here are my current devices:
 
-My primary phone currently is the Nokia Lumia 920 and I'm looking forward to
-getting a Google Nexus 4 when it's in stock again.
-
-My current devices:
-
+- **Nexus 4** (Android)
 - **Nokia Lumia 920** (Windows Phone 8)
 - **Nexus 7** (Android)
 - **LG Optimus 7** (Windows Phone 7)
@@ -30,6 +24,7 @@ Devices I’ve used for longer periods of time:
 - HTC Diamond 2
 - European White HTC Hero
 - Apple iPad 3 (The new iPad)
+- Apple iPod Touch 4th gen
 <br/>
 <br/>
 
@@ -37,10 +32,12 @@ Devices I’ve used for short periods of time to check out different platforms:
 
 - HTC Dream
 - Apple iPhone 3G
-- Blackberry Torch
+- Blackberry Torch 9800
 - Nokia C7
 - Palm Pre
 - Apple iPhone 4
+- BlackBerry Bold 9900
+- BlackBerry Curve 9360
 <br/>
 <br/>
 
