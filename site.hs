@@ -290,6 +290,7 @@ addTeaser = arr $
 
     compactTeaser :: String -> String
     compactTeaser =
+        (replaceAll "<iframe [^>]*>" (const "")) .
         (replaceAll "<img [^>]*>" (const "")) .
         (replaceAll "<p>" (const "")) .
         (replaceAll "</p>" (const "")) .
