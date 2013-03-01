@@ -1,13 +1,13 @@
 ---
 title: About Me
 ---
-After graduating from the University of Waterloo I started working at Microsoft
-playing with mobile phones. Most recently I worked on the Windows Phone 7 Bing
-Maps application before leaving Seattle. I returned back to Canada to work for
-Canadian start-up Well.ca. At Well.ca I led the warehouse software team, and I
-also worked on several mobile apps. Having seen both large companies and small
-start-ups, I am now trying to start a start-up as my next challege. See [this
-page][1] for more details about my work experience.
+
+- Currently co-founder of [AvidTap][6], an NFC-based viral mobile loyalty platform
+- Well.ca mobile developer and warehouse software lead
+- Microsoft SDE on Windows Mobile and Windows Phone 7 Bing Maps
+- University of Waterloo grad 
+
+See [this page][1] for more details about my work experience.
 
 In my spare time, I love to tinker with technology and I love to write code to
 make my ideas come true. Check out some of my [past projects][2]!
@@ -39,3 +39,4 @@ Here is a list of things I did that I'm most proud of:
   [3]: http://ocvolume.sf.net/
   [4]: /label/ocvolume/
   [5]: /2011/03/27/home-screen-customizer-found-on-microsoft-china/
+  [6]: http://avidtap.com
