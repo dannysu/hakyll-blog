@@ -73,8 +73,8 @@ pandocWriteOptions = defaultHakyllWriterOptions
 #### Paginated Post Listing
 
 To generate paginated pages, I used to use code from [Ian Ross's blog][5]. With
-Hakyll 4 the old code is no longer compatible, so I have to write my own which
-great.
+Hakyll 4 the old code is no longer compatible, so I had to write my own. This is
+a great practice for me.
 
 Initially I wasn't quite sure how to begin until I saw [Jasper's suggestion][6]
 on Google Groups to use getMatches. Below is what I ended up with. My
@@ -157,7 +157,10 @@ pandocCompilerWith defaultHakyllReaderOptions pandocWriteOptions
 
 So there it is, my blog now powered by Hakyll 4. It's definitely an improvement
 over the previous version. I also love that I got to write my own pagination
-code. The only remaining thing I need to work on at some point is fixing my RSS
+code. Please do comment if you see ways I can improve my code. I'd love to
+learn.
+
+The only remaining thing I need to work on at some point is fixing my RSS
 feed. It's broken not because of the Hakyll 4 upgrade, but because there are
 certain cases not handled and produces an invalid feed.
 
