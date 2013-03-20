@@ -3,7 +3,7 @@
 import           Control.Monad (forM_, zipWithM_)
 import           Data.Monoid (mappend, mconcat)
 import           Hakyll
-import           Text.Pandoc
+import           Text.Pandoc (writerReferenceLinks)
 import           Data.Char (toLower)
 import           System.Locale (defaultTimeLocale)
 import           Data.List (sortBy, intercalate)
@@ -19,7 +19,7 @@ import qualified Text.Blaze.Html5 as H
 import qualified Text.Blaze.Html5.Attributes as A
 
 -- Allow for reference style links in markdown
-pandocWriteOptions = def
+pandocWriteOptions = defaultHakyllWriterOptions
     { writerReferenceLinks = True
     }
 
@@ -45,7 +45,7 @@ main = hakyll $ do
         route   idRoute
         compile compressCssCompiler
 
-    tags <- buildTags ("posts/*" .&&. hasNoVersion) (fromCapture "label/*")
+    tags <- buildTags "posts/*" (fromCapture "label/*")
 
     -- Match all files under posts directory and its subdirectories.
     -- Turn posts into wordpress style url: year/month/date/title/index.html
@@ -131,7 +131,7 @@ main = hakyll $ do
             let feedCtx = (postCtx tags) `mappend`
                           bodyField "description"
             posts <- fmap (take 10) . recentFirst =<<
-                loadAllSnapshots ("posts/*" .&&. hasNoVersion) "content"
+                loadAllSnapshots "posts/*" "content"
             renderRss feedConfiguration feedCtx posts
 
 
@@ -168,7 +168,7 @@ recentPostList = do
 --------------------------------------------------------------------------------
 recentPosts :: Compiler [Item String]
 recentPosts = do
-    identifiers <- getMatches ("posts/*" .&&. hasNoVersion)
+    identifiers <- getMatches "posts/*"
     return [Item identifier "" | identifier <- identifiers]
 
 
@@ -307,7 +307,7 @@ indexNavLink n d maxn = renderHtml ref
 --------------------------------------------------------------------------------
 paginate:: Int -> (Int -> Int -> [Identifier] -> Rules ()) -> Rules ()
 paginate itemsPerPage rules = do
-    identifiers <- getMatches ("posts/*" .&&. hasNoVersion)
+    identifiers <- getMatches "posts/*"
 
     let sorted = reverse $ sortBy byDate identifiers
         chunks = chunk itemsPerPage sorted

@@ -17,7 +17,6 @@ task :build do
   # Build Hakyll blog code
   sh "ghc --make site.hs"
 
-  # 2-pass build
   sh "./site rebuild"
 
   # Make sure every directory without index.html has one

@@ -1,7 +1,7 @@
 ---
 date: 2012-07-26 00:27:00
 title: Blog now powered by Hakyll
-tags: Miscellaneous, Mad Coding
+tags: Miscellaneous, Mad Coding, Hakyll, Haskell
 ---
 This post talks about my experience converting my WordPress blog to a static
 site generated using [Hakyll][2].
