@@ -1,1 +1,3 @@
-http://dannysu.com/2012/07/26/hakyll-blog/
+http://dannysu.com
+
+Except for the blog content, feel free to grab my Hakyll code.
