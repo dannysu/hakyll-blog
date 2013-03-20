@@ -1,39 +1,29 @@
-{-# LANGUAGE OverloadedStrings, Arrows #-}
+--------------------------------------------------------------------------------
+{-# LANGUAGE OverloadedStrings #-}
+import           Control.Monad (forM_, zipWithM_)
+import           Data.Monoid (mappend, mconcat)
+import           Hakyll
+import           Text.Pandoc
+import           Data.Char (toLower)
+import           System.Locale (defaultTimeLocale)
+import           Data.List (sortBy, intercalate)
+import           Data.Time.Clock (UTCTime)
+import           System.FilePath (takeFileName)
+import           Data.Time.Format (parseTime)
+import           Data.List (isPrefixOf, tails, findIndex)
 
--- OverloadedStrings enables strings to become (Pattern a) automatically:
--- Pattern.hs uses parseGlob to convert string to (Pattern a)
--- http://www.haskell.org/ghc/docs/7.2.2/html/users_guide/type-class-extensions.html
-
-import Control.Monad (forM_)
-import Control.Arrow (arr, (>>>), (***), (&&&), (>>^))
-import Data.Monoid (mempty, mconcat)
-
-import Prelude hiding (id)
-import Control.Category (id)
-
-import Text.Blaze.Html.Renderer.String (renderHtml)
-import Text.Blaze.Internal (preEscapedString)
-import Text.Blaze.Html ((!), toHtml, toValue)
+import           Text.Blaze.Html.Renderer.String (renderHtml)
+import           Text.Blaze.Internal (preEscapedString)
+import           Text.Blaze.Html ((!), toHtml, toValue)
 import qualified Text.Blaze.Html5 as H
 import qualified Text.Blaze.Html5.Attributes as A
 
-import Data.Char (toLower)
-import Data.List (isPrefixOf, tails, findIndex)
-
-import Text.Pandoc
-
-import Hakyll
-
-postsPerBlogPage :: Int
-postsPerBlogPage = 2
-
 -- Allow for reference style links in markdown
-pandocWriteOptions = defaultWriterOptions {
-      writerReferenceLinks = True
-    , writerLiterateHaskell = True
+pandocWriteOptions = def
+    { writerReferenceLinks = True
     }
 
--- Main program
+--------------------------------------------------------------------------------
 main :: IO ()
 main = hakyll $ do
 
@@ -55,69 +45,134 @@ main = hakyll $ do
         route   idRoute
         compile compressCssCompiler
 
-    -- Labels
-    create "labels" $
-        requireAll "posts/*" (\_ ps -> readTags ps :: Tags String)
-
-    -- Add a label list compiler for every label
-    match "label/*" $ route $ labelRoute
-    metaCompile $ require_ "labels"
-        >>> arr tagsMap
-        >>> arr (map (\(t, p) -> (tagIdentifier "label/*" t, makePostList "Posts with label" t p)))
+    tags <- buildTags ("posts/*" .&&. hasNoVersion) (fromCapture "label/*")
 
     -- Match all files under posts directory and its subdirectories.
     -- Turn posts into wordpress style url: year/month/date/title/index.html
-    forM_ [("posts/*", "templates/post.html"), ("pages/*", "templates/page.html")] $ \(p, t) ->
+    forM_ [("posts/*", "templates/post.html", "templates/postfooter.html"),
+           ("pages/*", "templates/page.html", "templates/pagefooter.html")] $ \(p, t, f) ->
         match p $ do
-            route   $ wordpressRoute
-            compile $ pageCompilerWith defaultHakyllParserState pandocWriteOptions
-                >>> addTeaser
-                >>> renderTagsField "labels" (fromCapture "label/*")
-                >>> applyTemplateCompiler t
-                >>> requireA "recent.markdown" (setFieldA "recent" $ arr pageBody)
-                >>> applyTemplateCompiler "templates/default.html"
-                >>> wordpressUrlsCompiler
+            route $ wordpressRoute
+            compile $ do
+                let allCtx =
+                        field "recent" (\_ -> recentPostList) `mappend`
+                        defaultContext
 
-    -- Build list of recent posts
-    match "recent_template.html" $ route idRoute
-    create "recent_template.html" $ constA mempty
-        >>> requireAllA "posts/*" (id *** arr (take 10 . reverse . chronological) >>> addPostList "recent" "templates/indexpostitem.html")
-        >>> applyTemplateCompiler "templates/recent_template.html"
+                pandocCompilerWith defaultHakyllReaderOptions pandocWriteOptions
+                    >>= saveSnapshot "teaser"
+                    >>= loadAndApplyTemplate t (postCtx tags)
+                    >>= saveSnapshot "content"
+                    >>= loadAndApplyTemplate f (postCtx tags)
+                    >>= loadAndApplyTemplate "templates/default.html" allCtx
+                    >>= wordpressifyUrls
 
-    -- Used in the second pass to include recent posts on every page
-    match "recent.markdown" $ compile pageCompiler
-
-    -- Build index page
+    -- Build special pages
     forM_ ["index.markdown", "404.markdown", "search.markdown"] $ \p ->
         match p $ do
             route   $ setExtension "html"
-            compile $ pageCompiler
-                >>> applyTemplateCompiler "templates/page.html"
-                >>> requireA "recent.markdown" (setFieldA "recent" $ arr pageBody)
-                >>> applyTemplateCompiler "templates/default.html"
-                >>> wordpressUrlsCompiler
+            compile $ do
+                let allCtx =
+                        field "recent" (\_ -> recentPostList) `mappend`
+                        defaultContext
 
-    -- Build blog pages
-    match "blog/page/*/index.html" $ route idRoute
-    metaCompile $ requireAll_ "posts/*"
-        >>> arr (chunk postsPerBlogPage . reverse . chronological)
-        >>^ makeBlogPages
+                pandocCompilerWith defaultHakyllReaderOptions pandocWriteOptions
+                    >>= loadAndApplyTemplate "templates/page.html" (postCtx tags)
+                    >>= loadAndApplyTemplate "templates/default.html" allCtx
+                    >>= wordpressifyUrls
+
+    -- Labels
+    tagsRules tags $ \tag pattern -> do
+        let title = "Posts with label " ++ " &#8216;" ++ tag ++ "&#8217;"
+        route labelRoute
+        compile $ do
+            let allCtx =
+                    field "recent" (\_ -> recentPostList) `mappend`
+                    defaultContext
+
+            list <- postList tags pattern recentFirst
+            makeItem ""
+                >>= loadAndApplyTemplate "templates/posts.html"
+                        (constField "title" title `mappend`
+                            constField "posts" list `mappend`
+                            defaultContext)
+                >>= loadAndApplyTemplate "templates/default.html" allCtx
+                >>= wordpressifyUrls
+
+    paginate 2 $ \index maxIndex itemsForPage -> do
+        let id = fromFilePath $ "blog/page/" ++ (show index) ++ "/index.html"
+        create [id] $ do
+            route idRoute
+            compile $ do
+                let allCtx =
+                        field "recent" (\_ -> recentPostList) `mappend`
+                        defaultContext
+                    loadTeaser id = loadSnapshot id "teaser"
+                                        >>= loadAndApplyTemplate "templates/teaser.html" (teaserCtx tags)
+                                        >>= wordpressifyUrls
+                item1 <- loadTeaser (head itemsForPage)
+                item2 <- loadTeaser (last itemsForPage)
+                let body1 = itemBody item1
+                    body2 = if length itemsForPage == 1 then "" else itemBody item2
+                    postsCtx =
+                        constField "posts" (body1 ++ body2) `mappend`
+                        field "navlinkolder" (\_ -> return $ indexNavLink index 1 maxIndex) `mappend`
+                        field "navlinknewer" (\_ -> return $ indexNavLink index (-1) maxIndex) `mappend`
+                        defaultContext
+
+                makeItem ""
+                    >>= loadAndApplyTemplate "templates/blogpage.html" postsCtx
+                    >>= loadAndApplyTemplate "templates/default.html" allCtx
+                    >>= wordpressifyUrls
 
     -- Render RSS feed
-    match  "rss.xml" $ route idRoute
-    create "rss.xml" $
-        requireAll_ "posts/*"
-        >>> arr (take 10 . reverse . chronological)
-        >>> mapCompiler (arr $ copyBodyToField "description")
-        >>> mapCompiler (arr $ changeField "description" trimHeader)
-        >>> mapCompiler (arr $ changeField "description" trimFooter)
-        >>> mapCompiler (arr $ changeField "url" (replaceAll "/index.html" (const "/")))
-        >>> renderRss feedConfiguration
+    create ["rss.xml"] $ do
+        route idRoute
+        compile $ do
+            let feedCtx = (postCtx tags) `mappend`
+                          bodyField "description"
+            posts <- fmap (take 10) . recentFirst =<<
+                loadAllSnapshots ("posts/*" .&&. hasNoVersion) "content"
+            renderRss feedConfiguration feedCtx posts
 
-  where
-    tagIdentifier :: Pattern (Page String) -> String -> Identifier (Page String)
-    tagIdentifier pattern = fromCapture pattern
 
+--------------------------------------------------------------------------------
+postCtx :: Tags -> Context String
+postCtx tags = mconcat
+    [ dateField "date" "%B %e, %Y"
+    , tagsField "tags" tags
+    , defaultContext
+    ]
+
+teaserCtx :: Tags -> Context String
+teaserCtx tags =
+    field "teaser" teaserBody `mappend`
+    (postCtx tags)
+
+
+--------------------------------------------------------------------------------
+postList :: Tags -> Pattern -> ([Item String] -> Compiler [Item String])
+         -> Compiler String
+postList tags pattern preprocess' = do
+    itemTpl <- loadBody "templates/postitem.html"
+    posts   <- preprocess' =<< loadAll (pattern .&&. hasNoVersion)
+    applyTemplateList itemTpl (postCtx tags) posts
+
+recentPostList :: Compiler String
+recentPostList = do
+    posts   <- fmap (take 10) . recentFirst =<< recentPosts
+    itemTpl <- loadBody "templates/indexpostitem.html"
+    list    <- applyTemplateList itemTpl defaultContext posts
+    return list
+
+
+--------------------------------------------------------------------------------
+recentPosts :: Compiler [Item String]
+recentPosts = do
+    identifiers <- getMatches ("posts/*" .&&. hasNoVersion)
+    return [Item identifier "" | identifier <- identifiers]
+
+
+--------------------------------------------------------------------------------
 wordpressRoute :: Routes
 wordpressRoute =
     gsubRoute "posts/" (const "") `composeRoutes`
@@ -128,6 +183,41 @@ wordpressRoute =
                                    then '/'
                                    else c
 
+
+--------------------------------------------------------------------------------
+-- | Compiler form of 'wordpressUrls' which automatically turns index.html
+-- links into just the directory name
+wordpressifyUrls :: Item String -> Compiler (Item String)
+wordpressifyUrls item = do
+    route <- getRoute $ itemIdentifier item
+    return $ case route of
+        Nothing -> item
+        Just r  -> fmap wordpressifyUrlsWith item
+
+
+--------------------------------------------------------------------------------
+-- | Wordpressify URLs in HTML
+wordpressifyUrlsWith :: String  -- ^ HTML to wordpressify
+                     -> String  -- ^ Resulting HTML
+wordpressifyUrlsWith = withUrls convert
+  where
+    convert x = replaceAll "/index.html" (const "/") x
+
+
+--------------------------------------------------------------------------------
+-- | RSS feed configuration.
+--
+feedConfiguration :: FeedConfiguration
+feedConfiguration = FeedConfiguration
+    { feedTitle       = "Danny Su"
+    , feedDescription = "RSS feed for Danny Su's blog"
+    , feedAuthorName  = "Danny Su"
+    , feedAuthorEmail = "contact@dannysu.com"
+    , feedRoot        = "http://dannysu.com"
+    }
+
+
+--------------------------------------------------------------------------------
 labelRoute :: Routes
 labelRoute =
     setExtension ".html" `composeRoutes`
@@ -148,134 +238,21 @@ isSlash :: Char -> Bool
 isSlash '/' = True
 isSlash _   = False
 
--- | Auxiliary compiler: generate a post list from a list of given posts, and
--- add it to the current page under @$posts@
---
-addPostList :: String -> Identifier (Template) -> Compiler (Page String, [Page String]) (Page String)
-addPostList field template = setFieldA field $
-    arr (reverse . chronological)
-        >>> require template (\p t -> map (applyTemplate t) p)
-        >>> arr mconcat
-        >>> arr pageBody
 
-makePostList :: String
-            -> String
-            -> [Page String]
-            -> Compiler () (Page String)
-makePostList message tag posts =
-    constA (mempty, posts)
-        >>> addPostList "posts" "templates/postitem.html"
-        >>> arr (setField "title" (message ++ " &#8216;" ++ tag ++ "&#8217;"))
-        >>> arr (setField "label" tag)
-        >>> arr (setField "route" (adjustLink tag))
-        >>> applyTemplateCompiler "templates/posts.html"
-        >>> requireA "recent.markdown" (setFieldA "recent" $ arr pageBody)
-        >>> applyTemplateCompiler "templates/default.html"
-        >>> wordpressUrlsCompiler
-
--- | Compiler form of 'wordpressUrls' which automatically turns index.html
--- links into just the directory name
---
-wordpressUrlsCompiler :: Compiler (Page String) (Page String)
-wordpressUrlsCompiler = getRoute &&& id >>^ uncurry convert
-  where
-    convert Nothing  = id
-    convert (Just r) = fmap (wordpressUrls r)
-
--- | Convert URLs to WordPress style in HTML
---
-wordpressUrls :: String  -- ^ Path to the site root
-              -> String  -- ^ HTML to convert
-              -> String  -- ^ Resulting HTML
-wordpressUrls root = withUrls convert
-  where
-    convert x = replaceAll "/index.html" (const "/") x
-
+--------------------------------------------------------------------------------
 -- | Split list into equal sized sublists.
 -- https://github.com/ian-ross/blog
---
 chunk :: Int -> [a] -> [[a]]
 chunk n [] = []
 chunk n xs = ys : chunk n zs
     where (ys,zs) = splitAt n xs
 
--- | Helper function for index page metacompilation: generate
--- appropriate number of index pages with correct names and the
--- appropriate posts on each one.
--- https://github.com/ian-ross/blog
---
-makeBlogPages :: [[Page String]]
-              -> [(Identifier (Page String), Compiler () (Page String))]
-makeBlogPages ps = map doOne (zip [1..] ps)
-  where doOne (n, ps) = (indexIdentifier n, makeBlogPage n maxn ps)
-        maxn = nposts `div` postsPerBlogPage +
-               if (nposts `mod` postsPerBlogPage /= 0) then 1 else 0
-        nposts = sum $ map length ps
-        indexIdentifier n = parseIdentifier url
-          where url = "blog/page/" ++ (show n) ++ "/index.html" 
 
--- | Make a single index page: inserts posts, sets up navigation links
--- to older and newer article index pages, applies templates.
--- https://github.com/ian-ross/blog
---
-makeBlogPage :: Int -> Int -> [Page String] -> Compiler () (Page String)
-makeBlogPage n maxn posts = 
-    constA (mempty, posts)
-    >>> addPostList "posts" "templates/teaser.html"
-    >>> arr (setField "navlinkolder" (indexNavLink n 1 maxn))
-    >>> arr (setField "navlinknewer" (indexNavLink n (-1) maxn))
-    >>> arr (setField "title" "Danny Su")
-    >>> applyTemplateCompiler "templates/blogpage.html"
-    >>> requireA "recent.markdown" (setFieldA "recent" $ arr pageBody)
-    >>> applyTemplateCompiler "templates/default.html"
-    >>> wordpressUrlsCompiler
-
--- | Generate navigation link HTML for stepping between index pages.
--- https://github.com/ian-ross/blog
---
-indexNavLink :: Int -> Int -> Int -> String
-indexNavLink n d maxn = renderHtml ref
-  where ref = if (refPage == "") then ""
-              else H.a ! A.href (toValue $ toUrl $ refPage) $ 
-                   (preEscapedString lab)
-        lab = if (d > 0) then "Older Entries &raquo;" else "&laquo; Newer Entries"
-        refPage = if (n + d < 1 || n + d > maxn) then ""
-                  else case (n + d) of
-                    1 -> "/blog/page/1/"
-                    _ -> "/blog/page/" ++ (show $ n + d) ++ "/"
-
--- | RSS feed configuration.
---
-feedConfiguration :: FeedConfiguration
-feedConfiguration = FeedConfiguration
-    { feedTitle       = "Danny Su"
-    , feedDescription = "RSS feed for Danny Su's blog"
-    , feedAuthorName  = "Danny Su"
-    , feedRoot        = "http://dannysu.com"
-    , feedAuthorEmail = "contact@dannysu.com"
-    }
-
-trimFooter :: String -> String
-trimFooter [] = []
-trimFooter xs@(x : xr)
-    | "<div id=\"secondary\">" `isPrefixOf` xs = []
-    | otherwise                                = x : trimFooter xr
-
-trimHeader :: String -> String
-trimHeader [] = []
-trimHeader xs@(x : xr)
-    | "<div id=\"primary\">" `isPrefixOf` xs = x : xr
-    | otherwise                              = trimHeader xr
-
--- | Turns body of the page into the teaser
--- https://groups.google.com/forum/?fromgroups#!topic/hakyll/Q9wjV1Xag0c
---
-addTeaser :: Compiler (Page String) (Page String)
-addTeaser = arr $
-    copyBodyToField "teaser"
-    >>> changeField "teaser" compactTeaser
-    >>> changeField "teaser" maxLengthTeaser
-    >>> changeField "teaser" extractTeaser
+--------------------------------------------------------------------------------
+teaserBody :: Item String -> Compiler String
+teaserBody item = do
+    let body = itemBody item
+    return $ extractTeaser . maxLengthTeaser . compactTeaser $ body
   where
     extractTeaser :: String -> String
     extractTeaser [] = []
@@ -310,3 +287,37 @@ addTeaser = arr $
         (replaceAll "<a [^>]*>" (const "")) .
         (replaceAll "</a>" (const ""))
 
+
+--------------------------------------------------------------------------------
+-- | Generate navigation link HTML for stepping between index pages.
+-- https://github.com/ian-ross/blog
+--
+indexNavLink :: Int -> Int -> Int -> String
+indexNavLink n d maxn = renderHtml ref
+  where ref = if (refPage == "") then ""
+              else H.a ! A.href (toValue $ toUrl $ refPage) $ 
+                   (preEscapedString lab)
+        lab = if (d > 0) then "Older Entries &raquo;" else "&laquo; Newer Entries"
+        refPage = if (n + d < 1 || n + d > maxn) then ""
+                  else case (n + d) of
+                    1 -> "/blog/page/1/"
+                    _ -> "/blog/page/" ++ (show $ n + d) ++ "/"
+
+
+--------------------------------------------------------------------------------
+paginate:: Int -> (Int -> Int -> [Identifier] -> Rules ()) -> Rules ()
+paginate itemsPerPage rules = do
+    identifiers <- getMatches ("posts/*" .&&. hasNoVersion)
+
+    let sorted = reverse $ sortBy byDate identifiers
+        chunks = chunk itemsPerPage sorted
+        maxIndex = length chunks
+        pageNumbers = take maxIndex [1..]
+        process i is = rules i maxIndex is
+    zipWithM_ process pageNumbers chunks
+        where
+            byDate id1 id2 =
+                let fn1 = takeFileName $ toFilePath id1
+                    fn2 = takeFileName $ toFilePath id2
+                    parseTime' fn = parseTime defaultTimeLocale "%Y-%m-%d" $ intercalate "-" $ take 3 $ splitAll "-" fn
+                in compare ((parseTime' fn1) :: Maybe UTCTime) ((parseTime' fn2) :: Maybe UTCTime)
