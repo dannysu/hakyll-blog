@@ -1,6 +1,6 @@
 --------------------------------------------------------------------------------
 {-# LANGUAGE OverloadedStrings #-}
-import           Control.Monad (forM_, zipWithM_)
+import           Control.Monad (forM_, zipWithM_, liftM)
 import           Data.Monoid (mappend, mconcat)
 import           Hakyll
 import           Text.Pandoc (writerReferenceLinks)
@@ -8,7 +8,7 @@ import           Data.Char (toLower)
 import           System.Locale (defaultTimeLocale)
 import           Data.List (sortBy, intercalate)
 import           Data.Time.Clock (UTCTime)
-import           System.FilePath (takeFileName)
+import           System.FilePath (takeBaseName, takeFileName)
 import           Data.Time.Format (parseTime)
 import           Data.List (isPrefixOf, tails, findIndex)
 
@@ -128,11 +128,47 @@ main = hakyll $ do
     create ["rss.xml"] $ do
         route idRoute
         compile $ do
-            let feedCtx = (postCtx tags) `mappend`
-                          bodyField "description"
             posts <- fmap (take 10) . recentFirst =<<
                 loadAllSnapshots "posts/*" "content"
-            renderRss feedConfiguration feedCtx posts
+            renderRss feedConfiguration feedContext posts
+
+
+--------------------------------------------------------------------------------
+feedContext :: Context String
+feedContext = mconcat
+    [ rssBodyField "description"
+    , rssTitleField "title"
+    , wpUrlField "url"
+    , dateField "date" "%B %e, %Y"
+    ]
+
+empty :: Compiler String
+empty = return ""
+
+rssTitleField :: String -> Context a
+rssTitleField key = field key $ \i -> do
+    value <- getMetadataField (itemIdentifier i) "title"
+    let value' = liftM (replaceAll "&" (const "&amp;")) value
+    maybe empty return value'
+
+toWordPressUrl :: FilePath -> String
+toWordPressUrl url =
+    replaceAll "/index.html" (const "/") (toUrl url)
+
+wpUrlField :: String -> Context a
+wpUrlField key = field key $
+    fmap (maybe "" toWordPressUrl) . getRoute . itemIdentifier
+
+rssBodyField :: String -> Context String
+rssBodyField key = field key $
+    return .
+    (replaceAll "<iframe [^>]*>" (const "")) .
+    (withUrls wordpress) .
+    (withUrls absolute) .
+    itemBody
+  where
+    wordpress x = replaceAll "/index.html" (const "/") x
+    absolute x = if (head x) == '/' then (feedRoot feedConfiguration) ++ x else x
 
 
 --------------------------------------------------------------------------------
