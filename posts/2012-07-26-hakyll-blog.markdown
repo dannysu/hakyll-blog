@@ -3,6 +3,8 @@ date: 2012-07-26 00:27:00
 title: Blog now powered by Hakyll
 tags: Miscellaneous, Mad Coding, Hakyll, Haskell
 ---
+**UPDATE:** See my [new blog post][6] about upgrading to Hakyll 4.
+
 This post talks about my experience converting my WordPress blog to a static
 site generated using [Hakyll][2].
 
@@ -141,3 +143,4 @@ Turns out it was due to OverloadedStrings:
   [3]: https://github.com/thomasf/exitwp/
   [4]: http://johnmacfarlane.net/pandoc/index.html
   [5]: https://github.com/ian-ross/blog
+  [6]: /2013/03/20/hakyll-4/
