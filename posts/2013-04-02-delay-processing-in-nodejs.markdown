@@ -12,8 +12,13 @@ to the client. There is no point to wait for the geocode request to another
 server in order to return results for current request. In this situation it
 would have been great to just offload that task, which is also IO-bound.
 
-There are several ways of accomplishing this: `child_process`, process.nextTick,
-and additional modules.
+There are several ways of accomplishing this: `child_process`, `setImmediate`,
+`process.nextTick`, and additional modules.
+
+**Update:** Actually, some realization later, for IO-bound tasks you don't
+really need to delay using these techniques. Once processing hits IO regular
+event loop applies. For CPU-bound tasks `child_process` and `webworkers` will
+help.
 
 <br>
 **child_process**
