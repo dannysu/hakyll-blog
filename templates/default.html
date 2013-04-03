@@ -15,9 +15,11 @@
           _gaq.push(['_trackPageview']);
 
           (function() {
-            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+              if (document.URL.indexOf("dannysu.com") >= 0) {
+                  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+              }
           })();
 
         </script>
@@ -34,9 +36,10 @@
 
                 <h2><a href="/">Danny Su</a></h2>
                 <div class="links">
-                    <a href="mailto:contact@dannysu.com" class="toplink" target="_blank">contact@dannysu.com</a>
-                    <a href="http://www.linkedin.com/in/dannysu" class="toplink" target="_blank">LinkedIn</a>
-                    <a href="http://github.com/dannysu/" class="toplink" target="_blank">GitHub</a>
+                    <a href="mailto:contact@dannysu.com" class="toplink" target="_blank"><img src="images/email.png"></a>
+                    <a href="http://www.linkedin.com/in/dannysu" class="toplink" target="_blank"><img src="images/linkedin.png"></a>
+                    <a href="http://github.com/dannysu/" class="toplink" target="_blank"><img src="images/github.png"></a>
+                    <a href="http://twitter.com/cwdannysu" class="toplink" target="_blank"><img src="images/twitter.png"></a>
                 </div>
             </div>
         </div>

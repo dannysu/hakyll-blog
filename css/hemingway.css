@@ -31,6 +31,7 @@ a img{ border:none; }
 
 .links { padding-top:12px; }
 .toplink { color:#606060; margin-right:15px; }
+.toplink img { margin-top:-4px; }
 
 /*-----------------------------------------------------------------------------------------------
   Layout / Base Page Styling
