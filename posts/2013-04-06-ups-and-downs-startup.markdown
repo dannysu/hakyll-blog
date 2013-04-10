@@ -20,7 +20,7 @@ other ideas and came to our second solution. However, after some time
 implementing the second idea, it turned out that it was unreliable so we had to
 move past that too. If we spent more time we might have gotten the second idea
 to a reliable state, but by this time we had came up with an even better
-solution which should be released soon.
+(**UPDATE:** patent pending) solution which should be released soon.
 
 To everyone out there still just dreaming about your idea, better snap out of
 that daydream and get to work.
