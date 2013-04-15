@@ -3,6 +3,8 @@ date: 2013-01-14 11:35:23
 title: Getting Started With ClojureScript For Node.js
 tags: Start-up, Node.js, Clojure, ClojureScript, Mad Coding
 ---
+**UPDATE:** See also [Restify With ClojureScript][3]
+
 Here is a [video][1] of Rich Hickey introducing ClojureScript. It's interesting
 that Clojure can run on different runtimes. Being on JVM definitely has some
 downsides such as the longer start up time.
@@ -56,3 +58,4 @@ That's it! You should see "hello world" printed out.
 
   [1]: http://blip.tv/clojure/rich-hickey-unveils-clojurescript-5399498
   [2]: https://github.com/technomancy/leiningen
+  [3]: /2013/04/14/cljs-restify-node/
