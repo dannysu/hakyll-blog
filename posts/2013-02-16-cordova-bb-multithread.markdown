@@ -12,7 +12,7 @@ Well.ca's iOS app suffered random crashes due to memory leak in its early days
 until I fixed it. This post will examine BlackBerry 7's Cordova implementation
 and some of the issues I came across.
 
-**The Problem**
+## **The Problem**
 
 While using Cordova to build BB7 app, I was able to get the app functionally
 working but I kept having stability issues. The app would use the file system
@@ -20,7 +20,7 @@ and save files to it. However, once in a while I would find that the directory
 I'm saving to becomes locked and cannot be deleted even though I'm no longer
 using it. The directory remains locked until I pull the battery and reboot.
 
-**Multithread Issue**
+## **Multithread Issue**
 
 The symptom points to resources not being properly freed up. At first I didn't
 know what's wrong and blamed the issue on the crappy BlackBerry OS. However, as
@@ -110,7 +110,7 @@ in-progress threads to exit or finish, the threads get interrupted and the
 finally clause becomes useless thus leading to intermittent issue with file
 locking.
 
-**Fixing It**
+## **Fixing It**
 
 I'm unfortunately not as familiar with Java's way of doing things, but in C++
 and Win32 world you typically will solve this issue by using events and signal

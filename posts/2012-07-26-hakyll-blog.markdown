@@ -30,7 +30,7 @@ through the experience.
 
 &nbsp;  
 
-## Data Migration
+## **Data Migration**
 
 For exporting my wordpress pages and posts, I used [exitwp][3]. It's pretty easy
 to use, but I did have to go through all pages and posts once again to fix
@@ -39,7 +39,7 @@ and the references to those files had to be updated.
 
 &nbsp;  
 
-## Coding Site Logic Using Hakyll's Domain Specific Language (DSL)
+## **Coding Site Logic Using Hakyll's Domain Specific Language (DSL)**
 
 #### Recent Posts On Every Page
 
@@ -119,7 +119,7 @@ Ross's blog][5] also generated using hakyll.
 
 &nbsp;  
 
-## Haskell Confusion
+## **Haskell Confusion**
 
 My Hakyll blog is to my liking now, but I did have to tinker with Hakyll for a
 while. I find that reading Haskell code still tough when I encounter new

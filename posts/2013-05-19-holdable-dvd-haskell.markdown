@@ -12,7 +12,8 @@ Haskell and my progress so far is now on my [github][2]. What's missing right
 now is actually logging in and place a hold.
 
 <br>
-**Use HTTP.Conduit to fetch web pages**
+
+## **Use HTTP.Conduit to fetch web pages**
 
 I used [http-conduit][3] to grab the HTML source from Toronto library website.
 It's pretty straightforward. Just install it by `cabal install http-conduit`,
@@ -27,7 +28,8 @@ main = do
 </pre>
 
 <br>
-**Use regex-tdfa for regular expressions**
+
+## **Use regex-tdfa for regular expressions**
 
 Whenever I need to use regex to extract data from HTML source code, I used
 [regex-tdfa][5]'s =~ function.
@@ -46,7 +48,8 @@ updated s = if length matches &gt; 0
 </pre>
 
 <br>
-**Use Data.Aeson for parsing JSON**
+
+## **Use Data.Aeson for parsing JSON**
 
 For parsing Rotten Tomatoes JSON API data, I used [aeson][4] package for that.
 Install it by `cabal install aeson`. Below is how I mapped the JSON result to

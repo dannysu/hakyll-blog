@@ -11,7 +11,7 @@ examples.
 <br>
 <br>
 
-**Ability to Transfer Knowledge**
+## **Ability to Transfer Knowledge**
 
 Transferring knowledge is not easy and I've had experienced some of that myself.
 
@@ -32,7 +32,7 @@ better than others at this.
 <br>
 <br>
 
-**Passionate**
+## **Passionate**
 
 I love seeing people who are passionate about what they do. The excitement rubs
 off on others. I think of my university math professor who showed a genuine love
@@ -43,7 +43,7 @@ amazing and has so many applications.
 <br>
 <br>
 
-**Caring**
+## **Caring**
 
 I wish people are in the profession they're in because they care, or at least
 have the integrity to do things well. In Seattle I met some teachers who really
@@ -64,7 +64,7 @@ became teachers for very good reasons.
 <br>
 <br>
 
-**Motivator**
+## **Motivator**
 
 The best thing that some teachers gave me was simply the fact that they
 challenged the class to do more than they ever imagined they could. Parents and

@@ -19,7 +19,9 @@ With that in mind, I'm introducing [Hash0][6] - A password generator using a mix
 App Engine. Also inspired by [ZeroBin][10]'s idea of encrypted data that only the
 client can decrypt.
 
-# About
+<br>
+
+## **About**
 
 Hash0 has these improvements over existing hash-based password generators:
 
@@ -66,7 +68,9 @@ Password generation process:
 1. Truncate to desired length
 1. Encrypt account settings and store it at the provided URL
 
-# Background
+<br>
+
+## **Background**
 
 I went through couple phases in terms of how I deal with my passwords. In the
 beginning I had just couple passwords for all my accounts. One for important

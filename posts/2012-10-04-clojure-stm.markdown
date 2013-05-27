@@ -22,7 +22,7 @@ The remaining sections jot down what I learned yesterday.
 <br/>
 <br/>
 
-## Exceptions not for Triggering STM Retries
+## **Exceptions not for Triggering STM Retries**
 
 The solution that we ended up with at the end of the night is on Tom
 Alexandrowicz's [github][3]. After I got home I stared at the grab-forks
@@ -68,7 +68,7 @@ other philosopher's fork while it's in use?
 <br/>
 <br/>
 
-## STM Versioning
+## **STM Versioning**
 
 Tom later posted this image of times when philosophers are eating and when
 they're thinking. Orange is for eating and blue is for thinking.  
@@ -135,7 +135,7 @@ running since it encompasses the actual eating part.
 <br/>
 <br/>
 
-## Finer Grain Control
+## **Finer Grain Control**
 
 Ideally each transaction should be as short as possible to avoid more chances
 for retries and taking up more CPU time for the retries because STM needs to

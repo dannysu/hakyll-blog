@@ -25,7 +25,9 @@ screenshots:
 There were some issues that I had to spend more time debugging through, so here
 are my learnings:
 
-**1. You might have to flush things you store to IsolatedStorageSettings**
+<br>
+
+## **1. You might have to flush things you store to IsolatedStorageSettings**
 
 For my app, I implemented a Background Agent so that it will check for new
 manga releases and notify me through a toast notification as well as showing
@@ -47,7 +49,9 @@ class is closed". That statement is true when I used it in my main app to
 serialize settings, but I found that I needed explicit Save() in the Background
 Agent.
 
-**2. Use IsolatedStorageExplorerTool (ISETool) to retrieve and examine things
+<br>
+
+## **2. Use IsolatedStorageExplorerTool (ISETool) to retrieve and examine things
 stored in Isolated Storage**
 
 The [MSDN documentation][3] has the location where you can run the ISE command
@@ -62,7 +66,9 @@ those files are still present in "shared\transfers" folder. Another surprise to
 me is that even when Background Transfer attempts to download a nonexistent
 file, it'll also create a zero byte file, which I also wasn't cleaning up.
 
-**3. You can't store the same model to different Tables using LINQ to SQL**
+<br>
+
+## **3. You can't store the same model to different Tables using LINQ to SQL**
 
 Using LINQ to SQL is new to me, so I might be missing something.
 
@@ -99,7 +105,9 @@ Table<TestModel> properties I specified in my DataContext. That kind of
 explains why when I queried for things in one I also got things in the other
 because it's all stored to the same underlying table.
 
-**3. Background Transfer doesn't work from Background Agent code**
+<br>
+
+## **4. Background Transfer doesn't work from Background Agent code**
 
 I wrote a helper class that dealt with Background Transfer Service (BTS) and
 when I initially coded up the Background Agent code I naturally used the same

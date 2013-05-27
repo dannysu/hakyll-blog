@@ -8,7 +8,7 @@ is a problem or a potential problem one should let other people know early.
 After I left Seattle I found that there are many people that haven't learned
 this, so I'm putting my learning down in writing.
 
-## Why?
+## **Why?**
 
 The reason to let people know of potential difficulties early is to allow other
 people to be prepared and maybe even help if they can. This is not just in terms
@@ -57,7 +57,7 @@ Let's now look at some common reasons why people don't notify early.
 <br/>
 <br/>
 
-## But, but...
+## **But, but...**
 
 1. Maybe I'll later find out that I'm able to do the task, then telling my
    manager would have been unnecessary.
@@ -106,7 +106,7 @@ why I like code reviews.
 <br/>
 <br/>
 
-## My Personal Experiences
+## **My Personal Experiences**
 
 I have been asked in interview this type of situational questions. I have also
 seen the benefit of working as a team to achieve a common goal.
@@ -125,7 +125,7 @@ best of my ability.
 <br/>
 <br/>
 
-## Conclusion
+## **Conclusion**
 
 When there are potential problems, communicating to other people is a sign of
 maturity and not a sign of weakness. People working with you will like you even

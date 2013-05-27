@@ -5,25 +5,25 @@ tags: Mad Coding, Apple, Google, Microsoft, BlackBerry, RIM
 ---
 Below are links for redirecting users to each platform's app store.
 
-**Windows Phone**
+## **Windows Phone**
 
 http://windowsphone.com/s?appid=<font color="red">&lt;app id&gt;</font>
 
 E.g. [http://windowsphone.com/s?appid=ae13c46a-eed5-4c1a-8873-160c1635bbfa][1]
 
-**iOS**
+## **iOS**
 
 http://itunes.apple.com/ca/app/id<font color="red">&lt;app id&gt;</font>
 
 E.g. [http://itunes.apple.com/ca/app/id516359938][2]
 
-**Android**
+## **Android**
 
 https://market.android.com/details?id=<font color="red">&lt;namespace&gt;</font>
 
 E.g. [https://market.android.com/details?id=com.herocraft.game.farmfrenzy][3]
 
-**BlackBerry**
+## **BlackBerry**
 
 http://appworld.blackberry.com/webstore/content/<font color="red">&lt;app id&gt;</font>/
 

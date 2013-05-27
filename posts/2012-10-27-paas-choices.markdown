@@ -16,7 +16,7 @@ YMMV.
 <br/>
 <br/>
 
-## Hosting Static Content
+## **Hosting Static Content**
 
 I was using wordpress which requires PHP and MySQL, but my blog is not dynamic
 in nature so things like Jekyll and Hakyll really made sense for me. There are
@@ -30,7 +30,7 @@ later.
 <br/>
 <br/>
 
-## DreamHost Pros and Cons
+## **DreamHost Pros and Cons**
 
 Using DreamHost still makes sense in some situations. I'm using
 [Amazon Route 53][3] for my DNS and that costs $0.51/month for 1 domain.
@@ -71,7 +71,7 @@ elsewhere, it's time to say goodbye to DreamHost.
 <br/>
 <br/>
 
-## Windows Azure
+## **Windows Azure**
 
 I only played with Azure briefly. I was still at Microsoft when [Azure
 Sandbox][15] was introduced internally on the **The Garage** email list. Before
@@ -85,7 +85,7 @@ project, so I ended up going with Google App Engine.
 <br/>
 <br/>
 
-## Google App Engine
+## **Google App Engine**
 
 Google App Engine is pretty good. Its [free quota per app per day][5] is great
 for personal projects.
@@ -119,7 +119,7 @@ App Engine allows me to host 3 of my projects for the price of free.
 <br/>
 <br/>
 
-## Heroku
+## **Heroku**
 
 Heroku is another PaaS provider where I have projects hosted. All of my
 projects only need 1 web dyno, so all these projects can be hosted for
@@ -158,7 +158,7 @@ somebody please make it easier for Haskell.
 <br/>
 <br/>
 
-## AppFog
+## **AppFog**
 
 Heroku charging for custom domain drove me to check out AppFog that I signed up
 a while ago and never used. After playing with it I really like it! I moved my
@@ -197,7 +197,7 @@ So that's 1 project on AppFog plus my backup blog for the price of free. Awesome
 <br/>
 <br/>
 
-## CloudBees
+## **CloudBees**
 
 Pros:
 
@@ -215,7 +215,7 @@ not used their Java offering.
 <br/>
 <br/>
 
-## The New World
+## **The New World**
 
 When I first played with Node.js I used my EC2 free tier and that was pretty
 easy. However, with all these PaaS choices it's even easier to get things up and

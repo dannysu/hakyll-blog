@@ -6,7 +6,7 @@ tags: Mad Coding, Clojure, Node.js
 I've been playing with Node.js and Clojure recently. Below are the steps to get
 each of them up and running.
 
-## Setting up Node.js
+## **Setting up Node.js**
 
 The easiest way I've found so far is to use nvm.
 
@@ -42,7 +42,7 @@ you. For vagrant, there's also the [nodejs cookbook][1].
 <br/>
 <br/>
 
-## Setting up Clojure
+## **Setting up Clojure**
 
 clojure.org should have a better [Quick Start][2] guide. [Some people][3] say that
 Node.js is easier to set up and I agree. However, I also expect any good
@@ -125,7 +125,7 @@ clj script.
 <br/>
 <br/>
 
-## Setting up VIM
+## **Setting up VIM**
 
 For VIM users, install [VimClojure][6] and [vim-slime][7] will make editing
 Clojure code much easier. After installing VimClojure, put the following in

@@ -15,7 +15,7 @@ fixing memory leaks.
 
 &nbsp;  
 
-## Automatic Reference Counting (ARC)
+## **Automatic Reference Counting (ARC)**
 
 At the start of the project I championed the use of ARC instead of settling
 with what other developers already know of retain/release in ObjC. Sure, it
@@ -34,7 +34,7 @@ transferred over while developing Well.ca's iPad app.
 
 &nbsp;  
 
-## Retain Cycles
+## **Retain Cycles**
 
 Early on during development we simply used `__strong` qualifier everywhere due
 to the need to iterate faster. We focused on getting "flick to add to
@@ -72,7 +72,7 @@ is what leads to memory leak in ARC projects.
 
 &nbsp;  
 
-## Weak References in iOS 5
+## **Weak References in iOS 5**
 
 One way to break the retain cycle is to make use of weak references. In iOS 5,
 developers can use the `__weak` qualifier. The compiler will automatically have
@@ -161,7 +161,7 @@ references to it.
 
 &nbsp;  
 
-## Explicitly Break Retain Cycle
+## **Explicitly Break Retain Cycle**
 
 Another method that I used to fix the memory leak caused by retain cycle is by
 explicitly breaking the cycle from a 3rd party. Let's say we do have the
@@ -189,7 +189,7 @@ and Object2 thus allowing them to be freed as well.
 
 &nbsp;  
 
-## Conclusion
+## **Conclusion**
 
 ARC works great for iOS and gets rid of the need to manually dealing with
 references. I remember programming for Windows Phone and making sure I have all

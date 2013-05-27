@@ -13,7 +13,7 @@ had to make coming from Hakyll 3.
 
 <br>
 
-#### Recent Posts On Every Page
+## **Recent Posts On Every Page**
 
 My old WordPress blog showed 10 most recently added posts on every page.
 Although I might change this when I finally get a new design, for now I want to
@@ -53,7 +53,7 @@ makeItem ""
 
 <br>
 
-#### Markdown Reference-Style Links
+## **Markdown Reference-Style Links**
 
 I like reference-style links. I think it's easier to read. With Hakyll 4 this
 is how you would declare a custom write option:
@@ -70,7 +70,7 @@ pandocWriteOptions = defaultHakyllWriterOptions
 
 <br>
 
-#### Paginated Post Listing
+## **Paginated Post Listing**
 
 To generate paginated pages, I used to use code from [Ian Ross's blog][5]. With
 Hakyll 4 the old code is no longer compatible, so I had to write my own. This is
@@ -153,7 +153,7 @@ pandocCompilerWith defaultHakyllReaderOptions pandocWriteOptions
 
 <br>
 
-#### Conclusion
+## **Conclusion**
 
 So there it is, my blog now powered by Hakyll 4. It's definitely an improvement
 over the previous version. I also love that I got to write my own pagination

@@ -21,7 +21,7 @@ say why but it was lost on me. In any case, it's great to rediscover Lisp.
 <br/>
 <br/>
 
-## The Beauty of Clojure and of Lisp
+## **The Beauty of Clojure and of Lisp**
 
 In Clojure there isn't many special operators that dictate the structure of your
 program. Everything is a list denoted with ()s with the first thing in the list
@@ -117,7 +117,7 @@ put them into a function instead and use macro magic to call it.
 <br/>
 <br/>
 
-## Runs on JVM (or whatever it can compile to)
+## **Runs on JVM (or whatever it can compile to)**
 
 Clojure runs on the JVM, which is both a blessing and a curse.
 
@@ -137,7 +137,7 @@ startup time. Also, calling Java methods look out of place:
 </pre>
 <br/>
 
-## Comparison to Node.js
+## **Comparison to Node.js**
 
 The only disappointment I have so far with Clojure is in its comparison of
 certain tasks to Node.js. I wrote a REST service in both Node.js and Clojure to
@@ -176,7 +176,7 @@ switching from map to pmap. BAM!
 <br/>
 <br/>
 
-## Some Useful Functions
+## **Some Useful Functions**
 
 While working on my dream project, I had to deal with list processing where I
 need to correlate pairs of items in list. I might be able to change my algorithm

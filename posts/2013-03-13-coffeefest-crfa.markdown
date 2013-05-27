@@ -16,7 +16,7 @@ including things I wasn't comfortable doing. While we were at these tradeshows,
 I paid attention to what my co-founder Kasra Nejatian is doing. He is a much
 better sales person than I am. Below are things I learned.
 
-**Say Hello**
+## **Say Hello**
 
 One thing that I noticed is that Kaz says "hello" to everyone that walks by.
 This reminded me of that Hakkanese conference for which I was helping to sell
@@ -30,7 +30,7 @@ saying hi repeatedly, but it sure worked. People are sometimes just walking by
 the booths without paying much attention, by smiling and saying hi they start
 paying attention to you.
 
-**Quick Observations**
+## **Quick Observations**
 
 Another thing that Kaz is very good at is making quick observations. He can
 start a conversation by noticing something about the person very quickly.
@@ -40,7 +40,7 @@ just random situations such as somebody waiting on their friends.
 This is something I'm still not good at, but if I attend more tradeshows I will
 get better.
 
-**Make Connections**
+## **Make Connections**
 
 Sometimes we'd talk to somebody who is interested in online loyalty program,
 then in that situation I noticed Kaz offering to introduce the person to
@@ -49,7 +49,7 @@ company cannot help the person but knows another one that can, why not help the
 person? By doing so we not only get their contact information, we also made a
 good impression.
 
-**Future**
+## **Future**
 
 If the company does well I'm sure we'll hire sales staff, but I'm happy to say
 that I've been there and done that. When it comes to things I'm good at, I can
