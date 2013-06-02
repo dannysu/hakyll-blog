@@ -1,0 +1,216 @@
+---
+date: 2013-06-02 17:10:48
+title: Why is (1.13 * 100) shown as 112.99999999999999?
+tags: Mad Coding, JavaScript, AvidTap, Node.js
+---
+<script>
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    processEscapes: true
+  }
+});
+</script>
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/2.2-latest/MathJax.js"></script>
+I've been a fan of Khan Academy since its earlier days. Two years ago after I
+watched Salman Khan's TED video, I was inspired to leap into action. I went and
+[fixed couple bugs][1] in khan-exercises involving floating point precision on
+certain browsers on certain OS. One of these days I'd like to walk the walk and
+do more to directly help people.
+
+Regarding the floating point precision issue, I'm sad to say that I did not
+fully understand the cause behind it. I knew that it was a problem with floating
+point number precision problem and I stopped there. I was lucky that the
+exercises were meant for integer numbers, so my fixes made sure to round to
+integers. That said I always had this nagging feeling that I don't have a full
+grasp of the floating point issue and the solutions. I hate magic in code.
+
+Recently while working on [AvidTap][2] Prepaid Card, I ran into this issue
+again. This time I'm going to dig right in.
+
+<br>
+
+## **(1.13 * 100) = 112.99999999999999 or 0.1 + 0.2 != 0.3**
+
+If you try the following code in node.js, you don't get the expected 113 at the
+end.
+<pre class="brush:bash">
+[~] node
+> 1.13 * 100
+112.99999999999999
+>
+</pre>
+
+Why is that? Trying the same thing in different browsers and other languages reveal
+that it's the same behaviour across the board.
+
+Here's Haskell:
+<pre class="brush:bash">
+[~] ghci
+Prelude&gt; 1.13 * 100
+112.99999999999999
+Prelude&gt;
+</pre>
+
+A quick search online will tell you that this has something to do with how
+floating point numbers are represented in binary. Other people have similar
+questions such as why **0.1 + 0.2 != 0.3**.
+
+<br>
+
+## **Binary Representation**
+
+I know binary integers quite well, but floating point numbers not so much. I
+knew it's stored as a number plus the exponent, but not in detail. This is a
+[great website][3] that goes through how things are represented.
+
+According to the [ECMAScript spec][7], number values are double-precision 64-bit
+binary format IEEE 754 value. So let's take the 1.13 number as a concrete
+example, its binary representation on my little-endian machine is:
+**0x3ff2147ae147ae14** in hex
+
+I got the above representation via a simple C++ program (test.cpp):
+<pre class="brush:c">
+#include &lt;iostream&gt;
+#include &lt;iomanip&gt;
+using namespace std;
+ 
+int main() {
+    double x = 1.13;
+    long* px = (long*)&x;
+
+    cout << hex << *px << endl;
+}
+
+// g++ test.cpp
+// ./a.out
+</pre>
+
+Disecting the binary, you get the following components:
+<table>
+<tr>
+<td>Sign</td>
+<td>Exponent</td>
+<td>Mantissa</td>
+</tr>
+<tr>
+<td>0</td>
+<td>01111111111</td>
+<td>0010000101000111101011100001010001111010111000010100</td>
+</tr>
+</table>
+
+Now referring to the [IEEE 754 double-precision binary floating-point
+format][4], one can figure out what those bits represent.
+
+![](http://upload.wikimedia.org/math/9/3/e/93e5d971de740f61ee86eea8f2c1ba62.png)
+
+The sign bit is 0, so the number is a positive number. Exponent bits equate to
+1023, so the equation above will end up being multiplied by $$2^{e-1023} = 2^{(1023-1023)} = 2^0 = 1$$
+
+As for the summation, according to the equation you get:
+$$1 + 2^{-3} + 2^{-8} + 2^{-10} + 2^{-14} + 2^{-15} + 2^{-16} + 2^{-17} + 2^{-19} + 2^{-21} + 2^{-22}
++ 2^{-23} + 2^{-28} + 2^{-30} + ... = 1.12999999999999989341858963598$$
+
+That's not quite 1.13 but it's very close. That's really the issue here. The
+binary representation cannot store 1.13 perfectly which is why when we try to
+print the value of (1.13 * 100) it isn't quite exact.
+
+The issue with 0.1 + 0.2 != 0.3 is of the same cause. Due to 0.1 and 0.2 not
+being represented exactly in binary, the addition doesn't exactly equal to 0.3.
+
+To play around with the binary representation more, there's this [online
+converter][6] that works great.
+
+<br>
+
+## **How does it print 1.13 then?**
+
+Now that we know the computer can't represent 1.13 perfectly, so one question
+that comes up is how the node.js REPL is able to show certain numbers exactly?
+
+<pre class="brush:bash">
+[~] node
+> 1.13
+1.13
+> 1.13 * 2
+2.26
+> 1.13 * 3
+3.3899999999999997
+>
+</pre>
+
+Shouldn't it show 1.12999999999999989341858963598?
+
+I started with a bit of experimentation with different values and found that
+node.js REPL seems to round the result after 15 decimal digits.
+
+<pre class="brush:bash">
+[~] node
+> 1.13
+1.13
+> 1.129999999999999
+1.129999999999999
+> 1.1299999999999999
+1.13
+>
+</pre>
+
+According to [Exploring Binary][8] website, languages typically cap the digits
+between 15 to 17. Also, [17 digits are needed][9] to represent a double in text
+and be able it back.
+
+<br>
+
+## **Solution**
+
+At [AvidTap][2], we used [bignumber.js][5] library to deal with this issue with
+binary floating point representation. Let's look at the difference when using
+this library.
+
+<pre class="brush:bash">
+[~] node
+> var BigNumber = require('bignumber.js');
+undefined
+> var num = BigNumber(1.13);
+undefined
+> num
+{ s: 1,
+  e: 0,
+  c: [ 1, 1, 3 ] }
+> a.times(100)
+{ s: 1,
+  e: 2,
+  c: [ 1, 1, 3 ] }
+> a.times(100).times(-1)
+{ s: -1,
+  e: 2,
+  c: [ 1, 1, 3 ] }
+>
+</pre>
+
+As you can see above, the way bignumber.js represents number is by storing each
+digit in an array of integers. Doing so allows it to store the floating point
+number's digits exactly, but at the cost of perf and storage size.
+
+<br>
+
+## **How come some browsers/OS don't show this issue?**
+
+The khan-exercises bugs were not fixed prior to me taking a look at it because
+the issues were only reproducible on certain OSes and certain browser versions.
+This brings up the question why. If the binary representation is the same, then
+why would the issue occur for some but not others?
+
+That's a question to be answered for another day. Currently I don't have a
+combination that reproduces the issue.
+
+  [1]: https://github.com/Khan/khan-exercises/pull/5470
+  [2]: http://avidtap.com
+  [3]: http://floating-point-gui.de/formats/fp/
+  [4]: http://en.wikipedia.org/wiki/Double-precision_floating-point_format
+  [5]: https://github.com/MikeMcl/bignumber.js
+  [6]: http://www.binaryconvert.com/convert_float.html
+  [7]: http://www.ecma-international.org/publications/files/ecma-st/ECMA-262.pdf
+  [8]: http://www.exploringbinary.com/print-precision-of-dyadic-fractions-varies-by-language/
+  [9]: http://stackoverflow.com/questions/4738768/printing-double-without-losing-precision
