@@ -19,7 +19,7 @@ changes and we brought the cost down even more.
 
 Just like when I was working on Windows Phone I love the feeling of having
 something tangible in my hands. Smartphone does that for me, and in this case
-the AvidTap feels awesome. It's even a physical thing that I can show my
+the AvidTap box feels awesome. It's even a physical thing that I can show my
 parents.
 
 <br>
@@ -51,8 +51,8 @@ back the owner gave her some freebies. What an awesome way to reward your best
 customer and make them feel special.
 
 One time while I was in one of our partner stores setting up our new box, I saw
-a customer came in and launched AvidTap to tap in. It's an awesome feeling to
-see people use it for real!
+a customer came in and launched the AvidTap app to tap in. It's an awesome
+feeling to see people use it for real!
 
   [1]: http://avidtap.com
   [2]: https://plus.google.com/106413090159067280619/posts/az9UTAX7dB8
