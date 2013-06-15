@@ -3,6 +3,8 @@ date: 2013-06-15 00:22:17
 title: Evolution of the AvidTap Box
 tags: Start-up, AvidTap
 ---
+**UPDATE: Added photos of AvidTap stickers as well**
+
 Two months have rapidly went by since I last talked about [AvidTap][1] in more
 detail. A lot has happened since April.
 
@@ -12,7 +14,7 @@ detail. A lot has happened since April.
 
 Take our hardware for example, we've done several iterations for the AvidTap
 box. It went from a breadboard on my desk to a 3D-printed version, to a much
-more polished version. Aside from the exterior, the inners have also seen some
+more polished version. Aside from the exterior, the innards have also seen some
 changes and we brought the cost down even more.
 
 <img src="http://imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3JlcgwLEgVpbWFnZRj5VQw" style="width:100%">
@@ -21,6 +23,15 @@ Just like when I was working on Windows Phone I love the feeling of having
 something tangible in my hands. Smartphone does that for me, and in this case
 the AvidTap box feels awesome. It's even a physical thing that I can show my
 parents.
+
+<br>
+
+## **AvidTap Sticker**
+
+Similarly our sticker design has also been improved. We went from something that
+Kaz threw together quickly to something much more fun.
+
+![](http://imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3JlcgwLEgVpbWFnZRjhXQw)
 
 <br>
 
