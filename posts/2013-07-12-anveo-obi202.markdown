@@ -1,0 +1,79 @@
+---
+date: 2013-07-12 02:44:57
+title: VoIP with Anveo and OBi202
+tags: voip, sip, Miscellaneous
+---
+I recently switched my parents' phone to use voip, and have been pleased with it
+so far. I went with [Anveo][1] for porting over the phone number and for phone
+service. To connect regular phones to phone jack I bought a [OBi202][2] for
+around $100.
+
+My parents used to pay $23/month for phone service. Now I believe they can pay
+less than $5/month. The savings would cover the switching cost after 6 months
+and after that it's all savings.
+
+This post highlights some cool features and also talk about some tips for anyone
+who wants to use similar setup.
+
+<br>
+
+## **Cool Features**
+
+I looked around at voip providers and chose Anveo because I liked the feature
+set I saw. Below are some of the features that I enjoy:
+
+- [Fax support][3] (Send fax online, and receive fax via email)
+- [Call flow][4] (Design how you want incoming calls handled)
+    - For example, I configured my call flow to require callers who block caller
+      ID to do something extra, in order to reduce telemarketing.
+- Quick dial (E.g. dial "03#" for calling my aunt)
+- Call history
+
+<br>
+
+## **Custom CallerID Numbers**
+Anveo has this feature that allows you to call using any phone number you own.
+For example, I can configure it so that I can use voip to call somebody with my
+cell phone number as the caller ID. All I have to do is dial * followed by 2
+digits (aka star codes) and then the actual phone number I want to dial.
+
+On Anveo side, configuration for this is found in My Account -> Account
+Preferences -> Custom CallerID Numbers.
+
+The one tricky thing about this is that OBi202 needs to allow this kind of dial
+pattern through to Anveo. You need to go into OBi202 configuration for "ITSP
+Profile A General" and fix up the DigitMap.
+
+This was my DigitMap and it didn't allow star codes.
+<pre>
+(
+    1xxxxxxxxxx|
+    <1>[2-9]xxxxxxxxx|
+    011xx.|
+    xx.|
+    (Mipd)|
+    [^*#]@@.
+)
+</pre>
+
+I modified it to include the star code associated on Anveo side with my cell
+phone number.
+
+<pre>
+(
+    1xxxxxxxxxx|
+    <1>[2-9]xxxxxxxxx|
+    011xx.|
+    xx.|
+    (Mipd)|
+    [^*#]@@.|
+    *20xxxxxxxxxx|
+    *201xxxxxxxxxx
+)
+</pre>
+
+
+  [1]: http://anveo.com/
+  [2]: http://www.obihai.com/obi202pr.html
+  [3]: http://anveo.com/consumer/features.asp?code=faxinout
+  [4]: http://anveo.com/consumer/features.asp?code=ivrcallflow
