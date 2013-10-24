@@ -3,6 +3,8 @@ date: 2013-10-20 00:07:27 EDT
 title: HyperDrive Demo Day Recap
 tags: Start-up, AvidTap, HyperDrive
 ---
+**Update:** [Watch][5] AvidTap demo day video.
+
 It's been a year since I left Well.ca to take on the most difficult challenge in
 my career. Starting a company is unlike anything I've done before. I've
 worked at a couple of world's largest companies, and I've worked at medium
@@ -57,3 +59,4 @@ towards what will be a breakout year.
   [2]: http://www.saladworks.com/
   [3]: http://localhost:8000/2013/10/07/2-weeks-until-demo-day/
   [4]: http://avidregister.com
+  [5]: http://hosting.desire2learncapture.com/Communitech/1/watch/393.aspx
