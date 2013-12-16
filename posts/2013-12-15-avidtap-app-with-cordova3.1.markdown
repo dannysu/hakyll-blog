@@ -3,7 +3,7 @@ date: 2013-12-15 18:53:30
 title: New AvidTap app update based on Cordova 3.1
 tags: Start-up, AvidTap, Android, iOS, iPhone, Cordova, PhoneGap, KitKat, BLE, Bluetooth LE, Bluetooth Smart, iBeacon
 ---
-Here at AvidTap we've been preping a new set of native app updates based on
+Here at [AvidTap][5] we've been preping a new set of native app updates based on
 [Cordova][1] 3.1.0 since Oct. I recently unleashed both the Android and iPhone
 apps last week. This new update brings the Bluetooth LE / iBeacon support I
 talked about before. Watch out for us beginning to roll that out to stores in
@@ -21,8 +21,8 @@ more and more of the different platforms together via the creation of
 I love the speed at which Cordova is improving. There has been tons of
 improvements since I wrote the Well.ca virtual store app. There has been tons of
 improvements just in the year after I started AvidTap alone. AvidTap's release
-speed for AvidRegister is amazing too. We average 3.61 days between releases to
-Play Store. Talk about rapid improvements.
+speed for [AvidRegister][6] is amazing too. We average 3.61 days between
+releases to Play Store. Talk about rapid improvements.
 
 <br>
 
@@ -83,3 +83,5 @@ way way better than the 2 weeks I had to wait for Well.ca's virtual store app.
   [2]: http://cordova.apache.org/announcements/2013/11/15/kitkat.html
   [3]: https://github.com/apache/cordova-cli
   [4]: https://shazronatadobe.wordpress.com/2013/10/15/cordova-ios-and-ios-7-support/
+  [5]: http://avidtap.com
+  [6]: http://avidregister.com
