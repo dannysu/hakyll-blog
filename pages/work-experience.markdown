@@ -4,9 +4,14 @@ title: Work Experience
 ## **Technical Co-founder at [AvidTap Corp.](http://avidtap.com)
      (September 2012 to Present)**
 
-- Making shopping more fun, more social, and more rewarding!
-- More on this soon.
-<br/>
+We believe that retailers need help and we’re coming to their rescue.
+AvidTap is the mobile retail company that is bringing the e-commerce
+way of selling things to brick & mortar retail. We help retailers start, run
+and grow their businesses with our mobile retail platform. Next time an AvidTap
+user walks into an AvidTap powered retail store, her profile will pop up on the
+POS, the retailer can greet her by her name and relate to her based on her past
+shopping experience.
+
 <br/>
 
 ## **Software Developer and Project Lead at [Well.ca Inc.](http://well.ca)

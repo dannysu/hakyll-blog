@@ -2,10 +2,10 @@
 title: About Me
 ---
 
-- Currently co-founder of [AvidTap][6], an NFC-based viral mobile loyalty platform
+- Currently co-founder of [AvidTap][6] - the mobile retail company that helps retailers start, run and grow their businesses
 - Well.ca mobile developer and warehouse software lead
 - Microsoft SDE on Windows Mobile and Windows Phone 7 Bing Maps
-- University of Waterloo grad 
+- University of Waterloo grad
 
 See [this page][1] for more details about my work experience.
 
