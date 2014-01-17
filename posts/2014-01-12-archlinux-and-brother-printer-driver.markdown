@@ -1,7 +1,7 @@
 ---
 date: 2014-01-12 10:30:20
 title: Lenovo E431 and Brother HL-3045CN Printer with Arch Linux
-tags: Arch, Linux/Unix/QNX, Brother, Printer, GNOME, Lenovo, E431
+tags: Arch, Linux Unix QNX, Brother, Printer, GNOME, Lenovo, E431
 ---
 For the past year I used my own monitor from home at work and tried to make
 do with my 6-year old ultraportable whenever I had to be out and about. However,
