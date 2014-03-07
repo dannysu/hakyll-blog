@@ -17,5 +17,5 @@ Screenshots:
 - [Vote for Your Favourite Cupboard][3]
 
   [1]: http://well.ca/app/
-  [2]: http://asset0.dannysu.com/ahBzfmltYWdlZGF0YXN0b3JlcgwLEgVpbWFnZRjZNgw
-  [3]: http://asset0.dannysu.com/ahBzfmltYWdlZGF0YXN0b3JlcgwLEgVpbWFnZRjBPgw
+  [2]: http://imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3JlcgwLEgVpbWFnZRjZNgw
+  [3]: http://imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3JlcgwLEgVpbWFnZRjBPgw

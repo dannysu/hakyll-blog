@@ -46,12 +46,12 @@ The memory usage graph seen by Product-&gt;Profile-&gt;Alloctions in our
 application showed increasing usage just by clicking around, which is a sign of
 memory leak even though I expected certain things to be freed when switching
 view controllers:
-![](http://asset0.dannysu.com/ahBzfmltYWdlZGF0YXN0b3JlcgwLEgVpbWFnZRi5Fww)
+![](http://imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3JlcgwLEgVpbWFnZRi5Fww)
 
 Retain cycle, or circular reference, is when two objects each maintains a strong
 reference to the other:
 
-![](http://asset0.dannysu.com/ahBzfmltYWdlZGF0YXN0b3JlcgwLEgVpbWFnZRjRDww)
+![](http://imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3JlcgwLEgVpbWFnZRjRDww)
 
 In code it might look like this:
 
