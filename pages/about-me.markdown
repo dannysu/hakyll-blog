@@ -2,7 +2,7 @@
 title: About Me
 ---
 
-- Currently co-founder of [AvidTap][6] - the mobile retail company that helps retailers start, run and grow their businesses
+- Currently co-founder of [AvidRetail][6] - the mobile retail company that helps retailers start, run and grow their businesses
 - Well.ca mobile developer and warehouse software lead
 - Microsoft SDE on Windows Mobile and Windows Phone 7 Bing Maps
 - University of Waterloo grad
@@ -30,7 +30,6 @@ Here is a list of things I did that I'm most proud of:
   150,000 downloads and later bundled by Microsoft on all Huawei C8300 phones
   ([Featured on Microsoft China website][5]!)
 - Tackled open-ended problems and did research in high school and at Amazon.com
-- Shipped Bing Search &amp; Maps applications on Windows Phone 7
 - Proposed and prototyped a new driving navigation experience that became an
   official feature on Windows Phone 7 Mango release
 
