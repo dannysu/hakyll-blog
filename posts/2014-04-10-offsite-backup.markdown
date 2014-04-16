@@ -3,6 +3,9 @@ date: 2014-04-10 19:16:46
 title: Setting up my file sync & offsite backup
 tags: Miscellaneous, Linux Unix QNX, Dropbox, SpiderOak, BitTorrent Sync, Backupsy
 ---
+**UPDATE:** Found out about the [encfs security audit][9] by Defuse Security. I
+may have to revise the encryption I use.
+
 I didn't have a good offsite backup for my data for quite some time. I've played
 with all sorts of file sync options such as [box.com][1], [copy.com][2],
 [Dropbox][4], but they all leave my data unprotected. I then read about
@@ -78,3 +81,4 @@ store those things. Again, encrypted before I put it on FastMail.
   [6]: https://en.wikipedia.org/wiki/EncFS
   [7]: http://backupsy.com
   [8]: http://www.bittorrent.com/sync
+  [9]: https://defuse.ca/audits/encfs.htm
