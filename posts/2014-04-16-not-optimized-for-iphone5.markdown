@@ -1,5 +1,5 @@
 ---
-date: 
+date: 2014-04-16 09:34:58
 title: "Your binary is not optimized for iPhone 5" Issue
 tags: Mad Coding, Apple, Start-up, iOS, iPhone, XCode
 ---
