@@ -25,12 +25,14 @@ to spend money the same way and expect a different result.
 
 The specifics here isn't relevant to my feeling though. What I realized is that
 big companies don't necessarily know what to do. They don't always have the type
-of people that make things happen. Also, many things can be attempted with much
-less resources as long as you have a great team. These realizations contribute
-to my feeling that things are not so impossible.  Sometimes people might ask
-"What if certain big company get into the same space?" as if success is
-guaranteed for big companies. The real challenge for my team and anyone else is
-whether we can build something people want. Solve that and Goliath is no more.
+of people that make things happen. It's much harder to steer a giant ship
+without everything clicking already. Also, many things can be attempted with
+much less resources as long as you have a great team. These realizations
+contribute to my feeling that things are not so impossible.  Sometimes people
+might ask "What if certain big company get into the same space?" as if success
+is guaranteed for big companies. The real challenge for my team and anyone else
+is whether we can build something people want. Solve that and Goliath is no
+more.
 
 <br>
 
