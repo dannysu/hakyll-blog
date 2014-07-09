@@ -2,7 +2,7 @@
 title: About Me
 ---
 
-- Currently co-founder of [AvidRetail][6] - the mobile retail company that helps retailers start, run and grow their businesses
+- Currently co-founder of [Kash Corp][6] - we get rid of credit card fees
 - Well.ca mobile developer and warehouse software lead
 - Microsoft SDE on Windows Mobile and Windows Phone 7 Bing Maps
 - University of Waterloo grad
@@ -38,4 +38,4 @@ Here is a list of things I did that I'm most proud of:
   [3]: http://ocvolume.sf.net/
   [4]: /label/ocvolume/
   [5]: /2011/03/27/home-screen-customizer-found-on-microsoft-china/
-  [6]: http://avidtap.com
+  [6]: http://withkash.com

@@ -1,11 +1,11 @@
 ---
 title: Hello!
 ---
-My name is Danny Su, Co-founder of [AvidRetail][1]. Our vision at AvidRetail is to
-make the retail experience smarter, more personable, and better connected.
+My name is Danny Su, Co-founder of [Kash Corp][1]. Our mission is to get rid of
+the evil tax that is credit card fees.
 
 Previously I worked at Microsoft on the Windows Phone 7 Bing Maps application. I
 also worked at Canadian start-up Well.ca on their mobile apps and led their
 warehouse software team.
 
-  [1]: http://avidretail.com
+  [1]: http://withkash.com

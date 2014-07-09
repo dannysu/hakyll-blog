@@ -1,8 +1,24 @@
 ---
 title: Work Experience
 ---
-## **Technical Co-founder at [AvidTap Corp.](http://avidtap.com)
-     (September 2012 to Present)**
+## **Co-founder at [Kash Corp.](http://withkash.com)
+     (June 2014 to Present)**
+
+We get rid of credit card fees! Credit card fees are a tax on everything. Every
+time you swipe a credit card, there are 13 steps to clear that transaction and
+each middleman is taking a cut. This is why retailers are being gouged a large
+percentage of their revenue just for accepting paperless money. It doesn't have
+to be this way! At Kash, we're taking on Visa, MasterCard, and the banks by
+giving power to retailers with the latest technology and an app that allows
+consumers to pay their local businesses. Our system is faster than using a
+credit card and saves local businesses.
+
+Join the fight. [End Credit Card Fees](http://endcreditcardfees.com).
+
+<br/>
+
+## **Co-founder at [AvidTap Corp.](http://avidtap.com)
+     (September 2012 to June 2014)**
 
 We believe that retailers need help and we’re coming to their rescue.
 AvidTap is the mobile retail company that is bringing the e-commerce
