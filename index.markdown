@@ -1,7 +1,7 @@
 ---
 title: Hello!
 ---
-My name is Danny Su, Co-founder of [Kash Corp][1]. Our mission is to get rid of
+My name is Danny Su, Co-founder of [Kash Corp][1] (YC S14). Our mission is to get rid of
 the evil tax that is credit card fees.
 
 Previously I worked at Microsoft on the Windows Phone 7 Bing Maps application. I

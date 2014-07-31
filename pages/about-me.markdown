@@ -2,7 +2,7 @@
 title: About Me
 ---
 
-- Currently co-founder of [Kash Corp][6] - we get rid of credit card fees
+- Currently co-founder of [Kash Corp][6] (YC S14) - we get rid of credit card fees
 - Well.ca mobile developer and warehouse software lead
 - Microsoft SDE on Windows Mobile and Windows Phone 7 Bing Maps
 - University of Waterloo grad
