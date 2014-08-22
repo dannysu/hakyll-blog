@@ -1,7 +1,7 @@
 ---
 date: 2013-06-02 17:10:48
 title: Why is (1.13 * 100) shown as 112.99999999999999?
-tags: Mad Coding, JavaScript, AvidTap, Node.js
+tags: Mad Coding, JavaScript, AvidTap, Node.js, Khan Academy
 ---
 <script>
 MathJax.Hub.Config({

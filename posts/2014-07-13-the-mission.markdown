@@ -1,7 +1,7 @@
 ---
 date: 2014-07-13 16:10:15 PDT
 title: Driven by the Mission
-tags: Start-up, AvidTap, Kash, AvidRetail, Indiegogo, Ang Lee
+tags: Start-up, AvidTap, Kash, AvidRetail, Indiegogo, Ang Lee, Khan Academy
 ---
 I hope whoever reads this go and take the first step towards their dream or
 towards a cause they're passionate about. Just start with one step first.
