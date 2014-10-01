@@ -1,7 +1,7 @@
 ---
 title: Work Experience
 ---
-## **Co-founder at [Kash Corp.](http://withkash.com) (YC S14)
+## **Co-Founder at [Kash Corp.](http://withkash.com) (YC S14)
      (September 2012 to Present)**
 
 We get rid of credit card fees! Credit card fees are a tax on everything. Every
@@ -17,7 +17,7 @@ Join the fight. [End Credit Card Fees](http://endcreditcardfees.com).
 
 <br/>
 
-## **Co-founder at [AvidTap Corp.](http://avidtap.com)
+## **Co-Founder at [AvidTap Corp.](http://avidtap.com)
      (September 2012 to Present)**
 
 We believe that retailers need help and we’re coming to their rescue.
