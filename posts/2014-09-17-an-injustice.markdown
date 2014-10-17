@@ -1,5 +1,5 @@
 ---
-date: 2014-08-22 22:51:42 PDT
+date: 2014-09-17 00:00:00 PDT
 title: An Injustice in the World
 tags: Start-up, AvidTap, Kash, AvidRetail, YCombinator, YC
 ---
