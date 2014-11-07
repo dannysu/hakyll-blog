@@ -3,6 +3,7 @@ title: Past and Present Devices
 ---
 I love mobile phones. Here are my current devices:
 
+- **iPhone 6** (iOS)
 - **Nexus 4** (Android)
 - **Nokia Lumia 920** (Windows Phone 8)
 - **Nexus 7** (Android)
