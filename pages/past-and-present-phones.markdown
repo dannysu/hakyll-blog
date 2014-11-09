@@ -16,6 +16,7 @@ I love mobile phones. Here are my current devices:
 
 Devices I’ve used for longer periods of time:
 
+- OnePlus One
 - Motorola Q9m
 - Motorola Q9h
 - HTC TyTN
