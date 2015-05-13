@@ -68,11 +68,11 @@ by reducing it by `w1 * (1 - scaling factor) / 2`.
 `w1` is the View's original width. Since the new width is `w1 * scaling factor`,
 the light blue region on both sides combined is `w1 * (1 - scaling factor)`. In
 my example, that's `w1 * 0.4`. However, since scaling is done with respect to
-the center, on either side the adjust is just half. So you adjust the x
+the center, on either side the adjustment is just half. So you adjust the x
 coordinate by `w1 * (1 - scaling factor) / 2`.
 
 That means the code would be something like this:
-<pre>
+<pre class="brush:javascript">
 myView.animate()
     .scaleX(w2 / w1)
     .scaleY(h2 / h1)
