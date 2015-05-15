@@ -5,7 +5,7 @@ tags: Android, programming, mobile, Mad Coding
 ---
 Here's a neat problem I ran into while trying to animate things on Android. I
 wanted to animate moving a View from one place to another. On top of that, I
-also wanted to change the size of the view by scaling it.
+also wanted to change the size of the View by scaling it.
 
 <br/>
 
@@ -54,7 +54,7 @@ expands based on the center of the View.
 
 <br/>
 
-##**Correct Way**
+##**The Correct Way**
 
 So what do you do if you need to animate things to one of the corners? For
 example if you want to achieve something like the image below:
