@@ -104,4 +104,4 @@ That's all! Hope it helps.
 
   [1]: https://developers.google.com/apis-explorer
   [2]: https://npmjs.org/package/googleapis
-  [3]: https://github.com/google/google-api-nodejs-client/blob/master/test/test.jwt.js
+  [3]: https://github.com/google/google-api-nodejs-client/blob/master/test/test.auth.js
