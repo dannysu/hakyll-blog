@@ -94,3 +94,8 @@ ul.dates a:hover, ul.dates a:hover .date, ul.counts a:hover, ul.counts a:hover .
 .label {
     text-decoration: none;
 }
+
+code {
+    background-color: #f1f1f1;
+    padding: 3px;
+}
