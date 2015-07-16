@@ -5,11 +5,10 @@ import           Data.Monoid (mappend, mconcat)
 import           Hakyll
 import           Text.Pandoc (writerReferenceLinks)
 import           Data.Char (toLower)
-import           System.Locale (defaultTimeLocale)
+import           Data.Time.Format (defaultTimeLocale, parseTimeM)
 import           Data.List (sortBy, intercalate)
 import           Data.Time.Clock (UTCTime)
 import           System.FilePath (takeBaseName, takeFileName)
-import           Data.Time.Format (parseTime)
 import           Data.List (isPrefixOf, tails, findIndex)
 
 import           Text.Blaze.Html.Renderer.String (renderHtml)
@@ -30,6 +29,10 @@ main = hakyll $ do
     match "templates/*" $ compile templateCompiler
 
     match "favicon.ico" $ do
+        route   idRoute
+        compile copyFileCompiler
+
+    match "keybase.txt" $ do
         route   idRoute
         compile copyFileCompiler
 
@@ -355,5 +358,5 @@ paginate itemsPerPage rules = do
             byDate id1 id2 =
                 let fn1 = takeFileName $ toFilePath id1
                     fn2 = takeFileName $ toFilePath id2
-                    parseTime' fn = parseTime defaultTimeLocale "%Y-%m-%d" $ intercalate "-" $ take 3 $ splitAll "-" fn
+                    parseTime' fn = parseTimeM True defaultTimeLocale "%Y-%m-%d" $ intercalate "-" $ take 3 $ splitAll "-" fn
                 in compare ((parseTime' fn1) :: Maybe UTCTime) ((parseTime' fn2) :: Maybe UTCTime)

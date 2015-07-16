@@ -1,0 +1,71 @@
+==================================================================
+https://keybase.io/dannysu
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://dannysu.com
+  * I am dannysu (https://keybase.io/dannysu) on keybase.
+  * I have a public key with fingerprint 7039 C13C C78A 0B85 D1DB  C750 3420 31E1 C28C B1DB
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "fingerprint": "7039c13cc78a0b85d1dbc750342031e1c28cb1db",
+            "host": "keybase.io",
+            "key_id": "342031e1c28cb1db",
+            "kid": "010162a89bfc635b10f44c7df27081bb4b238d303e8efccb103586a721c4674079fa0a",
+            "uid": "1f26ec37b1198aa054a6fe93c30cfe19",
+            "username": "dannysu"
+        },
+        "service": {
+            "hostname": "dannysu.com",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1437015791,
+    "expire_in": 157680000,
+    "prev": "4f880e2882c9d2d709c5cdac7103a3f8973ff238fdb8945b7548614a904a0a51",
+    "seqno": 8,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: GnuPG v2
+
+owFtUmtMFFcYXRCN3RYRH+CrrRlSAwnSufPYubNFrFCD66sqrTYpZpm5c2cZHjuw
+Ozy2SIJb6ANUhBYqJQhqY1uBgqSEhKKtYkOJQJeqEAypYi2mEVoDCFpY2lnS/mjS
+++fmnu+c893v5DsZuMhg9BuLaJg+euP6lN/1K1tFw5ufv/A4jxBVyUWY84hUvHDJ
+it2GHRkOxa4RZoIjaR4BGiEOCqQIWQlIIuJYkmYokgYYIAoiUceISCJZdfoUuo0o
+OHGUouqY/rAqko7+Dz91oUACEpgoAfKijEw0KwJSZhjESTLFkRCIIiNSNJRoksYQ
+y0jXkjQLTQJHAcSYOIbkeFkgBd0ua8EOyJQJI5oTAeChIJAsI5hkzNOIJpGMAe8j
+OrHDLqRjnS0JdrvLmUXkRxI6mK0g7EvAN8h/CVFITdeVGQ5VU5GapheSNS3D7NNp
+rgwfMQeL1n8srKJil/QQdUE2djgV1U6Ygc5EmuLzBAzNkYDleBBJ4NwMxYGtio/B
+ciZI6sfXBmfrlowMIYkpCCnES5TEkTxikSQgTo9AoGXIc7Qs6+HIkgh5hhU5loEm
+wAg8yeiJsIDwDZVpVwkz1L8p2HRLp2KzC1qWAxP5xg/9NwQY/IyGJYv9fXtgMD6z
+/N/tOOYN8q4aoI6GzL07ERc72fVi1O0DObX8uu35D872XY4cn/UmFltRwE8bGt7p
+6LobWv/V+8HzyZbyki0S9Ozr7T+VFnfkboqD00rdz5UUR9w5GG8PiH/kaRhe9t4H
+tQ1NJbU8OZJcoVZdGJ0YPDuYOLqkOCyoe25i7Stt2e1vEOWPK3NCgz7tH2Au/7G+
+d9OurNPe0RWHt5XGGYvGd3adTOz9sva26fe5VTHugbYUb3jN2JOAU+k/vrzGsxvW
+Fz5ov2R56Zf6O/M13cM3U18/FN2qTVzq6Q8k3Cf8HnI9LRtLMqeGIaopitGmc4+3
+J9p27iMa4y3NHZVj3rC933buaL7Q06fepzBfrXyXXXCw/cxUU356XZv75uT+GW68
+yeDOteYlJxSsHeo754zGH9O9sZ3rbDtcB7wdYcuPxK6s/qssLSrkTxv4Oit4TfXk
+vfIiQ9cn8uKJ0GuFRvDDMSqCWjr92upnx+6tPlxC4s2fdU7XDW1jZjf/9kVIppte
+//2tKyktyqylsTyqe8948/m3hw7l0hcrapYtfasOj5u3jxSVXYsp3/tqWkfCFkvH
+N/erwqdaT1fdah+U5zbueb7i4vn+lYHhaeDX/kcVNx7uHrlavGlmRZPLtWjXR6WN
+zX6VSfVDV+cLZnDjmZai1llPpSXhxNb8rgT+5+gkf+5pGdQ8wU89hZVjYpLlyd8=
+=gpPz
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/dannysu
+
+==================================================================
