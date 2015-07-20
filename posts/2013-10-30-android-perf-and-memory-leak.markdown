@@ -1,7 +1,7 @@
 ---
 date: 
 title: Fixing AvidRegister Performance and Memory Leak Issues
-tags: Start-up, AvidTap, HyperDrive, Android, AvidRegister
+tags: Start-up, AvidTap, HyperDrive, Google, Android, AvidRegister
 ---
 Thanks to my co-founder Geoff, we just released a new version of
 [AvidRegister][1] to the [Play Store][2]. Geoff fixed a performance issue that

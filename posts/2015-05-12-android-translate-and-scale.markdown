@@ -1,7 +1,7 @@
 ---
 date: 2015-05-12 21:51:30 PDT
 title: Do Translate and Scale Animations at the Same Time
-tags: Android, programming, mobile, Mad Coding
+tags: Google, Android, programming, mobile, Mad Coding
 ---
 Here's a neat problem I ran into while trying to animate things on Android. I
 wanted to animate moving a View from one place to another. On top of that, I

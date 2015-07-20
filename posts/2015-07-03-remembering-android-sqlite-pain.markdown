@@ -1,7 +1,7 @@
 ---
 date: 2015-07-03 15:32:27 PDT
 title: Making Android SQLite Less Painful to Use
-tags: Mad Coding, Android, SQLite, Java, AvidTap, AvidRegister, SQLiteFutures
+tags: Mad Coding, Google, Android, SQLite, Java, AvidTap, AvidRegister, SQLiteFutures
 ---
 2 years ago (2013) when we were first working on AvidRegister, our Android
 Point-of-Sale, we used SQLite to store customer purchases and other data locally
