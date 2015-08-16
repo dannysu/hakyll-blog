@@ -5,9 +5,7 @@ In 2009, Microsoft launched Windows Marketplace for Mobile. After some
 brainstorming to figure out what I could contribute to it, I settled on the
 idea of writing a touch friendly UI for customizing the Windows Mobile 6.5 home
 screen. I went ahead and developed a tool that is easy to use and achieved
-great success on the Marketplace. This entire project was done during my spare
-time for fun, but the things that I learned and the program that I developed
-ended up being beneficial to the company.
+great success on the Marketplace.
 
 My app was bundled by Microsoft to ship on all Huawei C8300 devices in China
 (See more about that [here][1]). On top of that, there were other efforts

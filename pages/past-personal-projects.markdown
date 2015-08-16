@@ -26,9 +26,9 @@ Also see [github][3] for my past projects.
 **Home Screen Customizer for Windows Mobile**
 
 - Published on Microsoft Windows Marketplace for Mobile and allows users to
-  add, remove, rearrange home screen items. This hobby project had over 150,000
-  downloads and was later bundled by Microsoft to ship on all Huawei C8300
-  devices in China.  
+  add, remove, rearrange home screen items. The app had over 150,000 downloads
+  and was later bundled by Microsoft to ship on all Huawei C8300 devices in
+  China.  
   [[details](/home-screen-customizer-for-windows-mobile/)]
 
 &nbsp;  
@@ -60,11 +60,12 @@ Also see [github][3] for my past projects.
   [[details](/directx-game-engine/)]
 
 &nbsp;  
-**OCVolume**
+**OC Volume**
 
-- A simple speech recognition engine written in Java back in high school.
-  Project is about 4000 lines of code. After putting it up on SourceForge, I
-  received many emails from people who used the software or have questions.  
+- A simple speech recognition engine written in Java. Project is about 4000
+  lines of code. After putting it up on SourceForge, researchers around the
+  world have used it to aid their own efforts, and I received many emails from
+  people who used the software or have questions.
   [[details on SourceForge](http://ocvolume.sf.net/)]
 
 &nbsp;  

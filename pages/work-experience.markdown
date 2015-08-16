@@ -30,7 +30,7 @@ shopping experience.
 
 <br/>
 
-## **Software Developer and Project Lead at [Well.ca Inc.](http://well.ca)
+## **Software Engineer and Warehouse Software Lead at [Well.ca Inc.](http://well.ca)
      (September 2011 to August 2012)**
 - **Well.ca iPad app**
     - [See on Apple AppStore][4] and [Well.ca's website](http://well.ca/app/)
@@ -45,8 +45,8 @@ shopping experience.
         - Read about my usage of PhoneGap and SASS for this project [here][5].
     - Refactored server-side code to allow checkout business logic to be
       reusable.
-- **Project Lead for Warehouse Management Software**
-    - Led two junior developers as the project lead for the in-house
+- **Team Lead for Warehouse Management Software**
+    - Led two junior developers as the team lead for the in-house
       warehouse management software.
     - Directed and encouraged team members to write reusable, testable, and well designed
       components.
@@ -82,10 +82,9 @@ shopping experience.
       in wide variety of areas while helping Motorola and LG to commercialize
       phones.
 - **Other Achievements**
-    - Created the Home Screen Customizer application in C# during spare time.
-      It had 151,116 downloads on Windows Mobile Marketplace as of July 21,
-      2010, and it was later bundled by Microsoft to ship on Huawei C8300
-      phones in China.
+    - Created the Home Screen Customizer application in C#. It had 151,116
+      downloads on Windows Mobile Marketplace as of July 21, 2010, and it was
+      later bundled by Microsoft to ship on Huawei C8300 phones in China.
     - Wrote a C# tool during spare time to modify phone ROM images on desktop
       PCs. The tool saved developers and testers time by eliminating the build
       process.
@@ -97,53 +96,10 @@ shopping experience.
 <br/>
 <br/>
 
-## **SDE Internship at [Amazon.com Inc.](http://www.amazon.com/) 
-     (August 2006 to December 2006)**
-- Joined the Item Authority team whose goal is to figure out when two
-  things being sold are actually the same product.
-- Researched SimRank and co-citation link analysis algorithms, which use
-  the number of common links between items to determine the degree of
-  similarity between items.
-- Experimented with link analysis algorithms in Perl and later implemented
-  several designs for a matching engine in C++.
-<br/>
-<br/>
-
-## **SDE Internship at [Microsoft Corp.](http://www.microsoft.com/) 
-     (January 2006 to April 2006)**
-- **[ActiveSync][1] for Windows Mobile**
-    - Migrated Microsoft ActiveSync Service Provider from using CEDB database
-      to EDB database.
-    - Traced in ARM assembly and C++ to fix an ActiveSync heap overflow bug
-      that was disguised as a data type misalignment error.
-    - Debugged and fixed code defects in an ActiveSync application and solved a
-      Palm Treo 700w Smartphone’s synchronization problem.
-<br/>
-<br/>
-
-## **Program Manager Internship at [Microsoft Corp.](http://www.microsoft.com/)
-     (May 2005 to August 2005)**
-- **[Windows Communication Foundation][2]**
-    - Wrote REST API sample used for Microsoft Professional Developer
-      Conference.
-    - Tackled vague and open-ended project requirements by seeking out the
-      right people to gather information.
-    - Implemented four other API samples from specification stage to
-      implementation and testing stages.
-<br/>
-<br/>
-
-## **SDE Internship at [ScanSoft Inc.](http://www.scansoft.com/) 
+## **SDE at [ScanSoft Inc.](http://www.scansoft.com/) 
      (January 2004 to April 2004, September 2004 to December 2004)**
 - Developed the [Healthcare SpeechPAK][3] in Java utilizing a MVC J2EE
   framework written in-house.
-<br/>
-<br/>
-
-## **SDE Internship at [Intrafinity Inc.](http://www.intrafinity.com/) 
-     (April 2003 to August 2003)**
-- Converted their ColdFusion portal software from running on Windows and using
-  Microsoft SQL Server to instead use Linux and use PostgreSQL
 
   [1]: http://www.microsoft.com/windowsphone/en-us/howto/wp6/sync/installing-activesync.aspx
   [2]: http://msdn.microsoft.com/webservices/indigo/default.aspx

@@ -2,9 +2,9 @@
 title: About Me
 ---
 
-- Currently co-founder of [Kash Corp][6] (YC S14) - we get rid of credit card fees
-- Well.ca mobile developer and warehouse software lead
-- Microsoft SDE on Windows Mobile and Windows Phone 7 Bing Maps
+- Currently Co-Founder of [Kash Corp.][6] (YC S14) - we get rid of credit card fees
+- Well.ca mobile software engineer and warehouse software lead
+- Microsoft SDE on Windows Mobile and Windows Phone
 - University of Waterloo grad
 
 See [this page][1] for more details about my work experience.
@@ -24,11 +24,9 @@ and never giving up are two things I value a lot.
 
 Here is a list of things I did that I'm most proud of:
 
-- Wrote a speech recognizer named [OCVolume][3] in high school (I received
-  [numerous emails][4] after I put it up on SourceForge)
-- Developed Home Screen Customizer application in my spare time achieving over
-  150,000 downloads and later bundled by Microsoft on all Huawei C8300 phones
-  ([Featured on Microsoft China website][5]!)
+- Wrote a speech recognizer named [OC Volume][3]
+- Developed Home Screen Customizer application achieving over 150,000 downloads
+  and later bundled by Microsoft on all Huawei C8300 phones ([Featured on Microsoft China website][5]!)
 - Tackled open-ended problems and did research in high school and at Amazon.com
 - Proposed and prototyped a new driving navigation experience that became an
   official feature on Windows Phone 7 Mango release
@@ -36,6 +34,5 @@ Here is a list of things I did that I'm most proud of:
   [1]: /work-experience/
   [2]: /past-personal-projects/
   [3]: http://ocvolume.sf.net/
-  [4]: /label/ocvolume/
   [5]: /2011/03/27/home-screen-customizer-found-on-microsoft-china/
   [6]: http://withkash.com
