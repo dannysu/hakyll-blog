@@ -779,6 +779,15 @@ img.alignleft {
     #header {
         border-bottom:1px solid #ccc;
     }
+
+    #primary.twocol-stories .story, .twocol-story{
+        width:100%;
+        margin-top:1em;
+    }
+
+    #primary .newer, .older{
+        width:48%;
+    }
 }
 
 

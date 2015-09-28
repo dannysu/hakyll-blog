@@ -1,0 +1,13 @@
+---
+date: 2015-09-28 21:18:53 EDT
+title: Introducing Kash API
+tags: Start-up, Kash, YC, YCombinator
+---
+Earlier this month We officially launched our Kash API product and opened up our
+internal infrastructure to the world. This is the same backbone that has been
+powering Kash stores. We also announced new funding and the addition of Joe
+Saunders to our board.
+
+More details on the [Kash blog][1].
+
+  [1]: http://www.withkash.com/blog/2015/09/02/joesaunders/
