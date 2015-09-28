@@ -134,22 +134,32 @@ table caption{
 	background:#000;
 }
 #header .inside{
-	padding:3em 0;
+    padding-top: 1em;
+    padding-bottom: 1em;
 }
 
 #header h2{
 	font-size:2.25em;
 	margin:0 0.5em 0 0;
 	padding:0 0.5em 0.25em 0;
-	border-right:1px solid #808080;
 	float:left;
 }
-#header h2 a{ text-decoration:none; }
+#header h2 a{
+    text-decoration:none;
+}
+#header #me a{
+	border-right:1px solid #808080;
+    padding-right:1em;
+}
 
 #header p{
 	padding:1em 0;
 	margin:0;
 	line-height:1em;
+}
+
+#header .links {
+    float:left;
 }
 
 /*-----------------------------------------------------------------------------------------------
@@ -707,3 +717,68 @@ img.alignleft {
 .gcsc-branding, .gsc-above-wrapper-area {
     display: none;
 }
+
+/*-----------------------------------------------------------------------------------------------
+  Responsive
+-----------------------------------------------------------------------------------------------*/
+@media (max-width: 520px) {
+    #primary .inside {
+        width: 86%;
+        min-width: 0;
+        padding-left: 7%;
+        padding-right: 7%;
+    }
+
+    #secondary .inside {
+        width: 100%;
+        min-width: 0;
+    }
+
+    #ancillary .inside {
+        width: 86%;
+        min-width: 0;
+        padding-left: 7%;
+        padding-right: 7%;
+    }
+
+    #ancillary .second, #ancillary .third {
+        margin-top:1.2em;
+    }
+
+    #header .inside {
+        width: 86%;
+        min-width: 0;
+        padding-left: 7%;
+        padding-right: 7%;
+    }
+
+    #ancillary .block {
+        width: 100%;
+        margin-left: 0;
+        clear: both;
+    }
+
+    #header .inside #search {
+        position: absolute;
+        right: 7%;
+    }
+
+    #header .inside .links {
+        padding-top: 5px;
+    }
+
+    #header .inside {
+        padding-top: 1em;
+        padding-bottom: 1em;
+    }
+
+    #header #me a{
+        border-right: 0px;
+    }
+
+    #header {
+        border-bottom:1px solid #ccc;
+    }
+}
+
+
