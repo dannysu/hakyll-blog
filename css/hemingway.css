@@ -84,10 +84,12 @@ h2, h3{
 }
 
 p{
+    font-size:1.1em;
 	line-height:1.75em;
 }
 
 #primary ul li{
+    font-size:1.1em;
 	list-style-type:square;
 	margin:0.5em 0 0.5em 2em;
 }
@@ -464,11 +466,15 @@ label.text{
 	clear:both;
 	margin:0;
 }
+#ancillary .textwidget, small {
+    font-size:0.9em;
+}
 #ancillary .block-separator{
 	clear:both;
 	height:2.5em;
 }
 #ancillary .block h2, #ancillary .block h3{
+    font-size:1.3em;
 	margin:0 0 2em 0;
 }
 #ancillary .block img {
@@ -501,6 +507,7 @@ ul.counts .count{
 }
 
 ul.dates a, ul.counts a, ul.blogroll a, ul.pages a, .widget ul a, a.readmore, .links{
+    font-size:1.03em;
 	color:#BFBFBF;
 	text-decoration:none;
 }
@@ -527,7 +534,7 @@ ul.pages ul li{
 	list-style-type:square;
 }
 /*-----------------------------------------------------------------------------------------------
-  Foooter
+  Footer
 -----------------------------------------------------------------------------------------------*/
 
 #footer{
@@ -783,10 +790,6 @@ img.alignleft {
 
     #header #me a{
         border-right: 0px;
-    }
-
-    #header {
-        border-bottom:1px solid #ccc;
     }
 
     #primary.twocol-stories .story, .twocol-story{
