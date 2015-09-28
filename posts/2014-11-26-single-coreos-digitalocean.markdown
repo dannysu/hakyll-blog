@@ -136,6 +136,7 @@ WantedBy=default.target
 
 In my example, ExecStart runs a shell script named mystuff.service.sh. I use it
 to decide what docker commands to run. You can use it as an example:
+
 <pre class="brush:bash">
 #!/bin/bash
 
@@ -149,6 +150,7 @@ fi
 </pre>
 
 Finally, you can start the service and make it run upon reboot as well:
+
 <pre>
 systemctl start mystuff
 systemctl enable mystuff
