@@ -84,9 +84,6 @@ ul.dates a:hover, ul.dates a:hover .date, ul.counts a:hover, ul.counts a:hover .
 #footer .inside{
     background:url(/images/footer.gif) 50% 0 repeat-x;
 }
-#search .searchimg{
-    background:url(/images/search.gif) 0 0 no-repeat;
-}
 #searchform #s{background:#F0F0F0; border-bottom:1px solid #D8D8D8;}
 #searchform #searchsubmit{background:#FFF;}
 
