@@ -78,7 +78,7 @@ from my high school did? The thing is you wouldn't know until you try.
 Sal talked about tracking people in math doesn't quite make sense. It's almost
 like placing limits on people and giving up on them. Why don't we encourage them
 to keep struggle through it? Perhaps the understanding will come just like
-Sal's niece.
+Sal's cousin.
 
 As I read the book I wrote down tracking people in math is like judging a
 startup like a baby. "Oh they'll never amount to anything" is simply a
