@@ -680,18 +680,21 @@ img.centered, img.aligncenter {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
+    max-height: 300px;
 }
 
 img.alignright {
 	padding: 4px;
 	margin: 0 0 2px 7px;
 	display: inline;
+    max-height: 300px;
 }
 
 img.alignleft {
 	padding: 4px;
 	margin: 0 7px 2px 0;
 	display: inline;
+    max-height: 300px;
 }
 
 .alignright {
@@ -809,6 +812,21 @@ img.alignleft {
 
     #primary .newer, .older{
         width:48%;
+    }
+
+    img.centered, img.aligncenter {
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    img.alignright {
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    img.alignleft {
+        max-width: 100%;
+        max-height: 100%;
     }
 }
 

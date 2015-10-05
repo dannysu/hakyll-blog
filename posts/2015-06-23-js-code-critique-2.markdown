@@ -9,7 +9,7 @@ This is my 2nd javascript code critique. The first one is [here][1].
 My goal is to bring [hash0][3] code up to ES5 standards and stop coding like
 it's 1990s. Once that's done, then go on to bring it up to ES6.
 
-<br/>
+<br>
 
 ## **Array.prototype.forEach()**
 
@@ -34,7 +34,7 @@ vm.mappings.forEach(function(mapping) {
 
 Nice.
 
-<br/>
+<br>
 
 ## **camelCase**
 
@@ -52,7 +52,7 @@ To this:
 Metadata.prototype.findConfig = function(param, partialMatch) {
 </pre>
 
-<br/>
+<br>
 
 ## **var hoisting**
 
@@ -93,7 +93,7 @@ Metadata.prototype.addMapping = function(from, to) {
 
 Although in this case, I could do without the extra variable too.
 
-<br/>
+<br>
 
 ## **Closure**
 
@@ -127,7 +127,7 @@ to trigger the tap event, because at the time of the tap event the notification
 variable in the scope would have been changed to reference the last one in
 notifications array.
 
-<br/>
+<br>
 
 That's all I have time for code critique #2 for now, but it's great to get it
 out of my system.

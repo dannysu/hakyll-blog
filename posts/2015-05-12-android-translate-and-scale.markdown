@@ -7,11 +7,11 @@ Here's a neat problem I ran into while trying to animate things on Android. I
 wanted to animate moving a View from one place to another. On top of that, I
 also wanted to change the size of the View by scaling it.
 
-<br/>
+<br>
 
 ##**Animation Involving Just Translation (Moving)**
 
-<img src="https://imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg0LEgVpbWFnZRipugQM">
+<a href="//imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg0LEgVpbWFnZRipugQM" target="_blank"><img src="//imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg0LEgVpbWFnZRipugQM" class="centered"></a>
 
 A pure translation animation like the image above is simple. To know what values
 to feed to .translateX() and .translateY() you simply take delta for x
@@ -23,7 +23,7 @@ myView.animate()
     .translateY(y2 - y1)
 </pre>
 
-<br/>
+<br>
 
 ##**First Attempt at Combining Translation and Scaling**
 
@@ -43,7 +43,7 @@ The reason the View doesn't end up at the correct place that you'd expect is
 because the scaling operation shrinks the View at the center of the View. What
 you actually get is something like the following:
 
-<img src="https://imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg4LEgVpbWFnZRi5760DDA">
+<a href="//imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg4LEgVpbWFnZRi5760DDA" target="_blank"><img src="//imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg4LEgVpbWFnZRi5760DDA" class="centered"></a>
 
 The light blue box is where the box would end up without scaling. The darker
 blue is with scaling. In the above image, the scaling factor is 0.6. i.e. w2 /
@@ -52,14 +52,14 @@ w1 = 0.6
 The reason the result is as the above image shows is because scaling shrinks or
 expands based on the center of the View.
 
-<br/>
+<br>
 
 ##**The Correct Way**
 
 So what do you do if you need to animate things to one of the corners? For
 example if you want to achieve something like the image below:
 
-<img src="https://imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg4LEgVpbWFnZRjppeoDDA">
+<a href="//imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg4LEgVpbWFnZRjppeoDDA" target="_blank"><img src="//imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg4LEgVpbWFnZRjppeoDDA" class="centered"></a>
 
 What you need to do is to apply additional translation to compensate for the
 difference due to scaling. In the above example, I need to adjust x coordinate

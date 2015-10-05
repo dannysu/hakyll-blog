@@ -54,8 +54,8 @@ Option #3 is the worse. It's already the next day and the manager has no time to
 look for someone else to help.
 
 Let's now look at some common reasons why people don't notify early.
-<br/>
-<br/>
+<br>
+<br>
 
 ## **But, but...**
 
@@ -103,8 +103,8 @@ they need to learn. If not, get out of there.
 An even better situation is when everybody knows at least some idea of key
 things such that the [bus factor][1] is not low. This is one of the many reasons
 why I like code reviews.
-<br/>
-<br/>
+<br>
+<br>
 
 ## **My Personal Experiences**
 
@@ -122,8 +122,8 @@ I could have held on to the last minute to break the news, but doing so would've
 ruled out any possibility of getting external help. In the end the project is
 successful, and that's all that matters. I handled the situation well and to the
 best of my ability.
-<br/>
-<br/>
+<br>
+<br>
 
 ## **Conclusion**
 

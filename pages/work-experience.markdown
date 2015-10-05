@@ -15,7 +15,7 @@ credit card and saves local businesses.
 
 Join the fight. [End Credit Card Fees](http://endcreditcardfees.com).
 
-<br/>
+<br>
 
 ## **Co-Founder at [AvidTap Corp.](http://avidtap.com)
      (September 2012 to Present)**
@@ -28,7 +28,7 @@ user walks into an AvidTap powered retail store, her profile will pop up on the
 POS, the retailer can greet her by her name and relate to her based on her past
 shopping experience.
 
-<br/>
+<br>
 
 ## **Software Engineer and Warehouse Software Lead at [Well.ca Inc.](http://well.ca)
      (September 2011 to August 2012)**
@@ -62,8 +62,8 @@ shopping experience.
     - Led by example in writing tests and caring about software design.
     - Installed Phabricator for the team to enable better code review
       feedbacks.
-<br/>
-<br/>
+<br>
+<br>
 
 ## **Software Development Engineer I & II at 
      [Microsoft Corp.](http://www.microsoft.com/) (July 2007 to July 2011)**
@@ -93,8 +93,8 @@ shopping experience.
       retrieval.
     - Won the internal Xperia X1 programming contest with an application that
       enables search via keywords for settings users want to change.
-<br/>
-<br/>
+<br>
+<br>
 
 ## **SDE at [ScanSoft Inc.](http://www.scansoft.com/) 
      (January 2004 to April 2004, September 2004 to December 2004)**

@@ -107,7 +107,7 @@ building. We registered with reception and waited in a big room that looks like
 a cafeteria with long benches. Unfortunately I didn't take any photos of the
 area. There were other people waiting for their turn and we also got to see some
 cool hardware startup's product. One of which is this cool touch interactive display thing:
-<img src="https://imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg0LEgVpbWFnZRjpinwM" style="height:400px;">
+<a href="//imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg0LEgVpbWFnZRjpinwM" target="_blank"><img src="//imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg0LEgVpbWFnZRjpinwM" class="centered"></a>
 
 Things were a little delayed, I think we finally got our turn closer to 11. We
 were led to a smaller room to the left of the reception. I didn't know the
@@ -129,8 +129,8 @@ The interview probably lasted more than 10 minutes but it felt like a great
 discussion. After the interview we could finally relax and take a group photo
 outside the building.
 
-<img src="https://imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg4LEgVpbWFnZRipj7kBDA" style="height:300px;">
-<img src="https://imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg0LEgVpbWFnZRj6zwIM" style="height:300px;">
+<a href="//imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg4LEgVpbWFnZRipj7kBDA" target="_blank"><img src="//imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg4LEgVpbWFnZRipj7kBDA" class="centered"></a>
+<a href="//imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg0LEgVpbWFnZRj6zwIM" target="_blank"><img src="//imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg0LEgVpbWFnZRj6zwIM" class="centered"></a>
 
 <br>
 
@@ -148,8 +148,8 @@ be tough on top of being already tired, so I went to my room to sleep. Later I
 woke up and joined Kaz and Geoff in the living room watching the Raptors game
 as we waited.
 
-<img src="https://imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg4LEgVpbWFnZRjpk_YBDA" style="width:300px;">
-<img src="https://imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg4LEgVpbWFnZRj54fYBDA" style="width:300px;">
+<a href="//imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg4LEgVpbWFnZRjpk_YBDA" target="_blank"><img src="//imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg4LEgVpbWFnZRjpk_YBDA" class="centered"></a>
+<a href="//imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg4LEgVpbWFnZRj54fYBDA" target="_blank"><img src="//imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg4LEgVpbWFnZRj54fYBDA" class="centered"></a>
 
 Finally at about 9:43PM EST we got a call from Aaron Harris. It was a great
 feeling. We weren't depending on getting into YC for our startup, because we'd

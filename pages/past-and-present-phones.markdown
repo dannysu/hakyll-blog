@@ -11,8 +11,8 @@ I love mobile phones. Here are my current devices:
 - **iPhone 3Gs** (iOS)
 - **Nexus One** (Android)
 - **Motorola FONE F3**
-<br/>
-<br/>
+<br>
+<br>
 
 Devices I’ve used for longer periods of time:
 
@@ -27,8 +27,8 @@ Devices I’ve used for longer periods of time:
 - European White HTC Hero
 - Apple iPad 3 (The new iPad)
 - Apple iPod Touch 4th gen
-<br/>
-<br/>
+<br>
+<br>
 
 Devices I’ve used for short periods of time to check out different platforms:
 
@@ -40,8 +40,8 @@ Devices I’ve used for short periods of time to check out different platforms:
 - Apple iPhone 4
 - BlackBerry Bold 9900
 - BlackBerry Curve 9360
-<br/>
-<br/>
+<br>
+<br>
 
 Devices I’ve worked on
 

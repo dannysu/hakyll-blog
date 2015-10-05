@@ -39,8 +39,8 @@ That's it! From then on just write your js scripts and run them with node.
 
 You can of course install from source or use package manager if that works for
 you. For vagrant, there's also the [nodejs cookbook][1].
-<br/>
-<br/>
+<br>
+<br>
 
 ## **Setting up Clojure**
 
@@ -122,8 +122,8 @@ data.json-0.1.3.jar and math.numeric-tower-0.0.1.jar in there.
 An alternative method is to use [Leiningen][5], but that's more useful IMO for
 setting up projects. If I want to quickly write a script and run it, I prefer my
 clj script.
-<br/>
-<br/>
+<br>
+<br>
 
 ## **Setting up VIM**
 

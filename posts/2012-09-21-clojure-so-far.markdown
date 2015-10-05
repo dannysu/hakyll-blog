@@ -10,16 +10,16 @@ book's coverage on Compojure is way too little for somebody to get into it. My
 actual hands-on experience with Compojure taught me more than what the book
 covers. Also, I went to a MeetUp and got some experience with STM that's really
 enlightening. I blogged about it [here][11].
-<br/>
-<br/>
+<br>
+<br>
 I started reading the book [Clojure in Action][1] that I got from a local
 library. The beauty of Clojure's Lisp syntax is making me wish that I had paid
 more attention to those Scheme exercises in school. I vaguely remember all the
 brackets and trying to use only recursion instead of for-loops, but I didn't
 fully understand why the professor was teaching us some Scheme. He probably did
 say why but it was lost on me. In any case, it's great to rediscover Lisp.
-<br/>
-<br/>
+<br>
+<br>
 
 ## **The Beauty of Clojure and of Lisp**
 
@@ -114,8 +114,8 @@ macros, it's a big difference. C++ macros are typically written in upper
 case, and requires you to code in different way by having '\\'s everywhere to
 have multiline. If you want to execute different set of statements you need to
 put them into a function instead and use macro magic to call it.
-<br/>
-<br/>
+<br>
+<br>
 
 ## **Runs on JVM (or whatever it can compile to)**
 
@@ -135,7 +135,7 @@ startup time. Also, calling Java methods look out of place:
 <pre class="brush:clojure">
 (.toUpper "lower")
 </pre>
-<br/>
+<br>
 
 ## **Comparison to Node.js**
 
@@ -173,8 +173,8 @@ Clojure on the other hand would be able to utilize multi-core much easier. Check
 out this [awesome talk][10] by Tyler Jennings on how he used Clojure at Groupon.
 Aside from the cool BK-Tree, Tyler made use of Clojure parallel processing by
 switching from map to pmap. BAM!
-<br/>
-<br/>
+<br>
+<br>
 
 ## **Some Useful Functions**
 

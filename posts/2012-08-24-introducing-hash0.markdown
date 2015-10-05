@@ -7,8 +7,8 @@ tags: Mad Coding, Security
 passwords in plain text. Furthermore, Kevin Burke recently found [Virgin Mobile
 not doing the right thing][12]. All the more reasons to use different passwords
 and don't assume big companies know what they're doing.
-<br/>
-<br/>
+<br>
+<br>
 
 It's a good idea to get strong passwords including random characters, numbers,
 symbols and don't reuse the same password for different account. Here's a very

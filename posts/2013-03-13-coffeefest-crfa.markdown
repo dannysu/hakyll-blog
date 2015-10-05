@@ -9,7 +9,7 @@ Both shows were awesome and we talked to many interested customers. At Coffee
 Fest, [AvidTap][4] also won the best new product award. The organizers told us
 that we got the highest score in the show's 20-year history!
 
-[<img src="http://imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3JlcgwLEgVpbWFnZRiRTgw" width="512">][3]
+[<img src="//imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3JlcgwLEgVpbWFnZRiRTgw" width="512" class="centered">][3]
 
 When I started [AvidTap][4] I told myself that I'll do whatever is necessary
 including things I wasn't comfortable doing. While we were at these tradeshows,

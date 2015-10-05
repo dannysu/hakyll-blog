@@ -13,8 +13,8 @@ dealing with installations.
 
 Note that the pros & cons listed are from the perspective of my usage level.
 YMMV.
-<br/>
-<br/>
+<br>
+<br>
 
 ## **Hosting Static Content**
 
@@ -27,8 +27,8 @@ Currently my blog is hosted with GitHub Pages which is free. There's also
 providers are great for static blogs too. I got my blog on AppFog very easily
 and I've read about people using Heroku as well. More on those PaaS providers
 later.
-<br/>
-<br/>
+<br>
+<br>
 
 ## **DreamHost Pros and Cons**
 
@@ -68,8 +68,8 @@ Node.js or Clojure I also have to tinker with it somehow.
 
 Since I already moved my photo storage to SkyDrive (25GB) and all of my projects
 elsewhere, it's time to say goodbye to DreamHost.
-<br/>
-<br/>
+<br>
+<br>
 
 ## **Windows Azure**
 
@@ -82,8 +82,8 @@ Azure Sandbox is a great idea, and I used it for my [daily Bing wallpaper
 app][4]. However, I quickly found out that with the quota they gave me
 I can't even keep the service running 24/7. I'm not going to pay for a hobby
 project, so I ended up going with Google App Engine.
-<br/>
-<br/>
+<br>
+<br>
 
 ## **Google App Engine**
 
@@ -116,8 +116,8 @@ simple place to throw data to. I have a modified ZeroBin version that stores
 data in GAE using this project instead of needing filesystem access.
 
 App Engine allows me to host 3 of my projects for the price of free.
-<br/>
-<br/>
+<br>
+<br>
 
 ## **Heroku**
 
@@ -155,8 +155,8 @@ prototypes.
 Again, 3 projects for the price of free. Plus I get to use Clojure and Node.js.
 Can't beat that. I think getting Haskell going is a bit more involved though,
 somebody please make it easier for Haskell.
-<br/>
-<br/>
+<br>
+<br>
 
 ## **AppFog**
 
@@ -194,8 +194,8 @@ Also, for some reason the command line tool to view logs didn't work
 reliably for me.
 
 So that's 1 project on AppFog plus my backup blog for the price of free. Awesome!
-<br/>
-<br/>
+<br>
+<br>
 
 ## **CloudBees**
 
@@ -212,8 +212,8 @@ I found CloudBees while searching for hosted build service. I put up the
 [clj-philosopher][12] code on there and used Jenkins to automate running the
 tests. CloudBees is unique in this aspect of providing a Jenkins service. I have
 not used their Java offering.
-<br/>
-<br/>
+<br>
+<br>
 
 ## **The New World**
 

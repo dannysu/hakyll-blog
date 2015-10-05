@@ -21,7 +21,7 @@ I try to patch up some of the holes in my understanding of javascript, I thought
 it's a great time to give myself some code critiques. I'm going to use my
 [hash0][1] project for this because it was first written a while ago.
 
-<br/>
+<br>
 
 ## **new Array() vs []**
 
@@ -45,7 +45,7 @@ function Metadata() {
 
 Just a style thing, so moving on.
 
-<br/>
+<br>
 
 ## **truthy & falsy values #1**
 
@@ -84,12 +84,12 @@ Metadata.prototype.hasStorageUrl = function() {
 There. Nice and simple. Empty string returns false. null also returns false.
 Other strings return true. This is exactly what I want.
 
-<br/>
+<br>
 
 ## **truthy & falsy values #2**
 
 I also wrote code like this:
-<pre class="brush:javascript">
+<pre class="arush:javascript">
 Metadata.prototype.findConfig = function(param, partial_match) {
     partial_match = partial_match || false;
 
@@ -106,7 +106,7 @@ and sometimes whatever the incoming type is.
 If I really wanted to ensure it's a typeof boolean, then I could either
 !!partial_match or Boolean(partial_match) here.
 
-<br/>
+<br>
 
 ## **Array.prototype.map()**
 
@@ -140,7 +140,7 @@ function and setting up and tearing down function scope repeatedly. This
 function doesn't run many times and always at the initialization of an AngularJS
 controller, so it doesn't matter at all.
 
-<br/>
+<br>
 
 ## **Array.prototype.filter()**
 
@@ -171,7 +171,7 @@ Cool, that's more compact and perhaps more clear at a glance what the function
 is doing. I'm filtering and grabbing only the ones that meet the condition
 inside.
 
-<br/>
+<br>
 
 Well, that's it for now. I have more things to add but no time to write it down
 right now.

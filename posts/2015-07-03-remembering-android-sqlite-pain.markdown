@@ -7,7 +7,7 @@ tags: Mad Coding, Google, Android, SQLite, Java, AvidTap, AvidRegister, SQLiteFu
 Point-of-Sale, we used SQLite to store customer purchases and other data locally
 on the tablet.
 
-<img src="https://imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg4LEgVpbWFnZRj58-oDDA" width="400"/>
+<a href="//imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg4LEgVpbWFnZRj58-oDDA" target="_blank"><img src="//imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg4LEgVpbWFnZRj58-oDDA" width="400" class="centered"></a>
 
 We had to solve some issues with using SQLite that left me surprised things are
 still this bad in 2013. I extracted the helper classes I wrote back then and
@@ -15,7 +15,7 @@ published it as [SQLiteFutures][3] on GitHub. At some point I'll figure out how
 to throw it up on Maven. With this post, I'll look back at some of the things
 we had to do at the time that prompted me to write SQLiteFutures.
 
-<br/>
+<br>
 
 ## **Enforce Single SQLiteOpenHelper**
 
@@ -33,7 +33,7 @@ for our **SQLiteOpenHelper** subclass. In SQLiteFutures, this is enforced
 because SQLiteFutures is a singleton and accepts a SQLiteOpenHelper at
 initialization.
 
-<br/>
+<br>
 
 ## **DB Access on the UI Thread**
 
@@ -47,7 +47,7 @@ synchronously you can enforce that easily. However, the default behaviour is
 that things are asynchrous. Doing so makes it easy to not block UI thread by
 default.
 
-<br/>
+<br>
 
 ## **Remember to Close Cursor**
 

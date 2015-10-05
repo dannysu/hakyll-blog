@@ -19,8 +19,8 @@ to.
 
 The best way to learn is to be hands on and actually practice what you preach.
 The remaining sections jot down what I learned yesterday.
-<br/>
-<br/>
+<br>
+<br>
 
 ## **Exceptions not for Triggering STM Retries**
 
@@ -65,8 +65,8 @@ retry logic because Clojure is looking for RetryEx and not the generic Exception
 class. Also, as I discovered later, this is a totally wrong way to think about
 Clojure's STM. So how does one make sure grab-forks don't go ahead and grab some
 other philosopher's fork while it's in use?
-<br/>
-<br/>
+<br>
+<br>
 
 ## **STM Versioning**
 
@@ -132,8 +132,8 @@ check whether you can use things or not. All that's required is to mark the
 resources using ref and do things inside a dosync. However, there is some
 problems with this approach. The transaction could potentially be fairly long
 running since it encompasses the actual eating part.
-<br/>
-<br/>
+<br>
+<br>
 
 ## **Finer Grain Control**
 

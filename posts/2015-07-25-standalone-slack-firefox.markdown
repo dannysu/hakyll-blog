@@ -15,7 +15,7 @@ a regular website everytime I open it via the shortcut. That was enough to
 finally push me to look for a pure Firefox solution, and I'm sharing the steps
 here.
 
-<br/>
+<br>
 
 ## **Make a Desktop App**
 
@@ -29,7 +29,7 @@ Slack.
 </pre>
 
 You should then see a window like the one below:  
-<img src="https://imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg4LEgVpbWFnZRj56vACDA"/>
+<a href="//imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg4LEgVpbWFnZRj56vACDA" target="_blank"><img src="//imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg4LEgVpbWFnZRj56vACDA" class="centered"></a>
 
 **2. Click "Create Profile"**
 
@@ -45,7 +45,7 @@ name. I used "slack" for my standalone profile.
 After these steps, you can now run the same command as step 1 and get a
 standalone web app.
 
-<br/>
+<br>
 
 ## **Make an Application Shortcut**
 
@@ -71,7 +71,7 @@ just look for a slack icon yourself and put the path to the file in there.
 Finally refresh GNOME to get the shortcut to show up by pressing `Alt + F2` and
 then type `r` as the command.
 
-<br/>
+<br>
 
 ## **Hide Toolbars**
 
@@ -95,7 +95,7 @@ Create a Stylish style with the following content:
 }
 </pre>
 
-<br/>
+<br>
 
 That's it! Standalone Slack with Firefox.
 
