@@ -42,7 +42,7 @@ Cordova's invocation method and added my own semantic for how the custom scheme
 is used to pass parameters. Below is the code I used to invoke native
 functionality from javascript.
 
-<pre class="brush:js">
+<pre><code class="javascript">
 var execIframe = null;
 
 var createExecIframe = function() {
@@ -68,13 +68,14 @@ sendToNative = function(cmd, data) {
 
 // Then whenever you want to invoke native functionality, call:
 // sendToNative('the command', {arg1:"value1"});
-</pre>
+
+</code></pre>
 
 Then in your UIViewController that contains the UIWebView, you'll want to
 implement the following UIWebViewDelegate function. Inside it you check for
 whether the request should be handled specially or not.
 
-<pre class="brush:objc">
+<pre><code class="objc">
 - (BOOL)webView:(UIWebView *)webViewInstance shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
     NSURL *url = [request URL];
     
@@ -84,7 +85,8 @@ whether the request should be handled specially or not.
     }
     return YES;
 }
-</pre>
+
+</code></pre>
 
 By using the code shown and implementing special commands to be invoked from
 javascript, it allowed us to test a bunch of theories in short amount of time.
@@ -104,7 +106,7 @@ TTTAttributedLabel allows me to send JSON from server like the one shown below.
 It allows me to control what the user sees entirely from server-side while
 maintaining the speed of a native app.
 
-<pre class="brush:js">
+<pre><code class="javascript">
 var modals = [];
 var modal = {
     msg: "A Title\n\nWrite something in the body",
@@ -130,7 +132,8 @@ modals.push(modal);
 
 // I return an array of "modals", which tells the native code what message to show.
 // Native code reads the JSON and then use TTTAttributedLabel to show parts of the text differently.
-</pre>
+
+</code></pre>
 
   [1]: /2013/05/02/iterating-at-light-speed/
   [2]: https://github.com/mattt/TTTAttributedLabel

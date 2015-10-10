@@ -41,9 +41,10 @@ account, do so now by following steps 1-3 of this tutorial: [How To Use SSH
 Keys with DigitalOcean Droplets][4]. Then you will want to add your private key
 to your SSH agent on your client machine by running the following command:
 
-<pre class="brush:bash">
+<pre><code class="bash">
 ssh-add
-</pre>
+
+</code></pre>
 
 **Write a Cloud-Config File**
 =============================
@@ -56,12 +57,13 @@ need that right now.
 ------------------------
 My cloud-config file is very simple and only configures the reboot-strategy:
 
-<pre>
+<pre><code class="ini">
 #cloud-config
 coreos:
   update:
     reboot-strategy: reboot
-</pre>
+
+</code></pre>
 
 **Create Droplet on DigitalOcean**
 ==================================
@@ -84,9 +86,10 @@ You would go through the typical steps:
 Your DigitalOcean Control Panel should show the IP of the droplet. You can SSH
 into CoreOS by typing:
 
-<pre class="brush:bash">
+<pre><code class="bash">
 ssh core@[ip]
-</pre>
+
+</code></pre>
 
 **Setup systemd Service to Run Docker**
 =======================================
@@ -102,10 +105,11 @@ Since downloading Docker images can take a while, it's a good idea to grab the
 image prior to doing anything else. For example, I grab my private image from
 Docker Hub this way:
 
-<pre class="brush:bash">
+<pre><code class="bash">
 docker login
 docker pull dannysu/mystuff
-</pre>
+
+</code></pre>
 
 You'll be prompted for username, password and email for the `docker login`
 command.
@@ -117,7 +121,7 @@ You'll save it as `mystuff.service`. It basically defines what to run when you
 type `systemctl start mystuff` or `systemctl stop mystuff`. Save this file to
 `/etc/systemd/system/mystuff.service` on your CoreOS instance.
 
-<pre>
+<pre><code class="ini">
 [Unit]
 Description=My Cool Stuff
 After=docker.service
@@ -132,12 +136,13 @@ ExecStop=/usr/bin/docker stop mystuff
 
 [Install]
 WantedBy=default.target
-</pre>
+
+</code></pre>
 
 In my example, ExecStart runs a shell script named mystuff.service.sh. I use it
 to decide what docker commands to run. You can use it as an example:
 
-<pre class="brush:bash">
+<pre><code class="bash">
 #!/bin/bash
 
 if [ -n "$(docker ps -l -q)" ]; then
@@ -147,14 +152,16 @@ else
     /usr/bin/docker pull dannysu/mystuff
     /usr/bin/docker run --name mystuff -p $1:80:80 dannysu/mystuff nginx
 fi
-</pre>
+
+</code></pre>
 
 Finally, you can start the service and make it run upon reboot as well:
 
-<pre>
+<pre><code class="html">
 systemctl start mystuff
 systemctl enable mystuff
-</pre>
+
+</code></pre>
 
 
   [1]: https://www.docker.com/

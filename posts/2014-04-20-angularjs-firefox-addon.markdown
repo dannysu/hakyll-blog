@@ -18,17 +18,19 @@ loop.
 I found that inside the code, when `history.replaceState` was called, Firefox
 addon was giving me the following error:
 
-<pre>
+<pre><code class="html">
 Message: [Exception... "Failure"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: resource://jid1-1qqtvsfpouxjea-at-jetpack/angularjs-firefox-seed/data/angular-seed/bower_components/angular/angular.js :: Browser/self.url :: line 4409"  data: no]
-</pre>
+
+</code></pre>
 
 I started to dig into AngularJS code to find out why that is. I found a
 workaround by adding to an if-statement to stop AngularJS from using history
 API.
 
-<pre class="brush:js">
+<pre><code class="javascript">
     history: !!($window.history && $window.history.pushState && !(android < 4) && !boxee && !$window.addon),
-</pre>
+
+</code></pre>
 
 You add `!$window.addon` after `!boxee` inside the angular.js file and that
 allowed my addon to function correctly afterwards.

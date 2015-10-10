@@ -42,12 +42,13 @@ pre-built Input for grabbing data from log files.
 
 Here is the relevant part in my toml file:
 
-<pre class="brush:bash">
+<pre><code class="ini">
 [ExampleLog]
 type = "LogstreamerInput"
 log_directory = "/var/log/somewhere"
 file_match = 'some_filename.log'
-</pre>
+
+</code></pre>
 
 What this does is set up an Input of type LogstreamerInput and configure it to
 monitor a particular log file.
@@ -76,14 +77,15 @@ the later parts processes data. You can use it to do things like alert me on the
 For my use, I'm using the filter to group lines from my log file before sending
 the group of lines through. Below is an example toml configuration:
 
-<pre class="brush:bash">
+<pre><code class="ini">
 [ExampleLogAggregator]
 type = "SandboxFilter"
 message_matcher = "Logger == 'ExampleLog'"
 filename = "/some/place/log_aggregator.lua"
 ticker_interval = 15
 can_exit = false
-</pre>
+
+</code></pre>
 
 This configuration says that it wants data that came from ExampleLog Input. As
 data goes through the Heka system, they get metadata attached that associate
@@ -93,23 +95,23 @@ coming from my log file as provided by ExampleLog Input.
 Heka allows you to write custom logic in Lua without having to compile
 anything. The configuration above points Heka to the location of the Lua script.
 
-**ticker_interval** is an optional configuration. I set it to trigger the filter
+`ticker_interval` is an optional configuration. I set it to trigger the filter
   processing at least every 15 seconds. I do this because I'm using the Filter
   to aggregate log data and send the data out in groups, so I need to
   periodically flush out what's been collected.
 
-**can_exit** is also an optional configuration. I set it to false to make sure
+`can_exit` is also an optional configuration. I set it to false to make sure
   if the filter exits the entire Heka system also exits.
 
 <br>
 
 Next up is to actually implement the filter logic in Lua. There are two main
-functions to implement: **process_message** and **timer_event**.
+functions to implement: `process_message` and `timer_event`.
 
-**process_message** is called whenever the upstream Input has new data. For my
+`process_message` is called whenever the upstream Input has new data. For my
 aggregator Filter, my implementation simply accumulates data for later.
 
-<pre class="brush:ruby">
+<pre><code class="ruby">
 require "os"
 require "string"
 
@@ -120,30 +122,32 @@ function process_message()
     buffer = buffer .. payload
     return 0
 end
-</pre>
 
-The **process_message** implementation uses a variable **buffer** to concatenate
-string with each call to **process_message**. The Heka function **read_message**
+</code></pre>
+
+The `process_message` implementation uses a variable `buffer` to concatenate
+string with each call to `process_message`. The Heka function `read_message`
 allows you to grab data ("Payload") coming out from Input or some metadata
 associated with it.
 
 Now that I have the logic to simply accumulate data until some time, I need to
-implement **timer_event** to actually send it downstream for processing. Here's
+implement `timer_event` to actually send it downstream for processing. Here's
 my example implementation:
 
-<pre class="brush:ruby">
+<pre><code class="ruby">
 function timer_event(ns)
     if string.len(buffer) > 0 then
         inject_payload("txt", "", buffer)
         buffer = ""
     end
 end
-</pre>
 
-Note that I configured **timer_event** to be triggered every 15 seconds via the
-**ticker_interval** configuration in toml. So what this function does is when it
+</code></pre>
+
+Note that I configured `timer_event` to be triggered every 15 seconds via the
+`ticker_interval` configuration in toml. So what this function does is when it
 gets invoked, it checks to see if we accumulated any log data in variable
-**buffer**, if we did then inject the payload back into Heka pipeline to be processed.
+`buffer`, if we did then inject the payload back into Heka pipeline to be processed.
 
 <br>
 
@@ -153,11 +157,12 @@ In order to integrate with Slack, we need to somehow transform log data into the
 JSON format Slack expects. That's where Heka Encoder comes in. Again, it's
 something we can code in Lua. Here's an example configuration:
 
-<pre class="brush:bash">
+<pre><code class="ini">
 [SlackEncoder]
 type = "SandboxEncoder"
 filename = "/some/place/slack_encoder.lua"
-</pre>
+
+</code></pre>
 
 It's very simple. All it does is define an Encoder and point to the Lua script
 that implements the logic.
@@ -165,7 +170,7 @@ that implements the logic.
 The Lua script is also not too bad. Slack expects JSON to be sent to its Webhook
 URL, so we need to transform our raw log data into a JSON format.
 
-<pre class="brush:ruby">
+<pre><code class="ruby">
 require "os"
 require "string"
 require "table"
@@ -184,10 +189,11 @@ function process_message()
     inject_payload("json", "Slack", cjson.encode(slack_alert))
     return 0
 end
-</pre>
 
-Here we again implement the **process_message** function that gets invoked for
-each piece of data to be processed. We read out the content via **read_message**
+</code></pre>
+
+Here we again implement the `process_message` function that gets invoked for
+each piece of data to be processed. We read out the content via `read_message`
 call and then construct an object then encode it and inject it back into the
 pipeline to be processed.
 
@@ -198,17 +204,18 @@ pipeline to be processed.
 Finally we're ready to actually send the JSON data to Slack. We do this using
 the Heka Output component. Below is the configuration used to do that.
 
-<pre class="brush:bash">
+<pre><code class="ini">
 [HttpOutput]
 message_matcher = "Logger == 'ExampleLogAggregator'"
 address = "https://your/slack/webhook/url"
 encoder = "SlackEncoder"
-</pre>
+
+</code></pre>
 
 This configuration does the following things:
 
 - Tells Heka to use pre-built [HttpOutput] component
-- Gives it a URL via the **address** configuration
+- Gives it a URL via the `address` configuration
 - Tells it to grab data from ExampleLogAggregator and encode it using
 SlackEncoder
 
@@ -220,7 +227,7 @@ So that's how you can use Heka to monitor log files and get notified via Slack.
 
 Putting it all together, the configuration file in the end looks like this:
 
-<pre class="brush:bash">
+<pre><code class="ini">
 [ExampleLog]
 type = "LogstreamerInput"
 log_directory = "/var/log/somewhere"
@@ -241,7 +248,8 @@ filename = "/some/place/slack_encoder.lua"
 message_matcher = "Logger == 'ExampleLogAggregator'"
 address = "https://your/slack/webhook/url"
 encoder = "SlackEncoder"
-</pre>
+
+</code></pre>
 
   [1]: http://withkash.com
   [2]: https://github.com/mozilla-services/heka

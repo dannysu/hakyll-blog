@@ -53,7 +53,7 @@ back. The following code is what I wrote to simulate the 20px status bar and
 have it work correctly in all situations including when navigating out of the
 app and come back.
 
-<pre class="brush:objc">
+<pre><code class="objc">
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -66,7 +66,8 @@ app and come back.
         self.webView.frame = CGRectMake(0, 20, self.webView.frame.size.width, self.webView.frame.size.height - 20);
     }
 }
-</pre>
+
+</code></pre>
 
 That said, there's now a [new plugin for iOS status bar][4], so probably try that
 first. At the time I did the upgrade there was no such plugin. I will

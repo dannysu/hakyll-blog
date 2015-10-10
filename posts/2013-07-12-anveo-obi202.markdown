@@ -45,7 +45,8 @@ pattern through to Anveo. You need to go into OBi202 configuration for "ITSP
 Profile A General" and fix up the DigitMap.
 
 This was my DigitMap and it didn't allow star codes.
-<pre>
+
+<pre><code class="html">
 (
     1xxxxxxxxxx|
     <1>[2-9]xxxxxxxxx|
@@ -54,12 +55,13 @@ This was my DigitMap and it didn't allow star codes.
     (Mipd)|
     [^*#]@@.
 )
-</pre>
+
+</code></pre>
 
 I modified it to include the star code associated on Anveo side with my cell
 phone number.
 
-<pre>
+<pre><code class="html">
 (
     1xxxxxxxxxx|
     <1>[2-9]xxxxxxxxx|
@@ -70,7 +72,8 @@ phone number.
     *20xxxxxxxxxx|
     *201xxxxxxxxxx
 )
-</pre>
+
+</code></pre>
 
 
   [1]: http://anveo.com/

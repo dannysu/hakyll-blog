@@ -23,9 +23,10 @@ after a bit of search on google, I found the solution to my problem.
 Basically I need to create a folder in my home directory and create a file. The
 commands for doing both of these tasks are listed below:
 
-<pre class="brush:bash">
+<pre><code class="bash">
 mkdir ~/.abuse
 echo '(setq darkest_gray 40)' > ~/.abuse/gamma.lsp
-</pre>
+
+</code></pre>
 
   [1]: http://www.labyrinth.net.au/~trandor/abuse/

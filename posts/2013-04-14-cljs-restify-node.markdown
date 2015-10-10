@@ -12,7 +12,8 @@ see the [README][4] for details. Below is a demonstration of restify's example
 echo server written in ClojureScript.
 
 ## **javascript**
-<pre class="brush:c">
+
+<pre><code class="javascript">
 var restify = require('restify');
 
 function respond(req, res, next) {
@@ -26,10 +27,12 @@ server.head('/hello/:name', respond);
 server.listen(8080, function() {
   console.log('%s listening at %s', server.name, server.url);
 });
-</pre>
+
+</code></pre>
 
 ## **ClojureScript: src/cljs_node/core.cljs**
-<pre class="brush:clojure">
+
+<pre><code class="clojure">
 (ns cljs-node.core
   (:require [cljs.nodejs :as node]))
 
@@ -51,7 +54,8 @@ server.listen(8080, function() {
   (.listen server 8080 #(log "%s listening at %s" (.-name server) (.-url server))))
 
 (set! *main-cli-fn* -main)
-</pre>
+
+</code></pre>
 
   [1]: /2013/01/14/clojurescript-for-nodejs/
   [2]: https://github.com/dannysu/cljs-node

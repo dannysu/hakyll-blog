@@ -17,18 +17,20 @@ editing method than a bunch of C-x or M-x that takes my hands off the home row.
 instruction and git clone to ~/.emacs.d. On Arch Linux, installing Emacs is also
 easy:
 
-<pre class="brush:bash">
+<pre><code class="bash">
 pacman -S emacs
-</pre>
+
+</code></pre>
 
 <br>
 
 I mainly do my editing in my terminal rather than using the GUI version of
 Vim. To get the same thing with Emacs you would run it with the -nw parameter:
 
-<pre class="brush:bash">
+<pre><code class="bash">
 emacs -nw
-</pre>
+
+</code></pre>
 
 With Spacemacs and perhaps Emacs, the command line interface looks fairly ugly
 so I might start using the GUI version.
@@ -46,9 +48,10 @@ Vim and how to now do them with Emacs/Spacemacs.
 When I write blog entries I typically will enable hard wrapping in Vim to 80
 characters via:
 
-<pre class="brush:bash">
+<pre><code class="bash">
 :set textwidth=80
-</pre>
+
+</code></pre>
 
 Then I might highlight lines and reformat them with <font color="red">gq</font>
 if I had written things prior to setting textwidth or I need to trigger hard
@@ -60,23 +63,26 @@ in getting the right behaviour out of Emacs.
 In Emacs, to get the same behaviour, you'll want to turn on
 auto-fill-mode. Typically this is done in Emacs with:
 
-<pre class="brush:bash">
+<pre><code class="bash">
 M-x auto-fill-mode
-</pre>
+
+</code></pre>
 
 With Spacemacs, <font color="red">M-x</font> is mapped to <font color="red">SPC
 :</font> where <font color="red">SPC</font> means the space bar. So to turn
 auto-fill on or off, you would type:
 
-<pre class="brush:bash">
+<pre><code class="bash">
 SPC : auto-fill-mode
-</pre>
+
+</code></pre>
 
 Afterwards to set the textwidth in Emacs you would do:
 
-<pre class="brush:bash">
+<pre><code class="bash">
 SPC : set-fill-column
-</pre>
+
+</code></pre>
 
 It'll ask you for the column width and you can type in 80, for example.
 
@@ -115,9 +121,10 @@ file name.
 
 In Spacemacs it's also pretty easy:
 
-<pre class="brush:bash">
+<pre><code class="bash">
 SPC p f
-</pre>
+
+</code></pre>
 
 <br>
 
@@ -133,7 +140,7 @@ capability to other text editors, but it never worked well for me in Vim. It
 worked quite well in Emacs though since its integration with Emacs come
 built-in. Below is my .spacemacs config that enables it.
 
-<pre class="brush:clojure">
+<pre><code class="clojure">
 (defun dotspacemacs/config ()
   "This is were you can ultimately override default Spacemacs configuration.
 This function is called at the very end of Spacemacs initialization."
@@ -146,7 +153,8 @@ This function is called at the very end of Spacemacs initialization."
        (require 'tern-auto-complete)
        (tern-ac-setup)))
 )
-</pre>
+
+</code></pre>
 
 I just followed the Emacs [install instructions][8] on Tern website and git clone to
 a directory of my choosing.

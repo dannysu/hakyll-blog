@@ -27,7 +27,7 @@ it to fetch the actual content of a website. Nowadays so many sites are
 javascript driven so simply fetching the initial HTML won't do. Below is how you
 can use PhantomJS to capture the actual content.
 
-<pre class="brush:c">
+<pre><code class="javascript">
 var page = require('webpage').create(),
     system = require('system'),
     fs = require('fs'),
@@ -62,7 +62,8 @@ if (system.args.length != 3) {
         }
     });
 }
-</pre>
+
+</code></pre>
 
 Save the code to grab.js and run it via PhantomJS by providing the URL to fetch
 and the output file to save the content to.

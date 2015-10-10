@@ -17,11 +17,12 @@ A pure translation animation like the image above is simple. To know what values
 to feed to .translateX() and .translateY() you simply take delta for x
 coordinates and the delta for y coordinates.
 
-<pre class="brush:javascript">
+<pre><code class="java">
 myView.animate()
     .translateX(x2 - x1)
     .translateY(y2 - y1)
-</pre>
+
+</code></pre>
 
 <br>
 
@@ -31,13 +32,14 @@ When you want to move a View and scale it at the same time, then you might find
 that the result is not what you want if your first attempt is the same as my
 first attempt below:
 
-<pre class="brush:javascript">
+<pre><code class="java">
 myView.animate()
     .scaleX(w2 / w1)
     .scaleY(h2 / h1)
     .translateX(x2 - x1)
     .translateY(y2 - y1)
-</pre>
+
+</code></pre>
 
 The reason the View doesn't end up at the correct place that you'd expect is
 because the scaling operation shrinks the View at the center of the View. What
@@ -72,10 +74,12 @@ the center, on either side the adjustment is just half. So you adjust the x
 coordinate by `w1 * (1 - scaling factor) / 2`.
 
 That means the code would be something like this:
-<pre class="brush:javascript">
+
+<pre><code class="java">
 myView.animate()
     .scaleX(w2 / w1)
     .scaleY(h2 / h1)
     .translateX(x2 - x1 - w1 * (1 - (w2 / w1)) / 2)
     .translateY(y2 - y1 - h1 * (1 - (h2 / h1)) / 2)
-</pre>
+
+</code></pre>

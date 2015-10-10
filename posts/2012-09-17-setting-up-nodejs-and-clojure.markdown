@@ -12,28 +12,23 @@ The easiest way I've found so far is to use nvm.
 
 1. Get nvm (Node Version Manager)
 
-<pre class="brush:bash">
-git clone git://github.com/creationix/nvm.git ~/apps/nvm
-</pre>
+<pre><code class="bash">git clone git://github.com/creationix/nvm.git ~/apps/nvm</code></pre>
 
 2. Source nvm.sh in bash or zsh
 
-<pre class="brush:bash">
-source $HOME/apps/nvm/nvm.sh
-</pre>
+<pre><code class="bash">source $HOME/apps/nvm/nvm.sh</code></pre>
 
 3. Install the version of node you want
 
-<pre class="brush:bash">
-nvm install v0.8.9
-</pre>
+<pre><code class="bash">nvm install v0.8.9</code></pre>
 
 4. Select the version of node you want
 
-<pre class="brush:bash">
+<pre><code class="bash">
 nvm use v0.8.9
 node --version
-</pre>
+
+</code></pre>
 
 That's it! From then on just write your js scripts and run them with node.
 
@@ -61,9 +56,7 @@ here's how I got it set up.
 Apparently JDK is already installed on my machine, but if it's not on your then
 install it by:
 
-<pre class="brush:bash">
-apt-get install openjdk-6-jre-headless
-</pre>
+<pre><code class="bash">apt-get install openjdk-6-jre-headless</code></pre>
 
 2. Get a helper script to help run the java command with proper classpath  
   
@@ -72,7 +65,7 @@ also include \*.jar in `$HOME/apps/jars` directory. The good thing about this
 script is that I can now use whatever version of clojure I want. I saved the
 file as `clj`.
 
-<pre class="brush:bash">
+<pre><code class="bash">
 #!/bin/sh
 
 if [ "x$CLASSPATH" = "x" ] ; then
@@ -104,16 +97,15 @@ do
 done
 
 exec $rlwrap java -cp $HOME/apps/jars/clojure-1.4.0.jar:.:"$included""$extra_classpath" clojure.main "$@"
-</pre>
+
+</code></pre>
 
 3. Grab clojure jar from [http://clojure.org/downloads][4] and put the jar in
    `$HOME/apps/jars`
 
 4. Run Clojure
 
-<pre class="brush:bash">
-clj
-</pre>
+<pre><code class="bash">clj</code></pre>
 
 For any additional library you want to use, you can either pass the -cp argument
 or simply drop the jar files into `$HOME/apps/jars`. E.g. I put

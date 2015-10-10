@@ -45,7 +45,7 @@ others. One thing that the documentation was wrong about is that it talked about
 some testing endpoint, but when I called Beanstream the support person said to
 just use https://www.beanstream.com.
 
-<pre class="brush:js">
+<pre><code class="javascript">
 var restify = require('restify');
 
 function getSingleUseToken(credit_card_number, callback) {
@@ -77,7 +77,8 @@ function getSingleUseToken(credit_card_number, callback) {
         return callback(null, obj.token);
     });
 }
-</pre>
+
+</code></pre>
 
 <br>
 
@@ -88,7 +89,7 @@ What Stripe call "customer", Beanstream calls them "Secure Payment Profile"
 associate it with the token you receive in previous step. To do that it's just a
 simple POST to the server.
 
-<pre class="brush:js">
+<pre><code class="javascript">
 var client = restify.createJSONClient({
     url: "https://www.beanstream.com",
     headers: {
@@ -117,7 +118,8 @@ client.post(path, data, function(err, req, res, result) {
     var obj = querystring.parse(result);
     // You get back result.customerCode that you can use later
 });
-</pre>
+
+</code></pre>
 
 For details about what you can pass as parameters to the SPP API, see the
 Classic Developer Guides [here][5].
@@ -132,7 +134,7 @@ the test account for Beanstream to validate your requests. In this step, you
 have to calculate a SHA-1 hash using the same key before sending request to
 Beanstream.
 
-<pre class="brush:js">
+<pre><code class="javascript">
 // Use merchant ID from test account
 // Customer code is obtain in step 3
 // amount is how much to charge to the credit card
@@ -164,7 +166,8 @@ client.post(path, data, function(err, req, res, result) {
 
     var obj = querystring.parse(result);
 });
-</pre>
+
+</code></pre>
 
 Both Stripe and Braintree both have node.js libraries, [here][6] and [here][7].
 If you happen to need to use Beanstream, I hope this post helped.

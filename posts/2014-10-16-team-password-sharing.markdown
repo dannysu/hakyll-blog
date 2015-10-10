@@ -58,13 +58,14 @@ secure email.
 Also you have to mark team members' public key as trusted.
 
 On Linux you can:
-<pre class="brush:bash">
+<pre><code class="bash">
 gpg --list-keys
 gpg --edit-key [ID of the key]
 gpg> trust
 Your decision? 5
 gpg> save
-</pre>
+
+</code></pre>
 
 On Mac, the UI tool allows you to do that. Just look under info.
 

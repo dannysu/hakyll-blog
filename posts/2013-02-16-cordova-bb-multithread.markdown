@@ -32,7 +32,7 @@ thread to do the work in, and later call back to javascript engine with
 results. You can see this in the [PluginManagerFunction.java][2] file inside
 invoke():
 
-<pre class="brush:c">
+<pre><code class="java">
 if (async) {
     // Run this async on a background thread so that JavaScript can continue on
     Thread thread = new Thread(new Runnable() {
@@ -43,7 +43,8 @@ if (async) {
     }
     thread.start();
 }
-</pre>
+
+</code></pre>
 
 This should be similar to how Node.js works. It's restricted in that the
 javascript engine must be single-threaded and you need to do
@@ -53,7 +54,7 @@ real issue arises due to Cordova plugin's lack of proper cleanup.
 For example, the [FileTransfer plugin][3] will perform download() inside the
 newly created thread and open a bunch of file handles:
 
-<pre class="brush:c">
+<pre><code class="java">
 private PluginResult download(String source, String target) {
     HttpConnection httpConn = null;
     FileConnection fileConn = null;
@@ -78,7 +79,8 @@ private PluginResult download(String source, String target) {
         }
     }
 }
-</pre>
+
+</code></pre>
 
 This might seem right by itself. Any opened file handle should be freed up in the
 finally clause. However, one needs to remember that this download() function is
@@ -87,7 +89,7 @@ created thread.
 
 Below is Cordova's application termination sequence:
 
-<pre class="brush:c">
+<pre><code class="javascript">
   exitApp:function() {
       // Call onunload if it is defined since BlackBerry does not invoke
       // on application exit.
@@ -101,7 +103,8 @@ Below is Cordova's application termination sequence:
       // exit the app
       blackberry.app.exit();
   }
-</pre>
+
+</code></pre>
 
 The manager.destroy() call will go through each plugin and allow the plugin to
 finish what it needs to do. However, the plugins don't properly clean up after
@@ -121,7 +124,7 @@ volatile boolean.
 Here's a [link][5] that explains the volatile keyword usage. The page has an
 example how signaling a thread to exit early which I replicated below:
 
-<pre class="brush:c">
+<pre><code class="java">
 public class StoppableTask extends Thread {
   private volatile boolean pleaseStop;
 
@@ -135,12 +138,13 @@ public class StoppableTask extends Thread {
     pleaseStop = true;
   }
 }
-</pre>
+
+</code></pre>
 
 The way I fixed the file locking issue is by modifying destroy to do something
 like the following:
 
-<pre class="brush:c">
+<pre><code class="java">
 public void destroy() {
     // Set the volatile boolean so that all threads will see this signaling to
     // exit
@@ -151,7 +155,8 @@ public void destroy() {
         Thread.sleep(50);
     }
 }
-</pre>
+
+</code></pre>
 
 There's more to the fix than what I showed above, but that's the gist of it.
 Whenever you create a new thread, think about the ending condition. Kind of like

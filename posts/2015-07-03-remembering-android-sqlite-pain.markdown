@@ -63,11 +63,12 @@ comments on StackOverflow.
 
 I haven't tried it yet, but this kind of syntax would be much nicer:
 
-<pre class="brush:javascript">
+<pre><code class="java">
 try (Cursor cursor = database.query(...)) {
     return cursor.getInt(0);
 }
-</pre>
+
+</code></pre>
 
   [1]: https://msdn.microsoft.com/en-us/library/yh598w02.aspx
   [2]: http://docs.oracle.com/javase/tutorial/essential/exceptions/tryResourceClose.html

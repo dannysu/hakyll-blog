@@ -24,9 +24,10 @@ I've included the steps here that have been modified to be specifically for
 Slack.
 
 **1. First run Firefox with a specific profile (the -P parameter):**
-<pre class="brush:bash">
+<pre><code class="bash">
 > firefox --class=Slack -P slack -no-remote https://yourown.slack.com
-</pre>
+
+</code></pre>
 
 You should then see a window like the one below:  
 <a href="//imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg4LEgVpbWFnZRj56vACDA" target="_blank"><img src="//imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg4LEgVpbWFnZRj56vACDA" class="centered"></a>
@@ -54,7 +55,7 @@ launch it from the command line.
 
 Create a `slack.desktop` file in `~/.local/share/applications` directory with
 the following content:
-<pre>
+<pre><code class="ini">
 #!/usr/bin/env xdg-open
 [Desktop Entry]
 Version=1.0
@@ -63,7 +64,8 @@ Type=Application
 Name=Slack
 Exec=firefox --class=Slack -P slack -no-remote https://kash.slack.com
 Icon=chrome-jeogkiiogjbmhklcnbgkdcjoioegiknm-Profile_1
-</pre>
+
+</code></pre>
 
 For `Icon=` I just reused what Chrome Apps used. If you don't have that, I guess
 just look for a slack icon yourself and put the path to the file in there.
@@ -82,7 +84,8 @@ Launch Slack standalone Firefox instance, then install the [Stylish][3] and the
 [Hide Tab Bar With One Tab][4] addons.
 
 Create a Stylish style with the following content:
-<pre>
+
+<pre><code class="css">
 @namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
 
 #urlbar-container { display: none !important }
@@ -93,7 +96,8 @@ Create a Stylish style with the following content:
 #navigator-toolbox::after {
   display: none !important;
 }
-</pre>
+
+</code></pre>
 
 <br>
 

@@ -39,9 +39,7 @@ in my Background Agent was not actually saved the next time my code runs.
 Adding a call to Save() allowed the setting to be flushed to wherever it's
 actually stored:
 
-<pre class="brush:csharp">
-IsolatedStorageSettings.ApplicationSettings.Save();
-</pre>
+<pre><code class="csharp">IsolatedStorageSettings.ApplicationSettings.Save();</code></pre>
 
 The [IsolatedStorageSettings documentation][2] says that "Data written to the
 IsolatedStorageSettings object is saved when the application that uses the
@@ -77,7 +75,7 @@ in Isolated Storage. With 'Mango', I decided to move things to SQL CE but ran
 into a problem. Initially I had a DataContext similar to the following code
 where I attempted to specify two tables using the same model:
 
-<pre class="brush:csharp">
+<pre><code class="csharp">
 public class TestDataContext : DataContext
 {
     // Pass the connection string to the base class.
@@ -88,7 +86,8 @@ public class TestDataContext : DataContext
     public Table<TestModel> Table1;
     public Table<TestModel> Table2;
 }
-</pre>
+
+</code></pre>
 
 The reason I had two conceptual lists is because I have one for recent releases
 and one for storing all chapters of all the manga series. Since it is more
@@ -122,7 +121,7 @@ Assemblies\\Microsoft\\Framework\\Silverlight\\v4.0\\Profile\\WindowsPhone71\\Mi
 Turns out that the BackgroundTransferRequest.Submit() code checks for
 IsHeadlessHost:
 
-<pre class="brush:csharp">
+<pre><code class="csharp">
 // Microsoft.Phone.BackgroundTransfer.BackgroundTransferRequest
 [SecurityCritical]
 internal void Submit()
@@ -133,7 +132,8 @@ internal void Submit()
     {
         throw new InvalidOperationException();
     }
-</pre>
+
+</code></pre>
 
 I ended up using WebClient in my Background Agent instead.
 

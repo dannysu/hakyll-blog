@@ -56,7 +56,7 @@ It's important to read. It's something I don't do enough of. However, it's also
 important to _do_. Doing and gaining experience is how you can better compile the
 knowledge in books better. Let me give an analogy.
 
-<pre>
+<pre><code class="html">
 Let's say you read a ton of books on boxing.
 
 You read about the right techniques, the right counter for different situations, etc.
@@ -66,7 +66,8 @@ All that's great, but are you a great fighter after this? No.
 
 Experience is someone swinging a punch straight at you, you have less than a
 second to decide and react. Pure head knowledge doesn't help at that point.
-</pre>
+
+</code></pre>
 
 If I get knocked out, or get kicked in the butt, you can bet that when I read a
 book on the topic later I will have a better model to compile that book with.

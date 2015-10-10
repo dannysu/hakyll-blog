@@ -32,9 +32,10 @@ Aside from the base, I also added:
 
 - Numix theme
 
-<pre class="brush:bash">
+<pre><code class="html">
 pacman -S numix-themes
-</pre>
+
+</code></pre>
 
 - Extensions: [Topicons][10], [Lock screen][9], [Frippery move clock][8]
 
@@ -65,17 +66,13 @@ I did the install at work, so didn't have time to package it all nice in a
 PKGBUILD yet. Nevertheless, there are the instructions.
 
 1. Make sure you have [rpmextract][14] installed
-   <pre class="brush:bash">
-   pacman -S rpmextract
-   </pre>
+   <pre><code class="html">pacman -S rpmextract</code></pre>
 1. Download the rpm files from [brother.com for HL-3045CN][1]
 1. Run rpmextract.sh on the rpm files
    (You should end up with a **opt** and a **usr** folder afterwards)
 1. Move the content in those directories to the same places on /
 1. Then run the cupswrapperhl3045cn script
-   <pre class="brush:bash">
-   /opt/brother/Printers/hl3045cn/cupswrapper/cupswrapperhl3045cn
-   </pre>
+   <pre><code class="html">/opt/brother/Printers/hl3045cn/cupswrapper/cupswrapperhl3045cn</code></pre>
 1. After this you should be able to enter cups web interface and add the printer
    just fine
 

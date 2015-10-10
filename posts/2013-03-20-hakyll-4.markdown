@@ -25,7 +25,7 @@ used Rake to compile pages twice in order to make it work.
 With Hakyll 4 this is much easier. With Hakyll 4, you can use `getMatches` to
 get all identifiers and produce the necessary HTML for recent posts.
 
-<pre class="brush:haskell">
+<pre><code class="haskell">
 recentPosts :: Compiler [Item String]
 recentPosts = do
     identifiers <- getMatches ("posts/*" .&&. hasNoVersion)
@@ -37,19 +37,21 @@ recentPostList = do
     itemTpl <- loadBody "templates/indexpostitem.html"
     list    <- applyTemplateList itemTpl defaultContext posts
     return list
-</pre>
+
+</code></pre>
 
 Then you can produce the necessary `Context` to supply to
 `loadAndApplyTemplate`. It's all very easy now. For example:
 
-<pre class="brush:haskell">
+<pre><code class="haskell">
 let allCtx =
         field "recent" (\_ -> recentPostList) `mappend`
         defaultContext
 
 makeItem ""
     >>= loadAndApplyTemplate "templates/default.html" allCtx
-</pre>
+
+</code></pre>
 
 <br>
 
@@ -58,7 +60,7 @@ makeItem ""
 I like reference-style links. I think it's easier to read. With Hakyll 4 this
 is how you would declare a custom write option:
 
-<pre class="brush:haskell">
+<pre><code class="haskell">
 -- Allow for reference style links in markdown
 pandocWriteOptions = defaultHakyllWriterOptions
     { writerReferenceLinks = True
@@ -66,7 +68,8 @@ pandocWriteOptions = defaultHakyllWriterOptions
 
 -- Render markdown by calling:
 -- pandocCompilerWith defaultHakyllReaderOptions pandocWriteOptions
-</pre>
+
+</code></pre>
 
 <br>
 
@@ -80,7 +83,7 @@ Initially I wasn't quite sure how to begin until I saw [Jasper's suggestion][6]
 on Google Groups to use getMatches. Below is what I ended up with. My
 implementation allows one to chop up all posts into equal size chunks per page.
 
-<pre class="brush:haskell">
+<pre><code class="haskell">
 --------------------------------------------------------------------------------
 paginate:: Int -> (Int -> Int -> [Identifier] -> Rules ()) -> Rules ()
 paginate itemsPerPage rules = do
@@ -98,7 +101,8 @@ paginate itemsPerPage rules = do
                     fn2 = takeFileName $ toFilePath id2
                     parseTime' fn = parseTime defaultTimeLocale "%Y-%m-%d" $ intercalate "-" $ take 3 $ splitAll "-" fn
                 in compare ((parseTime' fn1) :: Maybe UTCTime) ((parseTime' fn2) :: Maybe UTCTime)
-</pre>
+
+</code></pre>
 
 In the code above, it's basically doing the following:
 
@@ -113,7 +117,7 @@ The way I implemented pagination, you can basically do whatever you want with
 the page number and the truncated list of Identifier. For my own blog below is
 what I do.
 
-<pre class="brush:haskell">
+<pre><code class="haskell">
 paginate 2 $ \index maxIndex itemsForPage -> do
     let id = fromFilePath $ "blog/page/" ++ (show index) ++ "/index.html"
     create [id] $ do
@@ -139,17 +143,19 @@ paginate 2 $ \index maxIndex itemsForPage -> do
                 >>= loadAndApplyTemplate "templates/blogpage.html" postsCtx
                 >>= loadAndApplyTemplate "templates/default.html" allCtx
                 >>= wordpressifyUrls
-</pre>
+
+</code></pre>
 
 Another very nice thing about Hakyll 4 is the ability to save snapshots. In
 generating paginated pages, I make use of "teaser" snapshot that I saved while
 processing individual blog entries in order to produce the snippet to show. See
 `loadTeaser` function above. For saving snapshot, see below:
 
-<pre class="brush:haskell">
+<pre><code class="haskell">
 pandocCompilerWith defaultHakyllReaderOptions pandocWriteOptions
     >>= saveSnapshot "teaser"
-</pre>
+
+</code></pre>
 
 <br>
 

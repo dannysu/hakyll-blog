@@ -10,7 +10,7 @@ it affected the floating point unit or something...
 as soon as I read about it, I tried it on my machine the night I got home,
 and... it does hang my computer quite well
 
-<pre class="brush:c">
+<pre><code class="c">
 #include 
 #include 
 #include 
@@ -37,7 +37,8 @@ int main(int argc, char *argv[])
     
     return 0;
 }
-</pre>
+
+</code></pre>
 
 last weekend I finally took the time to update my kernel to 2.6.7...  
 after applying all the patches I wanted myself, I sort of have a working kernel

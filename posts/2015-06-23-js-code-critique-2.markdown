@@ -15,22 +15,26 @@ it's 1990s. Once that's done, then go on to bring it up to ES6.
 
 Looking through my old code, it looks like I wasn't taking advantage of the
 forEach function. I have code that looks like this:
-<pre class="brush:javascript">
+
+<pre><code class="javascript">
 for (var i = 0; i < vm.mappings.length; i++) {
     vm.mappings[i].label = vm.mappings[i].from + ' > ' + vm.mappings[i].to;
 }
-</pre>
+
+</code></pre>
 
 This works fine, but can be improved with forEach(). For one, the var i is not
 just in the for-loop's scope. It also looks messy with a bunch of array accesses
 with index here and there.
 
 With forEach():
-<pre class="brush:javascript">
+
+<pre><code class="javascript">
 vm.mappings.forEach(function(mapping) {
     mapping.label = mapping.from + ' > ' + mapping.to;
 });
-</pre>
+
+</code></pre>
 
 Nice.
 
@@ -43,14 +47,18 @@ and PHP, so I was kind of more used to variable_name than variableName. Camel
 case is the norm so I'll do that instead from now on.
 
 So from this:
-<pre class="brush:javascript">
+
+<pre><code class="javascript">
 Metadata.prototype.findConfig = function(param, partial_match) {
-</pre>
+
+</code></pre>
 
 To this:
-<pre class="brush:javascript">
+
+<pre><code class="javascript">
 Metadata.prototype.findConfig = function(param, partialMatch) {
-</pre>
+
+</code></pre>
 
 <br>
 
@@ -60,7 +68,8 @@ It's [recommended][2] to declare variables at the top of their scope to make
 things clear.
 
 I had code where variable declaration is done inside an if-statement.
-<pre class="brush:javascript">
+
+<pre><code class="javascript">
 Metadata.prototype.addMapping = function(from, to) {
     var mapping = this.findMapping(from);
     if (mapping === null) {
@@ -70,13 +79,15 @@ Metadata.prototype.addMapping = function(from, to) {
         };
         this.mappings.push(newMapping);
     }
-    ...
+    //...
 };
-</pre>
+
+</code></pre>
 
 However, the semantic is actually different, so might as well change it to what
 it is:
-<pre class="brush:javascript">
+
+<pre><code class="javascript">
 Metadata.prototype.addMapping = function(from, to) {
     var mapping = this.findMapping(from);
     var newMapping;
@@ -87,9 +98,10 @@ Metadata.prototype.addMapping = function(from, to) {
         };
         this.mappings.push(newMapping);
     }
-    ...
+    //...
 };
-</pre>
+
+</code></pre>
 
 Although in this case, I could do without the extra variable too.
 
@@ -103,7 +115,8 @@ Thankfully nowadays with linters and fully understanding, it's not an issue
 anymore.
 
 Imagine something like this:
-<pre class="brush:javascript">
+
+<pre><code class="javascript">
 for (var i = 0; i < notifications.length; i++) {
     var notification = notifications[i];
 
@@ -116,7 +129,8 @@ for (var i = 0; i < notifications.length; i++) {
         handleTap;
     );
 }
-</pre>
+
+</code></pre>
 
 What is clear now wasn't so clear when I first started. Here the for-loop and
 the `notification` variable are in the same exact scope. Each handleTap()

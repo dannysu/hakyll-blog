@@ -26,22 +26,26 @@ it's a great time to give myself some code critiques. I'm going to use my
 ## **new Array() vs []**
 
 For some reason I coded this constructor function with `new Array()`.
-<pre class="brush:javascript">
+
+<pre><code class="javascript">
 function Metadata() {
     this.configs = new Array();
     this.mappings = new Array();
     this.dirty = false;
 }
-</pre>
+
+</code></pre>
 
 This can be written using array literal and be more compact:
-<pre class="brush:javascript">
+
+<pre><code class="javascript">
 function Metadata() {
     this.configs = [];
     this.mappings = [];
     this.dirty = false;
 }
-</pre>
+
+</code></pre>
 
 Just a style thing, so moving on.
 
@@ -51,7 +55,8 @@ Just a style thing, so moving on.
 
 For some reason I wrote a whole bunch of code just to return whether the
 localStorage has 'storageUrl' property:
-<pre class="brush:javascript">
+
+<pre><code class="javascript">
 Metadata.prototype.hasStorageUrl = function() {
     if (!(storage['storageUrl']) ||
         storage['storageUrl'] == '') {
@@ -59,7 +64,8 @@ Metadata.prototype.hasStorageUrl = function() {
     }
     return true;
 };
-</pre>
+
+</code></pre>
 
 [Storage.getItem][2] will return null if it doesn't have value for the provided
 key. In this case, the key is 'storageUrl'. I guess when I originally wrote this
@@ -75,11 +81,13 @@ Since I mainly want the function to tell me if localStorage has value for
 to return the truthy value of whatever Storage.getItem gives me.
 
 Here's an updated version:
-<pre class="brush:javascript">
+
+<pre><code class="javascript">
 Metadata.prototype.hasStorageUrl = function() {
     return Boolean(storage.storageUrl);
 };
-</pre>
+
+</code></pre>
 
 There. Nice and simple. Empty string returns false. null also returns false.
 Other strings return true. This is exactly what I want.
@@ -89,13 +97,15 @@ Other strings return true. This is exactly what I want.
 ## **truthy & falsy values #2**
 
 I also wrote code like this:
-<pre class="arush:javascript">
+
+<pre><code class="javascript">
 Metadata.prototype.findConfig = function(param, partial_match) {
     partial_match = partial_match || false;
 
     // ...
 };
-</pre>
+
+</code></pre>
 
 What was I thinking? Yeah, probably didn't quite grasp truthy value at the time.
 
@@ -115,7 +125,8 @@ property. There's another way to write the same thing with the map() function
 though.
 
 Before:
-<pre class="brush:javascript">
+
+<pre><code class="javascript">
 Metadata.prototype.getAllParams = function() {
     var params = [];
     for (var i = 0; i < this.configs.length; i++) {
@@ -123,16 +134,19 @@ Metadata.prototype.getAllParams = function() {
     }
     return params;
 };
-</pre>
+
+</code></pre>
 
 After:
-<pre class="brush:javascript">
+
+<pre><code class="javascript">
 Metadata.prototype.getAllParams = function() {
     return this.configs.map(function(config) {
         return config.param;
     });
 };
-</pre>
+
+</code></pre>
 
 I think the higher-order function map() version looks more concise and clear.
 The for-loop version would tend to be faster though, because it isn't invoking a
@@ -146,7 +160,8 @@ controller, so it doesn't matter at all.
 
 Similarly I have a function that uses a for-loop, which acts like a search and
 returns only matching config:
-<pre class="brush:javascript">
+
+<pre><code class="javascript">
 Metadata.prototype.findConfigs = function(param) {
     var matches = [];
     for (var i = 0; i < this.configs.length; i++) {
@@ -156,16 +171,19 @@ Metadata.prototype.findConfigs = function(param) {
     }
     return matches;
 };
-</pre>
+
+</code></pre>
 
 Well, that sounds like a job for filter():
-<pre class="brush:javascript">
+
+<pre><code class="javascript">
 Metadata.prototype.findConfigs = function(param) {
     return this.configs.filter(function(config) {
         return (config.param.indexOf(param) >= 0);
     });
 };
-</pre>
+
+</code></pre>
 
 Cool, that's more compact and perhaps more clear at a glance what the function
 is doing. I'm filtering and grabbing only the ones that meet the condition

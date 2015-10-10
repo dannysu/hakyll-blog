@@ -28,31 +28,34 @@ program. Everything is a list denoted with ()s with the first thing in the list
 being the function to execute. For example, comparing a function call with an
 "if-statement":
 
-<pre class="brush:clojure">
+<pre><code class="clojure">
 ; A list with "add" being the function and two numbers in the list as arguments
 (+ 1 1)
-</pre>
+
+</code></pre>
 
 vs
 
-<pre class="brush:clojure">
+<pre><code class="clojure">
 ; A list with "if" being the function that takes 3 arguments.
 ; First argument is the expression to evaluate to determine true or false.
 ; Subsequent arguments specify what to use in case of true or false.
 (if (= 1 1)
   (println "It's true!")
   (println "It's false!"))
-</pre>
+
+</code></pre>
 
 With the lack of much of a syntax and special operators, you are free to use
 whatever characters you want as identifiers. E.g. you can have functions with
 dashes (-), exclamation marks (!), question marks (?), etc. That's beautiful!
 
-<pre class="brush:clojure">
+<pre><code class="clojure">
 (if-not test then)
 (zero? 0)
 (awesome!)
-</pre>
+
+</code></pre>
 
 I love the minimalistic Lisp syntax. After playing with Clojure for a little bit
 and with the help of VimClojure, it's no longer just a sea of brackets. That's
@@ -61,27 +64,19 @@ examples in Haskell that are even more compact than Clojure.
 
 #### Function Composition
 
-<pre class="brush:haskell">
-g . f
-</pre>
+<pre><code class="haskell">g . f</code></pre>
 
 vs
 
-<pre class="brush:clojure">
-(comp g f)
-</pre>
+<pre><code class="clojure">(comp g f)</code></pre>
 
 #### Partial Application
 
-<pre class="brush:haskell">
-(1 +)
-</pre>
+<pre><code class="haskell">(1 +)</code></pre>
 
 vs
 
-<pre class="brush:clojure">
-(partial + 1)
-</pre>
+<pre><code class="clojure">(partial + 1)</code></pre>
 
 Despite possibly making things even more compact, Lisp opts to maintain its
 code-as-data mentality. I think *Clojure in Action* explains it quite well by
@@ -94,7 +89,7 @@ The homoiconicity of Lisp allows it to provide macro feature that is consistent
 with rest of the language. For example, here's the *unless* macro from the
 *Clojure in Action* book:
 
-<pre class="brush:clojure">
+<pre><code class="clojure">
 ; Gives you ability to have a function/macro that evaluates a test condition
 ; to determine subsequent action.
 ; If the test condition is false only then evaluate the given expression.
@@ -105,7 +100,8 @@ with rest of the language. For example, here's the *unless* macro from the
 ; Using it
 (unless (even? x)
   (println "odd"))
-</pre>
+
+</code></pre>
 
 The macro is defined in the same way as anything else and feels very natural.
 For the *test* condition or the *then* expression, you can give it any
@@ -132,9 +128,7 @@ libraries such as [clj-ml with Weka][4], [Mahout][6], or [Hadoop][7].
 The downside of running on top of JVM is that your programs get hit by JVM
 startup time. Also, calling Java methods look out of place:
 
-<pre class="brush:clojure">
-(.toUpper "lower")
-</pre>
+<pre><code class="clojure">(.toUpper "lower")</code></pre>
 <br>
 
 ## **Comparison to Node.js**
@@ -183,7 +177,7 @@ need to correlate pairs of items in list. I might be able to change my algorithm
 to use BK-Tree instead though, after seeing Tyler's talk. In any case, here are
 some helper functions I wrote:
 
-<pre class="brush:clojure">
+<pre><code class="clojure">
 (defn take-n-while
   "returns a lazy sequence of successive items from coll while
   (pred (take cnt s)) returns true. pred must be free of side-effects."
@@ -199,7 +193,8 @@ some helper functions I wrote:
 ; Usage:
 ; user=> (take-n-while #(even? (+ %1 %2)) 2 [1 3 1 2])
 ; ((1 3) (3 1))
-</pre>
+
+</code></pre>
 
 This is like the `take-while` function except you can consume the list at any n
 items at a time. My first solution involved using `partition` and

@@ -19,13 +19,14 @@ I used [http-conduit][3] to grab the HTML source from Toronto library website.
 It's pretty straightforward. Just install it by `cabal install http-conduit`,
 then use the `simpleHttp` function.
 
-<pre class="brush:haskell">
+<pre><code class="haskell">
 import Network.HTTP.Conduit
 
 main :: IO ()
 main = do
     content &lt;- simpleHttp newMoviesURL
-</pre>
+
+</code></pre>
 
 <br>
 
@@ -36,7 +37,7 @@ Whenever I need to use regex to extract data from HTML source code, I used
 
 Example:
 
-<pre class="brush:haskell">
+<pre><code class="haskell">
 import qualified Data.ByteString.Lazy as L
 import Text.Regex.TDFA ((=~))
 
@@ -45,7 +46,8 @@ updated s = if length matches &gt; 0
             then last $ head matches
             else L.empty
               where matches = s =~ "&lt;h3[^&gt;]*&gt;Updated (.*)&lt;/h3&gt;"
-</pre>
+
+</code></pre>
 
 <br>
 
@@ -57,7 +59,7 @@ what I need.
 
 First the declarations:
 
-<pre class="brush:haskell">
+<pre><code class="haskell">
 {-# LANGUAGE DeriveGeneric #-}
 
 import Data.Aeson (FromJSON, ToJSON, decode, encode)
@@ -81,13 +83,15 @@ instance FromJSON RTInfo
 instance FromJSON RTMovie
 instance FromJSON RTCast
 instance FromJSON RTRatings
-</pre>
+
+</code></pre>
 
 then to actually decode:
 
-<pre class="brush:haskell">
+<pre><code class="haskell">
     let rt = decode content :: Maybe RTInfo
-</pre>
+
+</code></pre>
 
   [1]: http://www.torontopubliclibrary.ca/books-video-music/video/new-holdable-adult.jsp
   [2]: https://github.com/dannysu/new-holdable-dvd
