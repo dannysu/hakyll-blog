@@ -108,6 +108,7 @@ main = hakyll $ do
             compile $ do
                 let allCtx =
                         field "recent" (\_ -> recentPostList) `mappend`
+                        constField "title" ("Blog Archive - Page " ++ (show index)) `mappend`
                         defaultContext
                     loadTeaser id = loadSnapshot id "teaser"
                                         >>= loadAndApplyTemplate "templates/teaser.html" (teaserCtx tags)
