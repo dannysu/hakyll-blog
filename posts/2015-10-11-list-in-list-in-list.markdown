@@ -154,7 +154,7 @@ that makes sense in the context and alias one of the above for better
 readability.
 
 
-# Disable Touch on Top ListView
+# Disable Touch on the Top ListView
 
 Once you've got all the hierarchy sorted out, one of the issues you'll run into
 is when you scroll the green ListViews up and down, the red ListView also wants
