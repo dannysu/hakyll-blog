@@ -17,9 +17,8 @@ HTML5 and reverted back to making native apps, and I think for getting the
 absolute best experience that's the right thing to do. However, for AvidTap at
 this stage hybrid is a better choice.
 
-<br>
 
-## **Rapid Iteration with Over-The-Air Updates**
+# Rapid Iteration with Over-The-Air Updates
 
 For our app, I built an update system that allows AvidTap push out delta
 updates to any user. The update system allows the server to inform clients when

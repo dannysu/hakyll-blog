@@ -14,29 +14,27 @@ body, #ancillary{
 }
 
 a, .story .details a, .story .details a:hover{
-    color:#000;
+    color:#222222;
 }
 .story .details a:hover{
     text-decoration:underline;
 }
 .story .details{ border-top:1px solid #7F7F7F; }
 
-h1, h2, h3{ color:#000; }
-
-#primary h2{ color:#333; }
+h1, h2, h3{ color:#222222; }
 
 blockquote{ color:#333; }
 
 table th{ color:#FFF; background:#333; }
-table td{ color:#000; background:#EAEAEA; }
+table td{ color:#222222; background:#EAEAEA; }
 #cse table td{
-    color:#000;
+    color:#222222;
     background:white;
     font-family:"Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Verdana, Arial, sans-serif;
 }
 
 .secondary dd a:hover {
-    color: #000;
+    color: #222222;
 }
 .secondary .featured p{
     border-bottom:1px solid #CCC;
@@ -71,12 +69,12 @@ ul.dates .date, ul.counts .count{
 ul.dates a, ul.counts a, ul.blogroll a, ul.pages a, .widget ul a, a.readmore, .links{
     color:#404040;
 }
-ul.dates a:hover, ul.dates a:hover .date, ul.counts a:hover, ul.counts a:hover .count, ul.blogroll a:hover, ul.pages a:hover, .widget ul a:hover, a.readmore:hover, .links:hover{ color:#000; }
+ul.dates a:hover, ul.dates a:hover .date, ul.counts a:hover, ul.counts a:hover .count, ul.blogroll a:hover, ul.pages a:hover, .widget ul a:hover, a.readmore:hover, .links:hover{ color:#222222; }
 
 #footer a, #footer p.attributes a{
     color:#333;
 }
-#footer a:hover, #footer p.attributes a:hover{ color:#000; }
+#footer a:hover, #footer p.attributes a:hover{ color:#222222; }
 
 
 /* Images */
@@ -89,9 +87,4 @@ ul.dates a:hover, ul.dates a:hover .date, ul.counts a:hover, ul.counts a:hover .
 
 .label {
     text-decoration: none;
-}
-
-code {
-    background-color: #f1f1f1;
-    padding: 3px;
 }

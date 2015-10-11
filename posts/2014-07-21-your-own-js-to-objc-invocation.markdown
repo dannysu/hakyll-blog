@@ -17,9 +17,8 @@ Going with the native approach doesn't mean you can't sprinkle hybrid
 approach in your app. We did that for Kash in order to mitigate the issue of
 waiting for App Store review.
 
-<br>
 
-## **App Store Review Time**
+# App Store Review Time
 
 Currently it takes about 7 days from submission to approval. It used to be
 about 4 days. This lead time might be ok for established companies, but for a
@@ -29,9 +28,8 @@ The first approach is by delegating tasks to an UIViewController that contains
 an UIWebView. The second approach is by using [TTTAttributedLabel][2] and have
 whatever messaging and action I want to be sent from server.
 
-<br>
 
-## **Invoke Native Code from Javascript**
+# Invoke Native Code from Javascript
 
 For the Kash app, I made use of the hybrid approach for experimenting with
 post-purchase engagement ideas we have. Everything in the payment flow is done
@@ -42,7 +40,7 @@ Cordova's invocation method and added my own semantic for how the custom scheme
 is used to pass parameters. Below is the code I used to invoke native
 functionality from javascript.
 
-<pre><code class="javascript">
+```javascript
 var execIframe = null;
 
 var createExecIframe = function() {
@@ -68,14 +66,13 @@ sendToNative = function(cmd, data) {
 
 // Then whenever you want to invoke native functionality, call:
 // sendToNative('the command', {arg1:"value1"});
-
-</code></pre>
+```
 
 Then in your UIViewController that contains the UIWebView, you'll want to
 implement the following UIWebViewDelegate function. Inside it you check for
 whether the request should be handled specially or not.
 
-<pre><code class="objc">
+```objc
 - (BOOL)webView:(UIWebView *)webViewInstance shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
     NSURL *url = [request URL];
     
@@ -85,17 +82,15 @@ whether the request should be handled specially or not.
     }
     return YES;
 }
-
-</code></pre>
+```
 
 By using the code shown and implementing special commands to be invoked from
 javascript, it allowed us to test a bunch of theories in short amount of time.
 Being able to test as many hypothesis as possible in a given time is very
 crucial.
 
-<br>
 
-## **Using TTTAttributedLabel**
+# Using TTTAttributedLabel
 
 One down side of using UIWebView is that it isn't as fast as showing something
 native. You have to wait for the webpage to load and there is more data to
@@ -106,7 +101,7 @@ TTTAttributedLabel allows me to send JSON from server like the one shown below.
 It allows me to control what the user sees entirely from server-side while
 maintaining the speed of a native app.
 
-<pre><code class="javascript">
+```javascript
 var modals = [];
 var modal = {
     msg: "A Title\n\nWrite something in the body",
@@ -132,8 +127,7 @@ modals.push(modal);
 
 // I return an array of "modals", which tells the native code what message to show.
 // Native code reads the JSON and then use TTTAttributedLabel to show parts of the text differently.
-
-</code></pre>
+```
 
   [1]: /2013/05/02/iterating-at-light-speed/
   [2]: https://github.com/mattt/TTTAttributedLabel

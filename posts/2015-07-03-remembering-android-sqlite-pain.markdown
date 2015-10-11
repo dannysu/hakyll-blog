@@ -7,7 +7,7 @@ tags: Mad Coding, Google, Android, SQLite, Java, AvidTap, AvidRegister, SQLiteFu
 Point-of-Sale, we used SQLite to store customer purchases and other data locally
 on the tablet.
 
-<a href="//imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg4LEgVpbWFnZRj58-oDDA" target="_blank"><img src="//imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg4LEgVpbWFnZRj58-oDDA" width="400" class="centered"></a>
+[![][4]][4]
 
 We had to solve some issues with using SQLite that left me surprised things are
 still this bad in 2013. I extracted the helper classes I wrote back then and
@@ -15,9 +15,8 @@ published it as [SQLiteFutures][3] on GitHub. At some point I'll figure out how
 to throw it up on Maven. With this post, I'll look back at some of the things
 we had to do at the time that prompted me to write SQLiteFutures.
 
-<br>
 
-## **Enforce Single SQLiteOpenHelper**
+# Enforce Single SQLiteOpenHelper
 
 AvidRegister stores purchases locally on the device and then synchronizes with
 the server. With this design the Point-of-Sale is operational even if Internet
@@ -33,9 +32,8 @@ for our **SQLiteOpenHelper** subclass. In SQLiteFutures, this is enforced
 because SQLiteFutures is a singleton and accepts a SQLiteOpenHelper at
 initialization.
 
-<br>
 
-## **DB Access on the UI Thread**
+# DB Access on the UI Thread
 
 Initially we did all our DB queries on the UI thread and a background thread
 for syncing. We ran into perf issues if cashier is trying to ring up a sale
@@ -47,9 +45,8 @@ synchronously you can enforce that easily. However, the default behaviour is
 that things are asynchrous. Doing so makes it easy to not block UI thread by
 default.
 
-<br>
 
-## **Remember to Close Cursor**
+# Remember to Close Cursor
 
 While not something that SQLiteFutures solves, but is worth mentioning as
 something we ran into. We had too many mistakes not remembering to close Cursor
@@ -63,13 +60,13 @@ comments on StackOverflow.
 
 I haven't tried it yet, but this kind of syntax would be much nicer:
 
-<pre><code class="java">
+```java
 try (Cursor cursor = database.query(...)) {
     return cursor.getInt(0);
 }
-
-</code></pre>
+```
 
   [1]: https://msdn.microsoft.com/en-us/library/yh598w02.aspx
   [2]: http://docs.oracle.com/javase/tutorial/essential/exceptions/tryResourceClose.html
   [3]: https://github.com/dannysu/sqlitefutures
+  [4]: //imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg4LEgVpbWFnZRj58-oDDA

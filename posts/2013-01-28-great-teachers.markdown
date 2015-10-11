@@ -8,10 +8,9 @@ right reasons and the rest who are just going through the motions. The teaching
 profession is no different. However, I have a lot of respect for great teachers
 and I had the good fortune to have seen some of them at work. Below are some
 examples.
-<br>
-<br>
 
-## **Ability to Transfer Knowledge**
+
+# Ability to Transfer Knowledge
 
 Transferring knowledge is not easy and I've had experienced some of that myself.
 
@@ -29,10 +28,9 @@ easier time getting it.
 This is one of the reasons why I respect teachers for what they do. Some
 teachers are better than others at this. Certainly some professors are much
 better than others at this.
-<br>
-<br>
 
-## **Passionate**
+
+# Passionate
 
 I love seeing people who are passionate about what they do. The excitement rubs
 off on others. I think of my university math professor who showed a genuine love
@@ -40,10 +38,9 @@ for his area. This professor even held extra sessions outside of classes to show
 students math applications in the real world. I hope everyone knows why they're
 learning something and the impact in the real world it has. Math is truly
 amazing and has so many applications.
-<br>
-<br>
 
-## **Caring**
+
+# Caring
 
 I wish people are in the profession they're in because they care, or at least
 have the integrity to do things well. In Seattle I met some teachers who really
@@ -61,10 +58,9 @@ teachers that go above and beyond their "job" is awesome. It's like software
 companies wanting to find hackers who tinker with stuff and contribute to
 open-source projects. Teachers like these show that they really care and they
 became teachers for very good reasons.
-<br>
-<br>
 
-## **Motivator**
+
+# Motivator
 
 The best thing that some teachers gave me was simply the fact that they
 challenged the class to do more than they ever imagined they could. Parents and
@@ -81,8 +77,9 @@ The teachers would stay after school's over and supervise us in the computer
 lab. They don't necessarily know how to tackle the programming issues we were
 working on, but the best thing is the time they spent and the environment they
 created.
-<br>
-<br>
+
+---
+## 
 
 These are reasons why I have a lot of respect for great teachers. I've had my
 share of teachers who don't care. Some teachers don't even know students'

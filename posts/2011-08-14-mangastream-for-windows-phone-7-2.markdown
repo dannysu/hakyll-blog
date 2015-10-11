@@ -25,9 +25,8 @@ screenshots:
 There were some issues that I had to spend more time debugging through, so here
 are my learnings:
 
-<br>
 
-## **1. You might have to flush things you store to IsolatedStorageSettings**
+# 1. You might have to flush things you store to IsolatedStorageSettings
 
 For my app, I implemented a Background Agent so that it will check for new
 manga releases and notify me through a toast notification as well as showing
@@ -39,7 +38,9 @@ in my Background Agent was not actually saved the next time my code runs.
 Adding a call to Save() allowed the setting to be flushed to wherever it's
 actually stored:
 
-<pre><code class="csharp">IsolatedStorageSettings.ApplicationSettings.Save();</code></pre>
+```csharp
+IsolatedStorageSettings.ApplicationSettings.Save();
+```
 
 The [IsolatedStorageSettings documentation][2] says that "Data written to the
 IsolatedStorageSettings object is saved when the application that uses the
@@ -47,10 +48,8 @@ class is closed". That statement is true when I used it in my main app to
 serialize settings, but I found that I needed explicit Save() in the Background
 Agent.
 
-<br>
 
-## **2. Use IsolatedStorageExplorerTool (ISETool) to retrieve and examine things
-stored in Isolated Storage**
+# 2. Use IsolatedStorageExplorerTool (ISETool) to retrieve and examine things stored in Isolated Storage
 
 The [MSDN documentation][3] has the location where you can run the ISE command
 line tool. By retrieving files in Isolated Storage, I was able to examine
@@ -64,9 +63,8 @@ those files are still present in "shared\transfers" folder. Another surprise to
 me is that even when Background Transfer attempts to download a nonexistent
 file, it'll also create a zero byte file, which I also wasn't cleaning up.
 
-<br>
 
-## **3. You can't store the same model to different Tables using LINQ to SQL**
+# 3. You can't store the same model to different Tables using LINQ to SQL
 
 Using LINQ to SQL is new to me, so I might be missing something.
 
@@ -75,7 +73,7 @@ in Isolated Storage. With 'Mango', I decided to move things to SQL CE but ran
 into a problem. Initially I had a DataContext similar to the following code
 where I attempted to specify two tables using the same model:
 
-<pre><code class="csharp">
+```csharp
 public class TestDataContext : DataContext
 {
     // Pass the connection string to the base class.
@@ -86,8 +84,7 @@ public class TestDataContext : DataContext
     public Table<TestModel> Table1;
     public Table<TestModel> Table2;
 }
-
-</code></pre>
+```
 
 The reason I had two conceptual lists is because I have one for recent releases
 and one for storing all chapters of all the manga series. Since it is more
@@ -104,9 +101,8 @@ Table<TestModel> properties I specified in my DataContext. That kind of
 explains why when I queried for things in one I also got things in the other
 because it's all stored to the same underlying table.
 
-<br>
 
-## **4. Background Transfer doesn't work from Background Agent code**
+# 4. Background Transfer doesn't work from Background Agent code
 
 I wrote a helper class that dealt with Background Transfer Service (BTS) and
 when I initially coded up the Background Agent code I naturally used the same
@@ -121,7 +117,7 @@ Assemblies\\Microsoft\\Framework\\Silverlight\\v4.0\\Profile\\WindowsPhone71\\Mi
 Turns out that the BackgroundTransferRequest.Submit() code checks for
 IsHeadlessHost:
 
-<pre><code class="csharp">
+```csharp
 // Microsoft.Phone.BackgroundTransfer.BackgroundTransferRequest
 [SecurityCritical]
 internal void Submit()
@@ -132,8 +128,7 @@ internal void Submit()
     {
         throw new InvalidOperationException();
     }
-
-</code></pre>
+```
 
 I ended up using WebClient in my Background Agent instead.
 

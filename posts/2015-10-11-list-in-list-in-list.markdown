@@ -1,21 +1,23 @@
 ---
-date: 
-title: ListView inside a ListView inside a ListView on Android
+date: 2015-10-11 11:11:02 PDT
+title: ListView Inside a ListView Inside a ListView on Android
 tags: Google, Android, programming, mobile, Mad Coding
 ---
-Suppose you need to produce an UX involving multiple levels of ListViews similar
-to the following wireframe. How do you do that on Android?
+Suppose you need to produce an interface involving multiple levels of ListViews
+similar to the following wireframe. How do you do that on Android?
 
-<img src="//imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg0LEgVpbWFnZRj52HwM" class="centered">
+[![][4]][4]
 
-It's not an ideal UX, but let's say that's the requirement and you must make it
-work. I dug into it and figured it out. Feel free to jump to the end for the
-example project if you just want to see it on a device/emulator.
+It's not an ideal UX and can very easily be done wrong, but let's say that's the
+requirement and you must make it work. I dug into it and figured it out. Feel
+free to jump to the end for the example project if you just want to see it on a
+device/emulator.
 
 There are three major steps to making this UX. First, you need to make a
 horizontal ListView.
 
-## **Horizontal ListView**
+
+# Horizontal ListView
 
 Using a [vertical ListView][1] is fairly easy on Android and there are lots of
 resources online for that. However, Google didn't provide an implementation for
@@ -27,7 +29,7 @@ To use RecyclerView, you need to first add it to the list of dependencies of
 your project. Edit your app's build.gradle to add
 `com.android.support:recyclerview-v7:+`.
 
-```html
+```
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile 'com.android.support:appcompat-v7:23.0.0'
@@ -111,7 +113,8 @@ Once you've got a vertical ListView containing horizontal ListViews working, the
 next step is to have each horizontal ListView to also be populated with vertical
 ListViews.
 
-## **Third Level (vertical) ListViews**
+
+# Third Level (vertical) ListViews
 
 The third-level ListViews is shown in the wireframe in green colour. It isn't
 all that different than the top-level red ListView. The complicated part is
@@ -132,7 +135,7 @@ tell! Also, I expect a project specific naming might be more helpful too.
 
 Below is how each class is used in the hierarchy of ListViews.
 
-<a href="//imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg4LEgVpbWFnZRiZ_vcBDA" target="_blank"><img src="//imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg4LEgVpbWFnZRiZ_vcBDA" class="centered"></a>
+[![][5]][5]
 
 The top-level red ListView uses `HorizontalScrollableItemAdapter` as its
 adapter, which produces a bunch of items capable of being scrolled horizontally
@@ -150,7 +153,8 @@ These naming are really confusing. For a real project, I'd suggest using names
 that makes sense in the context and alias one of the above for better
 readability.
 
-## **Disable Touch on Top ListView**
+
+# Disable Touch on Top ListView
 
 Once you've got all the hierarchy sorted out, one of the issues you'll run into
 is when you scroll the green ListViews up and down, the red ListView also wants
@@ -196,7 +200,8 @@ public boolean onInterceptTouchEvent(MotionEvent ev) {
 }
 ```
 
-## **Performance Considerations**
+
+# Performance Considerations
 
 Typically for performance reasons you'll want to offload as much as you can to a
 separate thread instead of the UI thread when rendering the items. You typically
@@ -208,13 +213,17 @@ and deal with propagating those decisions across multiple levels of ListViews.
 You want to stop child ListViews' tasks when the top-level ListView is being
 flicked for example. That'll be an exercise for another day.
 
-## **Example Project**
+
+# Example Project
 
 See code on [github][3]. The final product looks like this:
 
-<a href="//imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg4LEgVpbWFnZRipzPgBDA" target="_blank"><img src="//imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg4LEgVpbWFnZRipzPgBDA" class="centered"></a>
+[![][6]][6]
 
 
   [1]: https://developer.android.com/reference/android/widget/ListView.html
   [2]: https://developer.android.com/reference/android/support/v7/widget/RecyclerView.html
   [3]: https://github.com/dannysu/ListListList
+  [4]: //imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg0LEgVpbWFnZRj52HwM
+  [5]: //imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg4LEgVpbWFnZRiZ_vcBDA
+  [6]: //imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg4LEgVpbWFnZRipzPgBDA

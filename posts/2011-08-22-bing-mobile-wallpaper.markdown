@@ -8,8 +8,7 @@ original release of Windows Phone 7. Even before WP7 was released to the world
 I had been interested in using those beautiful Bing pictures as wallpaper for
 my phone. You can often find gems like these:
 
-![](http://imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3JlcgwLEgVpbWFnZRjpBww)
-![](http://imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3JlcgsLEgVpbWFnZRgBDA)
+[![][2]][2] [![][3]][3]
 
 Initially I used the WP7 SDK to develop an app to do that and unveiled it to my
 team close to the release of WP7 and just around when 'Mango' release is
@@ -28,10 +27,12 @@ the random flip that occurs automatically. For the jquery animation I used
 vector graphic bundled with the WP7 SDK and embedded it as a SVG.
 
 Visit it on your Windows Phone 'Mango' devices @
-[http://bing.dannysu.com/](http://bing.dannysu.com/).
+<http://bing.dannysu.com/>.
 
 Note: I also tested on my iPhone but the back button and tap to flip back to
 image aren't working. I'll have to look into that some other time. Haven't
 tried it on my Android phone yet.
 
   [1]: http://hungred.com/wp-content/uploads/2009/04/demo-rawrflip.html
+  [2]: //imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3JlcgwLEgVpbWFnZRjpBww
+  [3]: //imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3JlcgsLEgVpbWFnZRgBDA

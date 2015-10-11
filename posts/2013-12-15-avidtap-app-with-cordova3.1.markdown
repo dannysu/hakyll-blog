@@ -24,9 +24,8 @@ improvements just in the year after I started AvidTap alone. AvidTap's release
 speed for [AvidRegister][6] is amazing too. We average 3.61 days between
 releases to Play Store. Talk about rapid improvements.
 
-<br>
 
-## **New Plugins**
+# New Plugins
 
 The new plugin system is great and will make things more plug & play. For our
 release, I wrote a bunch new plugins based on the new format. These plugins
@@ -41,9 +40,8 @@ include:
 - Porting existing Email Composer plugin to new format
 - Making Facebook plugin work in new version
 
-<br>
 
-## **iOS 7 Status Bar**
+# iOS 7 Status Bar
 
 On iOS 7 the app can take over the area underneath the status bar too. There are
 many suggestions on the Internet for how to fix that in MainViewController.m.
@@ -53,7 +51,7 @@ back. The following code is what I wrote to simulate the 20px status bar and
 have it work correctly in all situations including when navigating out of the
 app and come back.
 
-<pre><code class="objc">
+```objc
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -66,16 +64,15 @@ app and come back.
         self.webView.frame = CGRectMake(0, 20, self.webView.frame.size.width, self.webView.frame.size.height - 20);
     }
 }
-
-</code></pre>
+```
 
 That said, there's now a [new plugin for iOS status bar][4], so probably try that
 first. At the time I did the upgrade there was no such plugin. I will
 investigate upgrade to that plugin in the future.
 
-<br>
 
-## **App Store Approval**
+# App Store Approval
+
 Apple seems to have made improvements to app approval speed since I last
 submitted an update. The AvidTap update was approved in about 3-4 days. That's
 way way better than the 2 weeks I had to wait for Well.ca's virtual store app.

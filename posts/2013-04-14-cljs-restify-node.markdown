@@ -11,9 +11,10 @@ Setting up ClojureScript for running Node.js is the same as before. You can also
 see the [README][4] for details. Below is a demonstration of restify's example
 echo server written in ClojureScript.
 
-## **javascript**
 
-<pre><code class="javascript">
+# javascript
+
+```javascript
 var restify = require('restify');
 
 function respond(req, res, next) {
@@ -27,12 +28,12 @@ server.head('/hello/:name', respond);
 server.listen(8080, function() {
   console.log('%s listening at %s', server.name, server.url);
 });
+```
 
-</code></pre>
 
-## **ClojureScript: src/cljs_node/core.cljs**
+# ClojureScript: src/cljs_node/core.cljs
 
-<pre><code class="clojure">
+```clojure
 (ns cljs-node.core
   (:require [cljs.nodejs :as node]))
 
@@ -54,8 +55,7 @@ server.listen(8080, function() {
   (.listen server 8080 #(log "%s listening at %s" (.-name server) (.-url server))))
 
 (set! *main-cli-fn* -main)
-
-</code></pre>
+```
 
   [1]: /2013/01/14/clojurescript-for-nodejs/
   [2]: https://github.com/dannysu/cljs-node

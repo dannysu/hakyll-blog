@@ -18,11 +18,14 @@ some errors by updating versions, so will detail the steps in this post.
 1. From command line, run `lein`. This will download leiningen jar to
    `.lein/self-installs`.
 1. Go to .lein and create a profiles.clj file with the following content
-<pre><code class="clojure">{:user {:plugins [[lein-cljsbuild "0.2.10"]]}}</code></pre>
+```clojure
+{:user {:plugins [[lein-cljsbuild "0.2.10"]]}}
+```
 1. From command line, run `lein new cljs-helloworld`
 1. `cd cljs-helloworld`
 1. Edit project.clj file to add :cljsbuild parameters
-<pre><code class="clojure">(defproject cljs-helloworld "0.1.0-SNAPSHOT"
+```clojure
+(defproject cljs-helloworld "0.1.0-SNAPSHOT"
   :description "FIXME: write description"
   :url "http://example.com/FIXME"
   :license {:name "Eclipse Public License"
@@ -34,19 +37,22 @@ some errors by updating versions, so will detail the steps in this post.
                                    :target :nodejs
                                    :optimizations :advanced
                                    :pretty-print true}}]}
-  :dependencies [[org.clojure/clojure "1.4.0"]])</code></pre>
+  :dependencies [[org.clojure/clojure "1.4.0"]])
+```
 1. `cd src/cljs_helloworld`
 1. `mv core.clj core.cljs`
 1. Edit core.cljs and replace content with:
-<pre><code class="clojure">(ns cljs-helloworld.core)
-
-    (defn -main [& args]
-      (println (apply str (map [\space "world" "hello"] [2 0 1]))))
-
-    (set! *main-cli-fn* -main)</code></pre>
+```clojure
+(ns cljs-helloworld.core)
+(defn -main [& args]
+  (println (apply str (map [\space "world" "hello"] [2 0 1]))))
+(set! *main-cli-fn* -main)
+```
 1. `cd ../..`
 1. lein cljsbuild once
 1. node main.js
+
+## 
 
 That's it! You should see "hello world" printed out.
 

@@ -7,12 +7,12 @@ My first [pull request for khan-exercise][1] merged into master today.
 
 Several events happened over the last week that led me to dig into Khan
 Academy's code for their exercises questions. First of all, I was an instant
-fan of [khanacademy.org](khanacademy.org) when I first heard about them. When I
-used to tutor kids back in Seattle I told the teachers about the website as
-well. Several days ago I noticed the Khan Academy app on my Windows Phone, and
-I thought to myself that I wished the app would play videos directly from the
-app instead of sending users to the website. While I was playing with the app,
-I came across a [TED video of Salman Khan's talk][2].  It's a really
+fan of [khanacademy.org](http://www.khanacademy.org) when I first heard about
+them. When I used to tutor kids back in Seattle I told the teachers about the
+website as well. Several days ago I noticed the Khan Academy app on my Windows
+Phone, and I thought to myself that I wished the app would play videos directly
+from the app instead of sending users to the website. While I was playing with
+the app, I came across a [TED video of Salman Khan's talk][2].  It's a really
 eye-opening and exciting talk, so I recommend you check it out too!
 
 Later on, I came across David Hu's blog post about how they're [using machine

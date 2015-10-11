@@ -7,6 +7,8 @@ tags: Mad Coding, endless scroll, eol, infinite scroll, JQuery, knockout.js, pin
 
 **UPDATE:** Also see how I [optimized the memory usage of this][1].
 
+---
+
 I found an awesome site couple weeks ago that allows people to check out living
 things on Earth and collect ones they like: [Encyclopedia of
 Life](http://eol.org). It even has "collections" feature where you can put

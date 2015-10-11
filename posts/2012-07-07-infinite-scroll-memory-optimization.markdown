@@ -7,9 +7,8 @@ In my previous post, I talked about my [Pinterest-like interface for
 Encyclopedia of Life (eol.org)][1].  In this post I'm going to go through my
 iterations to optimize the memory usage of my web app.
 
-<br>
 
-## **A Problem With Infinite Scroll**
+# A Problem With Infinite Scroll
 
 After the first iteration, I started using my interface for browsing EOL and
 started collecting my favourite pictures. However, after about 7500+ images
@@ -22,9 +21,8 @@ Browsing the web I found that LinkedIn recently added a post on the [techniques
 they used][2].  My techniques however are a bit different, but both my and
 LinkedIn's approaches should help.
 
-<br>
 
-## **Iteration 1:**
+# Iteration 1:
 
 My initial version simply did the very naive thing, which is to continuously
 add &lt;div> elements to the page. When I monitored the number of DOM nodes
@@ -38,9 +36,8 @@ DOM Node Count: [1611-23403]
 As you can see, it's ever increasing so of course I eventually ran out of
 memory.
 
-<br>
 
-## **Iteration 2:**
+# Iteration 2:
 
 I knew from mobile development of how to implement infinite scroll on mobile
 devices, so the first approach I tried was to limit the number of cells (aka
@@ -66,9 +63,8 @@ Wow! That's half of the memory usage compared to the naive version. Also, you
 can see that the graph is sawtooth-like showing when Chrome garbage collected
 the &lt;div> elements and images I threw out.
 
-<br>
 
-## **Iteration 3:**
+# Iteration 3:
 
 Feeling encouraged and in the right direction, I started doing the real work of
 reusing cells. I did this first to the cells showing loading images as a small
@@ -88,9 +84,8 @@ There's a slight increase in memory usage from this approach, and at the time I
 figured that was just because there are so few cells showing loading image that
 it didn't matter, so that brings me to iteration 4.
 
-<br>
 
-## **Iteration 4:**
+# Iteration 4:
 
 I applied the same approach as iteration 3 to all cells showing actual EOL
 images. The timeline graph looks a lot better with # of DOM node count much
@@ -108,9 +103,8 @@ and the results were the same.
 At this point I'm disappointed but a bit excited too because I know that I'm
 just about to learn something.
 
-<br>
 
-## **Iteration 5:**
+# Iteration 5:
 
 I used Chrome's Heap Profiler tool to analyze what happened between iteration 2
 & 4. I noticed that the js Array containing EOL image data is larger in

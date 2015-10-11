@@ -9,25 +9,23 @@ and talked about how one can use it to facilitate website testing (with
 was fitting. Having a headless WebKit can do so much for you other than just
 tesitng too!
 
-<br>
 
-## **Taking Screenshots**
+# Taking Screenshots
 
 For another project I was working on, I wanted to capture webpages and save them
 as images. Before I discovered PhantomJS, I used [CutyCapt][2] and [Qt
 graphics-dojo example][5]. PhantomJS is much much simpler to use though. Check
 out the official [rasterize example][3] for details.
 
-<br>
 
-## **Fetching Actual Website Content**
+# Fetching Actual Website Content
 
 Another thing that's great about having a headless browser is that you can use
 it to fetch the actual content of a website. Nowadays so many sites are
 javascript driven so simply fetching the initial HTML won't do. Below is how you
 can use PhantomJS to capture the actual content.
 
-<pre><code class="javascript">
+```javascript
 var page = require('webpage').create(),
     system = require('system'),
     fs = require('fs'),
@@ -62,8 +60,7 @@ if (system.args.length != 3) {
         }
     });
 }
-
-</code></pre>
+```
 
 Save the code to grab.js and run it via PhantomJS by providing the URL to fetch
 and the output file to save the content to.

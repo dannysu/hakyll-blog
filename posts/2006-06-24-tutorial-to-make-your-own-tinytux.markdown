@@ -8,6 +8,4 @@ It's soooo cute.
 ![](http://www.crystalxp.net/news/img/th_219.jpg)
 
 See the tutorial at:
-[http://forum.crystalxp.net/index.php?showtopic=8505][1]
-
-  [1]: http://forum.crystalxp.net/index.php?showtopic=8505
+<http://forum.crystalxp.net/index.php?showtopic=8505>

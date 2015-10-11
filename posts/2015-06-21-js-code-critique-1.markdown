@@ -21,42 +21,38 @@ I try to patch up some of the holes in my understanding of javascript, I thought
 it's a great time to give myself some code critiques. I'm going to use my
 [hash0][1] project for this because it was first written a while ago.
 
-<br>
 
-## **new Array() vs []**
+# new Array() vs []
 
 For some reason I coded this constructor function with `new Array()`.
 
-<pre><code class="javascript">
+```javascript
 function Metadata() {
     this.configs = new Array();
     this.mappings = new Array();
     this.dirty = false;
 }
-
-</code></pre>
+```
 
 This can be written using array literal and be more compact:
 
-<pre><code class="javascript">
+```javascript
 function Metadata() {
     this.configs = [];
     this.mappings = [];
     this.dirty = false;
 }
-
-</code></pre>
+```
 
 Just a style thing, so moving on.
 
-<br>
 
-## **truthy & falsy values #1**
+# truthy & falsy values #1
 
 For some reason I wrote a whole bunch of code just to return whether the
 localStorage has 'storageUrl' property:
 
-<pre><code class="javascript">
+```javascript
 Metadata.prototype.hasStorageUrl = function() {
     if (!(storage['storageUrl']) ||
         storage['storageUrl'] == '') {
@@ -64,8 +60,7 @@ Metadata.prototype.hasStorageUrl = function() {
     }
     return true;
 };
-
-</code></pre>
+```
 
 [Storage.getItem][2] will return null if it doesn't have value for the provided
 key. In this case, the key is 'storageUrl'. I guess when I originally wrote this
@@ -82,30 +77,27 @@ to return the truthy value of whatever Storage.getItem gives me.
 
 Here's an updated version:
 
-<pre><code class="javascript">
+```javascript
 Metadata.prototype.hasStorageUrl = function() {
     return Boolean(storage.storageUrl);
 };
-
-</code></pre>
+```
 
 There. Nice and simple. Empty string returns false. null also returns false.
 Other strings return true. This is exactly what I want.
 
-<br>
 
-## **truthy & falsy values #2**
+# truthy & falsy values #2
 
 I also wrote code like this:
 
-<pre><code class="javascript">
+```javascript
 Metadata.prototype.findConfig = function(param, partial_match) {
     partial_match = partial_match || false;
 
     // ...
 };
-
-</code></pre>
+```
 
 What was I thinking? Yeah, probably didn't quite grasp truthy value at the time.
 
@@ -116,9 +108,8 @@ and sometimes whatever the incoming type is.
 If I really wanted to ensure it's a typeof boolean, then I could either
 !!partial_match or Boolean(partial_match) here.
 
-<br>
 
-## **Array.prototype.map()**
+# Array.prototype.map()
 
 I have a function to loop over all configs and return an array of their param
 property. There's another way to write the same thing with the map() function
@@ -126,7 +117,7 @@ though.
 
 Before:
 
-<pre><code class="javascript">
+```javascript
 Metadata.prototype.getAllParams = function() {
     var params = [];
     for (var i = 0; i < this.configs.length; i++) {
@@ -134,19 +125,17 @@ Metadata.prototype.getAllParams = function() {
     }
     return params;
 };
-
-</code></pre>
+```
 
 After:
 
-<pre><code class="javascript">
+```javascript
 Metadata.prototype.getAllParams = function() {
     return this.configs.map(function(config) {
         return config.param;
     });
 };
-
-</code></pre>
+```
 
 I think the higher-order function map() version looks more concise and clear.
 The for-loop version would tend to be faster though, because it isn't invoking a
@@ -154,14 +143,13 @@ function and setting up and tearing down function scope repeatedly. This
 function doesn't run many times and always at the initialization of an AngularJS
 controller, so it doesn't matter at all.
 
-<br>
 
-## **Array.prototype.filter()**
+# Array.prototype.filter()
 
 Similarly I have a function that uses a for-loop, which acts like a search and
 returns only matching config:
 
-<pre><code class="javascript">
+```javascript
 Metadata.prototype.findConfigs = function(param) {
     var matches = [];
     for (var i = 0; i < this.configs.length; i++) {
@@ -171,25 +159,24 @@ Metadata.prototype.findConfigs = function(param) {
     }
     return matches;
 };
-
-</code></pre>
+```
 
 Well, that sounds like a job for filter():
 
-<pre><code class="javascript">
+```javascript
 Metadata.prototype.findConfigs = function(param) {
     return this.configs.filter(function(config) {
         return (config.param.indexOf(param) >= 0);
     });
 };
-
-</code></pre>
+```
 
 Cool, that's more compact and perhaps more clear at a glance what the function
 is doing. I'm filtering and grabbing only the ones that meet the condition
 inside.
 
-<br>
+---
+## 
 
 Well, that's it for now. I have more things to add but no time to write it down
 right now.

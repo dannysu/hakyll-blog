@@ -8,9 +8,8 @@ well and I was good at my job. It was also around that time when I was making a
 huge decision. A decision that unexpectedly led me to Y Combinator couple years
 later.
 
-<br>
 
-## **Lots of Sleepless Nights**
+# Lots of Sleepless Nights
 
 I was wrestling with a challenge so scary I didn't know whether I could solve
 it or even how to begin. I felt an obligation that it was up to me to fix some
@@ -33,9 +32,8 @@ Ali was very supportive. He gave me advice and offered to help in whatever way
 he can. And of course he kept his word in the years that followed. I'm very
 thankful. Without him, we might not be where we are now.
 
-<br>
 
-## **2 Years Later - YC Demo Day**
+# 2 Years Later - YC Demo Day
 
 Fast forward 2 years, I can't believe that I just wrapped up my time in YC S14
 batch with the demo day this week (see [coverage on TechCrunch][1]). I'm very
@@ -58,9 +56,8 @@ things might have been quite different now.
 Looking back at my [first post about my startup][2], it's absolutely incredible
 to me that I'm entering the 3rd year of my entrepreneurial journey.
 
-<br>
 
-## **The Future - Endless Determination**
+# The Future - Endless Determination
 
 I've concluded that "Startups are not as impossible as you think, but it's more
 difficult than you ever imagined."

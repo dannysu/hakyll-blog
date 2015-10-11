@@ -7,8 +7,6 @@ As demonstrated on a binary version of Gentoo Linux,
 [Kororaa](http://kororaa.org/).
 
 Linux has gotten some very cool eye candy. Some screenshots can be found here:
-[http://www.tuxmachines.org/gallery/korxgl2][1]
+<http://www.tuxmachines.org/gallery/korxgl2>
 
 You'll find that some of the effects are like Apple's Expose and Cube effects.
-
-  [1]: http://www.tuxmachines.org/gallery/korxgl2

@@ -11,33 +11,30 @@ ratings to decide what movies to put on hold. I started writing the program in
 Haskell and my progress so far is now on my [github][2]. What's missing right
 now is actually logging in and place a hold.
 
-<br>
 
-## **Use HTTP.Conduit to fetch web pages**
+# Use HTTP.Conduit to fetch web pages
 
 I used [http-conduit][3] to grab the HTML source from Toronto library website.
 It's pretty straightforward. Just install it by `cabal install http-conduit`,
 then use the `simpleHttp` function.
 
-<pre><code class="haskell">
+```haskell
 import Network.HTTP.Conduit
 
 main :: IO ()
 main = do
     content &lt;- simpleHttp newMoviesURL
+```
 
-</code></pre>
 
-<br>
-
-## **Use regex-tdfa for regular expressions**
+# Use regex-tdfa for regular expressions
 
 Whenever I need to use regex to extract data from HTML source code, I used
 [regex-tdfa][5]'s =~ function.
 
 Example:
 
-<pre><code class="haskell">
+```haskell
 import qualified Data.ByteString.Lazy as L
 import Text.Regex.TDFA ((=~))
 
@@ -46,12 +43,10 @@ updated s = if length matches &gt; 0
             then last $ head matches
             else L.empty
               where matches = s =~ "&lt;h3[^&gt;]*&gt;Updated (.*)&lt;/h3&gt;"
+```
 
-</code></pre>
 
-<br>
-
-## **Use Data.Aeson for parsing JSON**
+# Use Data.Aeson for parsing JSON
 
 For parsing Rotten Tomatoes JSON API data, I used [aeson][4] package for that.
 Install it by `cabal install aeson`. Below is how I mapped the JSON result to
@@ -59,7 +54,7 @@ what I need.
 
 First the declarations:
 
-<pre><code class="haskell">
+```haskell
 {-# LANGUAGE DeriveGeneric #-}
 
 import Data.Aeson (FromJSON, ToJSON, decode, encode)
@@ -83,15 +78,13 @@ instance FromJSON RTInfo
 instance FromJSON RTMovie
 instance FromJSON RTCast
 instance FromJSON RTRatings
-
-</code></pre>
+```
 
 then to actually decode:
 
-<pre><code class="haskell">
-    let rt = decode content :: Maybe RTInfo
-
-</code></pre>
+```haskell
+let rt = decode content :: Maybe RTInfo
+```
 
   [1]: http://www.torontopubliclibrary.ca/books-video-music/video/new-holdable-adult.jsp
   [2]: https://github.com/dannysu/new-holdable-dvd

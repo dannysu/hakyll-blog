@@ -15,9 +15,8 @@ and after that it's all savings.
 This post highlights some cool features and also talk about some tips for anyone
 who wants to use similar setup.
 
-<br>
 
-## **Cool Features**
+# Cool Features
 
 I looked around at voip providers and chose Anveo because I liked the feature
 set I saw. Below are some of the features that I enjoy:
@@ -29,9 +28,9 @@ set I saw. Below are some of the features that I enjoy:
 - Quick dial (E.g. dial "03#" for calling my aunt)
 - Call history
 
-<br>
 
-## **Custom CallerID Numbers**
+# Custom CallerID Numbers
+
 Anveo has this feature that allows you to call using any phone number you own.
 For example, I can configure it so that I can use voip to call somebody with my
 cell phone number as the caller ID. All I have to do is dial * followed by 2
@@ -46,7 +45,7 @@ Profile A General" and fix up the DigitMap.
 
 This was my DigitMap and it didn't allow star codes.
 
-<pre><code class="html">
+```
 (
     1xxxxxxxxxx|
     <1>[2-9]xxxxxxxxx|
@@ -55,13 +54,12 @@ This was my DigitMap and it didn't allow star codes.
     (Mipd)|
     [^*#]@@.
 )
-
-</code></pre>
+```
 
 I modified it to include the star code associated on Anveo side with my cell
 phone number.
 
-<pre><code class="html">
+```
 (
     1xxxxxxxxxx|
     <1>[2-9]xxxxxxxxx|
@@ -72,9 +70,7 @@ phone number.
     *20xxxxxxxxxx|
     *201xxxxxxxxxx
 )
-
-</code></pre>
-
+```
 
   [1]: http://anveo.com/
   [2]: http://www.obihai.com/obi202pr.html

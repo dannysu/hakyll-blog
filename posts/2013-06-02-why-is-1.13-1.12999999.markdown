@@ -28,39 +28,37 @@ grasp of the floating point issue and the solutions. I hate magic in code.
 Recently while working on [AvidTap][2] Prepaid Card, I ran into this issue
 again. This time I'm going to dig right in.
 
-<br>
 
-## **(1.13 * 100) = 112.99999999999999 or 0.1 + 0.2 != 0.3**
+# (1.13 * 100) = 112.99999999999999 or 0.1 + 0.2 != 0.3
 
 If you try the following code in node.js, you don't get the expected 113 at the
 end.
-<pre><code class="bash">
+
+```bash
 [~] node
 > 1.13 * 100
 112.99999999999999
 >
-
-</code></pre>
+```
 
 Why is that? Trying the same thing in different browsers and other languages reveal
 that it's the same behaviour across the board.
 
 Here's Haskell:
-<pre><code class="bash">
+
+```bash
 [~] ghci
 Prelude&gt; 1.13 * 100
 112.99999999999999
 Prelude&gt;
-
-</code></pre>
+```
 
 A quick search online will tell you that this has something to do with how
 floating point numbers are represented in binary. Other people have similar
 questions such as why **0.1 + 0.2 != 0.3**.
 
-<br>
 
-## **Binary Representation**
+# Binary Representation
 
 I know binary integers quite well, but floating point numbers not so much. I
 knew it's stored as a number plus the exponent, but not in detail. This is a
@@ -72,7 +70,8 @@ example, its binary representation on my little-endian machine is:
 **0x3ff2147ae147ae14** in hex
 
 I got the above representation via a simple C++ program (test.cpp):
-<pre><code class="c">
+
+```c
 #include &lt;iostream&gt;
 #include &lt;iomanip&gt;
 using namespace std;
@@ -86,27 +85,18 @@ int main() {
 
 // g++ test.cpp
 // ./a.out
-
-</code></pre>
+```
 
 Disecting the binary, you get the following components:
-<table>
-<tr>
-<td>Sign</td>
-<td>Exponent</td>
-<td>Mantissa</td>
-</tr>
-<tr>
-<td>0</td>
-<td>01111111111</td>
-<td>0010000101000111101011100001010001111010111000010100</td>
-</tr>
-</table>
+
+| Sign | Exponent    | Mantissa                                             |
+|------|-------------|------------------------------------------------------|
+| 0    | 01111111111 | 0010000101000111101011100001010001111010111000010100 |
 
 Now referring to the [IEEE 754 double-precision binary floating-point
 format][4], one can figure out what those bits represent.
 
-![](http://upload.wikimedia.org/math/9/3/e/93e5d971de740f61ee86eea8f2c1ba62.png)
+![](//upload.wikimedia.org/math/9/3/e/93e5d971de740f61ee86eea8f2c1ba62.png)
 
 The sign bit is 0, so the number is a positive number. Exponent bits equate to
 1023, so the equation above will end up being multiplied by $$2^{e-1023} = 2^{(1023-1023)} = 2^0 = 1$$
@@ -125,14 +115,13 @@ being represented exactly in binary, the addition doesn't exactly equal to 0.3.
 To play around with the binary representation more, there's this [online
 converter][6] that works great.
 
-<br>
 
-## **How does it print 1.13 then?**
+# How does it print 1.13 then?
 
 Now that we know the computer can't represent 1.13 perfectly, so one question
 that comes up is how the node.js REPL is able to show certain numbers exactly?
 
-<pre><code class="bash">
+```bash
 [~] node
 > 1.13
 1.13
@@ -141,15 +130,14 @@ that comes up is how the node.js REPL is able to show certain numbers exactly?
 > 1.13 * 3
 3.3899999999999997
 >
-
-</code></pre>
+```
 
 Shouldn't it show 1.12999999999999989341858963598?
 
 I started with a bit of experimentation with different values and found that
 node.js REPL seems to round the result after 15 decimal digits.
 
-<pre><code class="bash">
+```bash
 [~] node
 > 1.13
 1.13
@@ -158,22 +146,20 @@ node.js REPL seems to round the result after 15 decimal digits.
 > 1.1299999999999999
 1.13
 >
-
-</code></pre>
+```
 
 According to [Exploring Binary][8] website, languages typically cap the digits
 between 15 to 17. Also, [17 digits are needed][9] to represent a double in text
 and be able it back.
 
-<br>
 
-## **Solution**
+# Solution
 
 At [AvidTap][2], we used [bignumber.js][5] library to deal with this issue with
 binary floating point representation. Let's look at the difference when using
 this library.
 
-<pre><code class="bash">
+```bash
 [~] node
 > var BigNumber = require('bignumber.js');
 undefined
@@ -192,16 +178,14 @@ undefined
   e: 2,
   c: [ 1, 1, 3 ] }
 >
-
-</code></pre>
+```
 
 As you can see above, the way bignumber.js represents number is by storing each
 digit in an array of integers. Doing so allows it to store the floating point
 number's digits exactly, but at the cost of perf and storage size.
 
-<br>
 
-## **How come some browsers/OS don't show this issue?**
+# How come some browsers/OS don't show this issue?
 
 The khan-exercises bugs were not fixed prior to me taking a look at it because
 the issues were only reproducible on certain OSes and certain browser versions.

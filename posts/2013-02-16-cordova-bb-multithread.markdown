@@ -12,7 +12,8 @@ Well.ca's iOS app suffered random crashes due to memory leak in its early days
 until I fixed it. This post will examine BlackBerry 7's Cordova implementation
 and some of the issues I came across.
 
-## **The Problem**
+
+# The Problem
 
 While using Cordova to build BB7 app, I was able to get the app functionally
 working but I kept having stability issues. The app would use the file system
@@ -20,7 +21,8 @@ and save files to it. However, once in a while I would find that the directory
 I'm saving to becomes locked and cannot be deleted even though I'm no longer
 using it. The directory remains locked until I pull the battery and reboot.
 
-## **Multithread Issue**
+
+# Multithread Issue
 
 The symptom points to resources not being properly freed up. At first I didn't
 know what's wrong and blamed the issue on the crappy BlackBerry OS. However, as
@@ -32,7 +34,7 @@ thread to do the work in, and later call back to javascript engine with
 results. You can see this in the [PluginManagerFunction.java][2] file inside
 invoke():
 
-<pre><code class="java">
+```java
 if (async) {
     // Run this async on a background thread so that JavaScript can continue on
     Thread thread = new Thread(new Runnable() {
@@ -43,8 +45,7 @@ if (async) {
     }
     thread.start();
 }
-
-</code></pre>
+```
 
 This should be similar to how Node.js works. It's restricted in that the
 javascript engine must be single-threaded and you need to do
@@ -54,7 +55,7 @@ real issue arises due to Cordova plugin's lack of proper cleanup.
 For example, the [FileTransfer plugin][3] will perform download() inside the
 newly created thread and open a bunch of file handles:
 
-<pre><code class="java">
+```java
 private PluginResult download(String source, String target) {
     HttpConnection httpConn = null;
     FileConnection fileConn = null;
@@ -79,8 +80,7 @@ private PluginResult download(String source, String target) {
         }
     }
 }
-
-</code></pre>
+```
 
 This might seem right by itself. Any opened file handle should be freed up in the
 finally clause. However, one needs to remember that this download() function is
@@ -89,22 +89,21 @@ created thread.
 
 Below is Cordova's application termination sequence:
 
-<pre><code class="javascript">
-  exitApp:function() {
-      // Call onunload if it is defined since BlackBerry does not invoke
-      // on application exit.
-      if (typeof window.onunload === "function") {
-          window.onunload();
-      }
+```javascript
+exitApp:function() {
+    // Call onunload if it is defined since BlackBerry does not invoke
+    // on application exit.
+    if (typeof window.onunload === "function") {
+        window.onunload();
+    }
 
-      // allow Cordova JavaScript Extension opportunity to cleanup
-      manager.destroy();
+    // allow Cordova JavaScript Extension opportunity to cleanup
+    manager.destroy();
 
-      // exit the app
-      blackberry.app.exit();
-  }
-
-</code></pre>
+    // exit the app
+    blackberry.app.exit();
+}
+```
 
 The manager.destroy() call will go through each plugin and allow the plugin to
 finish what it needs to do. However, the plugins don't properly clean up after
@@ -113,7 +112,8 @@ in-progress threads to exit or finish, the threads get interrupted and the
 finally clause becomes useless thus leading to intermittent issue with file
 locking.
 
-## **Fixing It**
+
+# Fixing It
 
 I'm unfortunately not as familiar with Java's way of doing things, but in C++
 and Win32 world you typically will solve this issue by using events and signal
@@ -124,7 +124,7 @@ volatile boolean.
 Here's a [link][5] that explains the volatile keyword usage. The page has an
 example how signaling a thread to exit early which I replicated below:
 
-<pre><code class="java">
+```java
 public class StoppableTask extends Thread {
   private volatile boolean pleaseStop;
 
@@ -138,13 +138,12 @@ public class StoppableTask extends Thread {
     pleaseStop = true;
   }
 }
-
-</code></pre>
+```
 
 The way I fixed the file locking issue is by modifying destroy to do something
 like the following:
 
-<pre><code class="java">
+```java
 public void destroy() {
     // Set the volatile boolean so that all threads will see this signaling to
     // exit
@@ -155,8 +154,7 @@ public void destroy() {
         Thread.sleep(50);
     }
 }
-
-</code></pre>
+```
 
 There's more to the fix than what I showed above, but that's the gist of it.
 Whenever you create a new thread, think about the ending condition. Kind of like

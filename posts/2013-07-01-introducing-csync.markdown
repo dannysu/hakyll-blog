@@ -10,11 +10,10 @@ However, it's been bugging me that I didn't have an offsite backup for
 some things that aren't on my SkyDrive. That's why I wrote [syncray][1] over the
 past week whenever I had some time.
 
-<br>
 
-## **syncray**
+# syncray
 
-syncray <strike>csync (aka Cloud Sync)</strike> is a script that encrypts data
+syncray ~~csync (aka Cloud Sync)~~ is a script that encrypts data
 locally, then synchronizes to one of the cloud storage providers. At this time
 it supports [Amazon S3][3] (or services with compatible API such as
 [DreamObjects][4]) as well as [Joyent Manta][2].
@@ -29,9 +28,8 @@ One great benefit of writing my own script is that adding Joyent Manta support
 was quite easy. The pricing for Joyent Manta is pretty good and the technology
 is just awesome.
 
-<br>
 
-## **Joyent Manta**
+# Joyent Manta
 
 In the beginning I was planning on dumping my data on DreamObjects because of
 its lower pricing than Amazon. However, while I was writing syncray, I saw the
@@ -51,9 +49,8 @@ host anything extra.
 
 That's cool!
 
-<br>
 
-## **Cloud Storage Pricing**
+# Cloud Storage Pricing
 
 syncray is hard-coded to store only 1 copy on Joyent Manta which makes its
 storage cost $0.043/GB. I signed up for DreamObjects while they have the deal

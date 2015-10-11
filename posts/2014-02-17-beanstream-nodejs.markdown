@@ -9,13 +9,11 @@ needed help from Beanstream support to resolve some confusion that came from bad
 documentation. This post provides details on how you can access Beanstream from
 node.
 
-<br>
-
-## **1. Getting and Configuring a Test Account**
+# 1. Getting and Configuring a Test Account
 
 Visit Beanstream's page for [creating test account][2] and create one. 
 
-Note down your **merchant ID**. It's visible at the top right of the page after you
+Note down your `merchant ID`. It's visible at the top right of the page after you
 login.
 
 Next click `configuration -> payment profile configuration`, and under "Security
@@ -30,9 +28,7 @@ Options" check the following options:
 
 In the Hash key text box, enter the desired hash key and select SHA-1.
 
-<br>
-
-## **2. Talk to Legato API**
+# 2. Talk to Legato API
 
 With the new [Legato API][3], Beanstream now works pretty much like how Stripe,
 Braintree and others work. You pass credit card information directly to
@@ -45,7 +41,7 @@ others. One thing that the documentation was wrong about is that it talked about
 some testing endpoint, but when I called Beanstream the support person said to
 just use https://www.beanstream.com.
 
-<pre><code class="javascript">
+```javascript
 var restify = require('restify');
 
 function getSingleUseToken(credit_card_number, callback) {
@@ -77,19 +73,16 @@ function getSingleUseToken(credit_card_number, callback) {
         return callback(null, obj.token);
     });
 }
+```
 
-</code></pre>
-
-<br>
-
-## **3. Create a Secure Payment Profile**
+# 3. Create a Secure Payment Profile
 
 What Stripe call "customer", Beanstream calls them "Secure Payment Profile"
 (SPP). To create a SPP that you can later charge, you will create a SPP and
 associate it with the token you receive in previous step. To do that it's just a
 simple POST to the server.
 
-<pre><code class="javascript">
+```javascript
 var client = restify.createJSONClient({
     url: "https://www.beanstream.com",
     headers: {
@@ -118,15 +111,12 @@ client.post(path, data, function(err, req, res, result) {
     var obj = querystring.parse(result);
     // You get back result.customerCode that you can use later
 });
-
-</code></pre>
+```
 
 For details about what you can pass as parameters to the SPP API, see the
 Classic Developer Guides [here][5].
 
-<br>
-
-## **4. Charge a Secure Payment Profile**
+## 4. Charge a Secure Payment Profile
 
 Charging a Secure Payment Profile involves using the customer code you obtained
 in step 3 and signing the request. In step 1 you already set up a hash key in
@@ -134,7 +124,7 @@ the test account for Beanstream to validate your requests. In this step, you
 have to calculate a SHA-1 hash using the same key before sending request to
 Beanstream.
 
-<pre><code class="javascript">
+```javascript
 // Use merchant ID from test account
 // Customer code is obtain in step 3
 // amount is how much to charge to the credit card
@@ -166,8 +156,7 @@ client.post(path, data, function(err, req, res, result) {
 
     var obj = querystring.parse(result);
 });
-
-</code></pre>
+```
 
 Both Stripe and Braintree both have node.js libraries, [here][6] and [here][7].
 If you happen to need to use Beanstream, I hope this post helped.

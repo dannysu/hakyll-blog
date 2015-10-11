@@ -3,7 +3,7 @@ date: 2006-12-31 22:02:29
 title: Brian's Website Audit
 tags: Security
 ---
-First post with the new _Security_ tag
+First post with the new *Security* tag
 
 Yesterday I got sidetracked when going through my website and making sure that
 the site is not obviously vulnerable to attacks. I ended up wondering if
@@ -16,9 +16,8 @@ I seriously hope that I don't have critical bugs on my own website, and I hope
 to check everything soon. I will educate myself and design software that is
 more secure.
 
-<br>
 
-## **XSS Vulnerability**
+# XSS Vulnerability
 
 The first problem with Brian's website is a XSS vulnerability in his Count
 Challenge PHP page. When I was going through his pages, the first thing I try
@@ -42,9 +41,8 @@ identify that the URL has injected code?
 Do a search for "google xss" and be scared... be very scared... the fact that
 somebody can send an email to your gmail and have their code execute is scary.
 
-<br>
 
-## **I scored 10/10 on Brian's questionnaire!**
+# I scored 10/10 on Brian's questionnaire!
 
 The 2nd bug is a fun one. I remember back when Johnny used to try out Brian's
 questionnaire and try to score as high as possible. Ah the fun memories.
@@ -56,9 +54,8 @@ If you know all about Brian and scored 10/10, then you will get a secret
 phrase. I forgot whether Johnny ever got 10/10, but it was fun to see that
 anybody could score 10/10.
 
-<br>
 
-## **Bad Design**
+# Bad Design
 
 The last thing I tried to tackle on Brian's website was with the way he
 displays contents on his site. He uses a single index.php page and provide

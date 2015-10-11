@@ -13,9 +13,8 @@ direction for Windows Phone. It reminds me of my company [Kash][4]'s mission to
 kill the stranglehold of credit cards on in-person paperless payment. It reminds
 me of Indiegogo's mission. It reminds me of Ang Lee's dream.
 
-<br>
 
-## **Indiegogo's Story**
+# Indiegogo's Story
 
 You should really read up on [this interview][2] and [this interview][1] with
 Indiegogo's Danae Ringelmann. There are so many great things she talks about in
@@ -33,9 +32,8 @@ being made are being influenced by that goal.
 
 That's the power of the mission.
 
-<br>
 
-## **Ang Lee's Story**
+# Ang Lee's Story
 
 I was reminded of Ang Lee's struggles and triumphs as they were so movingly
 [documented][3]. He had a dream job doing something atypical of most people's

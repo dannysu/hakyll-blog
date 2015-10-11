@@ -11,9 +11,8 @@ within the team. Late last year I was asked by a team mate to give a demo on
 VIM since I'm one of the few VIM users within the team. I'm sharing my
 presentation and reasons on this blog now as well.
 
-<br>
 
-## **Pros:**
+# Pros:
 
 - You can learn it once and use it everywhere
     - FreeBSD: I first learned VIM on this OS
@@ -29,9 +28,8 @@ presentation and reasons on this blog now as well.
     - assign keyboard shortcuts to whatever you want
     - etc
 
-<br>
 
-## **Cons:**
+# Cons:
 
 - Autocomplete support isn't always there for the language you need or isn't as
   good
@@ -44,9 +42,8 @@ presentation and reasons on this blog now as well.
 - No refactoring tool that I know of
 - No way to find all references of a function
 
-<br>
 
-## **Demo**
+# Demo
 
 After telling the team at Well.ca about the pros and cons of using VIM, I dive
 right into showing demos of using VIM to do various things. I showed some of
@@ -63,9 +60,8 @@ I also showed the awesome NrrwRgn plugin for doing things within a section of a
 file without impacting rest of the file. I also showed how you can manipulate
 text and sort things all within VIM.
 
-<br>
 
-## **Command-T**
+# Command-T
 
 One of the plugins that I love is the CommandT plugin. It allows you to type a
 keyboard shortcut and then just start typing file names that you'd like to

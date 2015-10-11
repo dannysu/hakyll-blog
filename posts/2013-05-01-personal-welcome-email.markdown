@@ -32,10 +32,10 @@ less like an automated email.
 > 
 > I'm Kaz, CEO of AvidTap. Saw you registered just now and wanted to say hello :)
 > 
-> What did you think about tapping in with your phone?<br>
+> What did you think about tapping in with your phone?  
 > Do you have any questions I can help out with?
 > 
-> Cheers,<br>
+> Cheers,  
 > KN
 > 
 > PS here is my cellphone number (647) ###-####. Give me a call anytime. If I'm awake I'll pick up.

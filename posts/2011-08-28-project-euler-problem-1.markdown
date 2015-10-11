@@ -8,7 +8,7 @@ Wu's tweet. I figured I'll also use it to help me learn Python and have fun
 solving problems. One of the cool things is that they give you an image to show
 off your progress. At the time of writing, I've solved 10 problems so far.
 
-![](http://projecteuler.net/profile/dannysu.png)
+![](//projecteuler.net/profile/dannysu.png)
 
 The first problem is: [Add all the natural numbers below one thousand that are
 multiples of 3 or 5.][1]
@@ -16,7 +16,7 @@ multiples of 3 or 5.][1]
 Below is my initial naive solution which ran fast enough for the small (999)
 limit. However, there are more efficient solutions.
 
-<pre><code class="python">
+```python
 import time
 
 target = 999
@@ -33,8 +33,7 @@ for i in range(5, target + 1, 5):
 
 end = time.time()
 print sum, "took:", end - start
-
-</code></pre>
+```
 
 Looking at my friend [Shu's solution on GitHub][2] exposed me to two things:
 	

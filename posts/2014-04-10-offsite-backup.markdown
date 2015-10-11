@@ -8,7 +8,8 @@ might have to revise the encryption I use.
 
 **UPDATE 2:** I'm now using [duplicati][10] & Backupsy. Duplicati does
 incremental backup + encrypts the data via standard gpg.
-<br>
+
+---
 
 I didn't have a good offsite backup for my data for quite some time. I've played
 with all sorts of file sync options such as [box.com][1], [copy.com][2],
@@ -17,9 +18,8 @@ with all sorts of file sync options such as [box.com][1], [copy.com][2],
 the encrypted data to any of the cloud storage providers and not have to worry
 that they can read my data. So now the question is which provider to use.
 
-<br>
 
-## **Bad Experience with SpiderOak**
+# Bad Experience with SpiderOak
 
 From this year's World Backup Day, I found out about [SpiderOak][3]. They were
 offering a $125 / year with unlimited storage offering. I downloaded their Linux
@@ -34,9 +34,8 @@ that backing up data to their server to be extremely slow even on my office's
 backup is happening (very slowly), file sync gets queued and becomes
 useless. I ended up cancelling my account 2 days later.
 
-<br>
 
-## **Backupsy + BitTorrent Sync + rdiff-backup + anacron**
+# Backupsy + BitTorrent Sync + rdiff-backup + anacron
 
 After SpiderOak, I figured what I really need is just a VM that has a lot of
 storage. I wondered whether any existed and found [Backupsy][7]. I signed up for
@@ -63,9 +62,8 @@ Since this is fairly involved, so it's not suitable for everyone. I wish there's
 a way to provide the same thing to everyone, but unfortunately as long as you
 don't control the encryption, you can't be sure your data is safe.
 
-<br>
 
-## **What if the house burns down?**
+# What if the house burns down?
 
 There is one last piece of the puzzle. In order to access Backupsy, I use my ssh
 key to do that. What if my apartment burns down and I lose all of my

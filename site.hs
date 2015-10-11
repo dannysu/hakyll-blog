@@ -318,8 +318,12 @@ teaserBody item = do
         (replaceAll "</ol>" (const "")) .
         (replaceAll "<ul>" (const "")) .
         (replaceAll "</ul>" (const "")) .
+        (replaceAll "<strike>" (const "")) .
+        (replaceAll "</strike>" (const "")) .
         (replaceAll "<li>" (const "")) .
         (replaceAll "</li>" (const "")) .
+        (replaceAll "<div[^>]*>" (const "")) .
+        (replaceAll "</div>" (const "")) .
         (replaceAll "<h[0-9][^>]*>" (const "")) .
         (replaceAll "</h[0-9]>" (const "")) .
         (replaceAll "<pre.*" (const "")) .
@@ -336,7 +340,7 @@ indexNavLink n d maxn = renderHtml ref
   where ref = if (refPage == "") then ""
               else H.a ! A.href (toValue $ toUrl $ refPage) $ 
                    (preEscapedString lab)
-        lab = if (d > 0) then "Older Entries &raquo;" else "&laquo; Newer Entries"
+        lab = if (d > 0) then "Older Entries ▶" else "◀ Newer Entries"
         refPage = if (n + d < 1 || n + d > maxn) then ""
                   else case (n + d) of
                     1 -> "/blog/page/1/"

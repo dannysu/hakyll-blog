@@ -10,9 +10,8 @@ getting OOM crash reports on. The result is that the app is super snappy.
 Feedbacks from our customer have been that they love everything except the speed
 of the app. This fixes it and now our app is incredible!
 
-<br>
 
-## **Performance of Mobile Apps**
+# Performance of Mobile Apps
 
 We've been cranking out feature after feature such that we hadn't spent the time
 to make sure our app is as snappy as it could be. One of the earlier
@@ -38,9 +37,8 @@ Certainly if each CPU core is faster by itself, then it'll help. Also, if you
 could offload things to do in a separate thread than the UI thread, that'll also
 help.
 
-<br>
 
-## **Profiling in Android**
+# Profiling in Android
 
 The performance issue in our case was that a particular code path is noticeably
 slower. Geoff added tracing as documented on [Android developer website][3].
@@ -54,9 +52,8 @@ unexpected. Upon removing the code that was doing excessive updating to the grid
 view, everything went super snappy. Our slowest single-core tablet now runs the
 app flawlessly and confirms that it's not the hardware!
 
-<br>
 
-## **Investigating Memory Leak in Android**
+# Investigating Memory Leak in Android
 
 For our first release of AvidRegister I squeezed in [ACRA][4] for sending out
 crash reports. This has proven to be very valuable. It's one of those things

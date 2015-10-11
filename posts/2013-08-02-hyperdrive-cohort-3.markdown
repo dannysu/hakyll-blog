@@ -7,9 +7,8 @@ I'm very excited to announce that AvidTap is in HyperDrive accelerator's 3rd
 cohort with a demo day set for Oct 18 and another one in Toronto. See the
 Communitech [press release][1].
  
-<br>
 
-## **The Path to HyperDrive**
+# The Path to HyperDrive
 
 When Kaz, Geoff and I started the company HyperDrive was the first accelerator
 that we looked into. However, we weren't accepted back then when we haven't had
@@ -27,9 +26,8 @@ brought in experienced people in sales who have 30+ years of experience. Our
 product also got much better and supports all phones without requiring people to
 carry anything extra.
 
-<br>
 
-## **Lots More Learning**
+# Lots More Learning
 
 It's been less than a week and we already had lots of learning. Frank Erschen is
 our pitch coach and this week he held an initial orientation with all the cohort
@@ -45,9 +43,8 @@ Aside from learning from the accelerator program, I'm also learning a whole lot
 from our VP of Sales. When somebody is so good at what he does you can't help
 but admire the person. I have a totally different view of sales people now.
 
-<br>
 
-## **Challenges Ahead**
+# Challenges Ahead
 
 There are lots more challenges ahead. Bring it on!
 

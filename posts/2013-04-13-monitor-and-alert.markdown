@@ -17,9 +17,8 @@ I'm aware of the start-up PagerDuty that probably makes this very easy, but
 throwing together something simple is also very easy with the technology now.
 Below I walk through how you can get your own poor man's PagerDuty.
 
-<br>
 
-## **Accounts You Need**
+# Accounts You Need
 
 1. Sign up a free account with [AppFog][3]
 1. Sign up for a trial account with [Twilio][4]
@@ -28,9 +27,8 @@ Below I walk through how you can get your own poor man's PagerDuty.
 Personally I was already using all of the above services for my personal
 projects, so putting this together was quick.
 
-<br>
 
-## **Grab The Source Code**
+# Grab The Source Code
 
 My [monitoring repo on github][2] contains the code needed for this.
 
@@ -39,9 +37,8 @@ My [monitoring repo on github][2] contains the code needed for this.
 1. Grab the node.js modules needed: `npm install`
 1. Modify the test function to access your services and check for status
 
-<br>
 
-## **Setting Things Up For AppFog**
+# Setting Things Up For AppFog
 
 1. Install [AppFog CLI][6]
 1. `af login` and provide your credentials
@@ -56,9 +53,8 @@ My [monitoring repo on github][2] contains the code needed for this.
 
 The app should now be deployed.
 
-<br>
 
-## **Filling in AWS Details**
+# Filling in AWS Details
 
 1. Login to AWS
 1. Grab your security credential (Available by hovering over your name and click
@@ -68,9 +64,8 @@ The app should now be deployed.
 1. Provide values for both `AWSAccessKeyID` and `AWSSecretKey`
 1. Modify app.js to fill in the email addresses you want to send alerts to
 
-<br>
 
-## **Filling in Twilio Details**
+# Filling in Twilio Details
 
 1. Login to Twilio
 1. Your account SID and auth token are right at the top of the dashboard
@@ -84,7 +79,8 @@ documentation][7] for more info on what can be in the TwiML file. I included an
 example in my code [here][8]. Just host it somewhere and modify the code to
 point the `url` variable to it.
 
-<br>
+## 
+
 Finally, after all these changes, run `af update monitoring` to upload changes
 to AppFog. Enjoy! Let's hope you don't ever get alerts from this. However,
 should your service go down, this will alert you via email/sms/phone.

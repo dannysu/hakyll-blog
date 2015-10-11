@@ -7,9 +7,8 @@ Note that I originally wrote this on May 15 to capture my YC interview
 experience. This is not a how-to or tips on applying. This is just me capturing
 my memories and now sharing this verbose recollection of the events.
 
-<br>
 
-## **Application Process**
+# Application Process
 
 Kaz, Geoff, and I have only considered applying to accelerators around Toronto
 until now, because Geoff is unable to be away from wife and baby. On March 14,
@@ -34,9 +33,8 @@ good at communicating key points.
 The application deadline is March 28. We submitted ours on March 25 after more
 edits to incorporate feedbacks.
 
-<br>
 
-## **Not Waiting for Application Result**
+# Not Waiting for Application Result
 
 After we submitted the application we went right back to work. We knew that an
 accelerator doesn't make or break a company. The most important thing to
@@ -60,9 +58,8 @@ The one thing about YC that's really impressive is that they move fast, and
 they tell you exactly when decisions will be made. This is different than any
 other accelerators in Ontario.
 
-<br>
 
-## **Before the Interview**
+# Before the Interview
 
 We bought tickets for April 26 and our interview was going to be on April 27 at
 10:45AM.
@@ -89,9 +86,8 @@ important.
 Then came time for us to fly to California. We grabbed dinner from In-N-Out
 Burger and drove to our Airbnb place in Burlingame to rest for the night.
 
-<br>
 
-## **Day of Interview**
+# Day of Interview
 
 Because of the 3-hour timezone difference between Toronto and San Francisco, all of
 us were up super early. We practiced some more and rehearsed our demo routine in
@@ -107,7 +103,8 @@ building. We registered with reception and waited in a big room that looks like
 a cafeteria with long benches. Unfortunately I didn't take any photos of the
 area. There were other people waiting for their turn and we also got to see some
 cool hardware startup's product. One of which is this cool touch interactive display thing:
-<a href="//imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg0LEgVpbWFnZRjpinwM" target="_blank"><img src="//imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg0LEgVpbWFnZRjpinwM" class="centered"></a>
+
+[![][1]][1]
 
 Things were a little delayed, I think we finally got our turn closer to 11. We
 were led to a smaller room to the left of the reception. I didn't know the
@@ -129,12 +126,10 @@ The interview probably lasted more than 10 minutes but it felt like a great
 discussion. After the interview we could finally relax and take a group photo
 outside the building.
 
-<a href="//imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg4LEgVpbWFnZRipj7kBDA" target="_blank"><img src="//imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg4LEgVpbWFnZRipj7kBDA" class="centered"></a>
-<a href="//imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg0LEgVpbWFnZRj6zwIM" target="_blank"><img src="//imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg0LEgVpbWFnZRj6zwIM" class="centered"></a>
+[![][2]][2] [![][3]][3]
 
-<br>
 
-## **Waiting for Result**
+# Waiting for Result
 
 Again, one of the really impressive thing about YC is that they make decisions
 quickly and let you know when decisions will be made. We knew that the decision
@@ -148,8 +143,7 @@ be tough on top of being already tired, so I went to my room to sleep. Later I
 woke up and joined Kaz and Geoff in the living room watching the Raptors game
 as we waited.
 
-<a href="//imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg4LEgVpbWFnZRjpk_YBDA" target="_blank"><img src="//imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg4LEgVpbWFnZRjpk_YBDA" class="centered"></a>
-<a href="//imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg4LEgVpbWFnZRj54fYBDA" target="_blank"><img src="//imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg4LEgVpbWFnZRj54fYBDA" class="centered"></a>
+[![][4]][4] [![][5]][5]
 
 Finally at about 9:43PM EST we got a call from Aaron Harris. It was a great
 feeling. We weren't depending on getting into YC for our startup, because we'd
@@ -160,3 +154,9 @@ as we walked down the street.
 
 Our flights were originally scheduled on April 28, but we changed flights that
 night to delay by couple days so we could attend the YC kick off meeting.
+
+  [1]: //imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg0LEgVpbWFnZRjpinwM
+  [2]: //imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg4LEgVpbWFnZRipj7kBDA
+  [3]: //imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg0LEgVpbWFnZRj6zwIM
+  [4]: //imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg4LEgVpbWFnZRjpk_YBDA
+  [5]: //imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg4LEgVpbWFnZRj54fYBDA

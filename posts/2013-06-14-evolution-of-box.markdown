@@ -8,34 +8,31 @@ tags: Start-up, AvidTap
 Two months have rapidly went by since I last talked about [AvidTap][1] in more
 detail. A lot has happened since April.
 
-<br>
 
-## **AvidTap Box**
+# AvidTap Box
 
 Take our hardware for example, we've done several iterations for the AvidTap
 box. It went from a breadboard on my desk to a 3D-printed version, to a much
 more polished version. Aside from the exterior, the innards have also seen some
 changes and we brought the cost down even more.
 
-<img src="http://imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3JlcgwLEgVpbWFnZRj5VQw" style="width:100%">
+[![][4]][4]
 
 Just like when I was working on Windows Phone I love the feeling of having
 something tangible in my hands. Smartphone does that for me, and in this case
 the AvidTap box feels awesome. It's even a physical thing that I can show my
 parents.
 
-<br>
 
-## **AvidTap Sticker**
+# AvidTap Sticker
 
 Similarly our sticker design has also been improved. We went from something that
 Kaz threw together quickly to something much more fun.
 
-![](http://imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3JlcgwLEgVpbWFnZRjhXQw)
+[![][3]][3]
 
-<br>
 
-## **Improved Facebook Login**
+# Improved Facebook Login
 
 The AvidTap app had Facebook login feature for quite a while, but its use was
 minimal. However, things changed after we did a re-design.
@@ -51,9 +48,8 @@ initial screen taking some of the points mentioned. Since then we've seen steady
 increase in people logging in using Facebook. That cuts down on the number of
 people who fat-finger their email address.
 
-<br>
 
-## **Providing Value**
+# Providing Value
 
 During this time we've also sent out our analytics report and received great
 feedback. For one of the stores the owner actually puts it into immediate use!
@@ -67,3 +63,5 @@ feeling to see people use it for real!
 
   [1]: http://avidtap.com
   [2]: https://plus.google.com/106413090159067280619/posts/az9UTAX7dB8
+  [3]: //imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3JlcgwLEgVpbWFnZRjhXQw
+  [4]: //imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3JlcgwLEgVpbWFnZRj5VQw

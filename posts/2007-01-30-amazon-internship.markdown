@@ -44,13 +44,15 @@ internship great!
 
 Below is Srikanth's review for me:
 
-## **Goal: Identify Test Cases**
+
+# Goal: Identify Test Cases
 
 Your seeking out the right person to find out about SalesRank data was
 a great demonstration of your go-getting ability. Well done. Whenever
 you were stuck, you sought out help fast. Very good.
 
-## **Goal: Experimentation**
+
+# Goal: Experimentation
 
 This was the point, where you made a good impression on me. We talked
 about this briefly when you were stuck and I explained some of the
@@ -61,7 +63,8 @@ the ability to tackle problems you haven't had experience with before
 and not be flustered by the fact that you aren't aware of the
 techniques to solve such problems. Excellent job.
 
-## **Goal: System and Code Review**
+
+# Goal: System and Code Review
 
 Your code review is in and has been favorable. To quote Grant:
 
@@ -72,7 +75,8 @@ the entire Amazon build and deploy infrastructure so that we could reproduce
 it later and his documentation of how to deploy and run the software was very
 good. ".
 
-## **Strength: Reliability, dependability**
+
+# Strength: Reliability, dependability
 
 You are excellent in this aspect. You demonstrate maturity way past
 your experience. I've known SDEs in the business for several years
@@ -80,7 +84,8 @@ that aren't as good at this as you have been. It has amazed me how
 driven you are to set and achieve milestones. This trait is your best
 asset.
 
-## **Manager Additional Comments:**
+
+# Manager Additional Comments:
 
 It was a pleasure working with Danny. I had about 8-10 people
 reporting to me while Danny was here and it was really hard for me to

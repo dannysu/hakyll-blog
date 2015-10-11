@@ -7,8 +7,8 @@ tags: Mad Coding, Security
 passwords in plain text. Furthermore, Kevin Burke recently found [Virgin Mobile
 not doing the right thing][12]. All the more reasons to use different passwords
 and don't assume big companies know what they're doing.
-<br>
-<br>
+
+---
 
 It's a good idea to get strong passwords including random characters, numbers,
 symbols and don't reuse the same password for different account. Here's a very
@@ -19,9 +19,8 @@ With that in mind, I'm introducing [Hash0][6] - A password generator using a mix
 App Engine. Also inspired by [ZeroBin][10]'s idea of encrypted data that only the
 client can decrypt.
 
-<br>
 
-## **About**
+# About
 
 Hash0 has these improvements over existing hash-based password generators:
 
@@ -68,9 +67,8 @@ Password generation process:
 1. Truncate to desired length
 1. Encrypt account settings and store it at the provided URL
 
-<br>
 
-## **Background**
+# Background
 
 I went through couple phases in terms of how I deal with my passwords. In the
 beginning I had just couple passwords for all my accounts. One for important

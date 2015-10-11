@@ -24,7 +24,7 @@ it should be.
 
 That said, playing around with trains is fun. I was very excited to see my
 trains move the first time. When I get a figure 8 going I'll be sure to take a
-video :lol:
+video.
 
   [1]: http://www.student.cs.uwaterloo.ca/~cs452/images/big_news.jpg
   [2]: http://www.student.cs.uwaterloo.ca/~cs452/

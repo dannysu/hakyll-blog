@@ -13,10 +13,9 @@ dealing with installations.
 
 Note that the pros & cons listed are from the perspective of my usage level.
 YMMV.
-<br>
-<br>
 
-## **Hosting Static Content**
+
+# Hosting Static Content
 
 I was using wordpress which requires PHP and MySQL, but my blog is not dynamic
 in nature so things like Jekyll and Hakyll really made sense for me. There are
@@ -27,10 +26,9 @@ Currently my blog is hosted with GitHub Pages which is free. There's also
 providers are great for static blogs too. I got my blog on AppFog very easily
 and I've read about people using Heroku as well. More on those PaaS providers
 later.
-<br>
-<br>
 
-## **DreamHost Pros and Cons**
+
+# DreamHost Pros and Cons
 
 Using DreamHost still makes sense in some situations. I'm using
 [Amazon Route 53][3] for my DNS and that costs $0.51/month for 1 domain.
@@ -68,10 +66,9 @@ Node.js or Clojure I also have to tinker with it somehow.
 
 Since I already moved my photo storage to SkyDrive (25GB) and all of my projects
 elsewhere, it's time to say goodbye to DreamHost.
-<br>
-<br>
 
-## **Windows Azure**
+
+# Windows Azure
 
 I only played with Azure briefly. I was still at Microsoft when [Azure
 Sandbox][15] was introduced internally on the **The Garage** email list. Before
@@ -82,10 +79,9 @@ Azure Sandbox is a great idea, and I used it for my [daily Bing wallpaper
 app][4]. However, I quickly found out that with the quota they gave me
 I can't even keep the service running 24/7. I'm not going to pay for a hobby
 project, so I ended up going with Google App Engine.
-<br>
-<br>
 
-## **Google App Engine**
+
+# Google App Engine
 
 Google App Engine is pretty good. Its [free quota per app per day][5] is great
 for personal projects.
@@ -116,10 +112,9 @@ simple place to throw data to. I have a modified ZeroBin version that stores
 data in GAE using this project instead of needing filesystem access.
 
 App Engine allows me to host 3 of my projects for the price of free.
-<br>
-<br>
 
-## **Heroku**
+
+# Heroku
 
 Heroku is another PaaS provider where I have projects hosted. All of my
 projects only need 1 web dyno, so all these projects can be hosted for
@@ -155,10 +150,9 @@ prototypes.
 Again, 3 projects for the price of free. Plus I get to use Clojure and Node.js.
 Can't beat that. I think getting Haskell going is a bit more involved though,
 somebody please make it easier for Haskell.
-<br>
-<br>
 
-## **AppFog**
+
+# AppFog
 
 Heroku charging for custom domain drove me to check out AppFog that I signed up
 a while ago and never used. After playing with it I really like it! I moved my
@@ -194,10 +188,9 @@ Also, for some reason the command line tool to view logs didn't work
 reliably for me.
 
 So that's 1 project on AppFog plus my backup blog for the price of free. Awesome!
-<br>
-<br>
 
-## **CloudBees**
+
+# CloudBees
 
 Pros:
 
@@ -212,10 +205,9 @@ I found CloudBees while searching for hosted build service. I put up the
 [clj-philosopher][12] code on there and used Jenkins to automate running the
 tests. CloudBees is unique in this aspect of providing a Jenkins service. I have
 not used their Java offering.
-<br>
-<br>
 
-## **The New World**
+
+# The New World
 
 When I first played with Node.js I used my EC2 free tier and that was pretty
 easy. However, with all these PaaS choices it's even easier to get things up and

@@ -10,73 +10,78 @@ book's coverage on Compojure is way too little for somebody to get into it. My
 actual hands-on experience with Compojure taught me more than what the book
 covers. Also, I went to a MeetUp and got some experience with STM that's really
 enlightening. I blogged about it [here][11].
-<br>
-<br>
+
+---
+
 I started reading the book [Clojure in Action][1] that I got from a local
 library. The beauty of Clojure's Lisp syntax is making me wish that I had paid
 more attention to those Scheme exercises in school. I vaguely remember all the
 brackets and trying to use only recursion instead of for-loops, but I didn't
 fully understand why the professor was teaching us some Scheme. He probably did
 say why but it was lost on me. In any case, it's great to rediscover Lisp.
-<br>
-<br>
 
-## **The Beauty of Clojure and of Lisp**
+
+# The Beauty of Clojure and of Lisp
 
 In Clojure there isn't many special operators that dictate the structure of your
 program. Everything is a list denoted with ()s with the first thing in the list
 being the function to execute. For example, comparing a function call with an
 "if-statement":
 
-<pre><code class="clojure">
+```clojure
 ; A list with "add" being the function and two numbers in the list as arguments
 (+ 1 1)
-
-</code></pre>
+```
 
 vs
 
-<pre><code class="clojure">
+```clojure
 ; A list with "if" being the function that takes 3 arguments.
 ; First argument is the expression to evaluate to determine true or false.
 ; Subsequent arguments specify what to use in case of true or false.
 (if (= 1 1)
   (println "It's true!")
   (println "It's false!"))
-
-</code></pre>
+```
 
 With the lack of much of a syntax and special operators, you are free to use
 whatever characters you want as identifiers. E.g. you can have functions with
 dashes (-), exclamation marks (!), question marks (?), etc. That's beautiful!
 
-<pre><code class="clojure">
+```clojure
 (if-not test then)
 (zero? 0)
 (awesome!)
-
-</code></pre>
+```
 
 I love the minimalistic Lisp syntax. After playing with Clojure for a little bit
 and with the help of VimClojure, it's no longer just a sea of brackets. That's
 not to say a bit more syntax and special operator is always bad. Below are 2
 examples in Haskell that are even more compact than Clojure.
 
-#### Function Composition
+### Function Composition
 
-<pre><code class="haskell">g . f</code></pre>
-
-vs
-
-<pre><code class="clojure">(comp g f)</code></pre>
-
-#### Partial Application
-
-<pre><code class="haskell">(1 +)</code></pre>
+```haskell
+g . f
+```
 
 vs
 
-<pre><code class="clojure">(partial + 1)</code></pre>
+```clojure
+(comp g f)
+```
+
+### Partial Application
+
+```haskell
+(1 +)
+```
+
+vs
+
+```clojure
+(partial + 1)
+```
 
 Despite possibly making things even more compact, Lisp opts to maintain its
 code-as-data mentality. I think *Clojure in Action* explains it quite well by
@@ -89,7 +94,7 @@ The homoiconicity of Lisp allows it to provide macro feature that is consistent
 with rest of the language. For example, here's the *unless* macro from the
 *Clojure in Action* book:
 
-<pre><code class="clojure">
+```clojure
 ; Gives you ability to have a function/macro that evaluates a test condition
 ; to determine subsequent action.
 ; If the test condition is false only then evaluate the given expression.
@@ -100,8 +105,7 @@ with rest of the language. For example, here's the *unless* macro from the
 ; Using it
 (unless (even? x)
   (println "odd"))
-
-</code></pre>
+```
 
 The macro is defined in the same way as anything else and feels very natural.
 For the *test* condition or the *then* expression, you can give it any
@@ -110,10 +114,9 @@ macros, it's a big difference. C++ macros are typically written in upper
 case, and requires you to code in different way by having '\\'s everywhere to
 have multiline. If you want to execute different set of statements you need to
 put them into a function instead and use macro magic to call it.
-<br>
-<br>
 
-## **Runs on JVM (or whatever it can compile to)**
+
+# Runs on JVM (or whatever it can compile to)
 
 Clojure runs on the JVM, which is both a blessing and a curse.
 
@@ -128,10 +131,12 @@ libraries such as [clj-ml with Weka][4], [Mahout][6], or [Hadoop][7].
 The downside of running on top of JVM is that your programs get hit by JVM
 startup time. Also, calling Java methods look out of place:
 
-<pre><code class="clojure">(.toUpper "lower")</code></pre>
-<br>
+```clojure
+(.toUpper "lower")
+```
 
-## **Comparison to Node.js**
+
+# Comparison to Node.js
 
 The only disappointment I have so far with Clojure is in its comparison of
 certain tasks to Node.js. I wrote a REST service in both Node.js and Clojure to
@@ -167,17 +172,16 @@ Clojure on the other hand would be able to utilize multi-core much easier. Check
 out this [awesome talk][10] by Tyler Jennings on how he used Clojure at Groupon.
 Aside from the cool BK-Tree, Tyler made use of Clojure parallel processing by
 switching from map to pmap. BAM!
-<br>
-<br>
 
-## **Some Useful Functions**
+
+# Some Useful Functions
 
 While working on my dream project, I had to deal with list processing where I
 need to correlate pairs of items in list. I might be able to change my algorithm
 to use BK-Tree instead though, after seeing Tyler's talk. In any case, here are
 some helper functions I wrote:
 
-<pre><code class="clojure">
+```clojure
 (defn take-n-while
   "returns a lazy sequence of successive items from coll while
   (pred (take cnt s)) returns true. pred must be free of side-effects."
@@ -193,8 +197,7 @@ some helper functions I wrote:
 ; Usage:
 ; user=> (take-n-while #(even? (+ %1 %2)) 2 [1 3 1 2])
 ; ((1 3) (3 1))
-
-</code></pre>
+```
 
 This is like the `take-while` function except you can consume the list at any n
 items at a time. My first solution involved using `partition` and

@@ -15,7 +15,7 @@ immediately got excited :)
 screenshot:
 ![](http://www.labyrinth.net.au/~trandor/abuse/shot3.jpg)
 visit:
-[http://www.labyrinth.net.au/~trandor/abuse/][1]
+<http://www.labyrinth.net.au/~trandor/abuse/>
 
 After compiling the source... I still couldn't get the game running. However,
 after a bit of search on google, I found the solution to my problem.
@@ -23,10 +23,7 @@ after a bit of search on google, I found the solution to my problem.
 Basically I need to create a folder in my home directory and create a file. The
 commands for doing both of these tasks are listed below:
 
-<pre><code class="bash">
+```bash
 mkdir ~/.abuse
 echo '(setq darkest_gray 40)' > ~/.abuse/gamma.lsp
-
-</code></pre>
-
-  [1]: http://www.labyrinth.net.au/~trandor/abuse/
+```

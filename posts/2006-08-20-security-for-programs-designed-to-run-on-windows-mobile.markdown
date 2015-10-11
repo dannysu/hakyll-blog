@@ -7,7 +7,7 @@ Every developer and software designer should have security in mind when
 designing and programming software. Software security must be considered both
 at code level (buffer overflow, heap overflow, etc) and at the design level.
 
-I came across this article: [http://msmobiles.com/news.php/5474.html][1]. It
+I came across this article: <http://msmobiles.com/news.php/5474.html>. It
 talks about mistakes that some Windows Mobile programs made.
 
 Things like storing password in plaintext, or using weak encryption methods
@@ -24,5 +24,3 @@ An alarming news to me is that Microsoft Money for Windows Mobile 2006 uses a
 proprietary method for encrypting password!!! I thought Microsoft's Secure
 Software Development process will not even let this software release! I'm going
 to track down on this issue.
-
-  [1]: http://msmobiles.com/news.php/5474.html

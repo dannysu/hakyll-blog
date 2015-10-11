@@ -10,7 +10,7 @@ so I can leave office early...), and I've used it for writing my resume couple
 days ago.
 
 I just figured out how to get spellcheck working in OOWriter, here's the link:
-[http://lingucomponent.openoffice.org/download_dictionary.html][1]
+<http://lingucomponent.openoffice.org/download_dictionary.html>
 
 There's a macro that will do the installation :)
 
@@ -20,5 +20,3 @@ When reading WORD document, it doesn't read the page layout properly
 for example, I've written a 188 page functional specification for work, and
 half of it is in landscape mode... when reading in OO, that layout just gets
 lost :(
-
-  [1]: http://lingucomponent.openoffice.org/download_dictionary.html

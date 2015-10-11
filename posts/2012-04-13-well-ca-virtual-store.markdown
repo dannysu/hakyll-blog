@@ -6,14 +6,13 @@ tags: Apple, Google, Mad Coding, Microsoft, PhoneGap, SASS, Well.ca
 Well.ca's Virtual Store launched on April 2nd, 2012. I wrote smartphone apps
 for 4 mobile platforms and the supporting server-side work to make this happen.
 You can check out the time-lapse video
-here: [http://well.ca/virtualstore](http://well.ca/virtualstore)
+here: <http://well.ca/virtualstore>
 
 In this post I want to look back at the things I learned through this project.
 E.g. PhoneGap, SASS, app certification, etc.
 
-<br>
 
-## **PhoneGap**
+# PhoneGap
 
 So how was it done? It was a one man army (i.e. me) on the software side to
 produce apps for 4 mobile platforms plus I had to work on the server side stuff
@@ -74,9 +73,8 @@ Advantages of using PhoneGap:
 - Allow people to reuse web development skills
 - Don't need to think about memory management at least for the size of my app
 
-<br>
 
-## **SASS**
+# SASS
 
 I read this [tutorial][4] on getting pixel perfect HTML apps for Android.
 Basically making use of media query and determine which CSS to use. Since I
@@ -94,9 +92,8 @@ contrary to how programming languages work.
 Also, writing CSS using SASS can lead to larger resulting CSS if you're not
 conscience about what it's really doing.
 
-<br>
 
-## **App Certification**
+# App Certification
 
 App certification is a pain on all mobile platforms except Android where there
 is no checking at all. As a developer I like the fact there is no validation at
@@ -135,9 +132,8 @@ Windows Phone
 - Capability detection for WebBrowser has gotchas, but I like that there is
   actual capability detection. Developer can't lie.
 
-<br>
 
-## **Windows Phone**
+# Windows Phone
 
 I love my Windows Phone, so I really wanted to include it in the launch. I
 basically asked the CEO if I can make it happen whether we can include it for
@@ -158,9 +154,8 @@ internal framework. However, using Silverlight it's a bad idea to have a type
 selector for list items. Using profiling tools you'll find that the layout cost
 from doing so really kills the perf.
 
-<br>
 
-## **BlackBerry**
+# BlackBerry
 
 With WebWorks v2.3, I was finally able to support BlackBerry OS6+. The main
 motivation behind supporting BlackBerry is because Canada has a large
@@ -173,9 +168,8 @@ iPhone. Even the simulators have different development tools available
 depending on the device and OS version. Even the simulated camera functionality
 worked differently between simulators.
 
-<br>
 
-## **Server-Side Work**
+# Server-Side Work
 
 To support the mobile apps, I worked on exposing product information via a REST
 interface. To enable checkout through the mobile app, I had to refactor the
@@ -185,9 +179,8 @@ pain to refactor because by doing so I allowed mobile app to perform checkout,
 enabled automated testing to be done, and also enabled another internal project
 to do checkout that I can't talk about at this time.
 
-<br>
 
-## **The Launch**
+# The Launch
 
 The night before the actual launch, I went to Union station in Toronto to meet
 up with VP of Marketing, PR agency, videographer and the workers who'll put up
@@ -211,9 +204,8 @@ store. Afterwards, the team went to Marché restaurant at Brookfield Place to
 celebrate. VP of Marketing was on radio the next day and the CEO was on Canada
 AM on TV next morning!
 
-<br>
 
-## **Responses**
+# Responses
 
 Responses to the virtual store were largely positive. People were excited to
 see innovation happening in Canada.
@@ -235,9 +227,8 @@ responses into 4 groups:
 1. People who thinks it's a poor copy of the concept used in Korea
 1. People who are afraid of technology taking over the world or losing jobs
 
-<br>
 
-## **Conclusion**
+# Conclusion
 
 It was a fun launch and people were mostly excited about the virtual store. I
 learned a bunch of new things throughout this process. However, for me it's a

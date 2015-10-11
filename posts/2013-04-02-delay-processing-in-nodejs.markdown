@@ -3,7 +3,7 @@ date: 2013-04-02 23:39:15
 title: Delay Processing In Node.js
 tags: Mad Coding, Start-up, AvidTap, Node.js
 ---
-## **Scenario**
+# Scenario
 
 There have been scenarios where I wanted to offload some processing to be
 done in a separate thread. One example is when I want to geocode certain
@@ -20,9 +20,8 @@ really need to delay using these techniques. Once processing hits IO regular
 event loop applies. For CPU-bound tasks `child_process` and `webworkers` will
 help.
 
-<br>
 
-## **child_process**
+# child_process
 
 There is the built-in [child_process][4] module, which provides ability to spawn
 other processes like many other programming languages. This is the solution I
@@ -31,18 +30,17 @@ waiting on non-essential things. However, it's also not pretty and has more
 layers to jump through when reading code.
 
 The code roughly looks like this:
-<pre><code class="javascript">
+
+```javascript
 var spawn = require('child_process').spawn;
 spawn('node', [path.resolve(__dirname, '../tools/script.js'), 'some args']);
-
-</code></pre>
+```
 
 Ugly and all of a sudden I have to worry about file paths which have different
 semantic compared to when using require(). Enter process.nextTick.
 
-<br>
 
-## **process.nextTick**
+# process.nextTick
 
 While looking for another solution, I came across this article on
 [howtonode][3], which talked about [process.nextTick][8]. Since the task I want
@@ -55,48 +53,45 @@ method is that I can use closure and get access to the context. The downside is
 that I can't do anything CPU intensive here just like everwhere else.
 
 Example:
-<pre><code class="javascript">
+
+```javascript
 var saywhat = 'hello';
 process.nextTick(function() {
     console.log(saywhat);
 });
-
-</code></pre>
+```
 
 `nextTick` makes delaying things easier and nicer to read, and after node v9
 there is `setImmediate` too, which should work for IO-bound tasks as well.
 
-<br>
 
-## **setImmediate**
+# setImmediate
 
 [setImmediate][6] is similar to nextTick, but differs in the order it gets
 executed in the event loop. The doc explains the details. Using it is similar to
 `nextTick`:
 
-<pre><code class="javascript">
+```javascript
 var saywhat = 'hello';
 setImmediate(function(value) {
     console.log(saywhat);
     console.log(value);
 }, "world!");
-
-</code></pre>
+```
 
 In my scenario, it doesn't matter which one. I just want certain IO-bound task
 to be performed some time later. There's no recursive call either. If I have
 CPU-bound task, then I'll probably explore the webworkers route.
 
-<br>
 
-## **WebWorkers for Node.js**
+# WebWorkers for Node.js
 
 The [webworker-threads][1] module enables you to use [webworker API][2]. This
 would work for CPU intensive tasks. The downside of course is that it's
 basically a separate environment (so no closure) and you have to communicate via
 strings.
 
-<pre><code class="javascript">
+```javascript
 var Worker = require('webworker-threads').Worker;
 var worker = new Worker(function() {
     onmessage = function(event) {
@@ -105,10 +100,11 @@ var worker = new Worker(function() {
     };
 });
 worker.postMessage("world!");
+```
 
-</code></pre>
+---
+## 
 
-<br>
 So these are the ways I know of in terms of delay doing some non-essential
 processing in Node.js. Next time I won't be picking up the `child_process` tool
 because it's not the best thing for my current needs.

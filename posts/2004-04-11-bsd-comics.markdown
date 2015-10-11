@@ -20,11 +20,8 @@ BSD history??? is it? somebody who knows japanese tell me please!
 more cool pics [here](/files/bsd/spstick.jpg)
 
 I found these originally from
-[http://thetbserver.adsldns.org/~palatis/BSDComic/][1] while I was browsing on
-[http://forums.gentoo.org.tw][2]...
+<http://thetbserver.adsldns.org/~palatis/BSDComic/> while I was browsing on
+<http://forums.gentoo.org.tw>...
 
 Palatis' site is a bit slow so I copied everything over to my server... plus I
 wanted to keep these anyways :D
-
-  [1]: http://thetbserver.adsldns.org/~palatis/BSDComic/
-  [2]: http://forums.gentoo.org.tw

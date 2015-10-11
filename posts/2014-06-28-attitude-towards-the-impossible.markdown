@@ -10,9 +10,8 @@ doesn't feel as impossible as one might think. Whether we'll succeed is still to
 be seen, but I feel we have as good a chance as anyone to figure things out. We
 have sufficient resources to attempt to change the world for the better.
 
-<br>
 
-## **Big Companies are Failing**
+# Big Companies are Failing
 
 A week or two ago I was sharing my thoughts with my co-founders. We were sitting
 around discussing strategy and the path forward as we frequently do. There are
@@ -34,9 +33,8 @@ is guaranteed for big companies. The real challenge for my team and anyone else
 is whether we can build something people want. Solve that and Goliath is no
 more.
 
-<br>
 
-## **Door-to-Door Sales**
+# Door-to-Door Sales
 
 This week is the first time all 3 of us (Geoff, Kaz, me) went selling
 door-to-door in our new launch city. I closed my first sale and should be able
@@ -50,9 +48,8 @@ Can you feel both an enormous challenge looming and at the same time see hope in
 the future? At any point in time, I'm probably on varying scales of both. But
 it's because of that I feel a startup isn't so impossible.
 
-<br>
 
-## **Optimism**
+# Optimism
 
 I also recently watched [Bill & Melinda Gates's commencement speech to Stanford
 grads][1] with transcript [here][2]. billg said:

@@ -3,7 +3,7 @@ date: 2014-05-02 23:11:13
 title: Launching Kash
 tags: Start-up, AvidTap, Kash, AvidRetail
 ---
-[![](https://imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg0LEgVpbWFnZRjpgQIM)][1]
+[![](//imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg0LEgVpbWFnZRjpgQIM)][1]
 
 Great news! The AvidTap team pulled the trigger on launching v1 of Kash to the
 broader world yesterday. Visit [withkash.com][1] and download the app from App

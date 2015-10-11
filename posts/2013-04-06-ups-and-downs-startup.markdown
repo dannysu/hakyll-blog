@@ -8,9 +8,8 @@ this time period I've experienced some ups and downs associated with working for
 yourself. Some of these experiences further solidifies my belief that talk is
 pointless and action is more important.
 
-<br>
 
-## **Your Idea Will Change**
+# Your Idea Will Change
 
 Wouldn't it be great to just think of something, implement it and off it goes
 to great success? Well, that's not what happened with us. When Geoff, Kaz and I
@@ -26,9 +25,8 @@ to a reliable state, but by this time we had came up with an even better
 To everyone out there still just dreaming about your idea, better snap out of
 that daydream and get to work.
 
-<br>
 
-## **Rejections**
+# Rejections
 
 During the past 6 months, we applied to some accelerators but we didn't get in.
 I can't say rejection feels good, but frankly we were too busy to dwell on it.
@@ -43,9 +41,8 @@ success when AvidTap starts taking off. This is also why I never just talk about
 an idea at Microsoft. I build a prototype demonstrating that the idea can work
 and then pitch to people.
 
-<br>
 
-## **Great Success**
+# Great Success
 
 Of course it's not all sad and depressing. There are many moments of joy that I
 enjoyed. Like getting VentureStart funding, winning best new product at Coffee

@@ -8,9 +8,8 @@ tested out [KKGridView](https://github.com/kolinkrewinkel/KKGridView),
 [GMGridView](https://github.com/gmoledina/GMGridView), and SSCollectionView
 from [SSToolkit](http://sstoolk.it/).
 
-<br>
 
-## **KKGridView**
+# KKGridView
 
 Pros:
 	
@@ -30,9 +29,8 @@ Cons:
   animation happening.
   See [video](/files/videos/19.mp4).
 
-<br>
 
-## **GMGridView**
+# GMGridView
 
 Pros:
 	
@@ -45,9 +43,8 @@ Cons:
 - Always registers its own gesture recognizer even without delegates provided
   by consumer
 
-<br>
 
-## **SSCollectionView**
+# SSCollectionView
 
 Pros:
 

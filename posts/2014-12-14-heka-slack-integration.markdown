@@ -14,9 +14,8 @@ Decoders, Filters, Encoders and Outputs all come together to form a really great
 design. Here I'll just describe how I integrated Heka with Slack so that
 relevant log entries populate a particular channel I have at work.
 
-<br>
 
-## **Heka Design Overview**
+# Heka Design Overview
 
 Heka has 5 major components:
 
@@ -34,7 +33,8 @@ things through a decoder, and optionally pipe things through filters if you
 want. Finally before sending data to the destination (Outputs) you can
 optionally do some more encoding as well.
 
-## **Heka Input**
+
+# Heka Input
 
 The hekad.toml configuration file is used to setup the processing pipeline. For
 my situation, my inputs are simply log files on Linux systems. Luckily there are
@@ -42,20 +42,18 @@ pre-built Input for grabbing data from log files.
 
 Here is the relevant part in my toml file:
 
-<pre><code class="ini">
+```ini
 [ExampleLog]
 type = "LogstreamerInput"
 log_directory = "/var/log/somewhere"
 file_match = 'some_filename.log'
-
-</code></pre>
+```
 
 What this does is set up an Input of type LogstreamerInput and configure it to
 monitor a particular log file.
 
-<br>
 
-## **Heka Decoder**
+# Heka Decoder
 
 For my purposes, I didn't need a decoder but I'm including a section here for
 completeness. For later stages of the processing that I want to do, the line
@@ -66,9 +64,8 @@ into plain text, then I could make use of a decoder to process it. Maybe if the
 input is slurping up compressed data and I wanted to use a decoder to decompress
 it, then this is where you could use one.
 
-<br>
 
-## **Heka Filter**
+# Heka Filter
 
 Heka Filter gives you the ability to aggregate data or filter things out before
 the later parts processes data. You can use it to do things like alert me on the
@@ -77,15 +74,14 @@ the later parts processes data. You can use it to do things like alert me on the
 For my use, I'm using the filter to group lines from my log file before sending
 the group of lines through. Below is an example toml configuration:
 
-<pre><code class="ini">
+```ini
 [ExampleLogAggregator]
 type = "SandboxFilter"
 message_matcher = "Logger == 'ExampleLog'"
 filename = "/some/place/log_aggregator.lua"
 ticker_interval = 15
 can_exit = false
-
-</code></pre>
+```
 
 This configuration says that it wants data that came from ExampleLog Input. As
 data goes through the Heka system, they get metadata attached that associate
@@ -103,7 +99,7 @@ anything. The configuration above points Heka to the location of the Lua script.
 `can_exit` is also an optional configuration. I set it to false to make sure
   if the filter exits the entire Heka system also exits.
 
-<br>
+---
 
 Next up is to actually implement the filter logic in Lua. There are two main
 functions to implement: `process_message` and `timer_event`.
@@ -111,7 +107,7 @@ functions to implement: `process_message` and `timer_event`.
 `process_message` is called whenever the upstream Input has new data. For my
 aggregator Filter, my implementation simply accumulates data for later.
 
-<pre><code class="ruby">
+```lua
 require "os"
 require "string"
 
@@ -122,8 +118,7 @@ function process_message()
     buffer = buffer .. payload
     return 0
 end
-
-</code></pre>
+```
 
 The `process_message` implementation uses a variable `buffer` to concatenate
 string with each call to `process_message`. The Heka function `read_message`
@@ -134,35 +129,32 @@ Now that I have the logic to simply accumulate data until some time, I need to
 implement `timer_event` to actually send it downstream for processing. Here's
 my example implementation:
 
-<pre><code class="ruby">
+```lua
 function timer_event(ns)
     if string.len(buffer) > 0 then
         inject_payload("txt", "", buffer)
         buffer = ""
     end
 end
-
-</code></pre>
+```
 
 Note that I configured `timer_event` to be triggered every 15 seconds via the
 `ticker_interval` configuration in toml. So what this function does is when it
 gets invoked, it checks to see if we accumulated any log data in variable
 `buffer`, if we did then inject the payload back into Heka pipeline to be processed.
 
-<br>
 
-## **Heka Encoder**
+# Heka Encoder
 
 In order to integrate with Slack, we need to somehow transform log data into the
 JSON format Slack expects. That's where Heka Encoder comes in. Again, it's
 something we can code in Lua. Here's an example configuration:
 
-<pre><code class="ini">
+```ini
 [SlackEncoder]
 type = "SandboxEncoder"
 filename = "/some/place/slack_encoder.lua"
-
-</code></pre>
+```
 
 It's very simple. All it does is define an Encoder and point to the Lua script
 that implements the logic.
@@ -170,7 +162,7 @@ that implements the logic.
 The Lua script is also not too bad. Slack expects JSON to be sent to its Webhook
 URL, so we need to transform our raw log data into a JSON format.
 
-<pre><code class="ruby">
+```lua
 require "os"
 require "string"
 require "table"
@@ -189,28 +181,25 @@ function process_message()
     inject_payload("json", "Slack", cjson.encode(slack_alert))
     return 0
 end
-
-</code></pre>
+```
 
 Here we again implement the `process_message` function that gets invoked for
 each piece of data to be processed. We read out the content via `read_message`
 call and then construct an object then encode it and inject it back into the
 pipeline to be processed.
 
-<br>
 
-## **Heka Output**
+# Heka Output
 
 Finally we're ready to actually send the JSON data to Slack. We do this using
 the Heka Output component. Below is the configuration used to do that.
 
-<pre><code class="ini">
+```ini
 [HttpOutput]
 message_matcher = "Logger == 'ExampleLogAggregator'"
 address = "https://your/slack/webhook/url"
 encoder = "SlackEncoder"
-
-</code></pre>
+```
 
 This configuration does the following things:
 
@@ -219,15 +208,14 @@ This configuration does the following things:
 - Tells it to grab data from ExampleLogAggregator and encode it using
 SlackEncoder
 
-<br>
 
-## **Conclusion**
+# Conclusion
 
 So that's how you can use Heka to monitor log files and get notified via Slack.
 
 Putting it all together, the configuration file in the end looks like this:
 
-<pre><code class="ini">
+```ini
 [ExampleLog]
 type = "LogstreamerInput"
 log_directory = "/var/log/somewhere"
@@ -248,8 +236,7 @@ filename = "/some/place/slack_encoder.lua"
 message_matcher = "Logger == 'ExampleLogAggregator'"
 address = "https://your/slack/webhook/url"
 encoder = "SlackEncoder"
-
-</code></pre>
+```
 
   [1]: http://withkash.com
   [2]: https://github.com/mozilla-services/heka

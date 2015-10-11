@@ -3,8 +3,7 @@ date: 2014-11-26 01:05:27 PST
 title: Single CoreOS Droplet on DigitalOcean
 tags: Mad Coding, CoreOS, Docker, DigitalOcean
 ---
-**Introduction**
-----------------
+# Introduction
 
 I just finished converting my blog to run on [Docker][1] and sit on top of
 [CoreOS][2]. Since it's my blog and I don't actually want to spend money on a
@@ -13,11 +12,10 @@ Below is a list of steps on how to do the same on DigitalOcean. I took
 instructions from [DigitalOcean's guide][3] on setting up a CoreOS cluster for
 my case.
 
-**Prerequisites**
-=================
+# Prerequisites
 
-**Docker**
-----------
+## Docker
+
 I assume you have whatever application you want to run in a Docker image.
 Docker makes it super easy to replicate an environment. I have the same thing
 running on my laptop as on DigitalOcean except for some SSL files.
@@ -26,8 +24,8 @@ One downside of Docker though is the image size. When I first started with
 Docker, my image size was 1.4G. I've done some work to half the size for now
 while utilizing the image cache as much as I can.
 
-**SSH Keys**
-------------
+## SSH Keys
+
 This section in [DigitalOcean's guide][3] is applicable. Below is what it says
 about SSH keys:
 
@@ -41,32 +39,32 @@ account, do so now by following steps 1-3 of this tutorial: [How To Use SSH
 Keys with DigitalOcean Droplets][4]. Then you will want to add your private key
 to your SSH agent on your client machine by running the following command:
 
-<pre><code class="bash">
+```bash
 ssh-add
+```
 
-</code></pre>
 
-**Write a Cloud-Config File**
-=============================
+# Write a Cloud-Config File
+
 For our purpose of a single server CoreOS, the cloud-config file is really just
 applicable for configuring CoreOS's reboot strategy after installing an update.
 There's a lot more to cloud-config that's documented [here][5], but we don't
 need that right now.
 
-**Minimal Cloud-Config**
-------------------------
+## Minimal Cloud-Config
+
 My cloud-config file is very simple and only configures the reboot-strategy:
 
-<pre><code class="ini">
+```ini
 #cloud-config
 coreos:
   update:
     reboot-strategy: reboot
+```
 
-</code></pre>
 
-**Create Droplet on DigitalOcean**
-==================================
+# Create Droplet on DigitalOcean
+
 If you have the prerequisite and the minimal cloud-config file, then you're
 ready to create a new droplet on DigitalOcean.
 
@@ -81,23 +79,23 @@ You would go through the typical steps:
 1. Add your SSH key
 1. Click the "Create Droplet" button
 
-**SSH to CoreOS**
------------------
+## SSH to CoreOS
+
 Your DigitalOcean Control Panel should show the IP of the droplet. You can SSH
 into CoreOS by typing:
 
-<pre><code class="bash">
+```bash
 ssh core@[ip]
+```
 
-</code></pre>
 
-**Setup systemd Service to Run Docker**
-=======================================
+# Setup systemd Service to Run Docker
+
 The last major step is to setup a systemd service to automatically run a docker
 container to serve your application.
 
-**Login to Docker Hub**
------------------------
+## Login to Docker Hub
+
 If you are not using a private image on [Docker Hub][6], then you can skip this
 step.
 
@@ -105,23 +103,22 @@ Since downloading Docker images can take a while, it's a good idea to grab the
 image prior to doing anything else. For example, I grab my private image from
 Docker Hub this way:
 
-<pre><code class="bash">
+```bash
 docker login
 docker pull dannysu/mystuff
-
-</code></pre>
+```
 
 You'll be prompted for username, password and email for the `docker login`
 command.
 
-**Writing the systemd Service File**
-------------------------------------
+## Writing the systemd Service File
+
 A minimal systemd service file that you can use as an example is shown below.
 You'll save it as `mystuff.service`. It basically defines what to run when you
 type `systemctl start mystuff` or `systemctl stop mystuff`. Save this file to
 `/etc/systemd/system/mystuff.service` on your CoreOS instance.
 
-<pre><code class="ini">
+```ini
 [Unit]
 Description=My Cool Stuff
 After=docker.service
@@ -136,13 +133,12 @@ ExecStop=/usr/bin/docker stop mystuff
 
 [Install]
 WantedBy=default.target
-
-</code></pre>
+```
 
 In my example, ExecStart runs a shell script named mystuff.service.sh. I use it
 to decide what docker commands to run. You can use it as an example:
 
-<pre><code class="bash">
+```bash
 #!/bin/bash
 
 if [ -n "$(docker ps -l -q)" ]; then
@@ -152,16 +148,14 @@ else
     /usr/bin/docker pull dannysu/mystuff
     /usr/bin/docker run --name mystuff -p $1:80:80 dannysu/mystuff nginx
 fi
-
-</code></pre>
+```
 
 Finally, you can start the service and make it run upon reboot as well:
 
-<pre><code class="html">
+```bash
 systemctl start mystuff
 systemctl enable mystuff
-
-</code></pre>
+```
 
 
   [1]: https://www.docker.com/

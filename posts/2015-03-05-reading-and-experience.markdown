@@ -15,9 +15,8 @@ This time as I "compile" the essay again while I reflect on various things of my
 startup experience, I'm appreciating the wisdom packed in that one
 sentence much more.
 
-<br>
 
-## **You Read It, But You Don't Get It**
+# You Read It, But You Don't Get It
 
 One memory that now come to mind is something that I heard or read in an
 interview with Well.ca founder Ali Asaria. If I remember right, he said
@@ -48,26 +47,22 @@ definitely could make it past the first year. Every other friend or startup
 founder I met before, either quit before the year's up or would have given up
 without a committed external influence.
 
-<br>
 
-## **Reading and Experience Go Together**
+# Reading and Experience Go Together
 
 It's important to read. It's something I don't do enough of. However, it's also
 important to _do_. Doing and gaining experience is how you can better compile the
 knowledge in books better. Let me give an analogy.
 
-<pre><code class="html">
-Let's say you read a ton of books on boxing.
-
-You read about the right techniques, the right counter for different situations, etc.
-You can recite why you need to move your feet in an unnatural way when boxing.
-
-All that's great, but are you a great fighter after this? No.
-
-Experience is someone swinging a punch straight at you, you have less than a
-second to decide and react. Pure head knowledge doesn't help at that point.
-
-</code></pre>
+> Let's say you read a ton of books on boxing.
+>
+> You read about the right techniques, the right counter for different situations, etc.
+> You can recite why you need to move your feet in an unnatural way when boxing.
+>
+> All that's great, but are you a great fighter after this? No.
+>
+> Experience is someone swinging a punch straight at you, you have less than a
+> second to decide and react. Pure head knowledge doesn't help at that point.
 
 If I get knocked out, or get kicked in the butt, you can bet that when I read a
 book on the topic later I will have a better model to compile that book with.

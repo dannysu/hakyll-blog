@@ -16,9 +16,8 @@ leads to growth.
 I was hugely motivated after last summer and after reading a book by Khan
 Academy founder. This blog entry is about my own experiences on the topic.
 
-<br>
 
-## **Reading "One World Schoolhouse"**
+# Reading "One World Schoolhouse"
 
 The period immediately after YC demo day was very vivid for me. It was a
 whirlwind of epic experiences to remember for life. Not only that, I got to meet
@@ -35,9 +34,8 @@ that is The Growth Mindset. I also found Sal's experience ditching a well paid
 job and starting something from nothing to be hugely motivational, but that's
 the topic for another day.
 
-<br>
 
-## **The Growth Mindset**
+# The Growth Mindset
 
 Sal talked about not praising kids for being "smart" because that makes it seem
 like intelligence or ability is a static thing. Instead he suggested that
@@ -63,9 +61,8 @@ improvement. And if you do not shy away from struggle, then you will act. Now, t
 the first step is a must for overcoming inertia, so the growth mindset is
 crucial to achieving anything.
 
-<br>
 
-## **Artificial Limits**
+# Artificial Limits
 
 I'm baffled by parents saying something is too hard for their kids. Look. How do
 you know something is too hard without giving your kid a fair try at struggling

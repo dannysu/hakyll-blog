@@ -13,9 +13,8 @@ installed Ubuntu 13.10 first on the laptop and found that after installation the
 touchpad did not work. I then tried 12.04 LTS and found the same issue. I had
 been reading up on [Arch Linux][2] and decided to give it a go at this point.
 
-<br>
 
-## **Arch Linux Installation**
+# Arch Linux Installation
 
 Installing Arch is pretty easy in my opinion. Perhaps it's because I've been
 through the even more difficult installation process for Gentoo back in the
@@ -31,17 +30,13 @@ however I want.
 Aside from the base, I also added:
 
 - Numix theme
-
-<pre><code class="html">
+```bash
 pacman -S numix-themes
-
-</code></pre>
-
+```
 - Extensions: [Topicons][10], [Lock screen][9], [Frippery move clock][8]
 
-<br>
 
-## **Trackpoint on Lenovo E431**
+# Trackpoint on Lenovo E431
 
 My touchpad worked after installation and supports multi-finger scroll just
 fine. The trackpoint (the red little nob in middle of keyboard) also worked
@@ -55,9 +50,8 @@ done the hard work.
 On Arch, you have to install [xf86-input-evdev-trackpoint][11] from AUR and
 configure things similar to [LimaSierra's post][12] on the forums.
 
-<br>
 
-## **Brother HL-3045CN printer on Arch**
+# Brother HL-3045CN printer on Arch
 
 At work we have a Brother HL-3045CN printer, to get it to work I had to follow
 the [wiki for cups][13] and install the Linux driver from [brother.com][1].
@@ -66,19 +60,22 @@ I did the install at work, so didn't have time to package it all nice in a
 PKGBUILD yet. Nevertheless, there are the instructions.
 
 1. Make sure you have [rpmextract][14] installed
-   <pre><code class="html">pacman -S rpmextract</code></pre>
+```bash
+pacman -S rpmextract
+```
 1. Download the rpm files from [brother.com for HL-3045CN][1]
 1. Run rpmextract.sh on the rpm files
    (You should end up with a **opt** and a **usr** folder afterwards)
 1. Move the content in those directories to the same places on /
 1. Then run the cupswrapperhl3045cn script
-   <pre><code class="html">/opt/brother/Printers/hl3045cn/cupswrapper/cupswrapperhl3045cn</code></pre>
+```
+/opt/brother/Printers/hl3045cn/cupswrapper/cupswrapperhl3045cn
+```
 1. After this you should be able to enter cups web interface and add the printer
    just fine
 
-<br>
-
-## **Conclusion**
+---
+## 
 
 I love my new Linux setup. I'm also writing this blog post on the new laptop
 which means I have Haskell setup as well. In fact, I like my new Arch setup more
