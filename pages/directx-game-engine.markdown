@@ -10,41 +10,39 @@ clicking somewhere on the screen.
 
 The exact replication of our project tracking page is show below:
 
-&nbsp;  
+# Goals
 
-### Goals
-
-#### Project Goals (by March 13, 2004):
+### Project Goals (by March 13, 2004)
 
 Game should be able to receive input via clicking on screen. Hero will walk
 according to translated map location and camera following our Hero.
 
-#### Revised Project Goals (by March 20, 2004):
+### Revised Project Goals (by March 20, 2004)
 
 Have an AnimatedMesh moving towards a house (after mouse clicking on screen)...
 GameCamera following the Hero and perform collision detection to allow Hero to
 stop right in front of the house.
 
-#### Project Goals (by March 27, 2004):
+### Project Goals (by March 27, 2004)
 
 Integrate bounding sphere collision detection with quadtree detection. Hero can
 attack other units, other units will react when hit. Game Menus will be ready,
 be able to switch between game states. Should have Lighting and more models to
 work with.
 
-#### Project Goals (by end first week of April):
+### Project Goals (by end first week of April)
 
 Enemy units will be able to automatically initiate attack at the Hero. Have
 weather conditions. Have Level Editor. Units can go around things to reach
 destination.
 
-#### Project Goals (end of term):
+### Project Goals (end of term)
 
 A person walking in a terrain hitting people; with menus; simple game logic;
 
-* * *
+---
 
-### Current Status
+# Current Status
 
 Game Engine has the following capabilities:
 	
@@ -57,20 +55,20 @@ Game Engine has the following capabilities:
 - Scene-Model-Texture Management
 - Pick Ray - character movement controlled by mouse clicks
 
-### Team Member
+# Team Members
 
-Chien-Wen (Danny) Su  
-Johnny Yip  
-Brian Keng  
-Felix Lo
+- Danny Su  
+- Johnny Yip  
+- Brian Keng  
+- Felix Lo
 
-### Design
+# Design
 
 Main Components: Game Logic, Game Engine, Win32
 
 ![](/images/structure4.jpg)
 
-#### Game Logic Modules
+### Game Logic Modules
 
 <p><strong><span style="color: #ff8866;">Pink: High Priority</span>,&nbsp;<span style="color: #44aaee;">Blue: Medium Priority</span></strong></p>
 <table border="1">
@@ -132,9 +130,9 @@ Main Components: Game Logic, Game Engine, Win32
 </tbody>
 </table>
 
-Major Components for Game Engine:
+# Major Components for Game Engine
 
-#### Graphics Modules
+### Graphics Modules
 
 <table border="1">
 <tbody>
@@ -245,7 +243,7 @@ Classes involved: 3DAnimMeshFrame, 3DMeshHierarchy</td>
 
 ![](/images/graphics.jpg)
 
-#### Game Modules
+### Game Modules
 
 <table border="1">
 <tbody>
@@ -264,7 +262,7 @@ Classes involved: 3DAnimMeshFrame, 3DMeshHierarchy</td>
 </tbody>
 </table>
 
-#### Other Modules
+### Other Modules
 
 <table border="1">
 <tbody>
@@ -307,7 +305,7 @@ Classes involved: 3DAnimMeshFrame, 3DMeshHierarchy</td>
 </tbody>
 </table>
 
-### Screenshots
+# Screenshots
 
 ![](/images/sky.jpg)
 

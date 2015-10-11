@@ -1,8 +1,7 @@
 ---
 title: Work Experience
 ---
-## **Co-Founder at [Kash Corp.](http://withkash.com) (YC S14)
-     (September 2012 to Present)**
+### Co-Founder at [Kash Corp.](http://withkash.com) (YC S14) (September 2012 to Present)
 
 We get rid of credit card fees! Credit card fees are a tax on everything. Every
 time you swipe a credit card, there are 13 steps to clear that transaction and
@@ -15,10 +14,8 @@ credit card and saves local businesses.
 
 Join the fight. [End Credit Card Fees](http://endcreditcardfees.com).
 
-<br>
 
-## **Co-Founder at [AvidTap Corp.](http://avidtap.com)
-     (September 2012 to Present)**
+### Co-Founder at [AvidTap Corp.](http://avidtap.com) (September 2012 to Present)
 
 We believe that retailers need help and we’re coming to their rescue.
 AvidTap is the mobile retail company that is bringing the e-commerce
@@ -28,10 +25,9 @@ user walks into an AvidTap powered retail store, her profile will pop up on the
 POS, the retailer can greet her by her name and relate to her based on her past
 shopping experience.
 
-<br>
 
-## **Software Engineer and Warehouse Software Lead at [Well.ca Inc.](http://well.ca)
-     (September 2011 to August 2012)**
+### Software Engineer and Warehouse Software Lead at [Well.ca Inc.](http://well.ca) (September 2011 to August 2012)
+
 - **Well.ca iPad app**
     - [See on Apple AppStore][4] and [Well.ca's website](http://well.ca/app/)
     - Implemented "Flick to add to cart" gesture as well as drag & drop
@@ -62,11 +58,10 @@ shopping experience.
     - Led by example in writing tests and caring about software design.
     - Installed Phabricator for the team to enable better code review
       feedbacks.
-<br>
-<br>
 
-## **Software Development Engineer I & II at 
-     [Microsoft Corp.](http://www.microsoft.com/) (July 2007 to July 2011)**
+
+### Software Development Engineer I & II at [Microsoft Corp.](http://www.microsoft.com/) (July 2007 to July 2011)
+
 - **Windows Phone 7**
     - Implemented driving and walking direction features for the Bing Maps
       application.
@@ -93,11 +88,10 @@ shopping experience.
       retrieval.
     - Won the internal Xperia X1 programming contest with an application that
       enables search via keywords for settings users want to change.
-<br>
-<br>
 
-## **SDE at [ScanSoft Inc.](http://www.scansoft.com/) 
-     (January 2004 to April 2004, September 2004 to December 2004)**
+
+### SDE at [ScanSoft Inc.](http://www.scansoft.com/) (January 2004 to April 2004, September 2004 to December 2004)
+
 - Developed the [Healthcare SpeechPAK][3] in Java utilizing a MVC J2EE
   framework written in-house.
 

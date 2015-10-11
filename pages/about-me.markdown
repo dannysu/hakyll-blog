@@ -7,14 +7,10 @@ title: About Me
 - Microsoft SDE on Windows Mobile and Windows Phone
 - University of Waterloo grad
 
-See [this page][1] for more details about my work experience.
-
 In my spare time, I love to tinker with technology and I love to write code to
 make my ideas come true. Check out some of my [past projects][2]!
-<br>
-<br>
 
-**Making a Difference**
+# Making a Difference
 
 I believe that many people have the same or similar ideas, but the difference
 makers are people who pursue ideas to make them happen. "You stole my idea!" is

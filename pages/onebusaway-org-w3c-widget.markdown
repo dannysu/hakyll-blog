@@ -20,7 +20,7 @@ to work on the widget while I was taking public transit. Since it's all just
 client side scripting, I was using my smartphone and a text editor on it to
 write parts of the widget.
 
-**Screenshots**
+# Screenshots
 
 [![](/images/onebusaway0-180x300.png)](/images/onebusaway0.png)
 [![](/images/onebusaway1-180x300.png)](/images/onebusaway1.png)
@@ -29,7 +29,7 @@ write parts of the widget.
 [![](/images/onebusaway4-180x300.png)](/images/onebusaway4.png)
 [![](/images/onebusaway5-180x300.png)](/images/onebusaway5.png)
 
-**Links**
+# Links
 	
 - [Coverage on CareAce][2]
 

@@ -23,10 +23,16 @@ Features:
 
 You can find the [source code on GitHub](http://github.com/dannysu/mangastream).
 
-**Screenshots:**
+# Screenshots
 
-[![](/images/MangaStream1.png)](/images/MangaStream1.png)
-[![](/images/MangaStream2.png)](/images/MangaStream2.png)
-[![](/images/MangaStream3.png)](/images/MangaStream3.png)
-[![](/images/MangaStream4.png)](/images/MangaStream4.png)
-[![](/images/MangaStream5.png)](/images/MangaStream5.png)
+[![][1]][1]
+[![][2]][2]
+[![][3]][3]
+[![][4]][4]
+[![][5]][5]
+
+  [1]: /images/MangaStream1.png
+  [2]: /images/MangaStream2.png
+  [3]: /images/MangaStream3.png
+  [4]: /images/MangaStream4.png
+  [5]: /images/MangaStream5.png

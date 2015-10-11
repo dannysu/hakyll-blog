@@ -47,11 +47,11 @@ in 19 different regions on the Marketplace!
 1. EN-SG
 1. EN-US
 
-**Application Screenshots:**
+# Application Screenshots
 
 ![](/images/screenshotsp.png)
 
-**Links:**
+# Links
 	
 - [The app on Windows Marketplace for Mobile][2]
 - [Coverage on PocketNow.com][3]
