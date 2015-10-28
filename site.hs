@@ -281,15 +281,6 @@ isSlash _   = False
 
 
 --------------------------------------------------------------------------------
--- | Split list into equal sized sublists.
--- https://github.com/ian-ross/blog
-chunk :: Int -> [a] -> [[a]]
-chunk n [] = []
-chunk n xs = ys : chunk n zs
-    where (ys,zs) = splitAt n xs
-
-
---------------------------------------------------------------------------------
 teaserBody :: Item String -> Compiler String
 teaserBody item = do
     let body = itemBody item
@@ -355,7 +346,7 @@ paginate itemsPerPage rules = do
     identifiers <- getMatches "posts/*"
 
     let sorted = reverse $ sortBy byDate identifiers
-        chunks = chunk itemsPerPage sorted
+        chunks = paginateEvery itemsPerPage sorted
         maxIndex = length chunks
         pageNumbers = take maxIndex [1..]
         process i is = rules i maxIndex is
