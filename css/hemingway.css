@@ -52,8 +52,8 @@ hr{
     font-size:1.2em;
 }
 
-.underline {
-    text-decoration:underline !important;
+.textwidget a.underline{
+    text-decoration:underline;
 }
 
 .title {
@@ -61,6 +61,10 @@ hr{
 	font-size:2em;
 	font-weight:normal;
     margin-top: 1.3em;
+}
+
+.story .title a {
+    text-decoration:none;
 }
 
 /*-----------------------------------------------------------------------------------------------

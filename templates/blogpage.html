@@ -2,11 +2,12 @@
     <div class="inside">
         $for(posts)$
         <div class="story">
-            <h3><a href="$url$" rel="bookmark" title="Permanent Link to $title$">$title$</a></h3>
-            <p>$teaser$ [...]</p>
-            <div class="details">
-                $date$ | <span class="read-on"><a href="$url$">read more</a></span>
-            </div>
+            <div class="title"><a href="$url$" rel="bookmark" title="Permanent Link to $title$">$title$</a></div>
+            <div style="opacity:0.8;"><small>
+                    <i>$date$ / $tags$</i>
+            </small></div>
+            <br>
+            <p>$teaser$ <span class="read-on"><a href="$url$">&hellip;</a></span></p>
         </div>
         $endfor$
 
