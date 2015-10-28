@@ -1,21 +1,11 @@
 --------------------------------------------------------------------------------
 {-# LANGUAGE OverloadedStrings #-}
-import           Control.Monad (forM_, zipWithM_, liftM)
-import           Data.Monoid (mappend, mconcat)
+import           Control.Monad (forM_, liftM)
+import           Data.Monoid ((<>))
 import           Hakyll
 import           Text.Pandoc (writerReferenceLinks)
 import           Data.Char (toLower)
-import           Data.Time.Format (defaultTimeLocale, parseTimeM)
-import           Data.List (sortBy, intercalate)
-import           Data.Time.Clock (UTCTime)
-import           System.FilePath (takeBaseName, takeFileName)
 import           Data.List (isPrefixOf, tails, findIndex)
-
-import           Text.Blaze.Html.Renderer.String (renderHtml)
-import           Text.Blaze.Internal (preEscapedString)
-import           Text.Blaze.Html ((!), toHtml, toValue)
-import qualified Text.Blaze.Html5 as H
-import qualified Text.Blaze.Html5.Attributes as A
 
 -- Allow for reference style links in markdown
 pandocWriteOptions = defaultHakyllWriterOptions
@@ -58,7 +48,7 @@ main = hakyll $ do
             route $ wordpressRoute
             compile $ do
                 let allCtx =
-                        field "recent" (\_ -> recentPostList) `mappend`
+                        field "recent" (\_ -> recentPostList) <>
                         defaultContext
 
                 pandocCompilerWith defaultHakyllReaderOptions pandocWriteOptions
@@ -75,7 +65,7 @@ main = hakyll $ do
             route   $ setExtension "html"
             compile $ do
                 let allCtx =
-                        field "recent" (\_ -> recentPostList) `mappend`
+                        field "recent" (\_ -> recentPostList) <>
                         defaultContext
 
                 pandocCompilerWith defaultHakyllReaderOptions pandocWriteOptions
@@ -89,44 +79,35 @@ main = hakyll $ do
         route labelRoute
         compile $ do
             let allCtx =
-                    field "recent" (\_ -> recentPostList) `mappend`
+                    field "recent" (\_ -> recentPostList) <>
                     defaultContext
 
             list <- postList tags pattern recentFirst
             makeItem ""
                 >>= loadAndApplyTemplate "templates/posts.html"
-                        (constField "title" title `mappend`
-                            constField "posts" list `mappend`
+                        (constField "title" title <>
+                            constField "posts" list <>
                             defaultContext)
                 >>= loadAndApplyTemplate "templates/default.html" allCtx
                 >>= wordpressifyUrls
 
-    paginate 2 $ \index maxIndex itemsForPage -> do
-        let id = fromFilePath $ "blog/page/" ++ (show index) ++ "/index.html"
-        create [id] $ do
-            route idRoute
-            compile $ do
-                let allCtx =
-                        field "recent" (\_ -> recentPostList) `mappend`
-                        constField "title" ("Blog Archive - Page " ++ (show index)) `mappend`
-                        defaultContext
-                    loadTeaser id = loadSnapshot id "teaser"
-                                        >>= loadAndApplyTemplate "templates/teaser.html" (teaserCtx tags)
-                                        >>= wordpressifyUrls
-                item1 <- loadTeaser (head itemsForPage)
-                item2 <- loadTeaser (last itemsForPage)
-                let body1 = itemBody item1
-                    body2 = if length itemsForPage == 1 then "" else itemBody item2
-                    postsCtx =
-                        constField "posts" (body1 ++ body2) `mappend`
-                        field "navlinkolder" (\_ -> return $ indexNavLink index 1 maxIndex) `mappend`
-                        field "navlinknewer" (\_ -> return $ indexNavLink index (-1) maxIndex) `mappend`
-                        defaultContext
+    pag <- buildPaginateWith grouper "posts/*" makeId
 
-                makeItem ""
-                    >>= loadAndApplyTemplate "templates/blogpage.html" postsCtx
-                    >>= loadAndApplyTemplate "templates/default.html" allCtx
-                    >>= wordpressifyUrls
+    paginateRules pag $ \pageNum pattern -> do
+        route idRoute
+        compile $ do
+            posts <- recentFirst =<< loadAll pattern
+            let paginateCtx = paginateContext pag pageNum
+                ctx =
+                    field "recent" (\_ -> recentPostList) <>
+                    constField "title" ("Blog Archive - Page " ++ (show pageNum)) <>
+                    listField "posts" (teaserCtx tags) (return posts) <>
+                    paginateCtx <>
+                    defaultContext
+            makeItem ""
+                >>= loadAndApplyTemplate "templates/blogpage.html" ctx
+                >>= loadAndApplyTemplate "templates/default.html" ctx
+                >>= wordpressifyUrls
 
     -- Render RSS feed
     create ["rss.xml"] $ do
@@ -185,7 +166,7 @@ postCtx tags = mconcat
 
 teaserCtx :: Tags -> Context String
 teaserCtx tags =
-    field "teaser" teaserBody `mappend`
+    Main.teaserField <>
     (postCtx tags)
 
 
@@ -281,22 +262,15 @@ isSlash _   = False
 
 
 --------------------------------------------------------------------------------
-teaserBody :: Item String -> Compiler String
-teaserBody item = do
-    let body = itemBody item
-    return $ extractTeaser . maxLengthTeaser . compactTeaser $ body
+teaserField :: Context String
+teaserField = field "teaser" $ \item -> do
+    body <- itemBody <$> loadSnapshot (itemIdentifier item) "teaser"
+    return $ (maxLengthTeaser . compactTeaser) body
   where
-    extractTeaser :: String -> String
-    extractTeaser [] = []
-    extractTeaser xs@(x : xr)
-        | "<!-- more -->" `isPrefixOf` xs = []
-        | otherwise                       = x : extractTeaser xr
-
     maxLengthTeaser :: String -> String
     maxLengthTeaser s = if findIndex (isPrefixOf "<!-- more -->") (tails s) == Nothing
                             then unwords (take 60 (words s))
                             else s
-
     compactTeaser :: String -> String
     compactTeaser =
         (replaceAll "<iframe [^>]*>" (const "")) .
@@ -325,35 +299,11 @@ teaserBody item = do
 
 
 --------------------------------------------------------------------------------
--- | Generate navigation link HTML for stepping between index pages.
--- https://github.com/ian-ross/blog
+-- | Pagination related functions
 --
-indexNavLink :: Int -> Int -> Int -> String
-indexNavLink n d maxn = renderHtml ref
-  where ref = if (refPage == "") then ""
-              else H.a ! A.href (toValue $ toUrl $ refPage) $ 
-                   (preEscapedString lab)
-        lab = if (d > 0) then "Older Entries ▶" else "◀ Newer Entries"
-        refPage = if (n + d < 1 || n + d > maxn) then ""
-                  else case (n + d) of
-                    1 -> "/blog/page/1/"
-                    _ -> "/blog/page/" ++ (show $ n + d) ++ "/"
+makeId :: PageNumber -> Identifier
+makeId pageNum = fromFilePath $ "blog/page/" ++ (show pageNum) ++ "/index.html"
 
-
---------------------------------------------------------------------------------
-paginate:: Int -> (Int -> Int -> [Identifier] -> Rules ()) -> Rules ()
-paginate itemsPerPage rules = do
-    identifiers <- getMatches "posts/*"
-
-    let sorted = reverse $ sortBy byDate identifiers
-        chunks = paginateEvery itemsPerPage sorted
-        maxIndex = length chunks
-        pageNumbers = take maxIndex [1..]
-        process i is = rules i maxIndex is
-    zipWithM_ process pageNumbers chunks
-        where
-            byDate id1 id2 =
-                let fn1 = takeFileName $ toFilePath id1
-                    fn2 = takeFileName $ toFilePath id2
-                    parseTime' fn = parseTimeM True defaultTimeLocale "%Y-%m-%d" $ intercalate "-" $ take 3 $ splitAll "-" fn
-                in compare ((parseTime' fn1) :: Maybe UTCTime) ((parseTime' fn2) :: Maybe UTCTime)
+-- Run sortRecentFirst on ids, and then liftM (paginateEvery 10) into it
+grouper :: MonadMetadata m => [Identifier] -> m [[Identifier]]
+grouper ids = (liftM (paginateEvery 10) . sortRecentFirst) ids

@@ -1,13 +1,25 @@
 <div id="primary">
     <div class="inside">
-        $posts$
+        $for(posts)$
+        <div class="story">
+            <h3><a href="$url$" rel="bookmark" title="Permanent Link to $title$">$title$</a></h3>
+            <p>$teaser$ [...]</p>
+            <div class="details">
+                $date$ | <span class="read-on"><a href="$url$">read more</a></span>
+            </div>
+        </div>
+        $endfor$
 
         <br class="clear">
         <div class="story twocol-story newer">
-        $navlinknewer$&nbsp;
+        $if(previousPageNum)$
+        <a href="$previousPageUrl$">◀ Newer Entries</a>
+        $endif$&nbsp;
         </div>
         <div class="story twocol-story older" style="text-align:right;">
-        $navlinkolder$&nbsp;
+        $if(nextPageNum)$
+        <a href="$nextPageUrl$">Older Entries ▶</a>
+        $endif$&nbsp;
         </div>
         <br class="clear">
     </div>
