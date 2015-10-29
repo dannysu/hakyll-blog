@@ -295,7 +295,8 @@ teaserField = field "teaser" $ \item -> do
         (replaceAll "</h[0-9]>" (const "")) .
         (replaceAll "<pre.*" (const "")) .
         (replaceAll "<a [^>]*>" (const "")) .
-        (replaceAll "</a>" (const ""))
+        (replaceAll "</a>" (const "")) .
+        (replaceAll "<hr>" (const ""))
 
 
 --------------------------------------------------------------------------------
