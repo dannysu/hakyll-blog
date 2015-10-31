@@ -1,7 +1,33 @@
 ---
 title: Search
 ---
-<div id="cse" style="width: 100%;">Loading</div>
+<form method="get" id="sform" action="/search.html">
+  <input type="text" id="q" value="" name="q" size="20" class="searchbox">
+</form>
+<div id="cse">Loading</div>
+<script type="text/javascript">
+  (function() {
+    document.getElementById('q').value = decodeURIComponent(window.location.search.substring(3)).replace(/\+/g, ' ');
+    var loadingDiv = document.getElementById('cse');
+    var count = 0;
+    var handle = setInterval(function() {
+        var text = loadingDiv.innerHTML.substr(0, 8).trim();
+        if (text === 'Loading') {
+            if (count >= 3) {
+                loadingDiv.innerHTML = 'Loading';
+                count = 0;
+            }
+            else {
+                loadingDiv.innerHTML = loadingDiv.innerHTML + ' .';
+                count++;
+            }
+        }
+        else {
+            clearInterval(handle);
+        }
+    }, 500);
+  })();
+</script>
 <script src="//www.google.com/jsapi" type="text/javascript"></script>
 <script type="text/javascript"> 
   google.load('search', '1', {language : 'en', style : google.loader.themes.MINIMALIST});

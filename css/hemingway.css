@@ -659,6 +659,32 @@ ul.pages ul li{
 /*-----------------------------------------------------------------------------------------------
   Search
 -----------------------------------------------------------------------------------------------*/
+.top-search-icon {
+    opacity: 0.4;
+}
+
+#header .top-search-icon {
+    float: right;
+}
+
+.searchbox {
+    margin-top: 10px;
+    width: 100%;
+    line-height: 30px;
+    font-size: 15px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+#cse {
+    width: 100%;
+    font-size: 15px;
+    margin-top: 10px;
+}
+
+#cse {
+    border-top: 0px;
+}
 
 #search{
 	float:right;
@@ -841,9 +867,46 @@ img.alignleft {
 }
 
 /*-----------------------------------------------------------------------------------------------
+  Syntax Highlighting
+-----------------------------------------------------------------------------------------------*/
+
+code {
+    background-color: #F8F8F8;
+    padding: 3px;
+}
+
+pre, .sourceCode {
+    background-color: #F8F8F8;
+}
+
+pre {
+    padding-left: 1em;
+    margin-left: -1em;
+    border-left: 2px solid #A5A5A5;
+}
+
+/*-----------------------------------------------------------------------------------------------
   Responsive
 -----------------------------------------------------------------------------------------------*/
-@media (max-width: 520px) {
+@media (max-width: 900px) {
+    #header .inside #search {
+        position: absolute;
+        right: 7%;
+    }
+
+    #ancillary .block {
+        width: 100%;
+        margin-left: 0;
+        clear: both;
+    }
+
+    #header .inside {
+        width: 86%;
+        min-width: 0;
+        padding-left: 7%;
+        padding-right: 7%;
+    }
+
     #primary .inside {
         width: 86%;
         min-width: 0;
@@ -866,44 +929,16 @@ img.alignleft {
     #ancillary .second, #ancillary .third {
         margin-top:1.2em;
     }
+}
 
-    #header .inside {
-        width: 86%;
-        min-width: 0;
-        padding-left: 7%;
-        padding-right: 7%;
-    }
-
-    #ancillary .block {
-        width: 100%;
-        margin-left: 0;
-        clear: both;
-    }
-
-    #header .inside #search {
-        position: absolute;
-        right: 7%;
-    }
-
-    #header .inside .links {
-        padding-top: 5px;
-    }
-
-    #header .inside {
-        padding-top: 1em;
-        padding-bottom: 1em;
-    }
-
-    #header #me a{
+@media (max-width: 480px) {
+    #header #me a {
         border-right: 0px;
     }
+}
 
-    #primary.twocol-stories .story, .twocol-story{
-        width:100%;
-        margin-top:1em;
-        margin-left:0;
-        margin-right:0;
-        margin-bottom:0;
+@media (max-width: 520px) {
+    #search {
     }
 
     #primary .newer, .older{
@@ -924,23 +959,4 @@ img.alignleft {
         max-width: 100%;
         max-height: 100%;
     }
-}
-
-/*-----------------------------------------------------------------------------------------------
-  Syntax Highlighting
------------------------------------------------------------------------------------------------*/
-
-code {
-    background-color: #F8F8F8;
-    padding: 3px;
-}
-
-pre, .sourceCode {
-    background-color: #F8F8F8;
-}
-
-pre {
-    padding-left: 1em;
-    margin-left: -1em;
-    border-left: 2px solid #A5A5A5;
 }
