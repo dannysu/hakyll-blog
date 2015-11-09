@@ -48,9 +48,9 @@ Here's Haskell:
 
 ```bash
 [~] ghci
-Prelude&gt; 1.13 * 100
+Prelude> 1.13 * 100
 112.99999999999999
-Prelude&gt;
+Prelude>
 ```
 
 A quick search online will tell you that this has something to do with how
@@ -72,8 +72,8 @@ example, its binary representation on my little-endian machine is:
 I got the above representation via a simple C++ program (test.cpp):
 
 ```c
-#include &lt;iostream&gt;
-#include &lt;iomanip&gt;
+#include <iostream>
+#include <iomanip>
 using namespace std;
  
 int main() {
