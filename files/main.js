@@ -12,4 +12,6 @@
             image.parentElement.target = '_blank';
         }
     }
+
+    document.getElementById('email').href = 'mailto:contact@dannysu.com';
 })();
