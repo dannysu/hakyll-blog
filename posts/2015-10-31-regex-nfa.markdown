@@ -3,6 +3,9 @@ date: 2015-10-31 00:15:26 PDT
 title: Regular Expressions Based on Nondeterministic Finite Automaton
 tags: Mad Coding, RegEx, Regular Expression, NFA
 ---
+**UPDATE** the excellent [course on Coursera][5] by professor Robert Sedgewick
+also covers this with an implementation via digraph
+
 I recently came across [Russ Cox's explanation][1] on how many regular
 expression implementations behave in an exponential way in certain situations,
 whereas if a Nondeterministic Finite Automaton (NFA) is used then it has no
@@ -413,3 +416,4 @@ built-in backtracking engine won't do.
   [2]: https://swtch.com/%7Ersc/regexp/fig17.png
   [3]: https://swtch.com/%7Ersc/regexp/fig14.png
   [4]: https://swtch.com/%7Ersc/regexp/fig15.png
+  [5]: https://www.coursera.org/course/algs4partII
