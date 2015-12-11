@@ -241,12 +241,12 @@ is no way of turning it off.
 <font color="red">&#x2717; Doesn't seem to have a way to block images by default</font>  
 <font color="red">&#x2717; Fails emailprivacytester.com test for viewing email</font>
 
-# Apple Mail
+# Built-in Mail App
 
-If I remembered right, before FastMail iOS app was released I used Apple Mail
-because it passes the privacy test. However, one annoying thing is that once you
-block images by default, there's no easy way to show images on a per email
-basis. It's otherwise decent even if it doesn't support aliases.
+If I remembered right, before FastMail iOS app was released I used the built-in
+Mail app because it passes the privacy test. However, one annoying thing is
+that once you block images by default, there's no easy way to show images on a
+per email basis. It's otherwise decent even if it doesn't support aliases.
 
 <font color="green">&#x2713; Can block images by default</font>  
 <font color="red">&#x2717; Cannot show image on demand</font>  
