@@ -3,6 +3,15 @@ date: 2015-12-11 08:37:09 PST
 title: Best iOS Email Apps for Privacy
 tags: iOS, Apple, iPhone, iPad, Email, Gmail, FastMail, Dispatch, Spark, Outlook, Boxer, CloudMagic
 ---
+**UPDATE**: FastMail wrote about how they [sanitise emails][32] to protect
+their users. I encourage all email app developers to read it and do it properl,
+while maintaining good layout and readability.
+
+---
+
+**tl;dr** The only apps that can protect your privacy are the built-in Email
+app, FastMail, or Gmail (not Inbox).
+
 One of the first things I did after getting the iPhone 6 last year was to try
 to find an email app. Unfortunately no 3rd party client met my criteria at the
 time. With the recent announcement of [Mailbox shutting down][4], people have
@@ -121,7 +130,9 @@ Pro][13]** (currently $4.99). I liked the app and features, but once I tested
 its privacy protection I had to ditch it. While it passes the privacy test when
 viewing an email, as soon as you try to compose an email it's game over.
 Although I might be able to forgive the meta refresh leak, its inability to
-show images on demand after blocking it by default is really annoying.
+show images on demand after blocking it by default is really annoying. Also,
+its HTML email cleaning code isn't as nice as FastMail's resulting in hard to
+read emails after enabling the protection.
 
 [![][17]][17]
 
@@ -246,21 +257,27 @@ is no way of turning it off.
 If I remembered right, before FastMail iOS app was released I used the built-in
 Mail app because it passes the privacy test. However, one annoying thing is
 that once you block images by default, there's no easy way to show images on a
-per email basis. It's otherwise decent even if it doesn't support aliases.
+per email basis.
+
+Other than that it also supports aliases as **retemirabile** commented below.
+The setting is rather hidden, but it does auto detect the correct alias to use
+which is nice. Go to `Settings -> Mail, Contacts, Calendars`, select the
+account you want to add an alias for, tap on `Account`, tap on `Email`.
 
 <font color="green">&#x2713; Can block images by default</font>  
-<font color="red">&#x2717; Cannot show image on demand</font>  
 <font color="green">&#x2713; Passes emailprivacytest.com test for viewing email</font>  
 <font color="green">&#x2713; Passes emailprivacytest.com test when replying to email</font>  
-<font color="red">&#x2717; No aliases</font>
+<font color="green">&#x2713; Supports aliases</font>  
+<font color="green">&#x2713; Auto detects alias to use</font>  
+<font color="red">&#x2717; Cannot show image on demand</font>  
 
 # Conclusion
 
 As the tests have shown, if you don't want to reveal your email viewing
 activities on iOS, you have 3 options:
 
-1. Use the built-in Mail app (provided that you don't care about aliases and
-   don't care about being able to show images for particular email easily)
+1. Use the built-in Mail app (provided that you don't care about being able to
+   show images for particular email easily)
 1. Use Gmail but not Inbox (if you have Gmail, or if you want to pipe emails to
    Gmail)
 1. Use FastMail (if you have FastMail, or if you want to pipe emails to
@@ -309,3 +326,4 @@ use gmail's server if the from address is @gmail.com.
   [29]: https://imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg4LEgVpbWFnZRjJtLQCDA
   [30]: https://itunes.apple.com/us/app/mymail-free-email-app-for/id722120997?mt=8
   [31]: http://www.getboxer.com/boxer-joins-vmware/
+  [32]: https://blog.fastmail.com/2015/12/20/sanitising-html-the-dom-clobbering-issue/
