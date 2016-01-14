@@ -12,7 +12,7 @@ build-type:          Simple
 -- extra-source-files:
 cabal-version:       >=1.22
 
-executable hakyll-blog-exe
+executable site
   hs-source-dirs:      .
   main-is:             site.hs
   build-depends:       base,
