@@ -44,7 +44,7 @@ v1 parser. [Source code][1] on GitHub.
 I started my learning by researching how some of the tools work. From this
 research I found out that Babel uses the [Babylon parser][6]. I found out that
 ReactJS uses a [fork of the Esprima parser][7]. I also found out that ReactJS
-appears to have plan to transition to use the [Acorn parser][8]. Similarly to
+appears to have plan to transition to use the [Acorn parser][8]. Similar to
 ReactJS, ESLint also uses a fork of Esprima named [Espree][9]. JSHint uses
 Esprima as well. Lastly, UglifyJS has [its own parser][10].
 
