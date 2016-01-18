@@ -7,21 +7,21 @@ ECMAScript grammar as specified in [ECMA-262 1st edition][1]. This grammar is
 ---
 
 <a name="Program"></a>
-Program:  
+Program :  
 <span class="left-margin-40"><a href="#SourceElements">SourceElements</a></span>  
 
 <a name="SourceElements"></a>
-SourceElements:  
+SourceElements :  
 <span class="left-margin-40"><a href="#SourceElement">SourceElement</a></span>  
 <span class="left-margin-40">SourceElements <a href="#SourceElement">SourceElement</a></span>  
 
 <a name="SourceElement"></a>
-SourceElement:  
+SourceElement :  
 <span class="left-margin-40"><a href="#Statement">Statement</a></span>  
 <span class="left-margin-40"><a href="#FunctionDeclaration">FunctionDeclaration</a></span>  
 
 <a name="Statement"></a>
-Statement:  
+Statement :  
 <span class="left-margin-40"><a href="#Block">Block</a></span>  
 <span class="left-margin-40"><a href="#VariableStatement">VariableStatement</a></span>  
 <span class="left-margin-40"><a href="#EmptyStatement">EmptyStatement</a></span>  
@@ -34,76 +34,76 @@ Statement:
 <span class="left-margin-40"><a href="#WithStatement">WithStatement</a></span>  
 
 <a name="Block"></a>
-Block:  
+Block :  
 <span class="left-margin-40">`{` <a href="#StatementList">StatementList</a><sub>opt</sub> `}`</span>  
 
 <a name="StatementList"></a>
-StatementList:  
+StatementList :  
 <span class="left-margin-40"><a href="#Statement">Statement</a></span>  
 <span class="left-margin-40">StatementList <a href="#Statement">Statement</a></span>  
 
 <a name="VariableStatement"></a>
-VariableStatement:  
+VariableStatement :  
 <span class="left-margin-40">`var` <a href="#VariableDeclarationList">VariableDeclarationList</a> `;`</span>  
 
 <a name="VariableDeclarationList"></a>
-VariableDeclarationList:  
+VariableDeclarationList :  
 <span class="left-margin-40"><a href="#VariableDeclaration">VariableDeclaration</a></span>  
 <span class="left-margin-40">VariableDeclarationList `,` <a href="#VariableDeclaration">VariableDeclaration</a></span>  
 
 <a name="VariableDeclaration"></a>
-VariableDeclaration:  
+VariableDeclaration :  
 <span class="left-margin-40">Identifier <a href="#Initializer">Initializer</a><sub>opt</sub></span>  
 <span class="left-margin-40"><span class="left-margin-40"><small>\*Identifier as defined in Chapter 7 of the spec</small></span></span>  
 
 <a name="Initializer"></a>
-Initializer:  
+Initializer :  
 <span class="left-margin-40">`=` <a href="#AssignmentExpression">AssignmentExpression</a></span>  
 
 <a name="AssignmentExpression"></a>
-AssignmentExpression:  
+AssignmentExpression :  
 <span class="left-margin-40"><a href="#ConditionalExpression">ConditionalExpression</a></span>  
 <span class="left-margin-40"><a href="#LeftHandSideExpression">LeftHandSideExpression</a> AssignmentOperator AssignmentExpression</span>  
 <span class="left-margin-40"><span class="left-margin-40"><small>\*AssignmentOperator as defined in Chapter 7 of the spec</small></span></span>  
 
 <a name="ConditionalExpression"></a>
-ConditionalExpression:  
+ConditionalExpression :  
 <span class="left-margin-40"><a href="#LogicalORExpression">LogicalORExpression</a></span>  
-<span class="left-margin-40"><a href="#LogicalORExpression">LogicalORExpression</a> `?` <a href="#AssignmentExpression">AssignmentExpression</a> `:` <a href="#AssignmentExpression">AssignmentExpression</a></span>  
+<span class="left-margin-40"><a href="#LogicalORExpression">LogicalORExpression</a> `?` <a href="#AssignmentExpression">AssignmentExpression</a> ` :` <a href="#AssignmentExpression">AssignmentExpression</a></span>  
 
 <a name="LogicalORExpression"></a>
-LogicalORExpression:  
+LogicalORExpression :  
 <span class="left-margin-40"><a href="#LogicalANDExpression">LogicalANDExpression</a></span>  
 <span class="left-margin-40">LogicalORExpression `||` <a href="#LogicalANDExpression">LogicalANDExpression</a></span>  
 
 <a name="LogicalANDExpression"></a>
-LogicalANDExpression:  
+LogicalANDExpression :  
 <span class="left-margin-40"><a href="#BitwiseORExpression">BitwiseORExpression</a></span>  
 <span class="left-margin-40">LogicalANDExpression `&&` <a href="#BitwiseORExpression">BitwiseORExpression</a></span>  
 
 <a name="BitwiseORExpression"></a>
-BitwiseORExpression:  
+BitwiseORExpression :  
 <span class="left-margin-40"><a href="#BitwiseXORExpression">BitwiseXORExpression</a></span>  
 <span class="left-margin-40">BitwiseORExpression `|` <a href="#BitwiseXORExpression">BitwiseXORExpression</a></span>  
 
 <a name="BitwiseXORExpression"></a>
-BitwiseXORExpression:  
+BitwiseXORExpression :  
 <span class="left-margin-40"><a href="#BitwiseANDExpression">BitwiseANDExpression</a></span>  
 <span class="left-margin-40">BitwiseXORExpression `^` <a href="#BitwiseANDExpression">BitwiseANDExpression</a></span>  
 
 <a name="BitwiseANDExpression"></a>
-BitwiseANDExpression:  
+BitwiseANDExpression :  
 <span class="left-margin-40"><a href="#EqualityExpression">EqualityExpression</a></span>  
 <span class="left-margin-40">BitwiseANDExpression `&` <a href="#EqualityExpression">EqualityExpression</a></span>  
 
 <a name="EqualityExpression"></a>
-EqualityExpression:  
+EqualityExpression :  
 <span class="left-margin-40"><a href="#RelationalExpression">RelationalExpression</a></span>  
 <span class="left-margin-40">EqualityExpression `==` <a href="#RelationalExpression">RelationalExpression</a></span>  
 <span class="left-margin-40">EqualityExpression `!=` <a href="#RelationalExpression">RelationalExpression</a></span>  
 
 <a name="RelationalExpression"></a>
-RelationalExpression:  
+RelationalExpression :  
 <span class="left-margin-40"><a href="#ShiftExpression">ShiftExpression</a></span>  
 <span class="left-margin-40">RelationalExpression `<` <a href="#ShiftExpression">ShiftExpression</a></span>  
 <span class="left-margin-40">RelationalExpression `>` <a href="#ShiftExpression">ShiftExpression</a></span>  
@@ -111,27 +111,27 @@ RelationalExpression:
 <span class="left-margin-40">RelationalExpression `=>` <a href="#ShiftExpression">ShiftExpression</a></span>  
 
 <a name="ShiftExpression"></a>
-ShiftExpression:  
+ShiftExpression :  
 <span class="left-margin-40"><a href="#AdditiveExpression">AdditiveExpression</a></span>  
 <span class="left-margin-40">ShiftExpression `<<` <a href="#AdditiveExpression">AdditiveExpression</a></span>  
 <span class="left-margin-40">ShiftExpression `>>` <a href="#AdditiveExpression">AdditiveExpression</a></span>  
 <span class="left-margin-40">ShiftExpression `>>>` <a href="#AdditiveExpression">AdditiveExpression</a></span>  
 
 <a name="AdditiveExpression"></a>
-AdditiveExpression:  
+AdditiveExpression :  
 <span class="left-margin-40"><a href="#MultiplicativeExpression">MultiplicativeExpression</a></span>  
 <span class="left-margin-40">AdditiveExpression `+` <a href="#MultiplicativeExpression">MultiplicativeExpression</a></span>  
 <span class="left-margin-40">AdditiveExpression `-` <a href="#MultiplicativeExpression">MultiplicativeExpression</a></span>  
 
 <a name="MultiplicativeExpression"></a>
-MultiplicativeExpression:  
+MultiplicativeExpression :  
 <span class="left-margin-40"><a href="#UnaryExpression">UnaryExpression</a></span>  
 <span class="left-margin-40">MultiplicativeExpression `*` <a href="#UnaryExpression">UnaryExpression</a></span>  
 <span class="left-margin-40">MultiplicativeExpression `/` <a href="#UnaryExpression">UnaryExpression</a></span>  
 <span class="left-margin-40">MultiplicativeExpression `%` <a href="#UnaryExpression">UnaryExpression</a></span>  
 
 <a name="UnaryExpression"></a>
-UnaryExpression:  
+UnaryExpression :  
 <span class="left-margin-40"><a href="#PostfixExpression">PostfixExpression</a></span>  
 <span class="left-margin-40">`delete` UnaryExpression</span>  
 <span class="left-margin-40">`void` UnaryExpression</span>  
@@ -144,30 +144,30 @@ UnaryExpression:
 <span class="left-margin-40">`!` UnaryExpression</span>  
 
 <a name="PostfixExpression"></a>
-PostfixExpression:  
+PostfixExpression :  
 <span class="left-margin-40"><a href="#LeftHandSideExpression">LeftHandSideExpression</a></span>  
 <span class="left-margin-40"><a href="#LeftHandSideExpression">LeftHandSideExpression</a> <small>*[no LineTerminator here]*</small> `++`</span>  
 <span class="left-margin-40"><a href="#LeftHandSideExpression">LeftHandSideExpression</a> <small>*[no LineTerminator here]*</small> `--`</span>  
 
 <a name="LeftHandSideExpression"></a>
-LeftHandSideExpression:  
+LeftHandSideExpression :  
 <span class="left-margin-40"><a href="#NewExpression">NewExpression</a></span>  
 <span class="left-margin-40"><a href="#CallExpression">CallExpression</a></span>  
 
 <a name="NewExpression"></a>
-NewExpression:  
+NewExpression :  
 <span class="left-margin-40"><a href="#MemberExpression">MemberExpression</a></span>  
 <span class="left-margin-40">`new` NewExpression</span>  
 
 <a name="MemberExpression"></a>
-MemberExpression:  
+MemberExpression :  
 <span class="left-margin-40"><a href="#PrimaryExpression">PrimaryExpression</a></span>  
 <span class="left-margin-40">MemberExpression `[` <a href="#Expression">Expression</a> `]`</span>  
 <span class="left-margin-40">MemberExpression `.` Identifier</span>  
 <span class="left-margin-40">`new` MemberExpression <a href="#Arguments">Arguments</a></span>  
 
 <a name="PrimaryExpression"></a>
-PrimaryExpression:  
+PrimaryExpression :  
 <span class="left-margin-40">`this`</span>  
 <span class="left-margin-40">Identifier</span>  
 <span class="left-margin-40">Literal</span>  
@@ -175,42 +175,42 @@ PrimaryExpression:
 <span class="left-margin-40"><span class="left-margin-40"><small>\*Literal as defined in Chapter 7 of the spec</small></span></span>  
 
 <a name="Expression"></a>
-Expression:  
+Expression :  
 <span class="left-margin-40"><a href="#AssignmentExpression">AssignmentExpression</a></span>  
 <span class="left-margin-40">Expression `,` <a href="#AssignmentExpression">AssignmentExpression</a></span>  
 
 <a name="Arguments"></a>
-Arguments:  
+Arguments :  
 <span class="left-margin-40">`(` `)`</span>  
 <span class="left-margin-40">`(` <a href="#ArgumentList">ArgumentList</a> `)`</span>  
 
 <a name="ArgumentList"></a>
-ArgumentList:  
+ArgumentList :  
 <span class="left-margin-40"><a href="#AssignmentExpression">AssignmentExpression</a></span>  
 <span class="left-margin-40">ArgumentList `,` <a href="#AssignmentExpression">AssignmentExpression</a></span>  
 
 <a name="CallExpression"></a>
-CallExpression:  
+CallExpression :  
 <span class="left-margin-40"><a href="#MemberExpression">MemberExpression</a> <a href="#Arguments">Arguments</a></span>  
 <span class="left-margin-40">CallExpression <a href="#Arguments">Arguments</a></span>  
 <span class="left-margin-40">CallExpression `[` <a href="#Expression">Expression</a> `]`</span>  
 <span class="left-margin-40">CallExpression `.` Identifier</span>  
 
 <a name="EmptyStatement"></a>
-EmptyStatement:  
+EmptyStatement :  
 <span class="left-margin-40">`;`</span>  
 
 <a name="ExpressionStatement"></a>
-ExpressionStatement:  
+ExpressionStatement :  
 <span class="left-margin-40"><a href="#Expression">Expression</a> `;`</span>  
 
 <a name="IfStatement"></a>
-IfStatement:  
+IfStatement :  
 <span class="left-margin-40">`if` `(` <a href="#Expression">Expression</a> `)` <a href="#Statement">Statement</a> `else` <a href="#Statement">Statement</a></span>  
 <span class="left-margin-40">`if` `(` <a href="#Expression">Expression</a> `)` <a href="#Statement">Statement</a></span>  
 
 <a name="IterationStatement"></a>
-IterationStatement:  
+IterationStatement :  
 <span class="left-margin-40">`while` `(` <a href="#Expression">Expression</a> `)` <a href="#Statement">Statement</a></span>  
 <span class="left-margin-40">`for` `(` <a href="#Expression">Expression</a><sub>(opt)</sub> `;` <a href="#Expression">Expression</a><sub>(opt)</sub> `;` <a href="#Expression">Expression</a><sub>(opt)</sub> `)` <a href="#Statement">Statement</a></span>  
 <span class="left-margin-40">`for` `(` `var` <a href="#VariableDeclarationList">VariableDeclarationList</a> `;` <a href="#Expression">Expression</a><sub>(opt)</sub> `;` <a href="#Expression">Expression</a><sub>(opt)</sub> `)` <a href="#Statement">Statement</a></span>  
@@ -218,27 +218,27 @@ IterationStatement:
 <span class="left-margin-40">`for` `(` `var` Identifier <a href="#Initializer">Initializer</a><sub>(opt)</sub> `in` <a href="#Expression">Expression</a> `)` <a href="#Statement">Statement</a></span>  
 
 <a name="ContinueStatement"></a>
-ContinueStatement:  
+ContinueStatement :  
 <span class="left-margin-40">`continue` `;`</span>  
 
 <a name="BreakStatement"></a>
-BreakStatement:  
+BreakStatement :  
 <span class="left-margin-40">`break` `;`</span>  
 
 <a name="ReturnStatement"></a>
-ReturnStatement:  
+ReturnStatement :  
 <span class="left-margin-40">`return` <small>*[no LineTerminator here]*</small> <a href="#Expression">Expression</a><sub>(opt)</sub> `;`</span>  
 
 <a name="WithStatement"></a>
-WithStatement:  
+WithStatement :  
 <span class="left-margin-40">`with` `(` <a href="#Expression">Expression</a> `)` <a href="#Statement">Statement</a></span>  
 
 <a name="FunctionDeclaration"></a>
-FunctionDeclaration:  
+FunctionDeclaration :  
 <span class="left-margin-40">`function` Identifier `(` <a href="#FormalParameterList">FormalParameterList</a><sub>(opt)</sub> `)` <a href="#Block">Block</a></span>  
 
 <a name="FormalParameterList"></a>
-FormalParameterList:  
+FormalParameterList :  
 <span class="left-margin-40">Identifier</span>  
 <span class="left-margin-40">FormalParameterList `,` Identifier</span>  
 

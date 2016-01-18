@@ -1,10 +1,10 @@
 ---
 date: 2015-06-23
-title: Javascript Code Critique #2
-tags: javascript, programming, Mad Coding, Code Critique
+title: JavaScript Code Critique #2
+tags: JavaScript, programming, Mad Coding, Code Critique
 ---
 Continuing the process of looking back at some old code that I wrote years ago.
-This is my 2nd javascript code critique. The first one is [here][1].
+This is my 2nd JavaScript code critique. The first one is [here][1].
 
 My goal is to bring [hash0][3] code up to ES5 standards and stop coding like
 it's 1990s. Once that's done, then go on to bring it up to ES6.
@@ -38,7 +38,7 @@ Nice.
 
 # camelCase
 
-When I first started writing javascript, I had just came from the world of C/C++
+When I first started writing JavaScript, I had just came from the world of C/C++
 and PHP, so I was kind of more used to variable_name than variableName. Camel
 case is the norm so I'll do that instead from now on.
 

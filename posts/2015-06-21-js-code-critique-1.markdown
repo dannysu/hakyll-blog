@@ -1,7 +1,7 @@
 ---
 date: 2015-06-21 22:44:52 PDT
-title: Javascript Code Critique #1
-tags: javascript, programming, Mad Coding, Code Critique
+title: JavaScript Code Critique #1
+tags: JavaScript, programming, Mad Coding, Code Critique
 ---
 This will be the first of many code critiques I give to myself.
 
@@ -17,7 +17,7 @@ balance between get stuff done now (if requirement necessitates it), and learn
 something deeper so you can get stuff done faster the next time.
 
 I'm a big believer of code reviews because my peers can help teach me stuff. As
-I try to patch up some of the holes in my understanding of javascript, I thought
+I try to patch up some of the holes in my understanding of JavaScript, I thought
 it's a great time to give myself some code critiques. I'm going to use my
 [hash0][1] project for this because it was first written a while ago.
 
@@ -64,7 +64,7 @@ Metadata.prototype.hasStorageUrl = function() {
 
 [Storage.getItem][2] will return null if it doesn't have value for the provided
 key. In this case, the key is 'storageUrl'. I guess when I originally wrote this
-I didn't have a great grasp of the falsy values in javascript. The if-statement
+I didn't have a great grasp of the falsy values in JavaScript. The if-statement
 checks for truthy value of `!(storage['storageUrl'])` while also checking
 whether the value is an empty string. However, since `false`, `0`, empty string,
 NaN, null, and undefined are all falsy values, the empty string check is
