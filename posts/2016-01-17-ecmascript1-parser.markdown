@@ -1,5 +1,5 @@
 ---
-date: 
+date: 2016-01-17 21:20:18 PST
 title: ECMAScript 1 (ES1) Parser
 tags: Parser, Compiler, ECMAScript, JavaScript, ReactJS, JSX, ESLint, UglifyJS
 ---
