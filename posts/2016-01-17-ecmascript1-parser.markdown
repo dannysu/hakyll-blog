@@ -85,7 +85,7 @@ each time a character is deemed to be belonging to the same token. When it is
 decided that a token is finished, then one can take the substring from `start`
 to `pos` and advance `start`.
 
-[![][15]][15]
+[![lexer diagram showing start and pos variables][15]][15]
 
 For my lexer, the reading of a character is done by a function named `peek`. It
 reads the next character to be processed and returns it. However, the `peek`
