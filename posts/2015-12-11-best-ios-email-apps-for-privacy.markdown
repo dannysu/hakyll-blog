@@ -2,6 +2,7 @@
 date: 2015-12-11 08:37:09 PST
 title: Best iOS Email Apps for Privacy
 tags: iOS, Apple, iPhone, iPad, Email, Gmail, FastMail, Dispatch, Spark, Outlook, Boxer, CloudMagic
+description: A comparison of all popular iOS email apps and whether they protect user's privacy when viewing or replying to email.
 ---
 **UPDATE**: FastMail wrote about how they [sanitise emails][32] to protect
 their users. I encourage all email app developers to read it and do it

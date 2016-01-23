@@ -2,6 +2,7 @@
 date: 2016-01-11 00:10:00 PST
 title: Free Uptime Monitoring with Google App Engine
 tags: Google App Engine, GAE, uptime, Mad Coding, StatusCake
+description: Run uptime monitoring service on Google App Engine for free.
 ---
 Pingdom recently sent out an email notification telling users that their free
 monitoring tier will no longer feature 1-minute check interval. That's too bad

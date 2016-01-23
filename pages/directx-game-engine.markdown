@@ -1,5 +1,6 @@
 ---
 title: DirectX Game Engine
+description: A DirectX game engine a group of students worked on as a side project while on co-op work term.
 ---
 Three of my classmates and I were on our co-op work term in different cities,
 but we still decided to have some fun trying to write a DirectX game engine

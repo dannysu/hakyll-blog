@@ -1,5 +1,6 @@
 ---
 title: ECMAScript 1 Grammar
+description: ECMAScript 1 non-recursive grammar as written in ECMA-262 standard 1st edition.
 ---
 ECMAScript grammar as specified in [ECMA-262 1st edition][1]. This grammar is
 *left recursive* and is not friendly for LL parsers.

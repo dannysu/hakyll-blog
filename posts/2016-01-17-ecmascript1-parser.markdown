@@ -2,6 +2,7 @@
 date: 2016-01-17 21:20:18 PST
 title: ECMAScript 1 (ES1) Parser
 tags: Parser, Compiler, ECMAScript, JavaScript, ReactJS, JSX, ESLint, UglifyJS
+description: An explanation on how to write an ECMAScript 1 (ES1) Parser, understand how Babel, ReactJS, ESLint, JSHint, and UglifyJS work internally. 
 ---
 Although I took a compiler course while in university over 10 years ago, I
 don't write parsers or compilers on a day-to-day basis. So even though I

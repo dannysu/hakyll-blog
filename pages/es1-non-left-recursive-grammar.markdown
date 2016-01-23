@@ -1,5 +1,6 @@
 ---
 title: ECMAScript 1 Grammar (Left Recursion Eliminated)
+description: ECMAScript 1 grammar with left-recursion eliminated so that it's good for recursive descent parsers.
 ---
 Modified grammar with left-recursion eliminated
 
