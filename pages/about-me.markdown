@@ -2,9 +2,10 @@
 title: About Me
 ---
 
-- Co-Founder and CTO of [Kash Corp.][6] (Y Combinator Summer '14) - we get rid of credit card fees
-- Well.ca mobile software engineer and warehouse software lead
-- Microsoft SDE on Windows Mobile and Windows Phone
+- CTO & Software Engineer of [Kash Corp.][6] (Y Combinator Summer '14) - we get rid of credit card fees
+- CTO & Software Engineer of AvidTap Corp.
+- Well.ca Software Developer & Project Lead
+- Microsoft Software Development Engineer on Windows Mobile and Windows Phone
 - University of Waterloo grad
 
   [1]: /work-experience/
