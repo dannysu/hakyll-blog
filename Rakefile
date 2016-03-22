@@ -37,3 +37,7 @@ end
 task :clean do
   sh "./site clean"
 end
+
+task :deploy do
+  sh "rsync -avz --chmod=u=rwX,g=rX _site/* keycdn:zones/blog/"
+end
