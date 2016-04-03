@@ -39,5 +39,5 @@ task :clean do
 end
 
 task :deploy do
-  sh "rsync -avz --chmod=u=rwX,g=rX _site/* keycdn:zones/blog/"
+  sh "cd _site && aws --profile=blog s3 sync --storage-class=REDUCED_REDUNDANCY --acl=public-read --region=us-west-2 . s3://dannysu.com"
 end
