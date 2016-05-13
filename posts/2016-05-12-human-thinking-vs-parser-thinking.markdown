@@ -111,7 +111,7 @@ Let's first see if expanding to `new NewExpression` would work.
 //     ↓          ↓
 // [-- new --][-- MemberExpression --]
 ```
-From here the `MemberExpression` could be expaned to `MemberExpression .
+From here the `MemberExpression` could be expanded to `MemberExpression .
 Identifier`, but that doesn't work because we need `Identifier Arguments` at
 the end.
 
