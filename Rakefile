@@ -16,7 +16,7 @@ end
 task :build do
   # Build Hakyll blog code
   if not File.exists?("site")
-    sh "ghc --make site.hs"
+    sh "stack ghc -- --make site.hs"
   end
 
   sh "./site rebuild"
