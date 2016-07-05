@@ -301,11 +301,11 @@ At these prices the dealerships still make an unknown amount of profit of
 course. Different dealerships do have different pricing possibly based on
 their selling performance for the month and manufacturer bonuses.
 
-Now armed with a good idea of price range, if I can get a dealership to
+Now armed with a good idea of the price range, if I can get a dealership to
 sell the car to me below $17,400.00, then they have my business. Buying a car
 isn't just about lowest price. As noted in the [Test Drive
-section][#testdrive], some dealers are pretty terrible and I wouldn't buy from
-them even if the price is marginally cheaper.
+section](#testdrive), some dealerships are pretty terrible and I wouldn't buy
+from them even if the price is marginally cheaper.
 
 Some dealerships will choose to not engage with you at all. For example, I had
 a dealership quote me $19,930.00.
