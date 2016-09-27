@@ -413,7 +413,7 @@ p.parseBinaryExpression = function(minPrecedence) {
 ## 2.4: ConditionalExpression vs LeftHandSideExpression
 
 Another challenge when parsing JavaScript is when the parser needs to parse an
-`AssignmentExpression`. The parser needs to decide whether its parsing a
+`AssignmentExpression`. The parser needs to decide whether it's parsing a
 `ConditionalExpression` or a `LeftHandSideExpression` plus other stuff. The
 grammar is shown below:
 
