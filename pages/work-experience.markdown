@@ -1,7 +1,7 @@
 ---
 title: Work Experience
 ---
-### CTO and Software Engineer at [Kash Corp.](http://withkash.com) (YC S14) (September 2012 to Present)
+### Co-founder and CTO at [Kash Corp.](http://withkash.com) (YC S14) (September 2012 to Present)
 
 We get rid of credit card fees! Credit card fees are a tax on everything. Every
 time you swipe a credit card, there are 13 steps to clear that transaction and
@@ -15,7 +15,7 @@ credit card and saves local businesses.
 Join the fight. [End Credit Card Fees](http://endcreditcardfees.com).
 
 
-### CTO and Software Engineer at [AvidTap Corp.](http://avidtap.com) (September 2012 to Present)
+### Co-founder and CTO at [AvidTap Corp.](http://avidtap.com) (September 2012 to Present)
 
 We believe that retailers need help and we’re coming to their rescue.
 AvidTap is the mobile retail company that is bringing the e-commerce
