@@ -22,7 +22,7 @@ it's a great time to give myself some code critiques. I'm going to use my
 [hash0][1] project for this because it was first written a while ago.
 
 
-# new Array() vs []
+# new Array() vs \[\]
 
 For some reason I coded this constructor function with `new Array()`.
 
