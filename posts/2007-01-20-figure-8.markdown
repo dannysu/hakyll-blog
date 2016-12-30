@@ -15,15 +15,8 @@ about the hardware and how and why things work. My program is guaranteed not to
 lose clock ticks. It does figure 8 AND it honks AND blinks lights. What more do
 you want?!
 
-<div id="v5405"><a href="http://www.macromedia.com/go/getflashplayer" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://www.macromedia.com/go/getflashplayer']);">Get the Flash Player</a> to see this video.</div>
-<p>
-<script src="https://media.dreamhost.com/mp4/swfobject.js" type="text/javascript"></script>
-<script type="text/javascript">// <![CDATA[
-var swf = new SWFObject("https://media.dreamhost.com/mp4/player.swf", "mpl", "480", "659", 8);
-swf.addParam("allowfullscreen", "true");
-swf.addParam("allowscriptaccess", "always");
-swf.addVariable("file", "http://dannysu.com/files/videos/figure8_conv.flv");
-swf.addVariable("image", "http://dannysu.com/files/videos/figure8_conv.jpeg");
-swf.write("v5405");
-// ]]&gt;</script>
-</p>
+<video controls width="480" height="640" src="https://imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg4LEgVpbWFnZRjcgrUCDA" poster="https://imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg4LEgVpbWFnZRjbrYABDA">
+  Sorry, your browser doesn't support embedded videos, 
+  but don't worry, you can <a href="https://imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg4LEgVpbWFnZRjcgrUCDA">download it</a>
+  and watch it with your favorite video player!
+</video> 
