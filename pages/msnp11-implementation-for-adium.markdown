@@ -12,9 +12,9 @@ MSNP11. I then modified Adium source code to tie the two together.
 
 The result of my work can be seen through the following screenshots:
 
-![](/images/msnp11_psm.png)
+![](https://imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg0LEgVpbWFnZRi8kX8M)
 
-![](/images/msnp11_preferences.png)
+![](https://imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg4LEgVpbWFnZRj7p7ADDA)
 
 My patch for MSN module is roughly 1,000 lines of code.  
 MSN module within Gaim is roughly 18,000 lines of code.
