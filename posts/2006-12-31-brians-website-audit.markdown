@@ -27,7 +27,7 @@ to num and saw that it appeared on the webpage, I knew I found a XSS bug. I
 then proceed to inject javascript code onto his page and basically display any
 content I wish. See image:
 
-![](/images/brianxssvulnerability.png)
+[![][1]][1]
 
 Good thing he wasn't using the argument for database interaction, otherwise I
 would be trying to inject SQL statements.
@@ -76,3 +76,5 @@ Another problem is with his image gallery. It displays directory content and
 subdirectory names. The application essentially allows you to navigate certain
 parts of his website. If not done properly, this combined with knowledge about
 his file structure could lead to even more information disclosure.
+
+  [1]: https://imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg4LEgVpbWFnZRj5p7ADDA
