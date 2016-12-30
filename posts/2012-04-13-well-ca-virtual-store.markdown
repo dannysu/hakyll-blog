@@ -240,7 +240,7 @@ to provide the best experience for that platform.
 
 A screenshot of the virtual store landing page:
 
-[![](/images/virtualstore-150x150.png)](/images/virtualstore.png)
+[![](https://imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg4LEgVpbWFnZRipvf0BDA)](https://imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg0LEgVpbWFnZRjJokAM)
 
   [1]: https://github.com/phonegap/phonegap-plugins/tree/master/Android/Downloader
   [2]: http://phonegap.com/2012/04/11/phonegap-1-6-released/
