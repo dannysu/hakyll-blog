@@ -22,12 +22,12 @@ write parts of the widget.
 
 # Screenshots
 
-[![](/images/onebusaway0-180x300.png)](/images/onebusaway0.png)
-[![](/images/onebusaway1-180x300.png)](/images/onebusaway1.png)
-[![](/images/onebusaway2-180x300.png)](/images/onebusaway2.png)
-[![](/images/onebusaway3-180x300.png)](/images/onebusaway3.png)
-[![](/images/onebusaway4-180x300.png)](/images/onebusaway4.png)
-[![](/images/onebusaway5-180x300.png)](/images/onebusaway5.png)
+[![](https://imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg4LEgVpbWFnZRiakOwDDA)](https://imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg4LEgVpbWFnZRic7_wBDA)
+[![](https://imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg0LEgVpbWFnZRjr8gYM)](https://imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg4LEgVpbWFnZRiMwusDDA)
+[![](https://imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg0LEgVpbWFnZRi7kX8M)](https://imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg0LEgVpbWFnZRiLjwgM)
+[![](https://imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg4LEgVpbWFnZRj6lbwBDA)](https://imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg4LEgVpbWFnZRiZh_ICDA)
+[![](https://imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg4LEgVpbWFnZRip1fICDA)](https://imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg4LEgVpbWFnZRjZgrUCDA)
+[![](https://imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg0LEgVpbWFnZRjKokAM)](https://imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg4LEgVpbWFnZRjarYABDA)
 
 # Links
 	
