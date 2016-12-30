@@ -67,7 +67,7 @@ Game Engine has the following capabilities:
 
 Main Components: Game Logic, Game Engine, Win32
 
-![](/images/structure4.jpg)
+![](https://imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg4LEgVpbWFnZRj8p7ADDA)
 
 ### Game Logic Modules
 
@@ -242,7 +242,7 @@ Classes involved: 3DAnimMeshFrame, 3DMeshHierarchy</td>
 </tbody>
 </table>
 
-![](/images/graphics.jpg)
+![](https://imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg4LEgVpbWFnZRj7lbwBDA)
 
 ### Game Modules
 
@@ -308,7 +308,7 @@ Classes involved: 3DAnimMeshFrame, 3DMeshHierarchy</td>
 
 # Screenshots
 
-![](/images/sky.jpg)
+![](https://imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg4LEgVpbWFnZRjs2a8DDA)
 
-![](/images/landscape.jpg)
+![](https://imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg0LEgVpbWFnZRjL338M)
 
