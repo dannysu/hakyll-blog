@@ -15,12 +15,12 @@ features.
 As of July 21, 2010, the application has 151,116 downloads. It was the 11th
 most popular application in the US market:
 
-[![](/images/Most-Popular-US-Feb-24-2010-800x475.png)](/images/Most-Popular-US-Feb-24-2010.png)
+[![](https://imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg4LEgVpbWFnZRiLufECDA)](https://imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg4LEgVpbWFnZRiJ9rADDA)
 
 At one point in time, my app was chosen as one of the Showcase apps that
 Microsoft hand picked:
 
-[![](/images/Showcase-800x595.png)](/images/Showcase.png)
+[![](https://imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg4LEgVpbWFnZRibkOwDDA)](https://imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg0LEgVpbWFnZRjs8gYM)
 
 Originally I only have English version of the program, but after I released the
 first version people really loved it and offered to translate it. In the end,
@@ -49,7 +49,7 @@ in 19 different regions on the Marketplace!
 
 # Application Screenshots
 
-![](/images/screenshotsp.png)
+![](https://imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg4LEgVpbWFnZRj-p7ADDA)
 
 # Links
 	
