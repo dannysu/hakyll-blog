@@ -28,7 +28,7 @@ My initial version simply did the very naive thing, which is to continuously
 add &lt;div> elements to the page. When I monitored the number of DOM nodes
 using this approach, I got the following graph using Chrome Developer Tool:
 
-![](/images/iter1.timeline.png)
+![](https://imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg0LEgVpbWFnZRjK338M)
 
 Memory usage after 2500 images: 48.87MB  
 DOM Node Count: [1611-23403]
@@ -54,7 +54,7 @@ you don't see content are really just empty with nothing there.
 
 The node count graph became this:
 
-![](/images/iter2.timeline.png)
+![](https://imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg4LEgVpbWFnZRirvf0BDA)
 
 Memory usage after 2500 images: 20.19MB  
 DOM Node Count: [524-19933]
@@ -75,7 +75,7 @@ change as well without actually removing and adding back the element.
 
 I got this afterwards:
 
-![](/images/iter3.timeline.png)
+![](https://imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg0LEgVpbWFnZRiKjwgM)
 
 Memory usage after 2500 images: 20.22MB  
 DOM Node Count: [540-24478]
@@ -91,7 +91,7 @@ I applied the same approach as iteration 3 to all cells showing actual EOL
 images. The timeline graph looks a lot better with # of DOM node count much
 lower:
 
-![](/images/iter4.timeline.png)
+![](https://imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg4LEgVpbWFnZRisvf0BDA)
 
 Memory usage after 2500 images: 26.46MB  
 DOM Node Count: [518-571]
@@ -112,8 +112,8 @@ iteration 4 than iteration 2. Drilling deeper, I found that each object in
 iteration 4 takes up more memory than iteration 2. Check out the screenshot
 comparison to see the size of "smallImage" field:
 
-[![](/images/iter2.screenshot-150x150.png)](/images/iter2.screenshot.png) vs
-[![](/images/iter4.screenshot-150x150.png)](/images/iter4.screenshot.png)
+[![](https://imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg4LEgVpbWFnZRiZkOwDDA)](https://imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg4LEgVpbWFnZRjr2a8DDA) vs
+[![](https://imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg4LEgVpbWFnZRib7_wBDA)](https://imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg4LEgVpbWFnZRj6p7ADDA)
 
 In iteration 2, smallImage field simply stored the URL of the EOL image and
 took up 88 bytes. However, in iteration 4 the same field now takes up 592
