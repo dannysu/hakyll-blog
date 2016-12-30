@@ -8,7 +8,7 @@ I was successful in getting a simple "hello world" application running, but I
 didn't get GIMP working. Today I went back and compiled GIMP, fixed a compile
 error and there it is! GIMP running natively:
 
-[![](/images/nativegimp-300x200.png)](/images/nativegimp.png)
+[![](https://imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg4LEgVpbWFnZRj9p7ADDA)](https://imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg4LEgVpbWFnZRj8lbwBDA)
 
 The image showing on the screen is actually a photo I took of Pat Helland's
 office at Amazon.
