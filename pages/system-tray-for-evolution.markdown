@@ -12,11 +12,11 @@ documentation for it. The actual amount of code I wrote was small and is about
 
 The result of my work can be seen through the following screenshots:
 
-![](/images/evolution.systray.jpg)
+![](https://imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg0LEgVpbWFnZRjp8gYM)
 
-![](/images/systray.jpg) - system tray icon
+![](https://imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg0LEgVpbWFnZRi5kX8M) - system tray icon
 
-![](/images/new.email_.jpg) - new email notification icon
+![](https://imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg4LEgVpbWFnZRjpx7sBDA) - new email notification icon
 
 [Download my patch](/files/evolution.systray.patch.zip)
 
