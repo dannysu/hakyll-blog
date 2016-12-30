@@ -96,5 +96,5 @@ Animation.
 }
 ```
 
-  [1]: /files/videos/foldeffect.mov
+  [1]: https://imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg0LEgVpbWFnZRjN338M
   [2]: https://github.com/rbreve/Flipboard-3D-Transform-Effect-Example
