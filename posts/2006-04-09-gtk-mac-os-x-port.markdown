@@ -8,7 +8,7 @@ This means we'll get tighter integration of apps!
 Although still a work-in-progress, some code has already been checked in to
 GNOME CVS. At this time I can get simple apps running without any problem:
 
-![](/images/gtkmac.png)
+![](https://imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg0LEgVpbWFnZRiJjwgM)
 
 More information can be found at [Imendio AB's website][1].  
 Here's the [announcement][2].
