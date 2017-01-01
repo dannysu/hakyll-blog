@@ -6,6 +6,7 @@ description: Tribute to the Thinkpad laptop that has served me very well
 ---
 <small>click to see full image</small>
 
-[![][1]][1]
+[![][2]][1]
 
   [1]: https://imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg0LEgVpbWFnZRipw34M
+  [2]: https://imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg4LEgVpbWFnZRiJ5LwBDA
