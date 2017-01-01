@@ -24,6 +24,6 @@ Having the new developer tool made scraping and verifying things much easier.
   [1]: http://scrapy.org/
   [2]: http://news.ycombinator.com/over?points=100
   [3]: http://pypi.python.org/pypi/readability-lxml
-  [4]: http://dannysu.com/feeds/hackernews100.atom
+  [4]: http://feeds.dannysu.com/hackernews100.atom
   [5]: http://blog.mozilla.com/blog/2012/01/31/firefox-adds-powerful-new-developer-tools/
   [6]: https://github.com/dannysu/hackernews-feed
