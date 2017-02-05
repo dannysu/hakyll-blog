@@ -27,7 +27,7 @@ the random flip that occurs automatically. For the jquery animation I used
 vector graphic bundled with the WP7 SDK and embedded it as a SVG.
 
 Visit it on your Windows Phone 'Mango' devices @
-<http://bing.dannysu.com/>.
+<http://bing-wallpaper1337.appspot.com>.
 
 Note: I also tested on my iPhone but the back button and tap to flip back to
 image aren't working. I'll have to look into that some other time. Haven't
