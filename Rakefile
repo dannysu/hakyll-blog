@@ -23,11 +23,6 @@ task :build do
 
   # Make sure every directory without index.html has one
   ensure_index(File.expand_path('./_site'), File.expand_path('./_site/404.html'))
-
-  # Update dannysu.github.com submodule
-  sh "rm -rf dannysu.github.com/*"
-  sh "cp -r _site/* dannysu.github.com"
-  sh "cd dannysu.github.com && git checkout CNAME && git checkout .nojekyll"
 end
 
 task :monitor do
