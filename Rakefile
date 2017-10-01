@@ -14,23 +14,19 @@ def ensure_index(directory, file_404)
 end
 
 task :build do
-  # Build Hakyll blog code
-  if not File.exists?("site")
-    sh "stack ghc -- --make site.hs"
-  end
-
-  sh "./site rebuild"
+  sh "stack build"
+  sh "stack exec site rebuild"
 
   # Make sure every directory without index.html has one
   ensure_index(File.expand_path('./_site'), File.expand_path('./_site/404.html'))
 end
 
 task :monitor do
-  sh "./site preview"
+  sh "stack exec site watch"
 end
 
 task :clean do
-  sh "./site clean"
+  sh "stack exec site clean"
 end
 
 task :deploy do
