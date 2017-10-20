@@ -5,7 +5,7 @@ tags: Start-up, AvidTap
 ---
 [AvidTap][1]'s promo video is now up:
   
-<iframe width="640" height="360" src="http://www.youtube.com/embed/NxX4XMIyaaI" frameborder="0" allowfullscreen></iframe>
+<iframe width="640" height="360" src="//www.youtube.com/embed/NxX4XMIyaaI" frameborder="0" allowfullscreen></iframe>
 
 Thanks to [Café Pamenar][2] for letting us use their space! Considering we had
 very limited budget I'm pretty happy with the result! I make a cameo appearance
