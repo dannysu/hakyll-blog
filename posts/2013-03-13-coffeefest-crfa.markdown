@@ -63,7 +63,7 @@ anything necessary.
 
 In other news, there's a new video up:
   
-<iframe width="640" height="360" src="http://www.youtube.com/embed/AA9-_440lGI" frameborder="0" allowfullscreen></iframe>
+<iframe width="640" height="360" src="//www.youtube.com/embed/AA9-_440lGI" frameborder="0" allowfullscreen></iframe>
 
   [1]: http://www.crfa.ca/tradeshows/crfashow/
   [2]: http://www.coffeefest.com/

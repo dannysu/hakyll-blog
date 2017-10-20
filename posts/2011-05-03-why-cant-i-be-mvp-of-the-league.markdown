@@ -7,7 +7,7 @@ I wanted to blog about this for a while now whether or not Derrick Rose becomes
 the MVP or not. For those who don't know, Derrick Rose is a professional
 basketball player on the Chicago Bulls team. He said to reporters before the
 beginning of the NBA season, "[Why can't I be MVP of the
-league?](http://www.youtube.com/watch?v=s3NVmn51zE0)", and now months later
+league?](https://www.youtube.com/watch?v=s3NVmn51zE0)", and now months later
 NBA.com just announced that [he is the MVP of the
 league](http://www.nba.com/2011/news/05/03/mvp-award/index.html)!
 
