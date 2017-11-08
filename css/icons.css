@@ -23,21 +23,24 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
-.icon-search:before {
-	content: "\e604";
-}
 .icon-mail:before {
 	content: "\e600";
 }
 .icon-twitter:before {
 	content: "\e601";
 }
-.icon-feed:before {
-	content: "\e605";
-}
 .icon-github:before {
 	content: "\e602";
 }
 .icon-linkedin:before {
 	content: "\e603";
+}
+.icon-search:before {
+	content: "\e604";
+}
+.icon-feed:before {
+	content: "\e605";
+}
+.icon-watsi:before {
+	content: "\e606";
 }
