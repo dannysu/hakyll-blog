@@ -274,6 +274,7 @@ teaserField = field "teaser" $ \item -> do
     compactTeaser :: String -> String
     compactTeaser =
         (replaceAll "<iframe [^>]*>" (const "")) .
+        (replaceAll "</iframe>" (const "")) .
         (replaceAll "<img [^>]*>" (const "")) .
         (replaceAll "<p>" (const "")) .
         (replaceAll "</p>" (const "")) .
