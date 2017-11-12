@@ -199,8 +199,7 @@ wordpressRoute =
     gsubRoute "posts/" (const "") `composeRoutes`
         gsubRoute "pages/" (const "") `composeRoutes`
             gsubRoute "^[0-9]{4}-[0-9]{2}-[0-9]{2}-" (map replaceWithSlash)`composeRoutes`
-                gsubRoute "\\.markdown" (const "/index.html") `composeRoutes`
-                    gsubRoute "\\.rst" (const "/index.html")
+                gsubRoute "\\.markdown" (const "/index.html")
     where replaceWithSlash c = if c == '-' || c == '_'
                                    then '/'
                                    else c
