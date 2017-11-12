@@ -13,26 +13,21 @@ pandocWriteOptions = defaultHakyllWriterOptions
     }
 
 --------------------------------------------------------------------------------
+copyPatterns = [ "favicon.ico"
+               , "keybase.txt"
+               , "images/**"
+               , "files/**"
+               ]
+
 main :: IO ()
 main = hakyll $ do
 
     match "templates/*" $ compile templateCompiler
 
-    match "favicon.ico" $ do
-        route   idRoute
-        compile copyFileCompiler
-
-    match "keybase.txt" $ do
-        route   idRoute
-        compile copyFileCompiler
-
-    match "images/**" $ do
-        route   idRoute
-        compile copyFileCompiler
-
-    match "files/**" $ do
-        route   idRoute
-        compile copyFileCompiler
+    forM_ copyPatterns $ \p ->
+        match p $ do
+            route   idRoute
+            compile copyFileCompiler
 
     match "css/**" $ do
         route   idRoute
