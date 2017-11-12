@@ -7,6 +7,7 @@ import           Text.Pandoc (writerReferenceLinks)
 import           Data.Char (toLower)
 import           Data.List (isPrefixOf, tails, findIndex)
 import           WordPress
+import           Feed
 
 -- Allow for reference style links in markdown
 pandocWriteOptions = defaultHakyllWriterOptions
@@ -115,36 +116,6 @@ main = hakyll $ do
 
 
 --------------------------------------------------------------------------------
-feedContext :: Context String
-feedContext = mconcat
-    [ rssBodyField "description"
-    , rssTitleField "title"
-    , wpUrlField "url"
-    , dateField "date" "%B %e, %Y"
-    ]
-
-empty :: Compiler String
-empty = return ""
-
-rssTitleField :: String -> Context a
-rssTitleField key = field key $ \i -> do
-    value <- getMetadataField (itemIdentifier i) "title"
-    let value' = liftM (replaceAll "&" (const "&amp;")) value
-    maybe empty return value'
-
-rssBodyField :: String -> Context String
-rssBodyField key = field key $
-    return .
-    (replaceAll "<iframe [^>]*>" (const "")) .
-    (withUrls wordpress) .
-    (withUrls absolute) .
-    itemBody
-  where
-    wordpress x = replaceAll "/index.html" (const "/") x
-    absolute x = if (head x) == '/' then (feedRoot feedConfiguration) ++ x else x
-
-
---------------------------------------------------------------------------------
 postCtx :: Tags -> Context String
 postCtx tags = mconcat
     [ dateField "date" "%B %e, %Y"
@@ -179,19 +150,6 @@ recentPosts :: Compiler [Item String]
 recentPosts = do
     identifiers <- getMatches "posts/*"
     return [Item identifier "" | identifier <- identifiers]
-
-
---------------------------------------------------------------------------------
--- | RSS feed configuration.
---
-feedConfiguration :: FeedConfiguration
-feedConfiguration = FeedConfiguration
-    { feedTitle       = "Danny Su"
-    , feedDescription = "RSS feed for Danny Su's blog"
-    , feedAuthorName  = "Danny Su"
-    , feedAuthorEmail = "contact@dannysu.com"
-    , feedRoot        = "https://dannysu.com"
-    }
 
 
 --------------------------------------------------------------------------------
