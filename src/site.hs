@@ -234,7 +234,7 @@ feedConfiguration = FeedConfiguration
     , feedDescription = "RSS feed for Danny Su's blog"
     , feedAuthorName  = "Danny Su"
     , feedAuthorEmail = "contact@dannysu.com"
-    , feedRoot        = "http://dannysu.com"
+    , feedRoot        = "https://dannysu.com"
     }
 
 
