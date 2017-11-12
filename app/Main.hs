@@ -8,6 +8,7 @@ import           Data.List (isPrefixOf, tails, findIndex)
 import           WordPress
 import           Feed
 import           HakyllHelper
+import           Pagination
 
 --------------------------------------------------------------------------------
 copyPatterns = [ "favicon.ico"
@@ -83,7 +84,7 @@ main = hakyll $ do
                 >>= loadAndApplyTemplate "templates/default.html" allCtx
                 >>= wordpressifyUrls
 
-    pag <- buildPaginateWith grouper "posts/*" makeId
+    pag <- paginate "posts/*"
 
     paginateRules pag $ \pageNum pattern -> do
         route idRoute
@@ -206,14 +207,3 @@ teaserField = field "teaser" $ \item -> do
         (replaceAll "<a [^>]*>" (const "")) .
         (replaceAll "</a>" (const "")) .
         (replaceAll "<hr>" (const ""))
-
-
---------------------------------------------------------------------------------
--- | Pagination related functions
---
-makeId :: PageNumber -> Identifier
-makeId pageNum = fromFilePath $ "blog/page/" ++ (show pageNum) ++ "/index.html"
-
--- Run sortRecentFirst on ids, and then liftM (paginateEvery 10) into it
-grouper :: MonadMetadata m => [Identifier] -> m [[Identifier]]
-grouper ids = (liftM (paginateEvery 10) . sortRecentFirst) ids
