@@ -26,10 +26,10 @@ replaceWithSlash c = if c == '-' || c == '_'
 -- links into just the directory name
 wordpressifyUrls :: Item String -> Compiler (Item String)
 wordpressifyUrls item = do
-    route <- getRoute $ itemIdentifier item
-    return $ case route of
+    r <- getRoute $ itemIdentifier item
+    return $ case r of
         Nothing -> item
-        Just r  -> fmap wordpressifyUrlsWith item
+        Just _  -> fmap wordpressifyUrlsWith item
 
 
 --------------------------------------------------------------------------------
