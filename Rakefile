@@ -2,7 +2,7 @@ require 'fileutils'
 
 task :build do
   sh "stack build"
-  sh "stack exec site rebuild"
+  sh "stack exec site build"
 end
 
 task :monitor do
