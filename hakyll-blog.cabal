@@ -18,13 +18,14 @@ executable site
   default-language:    Haskell2010
   build-depends:       base >= 4.7 && < 5
                      , hakyll
-                     , pandoc
                      , hakyll-blog
 
 library
   hs-source-dirs:      src
   exposed-modules:     WordPress
                      , Feed
+                     , HakyllHelper
   default-language:    Haskell2010
   build-depends:       base >= 4.7 && < 5
                      , hakyll
+                     , pandoc

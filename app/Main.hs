@@ -2,17 +2,12 @@
 {-# LANGUAGE OverloadedStrings #-}
 import           Control.Monad (forM_, liftM)
 import           Data.Monoid ((<>))
-import           Hakyll
-import           Text.Pandoc (writerReferenceLinks)
+import           Hakyll hiding (pandocCompiler)
 import           Data.Char (toLower)
 import           Data.List (isPrefixOf, tails, findIndex)
 import           WordPress
 import           Feed
-
--- Allow for reference style links in markdown
-pandocWriteOptions = defaultHakyllWriterOptions
-    { writerReferenceLinks = True
-    }
+import           HakyllHelper
 
 --------------------------------------------------------------------------------
 copyPatterns = [ "favicon.ico"
@@ -48,7 +43,7 @@ main = hakyll $ do
                         field "recent" (\_ -> recentPostList) <>
                         defaultContext
 
-                pandocCompilerWith defaultHakyllReaderOptions pandocWriteOptions
+                pandocCompiler
                     >>= saveSnapshot "teaser"
                     >>= loadAndApplyTemplate t (postCtx tags)
                     >>= saveSnapshot "content"
@@ -65,7 +60,7 @@ main = hakyll $ do
                         field "recent" (\_ -> recentPostList) <>
                         defaultContext
 
-                pandocCompilerWith defaultHakyllReaderOptions pandocWriteOptions
+                pandocCompiler
                     >>= loadAndApplyTemplate "templates/page.html" (postCtx tags)
                     >>= loadAndApplyTemplate "templates/default.html" allCtx
                     >>= wordpressifyUrls
