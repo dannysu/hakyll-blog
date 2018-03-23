@@ -55,6 +55,7 @@ E6: 200k-220k base, 200k rsu / year, 20% bonus
 <tr><td>180k</td><td>625k</td><td>50k</td><td>?%</td><td>late 2016</td><td>[Blind](https://www.teamblind.com/article/facebook-e5-comp-LqcANqu1)</td>
 <tr><td>190k</td><td>500k</td><td>70k</td><td>?%</td><td>?</td><td>[Blind](https://www.teamblind.com/article/facebook-e5-comp-LqcANqu1)</td>
 <tr><td>190k</td><td>600k</td><td>60k</td><td>?%</td><td>Sep 8, 2017</td><td>[Blind](https://us.teamblind.com/s/NUEddV6P)</td>
+<tr><td>192k</td><td>750k</td><td>100k</td><td>15%</td><td>Mar 22, 2018</td><td>[Blind](https://us.teamblind.com/s/A2PUQq68)</td>
 </table>
 
 ### E6
