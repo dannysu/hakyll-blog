@@ -1,10 +1,9 @@
 ---
 title: Hello!
 ---
-My name is Danny Su, Co-founder & CTO of [Kash Corp][1] (YC S14). Our mission is to get rid of
-the evil tax that is credit card fees.
+My name is Danny Su. I'm a software engineer at Facebook.
 
-Previously I worked at Microsoft on Windows Phone. I also worked at Canadian
+Previously I was the CTO and one of the founders of Kash Corp (YC S14), which
+was acquired by a publicly traded financial services company. Before starting
+my company, I worked at Microsoft on Windows Phone. I also worked at Canadian
 start-up Well.ca and led their mobile apps and warehouse software efforts.
-
-  [1]: http://withkash.com
