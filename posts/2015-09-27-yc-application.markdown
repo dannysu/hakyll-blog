@@ -7,7 +7,7 @@ I did a brain dump of my [YC interview experience][1] before and gave advice on
 people's YC applications. Further down is Kash's successful application.
 
 And here's our video:  
-<iframe width="640" height="360" src="//www.youtube.com/embed/Mgo4rWeUSTQ" frameborder="0" allowfullscreen></iframe>
+<iframe width="640" height="360" src="//www.youtube.com/embed/rDCLtK9qPnk" frameborder="0" allowfullscreen></iframe>
 
 Some of our approach and strategy isn't the same as what's in our application
 anymore. That's because of the learnings we've had since we wrote it. However,
