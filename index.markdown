@@ -1,7 +1,8 @@
 ---
 title: Hello!
 ---
-My name is Danny Su. I'm a software engineer at Facebook.
+My name is Danny Su. I'm a software engineer at Oculus working on Oculus
+Browser.
 
 Previously I was the CTO and one of the founders of Kash Corp (YC S14), which
 was acquired by a publicly traded financial services company. Before starting

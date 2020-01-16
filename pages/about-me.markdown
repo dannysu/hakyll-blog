@@ -2,7 +2,7 @@
 title: About Me
 ---
 
-- Software Engineer at Facebook
+- Software Engineer at Oculus
 - Co-founder & CTO at [Kash Corp.][6] (Y Combinator Summer '14) - we get rid of credit card fees
 - Co-founder & CTO at AvidTap Corp.
 - Well.ca Software Developer & Project Lead
