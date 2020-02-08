@@ -77,6 +77,6 @@ myView.animate()
     .translateY(y2 - y1 - h1 * (1 - (h2 / h1)) / 2)
 ```
 
-  [1]: //imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg0LEgVpbWFnZRipugQM
-  [2]: //imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg4LEgVpbWFnZRi5760DDA
-  [3]: //imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg4LEgVpbWFnZRjppeoDDA
+  [1]: https://media.dannysu.com/scale.translate1.png
+  [2]: https://media.dannysu.com/scale.translate2.png
+  [3]: https://media.dannysu.com/scale.translate3.png

@@ -69,4 +69,4 @@ try (Cursor cursor = database.query(...)) {
   [1]: https://msdn.microsoft.com/en-us/library/yh598w02.aspx
   [2]: http://docs.oracle.com/javase/tutorial/essential/exceptions/tryResourceClose.html
   [3]: https://github.com/dannysu/sqlitefutures
-  [4]: //imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg4LEgVpbWFnZRj58-oDDA
+  [4]: https://media.dannysu.com/avidregister.sqlite.png

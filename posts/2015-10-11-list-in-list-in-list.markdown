@@ -224,6 +224,6 @@ See code on [github][3]. The final product looks like this:
   [1]: https://developer.android.com/reference/android/widget/ListView.html
   [2]: https://developer.android.com/reference/android/support/v7/widget/RecyclerView.html
   [3]: https://github.com/dannysu/ListListList
-  [4]: //imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg0LEgVpbWFnZRj52HwM
-  [5]: //imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg4LEgVpbWFnZRiZ_vcBDA
-  [6]: //imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg4LEgVpbWFnZRipzPgBDA
+  [4]: https://media.dannysu.com/list.list.list1.png
+  [5]: https://media.dannysu.com/list.list.list2.png
+  [6]: https://media.dannysu.com/list.list.list3.png

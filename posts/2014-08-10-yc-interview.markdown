@@ -155,8 +155,8 @@ as we walked down the street.
 Our flights were originally scheduled on April 28, but we changed flights that
 night to delay by couple days so we could attend the YC kick off meeting.
 
-  [1]: //imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg0LEgVpbWFnZRjpinwM
-  [2]: //imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg4LEgVpbWFnZRipj7kBDA
-  [3]: //imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg0LEgVpbWFnZRj6zwIM
-  [4]: //imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg4LEgVpbWFnZRjpk_YBDA
-  [5]: //imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg4LEgVpbWFnZRj54fYBDA
+  [1]: https://media.dannysu.com/displair.jpg
+  [2]: https://media.dannysu.com/yc.canvas.jpg
+  [3]: https://media.dannysu.com/group.photo.at.yc.jpg
+  [4]: https://media.dannysu.com/hot.links.jpg
+  [5]: https://media.dannysu.com/pier39.jpg

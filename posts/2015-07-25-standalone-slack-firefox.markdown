@@ -100,4 +100,4 @@ That's it! Standalone Slack with Firefox.
   [2]: http://www.adercon.com/ac/node/38
   [3]: https://addons.mozilla.org/en-US/firefox/addon/stylish/?src=search
   [4]: https://addons.mozilla.org/en-US/firefox/addon/hide-tab-bar-with-one-tab/?src=ss
-  [5]: //imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg4LEgVpbWFnZRj56vACDA
+  [5]: https://media.dannysu.com/firefox.slack.profile.png

@@ -8,7 +8,7 @@ that my company was accepted into Y Combinator's Summer 2014 batch. The
 [TechCrunch coverage][1] officially makes that public knowledge now. [Y
 Combinator blog][2] similarly confirms the news.
 
-![](//imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg4LEgVpbWFnZRiJsPcBDA)
+![](https://media.dannysu.com/yc.logo.png)
 
 More on this experience later.
 

@@ -300,31 +300,31 @@ use gmail's server if the from address is @gmail.com.
   [2]: http://www.fastmail.com
   [3]: https://blog.fastmail.com/2014/11/12/fastmail-app-for-ios-and-android-now-available/
   [4]: https://blogs.dropbox.com/dropbox/2015/12/saying-goodbye-to-carousel-and-mailbox/
-  [5]: https://imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg4LEgVpbWFnZRi53bkBDA
+  [5]: https://media.dannysu.com/privacy.mailbox.png
   [6]: https://itunes.apple.com/us/app/mailbox/id576502633?mt=8
   [7]: https://itunes.apple.com/us/app/spark-smart-email-app-for-work/id997102246?mt=8
-  [8]: https://imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg4LEgVpbWFnZRi5-KcEDA
+  [8]: https://media.dannysu.com/privacy.spark2.png
   [9]: https://itunes.apple.com/us/app/dispatch-email-meets-gtd-textexpander/id642022747?mt=8
-  [10]: https://imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg0LEgVpbWFnZRi5iAUM
+  [10]: https://media.dannysu.com/privacy.dispatch2.png
   [11]: https://itunes.apple.com/us/app/microsoft-outlook/id951937596?mt=8
-  [12]: https://imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg4LEgVpbWFnZRi5mvkBDA
+  [12]: https://media.dannysu.com/privacy.acompli.png
   [13]: https://itunes.apple.com/us/app/boxer-for-gmail-outlook-exchange/id561712083?mt=8
-  [14]: https://imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg4LEgVpbWFnZRjJ6PkBDA
-  [15]: https://imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg4LEgVpbWFnZRjZtvoBDA
-  [16]: https://imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg4LEgVpbWFnZRi55rMCDA
-  [17]: https://imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg0LEgVpbWFnZRjJ1gUM
-  [18]: https://imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg4LEgVpbWFnZRjK6PkBDA
-  [19]: https://imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg4LEgVpbWFnZRjJq7oBDA
-  [20]: https://imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg4LEgVpbWFnZRjJva4DDA
+  [14]: https://media.dannysu.com/privacy.boxer2.png
+  [15]: https://media.dannysu.com/privacy.spark1.png
+  [16]: https://media.dannysu.com/privacy.dispatch1.png
+  [17]: https://media.dannysu.com/privacy.boxer1.png
+  [18]: https://media.dannysu.com/privacy.cannonball1.png
+  [19]: https://media.dannysu.com/privacy.cannonball2.png
+  [20]: https://media.dannysu.com/privacy.yahoomail1.png
   [21]: https://itunes.apple.com/us/app/cloudmagic-email/id721677994?mt=8
-  [22]: https://imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg4LEgVpbWFnZRjZ-boBDA
+  [22]: https://media.dannysu.com/privacy.cloudmagic.png
   [23]: https://itunes.apple.com/us/app/cannonball-email/id701582906?mt=8
-  [24]: https://imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg0LEgVpbWFnZRiJp30M
+  [24]: https://media.dannysu.com/privacy.cannonball3.png
   [25]: https://itunes.apple.com/us/app/yahoo-mail-free-email-and-news/id577586159?mt=8
-  [26]: https://imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg4LEgVpbWFnZRjatvoBDA
+  [26]: https://media.dannysu.com/privacy.yahoomail2.png
   [27]: https://itunes.apple.com/th/app/gmail/id422689480
   [28]: https://itunes.apple.com/us/app/fastmail-email-calendars-contacts/id931370077?mt=8
-  [29]: https://imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg4LEgVpbWFnZRjJtLQCDA
+  [29]: https://media.dannysu.com/privacy.mymail.png
   [30]: https://itunes.apple.com/us/app/mymail-free-email-app-for/id722120997?mt=8
   [31]: http://www.getboxer.com/boxer-joins-vmware/
   [32]: https://blog.fastmail.com/2015/12/20/sanitising-html-the-dom-clobbering-issue/
