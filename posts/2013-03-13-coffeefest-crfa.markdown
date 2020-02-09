@@ -67,6 +67,5 @@ In other news, there's a new video up:
 
   [1]: http://www.crfa.ca/tradeshows/crfashow/
   [2]: http://www.coffeefest.com/
-  [3]: http://imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3JlcgwLEgVpbWFnZRiRTgw
   [4]: http://avidtap.com
-  [5]: //imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3JlcgwLEgVpbWFnZRiRTgw
+  [5]: https://media.dannysu.com/coffeefest.jpg
