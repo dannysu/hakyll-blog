@@ -96,5 +96,5 @@ Animation.
 }
 ```
 
-  [1]: https://imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg0LEgVpbWFnZRjN338M
+  [1]: https://media.dannysu.com/ios.folding.mov
   [2]: https://github.com/rbreve/Flipboard-3D-Transform-Effect-Example
