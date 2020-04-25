@@ -18,9 +18,9 @@ Windows Phone 7.
 You can click one of the thumbnails below to see the full feature list and more
 screenshots:
 
-[![](https://imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg4LEgVpbWFnZRiJwusDDA)][1]
-[![](https://imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg4LEgVpbWFnZRjqx7sBDA)][1]
-[![](https://imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg0LEgVpbWFnZRj5wAcM)][1]
+[![](https://media.dannysu.com/mangastream.screenshot1.png)][1]
+[![](https://media.dannysu.com/mangastream.screenshot2.png)][1]
+[![](https://media.dannysu.com/mangastream.screenshot3.png)][1]
 
 There were some issues that I had to spend more time debugging through, so here
 are my learnings:

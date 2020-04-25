@@ -77,4 +77,4 @@ subdirectory names. The application essentially allows you to navigate certain
 parts of his website. If not done properly, this combined with knowledge about
 his file structure could lead to even more information disclosure.
 
-  [1]: https://imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg4LEgVpbWFnZRj5p7ADDA
+  [1]: https://media.dannysu.com/brian.website.xss.png

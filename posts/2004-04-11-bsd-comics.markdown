@@ -6,18 +6,18 @@ tags: FreeBSD
 hahaha man! gotta get me this magazine!
 
 check out these comic strips!
-[bsd01](https://imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg4LEgVpbWFnZRi5o_MCDA) | [bsd02](https://imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg4LEgVpbWFnZRiMufECDA) |
-[bsd03](https://imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg0LEgVpbWFnZRjt8gYM) | [bsd04](https://imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg4LEgVpbWFnZRickOwDDA) |
-[bsd05](https://imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg4LEgVpbWFnZRiah_ICDA) | [bsd06](https://imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg4LEgVpbWFnZRjagrUCDA) |
-[bsd07](https://imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg0LEgVpbWFnZRiMjwgM) | [bsd08](https://imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg0LEgVpbWFnZRiNjwgM)
+[bsd01](https://media.dannysu.com/bsd01.jpg) | [bsd02](https://media.dannysu.com/bsd02.jpg) |
+[bsd03](https://media.dannysu.com/bsd03.jpg) | [bsd04](https://media.dannysu.com/bsd04.jpg) |
+[bsd05](https://media.dannysu.com/bsd05.jpg) | [bsd06](https://media.dannysu.com/bsd06.jpg) |
+[bsd07](https://media.dannysu.com/bsd07.jpg) | [bsd08](https://media.dannysu.com/bsd08.jpg)
 
 BSD history??? is it? somebody who knows japanese tell me please!
-[page 1](https://imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg4LEgVpbWFnZRi6o_MCDA)
-[page 2](https://imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg4LEgVpbWFnZRjbgrUCDA)
+[page 1](https://media.dannysu.com/bsd.history.page1.jpg)
+[page 2](https://media.dannysu.com/bsd.history.page2.jpg)
 
-[magazine cover](https://imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg4LEgVpbWFnZRidkOwDDA) - damn! BSD Daemon looks so cool here!
+[magazine cover](https://media.dannysu.com/bsd.magazine.cover.png) - damn! BSD Daemon looks so cool here!
 
-more cool pics [here](https://imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg4LEgVpbWFnZRjLxqgEDA)
+more cool pics [here](https://media.dannysu.com/bsd..magazine.pics.jpg)
 
 I found these originally from
 <http://thetbserver.adsldns.org/~palatis/BSDComic/> while I was browsing on
