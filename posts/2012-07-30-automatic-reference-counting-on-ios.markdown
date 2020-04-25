@@ -200,5 +200,5 @@ had to deal with on Windows Phone before.
   [2]: http://stackoverflow.com/questions/6260256/what-kind-of-leaks-does-automatic-reference-counting-in-objective-c-not-prevent/6388601#6388601
   [3]: http://clang.llvm.org/docs/AutomaticReferenceCounting.html
   [4]: http://itunes.apple.com/ca/app/well.ca/id516359938?mt=8
-  [5]: //imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3JlcgwLEgVpbWFnZRi5Fww
-  [6]: //imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3JlcgwLEgVpbWFnZRjRDww
+  [5]: https://media.dannysu.com/arc.memory.leak.png
+  [6]: https://media.dannysu.com/arc.strong.reference.png

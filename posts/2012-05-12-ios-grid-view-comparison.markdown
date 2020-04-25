@@ -23,11 +23,11 @@ Cons:
 - With animation enabled, adding items to list causes weird animation. With
   animation is disabled, adding item to a section has an issue where all items
   in other sections don't refresh. See
-  [video](https://imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg4LEgVpbWFnZRi7o_MCDA).
+  [video](https://media.dannysu.com/kkgridview.bug1.mp4).
 
 - Deleting a cell then tap a cell at the end of a section causes some weird
   animation happening.
-  See [video](https://imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg0LEgVpbWFnZRjM338M).
+  See [video](https://media.dannysu.com/kkgridview.bug2.mp4).
 
 
 # GMGridView

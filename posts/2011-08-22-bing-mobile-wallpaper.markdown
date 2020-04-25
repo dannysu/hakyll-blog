@@ -34,5 +34,5 @@ image aren't working. I'll have to look into that some other time. Haven't
 tried it on my Android phone yet.
 
   [1]: http://hungred.com/wp-content/uploads/2009/04/demo-rawrflip.html
-  [2]: //imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3JlcgwLEgVpbWFnZRjpBww
-  [3]: //imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3JlcgsLEgVpbWFnZRgBDA
+  [2]: https://media.dannysu.com/bing.elephant.wallpaper.jpg
+  [3]: https://media.dannysu.com/bing.wallpaper2.jpg

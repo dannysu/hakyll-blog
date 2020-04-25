@@ -41,4 +41,4 @@ fails to validate.
   [2]: https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/MobileHIG/IconsImages/IconsImages.html#//apple_ref/doc/uid/TP40006556-CH14-SW5
   [3]: https://developer.apple.com/library/ios/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/App-RelatedResources/App-RelatedResources.html#//aple_ref/doc/uid/TP40007072-CH6-SW12
   [4]: https://github.com/folletto
-  [5]: //imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg0LEgVpbWFnZRjZswEM
+  [5]: https://media.dannysu.com/binary.not.optimized.gif

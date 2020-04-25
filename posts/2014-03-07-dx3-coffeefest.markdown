@@ -53,4 +53,4 @@ stories and successes the team will have there.
   [4]: http://mobilesyrup.com/2014/03/06/avidretails-kash-looks-to-replace-cards-and-cash-by-bypassing-the-payment-middleman/
   [5]: http://www.avidretail.com
   [6]: /2013/03/13/coffeefest-crfa/
-  [7]: //imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3JlcgwLEgVpbWFnZRjJZQw
+  [7]: https://media.dannysu.com/coffeefest.jpg

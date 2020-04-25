@@ -63,5 +63,5 @@ feeling to see people use it for real!
 
   [1]: http://avidtap.com
   [2]: https://plus.google.com/106413090159067280619/posts/az9UTAX7dB8
-  [3]: //imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3JlcgwLEgVpbWFnZRjhXQw
-  [4]: //imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3JlcgwLEgVpbWFnZRj5VQw
+  [3]: https://media.dannysu.com/avidtap.sticker.jpg
+  [4]: https://media.dannysu.com/avidtap.box.jpg

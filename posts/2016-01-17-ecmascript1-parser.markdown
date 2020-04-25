@@ -654,7 +654,7 @@ of other things to learn, and I've got my eyes set on my next target.
   [12]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Language_Resources
   [13]: https://www.youtube.com/watch?v=HxaD_trXwRE
   [14]: http://www.ecma-international.org/publications/files/ECMA-ST-ARCH/ECMA-262,%201st%20edition,%20June%201997.pdf
-  [15]: //imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg4LEgVpbWFnZRj50vsBDA
+  [15]: https://media.dannysu.com/es1.start.pos.png
   [16]: /es1-left-recursive-grammar/
   [17]: /es1-non-left-recursive-grammar/
   [18]: https://en.wikipedia.org/wiki/LL_parser

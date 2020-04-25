@@ -10,4 +10,4 @@ check out my GNOME desktop running on FreeBSD
 after trying so many DE and WM
 I am going to stick with GNOME now
 
-see screenshot [[here]](https://imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg4LEgVpbWFnZRiq1fICDA)
+see screenshot [[here]](https://media.dannysu.com/freebsd.screenshot.png)

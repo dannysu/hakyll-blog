@@ -424,12 +424,12 @@ For Used Cars:
 - For used cars there's also [Beepi][11] and [InstaMotor][10]
 
 
-  [1]: //imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg4LEgVpbWFnZRjZi68DDA
-  [2]: //imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg4LEgVpbWFnZRiJofwBDA
+  [1]: https://media.dannysu.com/roadster.price.png
+  [2]: https://media.dannysu.com/drivemotors.price.png
   [3]: https://roadster.com/
   [4]: https://www.drivemotors.com
-  [5]: //imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg0LEgVpbWFnZRjZpAYM
-  [6]: //imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg0LEgVpbWFnZRiZ9X0M
+  [5]: https://media.dannysu.com/kbb.price.png
+  [6]: https://media.dannysu.com/truecar.price.png
   [7]: https://dmv.ca.gov/wasapp/FeeCalculatorWeb/newVehicleForm.do
   [8]: https://www.reddit.com/r/personalfinance/comments/36pnp0/3_tricks_car_salesmen_use_to_take_your_money/
   [9]: https://www.youtube.com/watch?v=v8VYNFzmJIQ

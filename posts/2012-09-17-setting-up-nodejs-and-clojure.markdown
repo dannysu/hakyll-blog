@@ -137,7 +137,7 @@ Node.js also benefits from vim-slime because you can then send javascript code
 to your node REPL.
 
 Screenshot of my setup:  
-![](//imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3JlcgwLEgVpbWFnZRjxLgw)
+![](https://media.dannysu.com/vim.clojure.setup.png)
 
 
   [1]: http://community.opscode.com/cookbooks/nodejs
