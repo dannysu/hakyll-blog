@@ -15,7 +15,7 @@ Life](http://eol.org). It even has "collections" feature where you can put
 anything you find on the site into your own collection. You can also copy
 things you find in other people's collection. Very, very cool!
 
-[![](https://imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg0LEgVpbWFnZRjZ8EAM)](https://imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg4LEgVpbWFnZRiqvf0BDA)
+[![](https://media.dannysu.com/eol.search.thumbnail.png)](https://media.dannysu.com/eol.search.png)
 
 Browsing around the website, I found that EOL has paginated interface for
 viewing their 1.5 million (and growing) images. I'm disappointed by the lack of
@@ -25,9 +25,9 @@ better interface for me to consume the vast number of images. Pagination was so
 Checkout my Pinterest-like infinite-scrolling interface for browsing EOL images
 at [http://eol.dannysu.com](http://eol.dannysu.com).
 
-[![](https://imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg4LEgVpbWFnZRjZrYABDA)](https://imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg4LEgVpbWFnZRiLwusDDA)
-[![](https://imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg0LEgVpbWFnZRj6wAcM)](https://imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg0LEgVpbWFnZRi6kX8M)
-[![](https://imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg4LEgVpbWFnZRiKwusDDA)](https://imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg4LEgVpbWFnZRiKufECDA)
+[![](https://media.dannysu.com/pinterest.eol.thumbnail.png)](https://media.dannysu.com/pinterest.eol.png)
+[![](https://media.dannysu.com/pinterest.eol2.thumbnail.png)](https://media.dannysu.com/pinterest.eol2.png)
+[![](https://media.dannysu.com/pinterest.eol3.thumbnail.png)](https://media.dannysu.com/pinterest.eol3.png)
 
 <small>(All photos in the screenshots are from EOL. In particular, the awesome
 looking bird in the last screenshot is from [Almir Cândido de

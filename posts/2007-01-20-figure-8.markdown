@@ -15,8 +15,8 @@ about the hardware and how and why things work. My program is guaranteed not to
 lose clock ticks. It does figure 8 AND it honks AND blinks lights. What more do
 you want?!
 
-<video controls width="480" height="640" src="https://imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg4LEgVpbWFnZRjcgrUCDA" poster="https://imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg4LEgVpbWFnZRjbrYABDA">
+<video controls width="480" height="640" src="https://media.dannysu.com/figure8.mp4" poster="https://media.dannysu.com/figure8.jpg">
   Sorry, your browser doesn't support embedded videos, 
-  but don't worry, you can <a href="https://imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg4LEgVpbWFnZRjcgrUCDA">download it</a>
+  but don't worry, you can <a href="https://media.dannysu.com/figure8.mp4">download it</a>
   and watch it with your favorite video player!
 </video> 

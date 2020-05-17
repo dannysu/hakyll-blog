@@ -28,7 +28,7 @@ My initial version simply did the very naive thing, which is to continuously
 add &lt;div> elements to the page. When I monitored the number of DOM nodes
 using this approach, I got the following graph using Chrome Developer Tool:
 
-![](https://imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg0LEgVpbWFnZRjK338M)
+![](https://media.dannysu.com/infinite.scroll.iteration1.png)
 
 Memory usage after 2500 images: 48.87MB  
 DOM Node Count: [1611-23403]
@@ -54,7 +54,7 @@ you don't see content are really just empty with nothing there.
 
 The node count graph became this:
 
-![](https://imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg4LEgVpbWFnZRirvf0BDA)
+![](https://media.dannysu.com/infinite.scroll.iteration2.png)
 
 Memory usage after 2500 images: 20.19MB  
 DOM Node Count: [524-19933]
@@ -75,7 +75,7 @@ change as well without actually removing and adding back the element.
 
 I got this afterwards:
 
-![](https://imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg0LEgVpbWFnZRiKjwgM)
+![](https://media.dannysu.com/infinite.scroll.iteration3.png)
 
 Memory usage after 2500 images: 20.22MB  
 DOM Node Count: [540-24478]
@@ -91,7 +91,7 @@ I applied the same approach as iteration 3 to all cells showing actual EOL
 images. The timeline graph looks a lot better with # of DOM node count much
 lower:
 
-![](https://imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg4LEgVpbWFnZRisvf0BDA)
+![](https://media.dannysu.com/infinite.scroll.iteration4.png)
 
 Memory usage after 2500 images: 26.46MB  
 DOM Node Count: [518-571]
@@ -112,8 +112,8 @@ iteration 4 than iteration 2. Drilling deeper, I found that each object in
 iteration 4 takes up more memory than iteration 2. Check out the screenshot
 comparison to see the size of "smallImage" field:
 
-[![](https://imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg4LEgVpbWFnZRiZkOwDDA)](https://imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg4LEgVpbWFnZRjr2a8DDA) vs
-[![](https://imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg4LEgVpbWFnZRib7_wBDA)](https://imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg4LEgVpbWFnZRj6p7ADDA)
+[![](https://media.dannysu.com/infinite.scroll.eol1.thumbnail.png)](https://media.dannysu.com/infinite.scroll.eol1.png) vs
+[![](https://media.dannysu.com/infinite.scroll.eol2.thumbnail.png)](https://media.dannysu.com/infinite.scroll.eol2.png)
 
 In iteration 2, smallImage field simply stored the URL of the EOL image and
 took up 88 bytes. However, in iteration 4 the same field now takes up 592

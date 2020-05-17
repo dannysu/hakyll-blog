@@ -31,8 +31,8 @@ You can find the [source code on GitHub](http://github.com/dannysu/mangastream).
 [![][4]][4]
 [![][5]][5]
 
-  [1]: https://imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg0LEgVpbWFnZRjq8gYM
-  [2]: https://imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg4LEgVpbWFnZRjq2a8DDA
-  [3]: https://imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg4LEgVpbWFnZRjKxqgEDA
-  [4]: https://imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg4LEgVpbWFnZRj5lbwBDA
-  [5]: https://imagedatastore.appspot.com/ahBzfmltYWdlZGF0YXN0b3Jlcg0LEgVpbWFnZRjJ338M
+  [1]: https://media.dannysu.com/mangastream.wp7.screenshot1.png
+  [2]: https://media.dannysu.com/mangastream.wp7.screenshot2.png
+  [3]: https://media.dannysu.com/mangastream.wp7.screenshot3.png
+  [4]: https://media.dannysu.com/mangastream.wp7.screenshot4.png
+  [5]: https://media.dannysu.com/mangastream.wp7.screenshot5.png
